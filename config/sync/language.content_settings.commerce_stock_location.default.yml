@@ -1,0 +1,11 @@
+uuid: bdd343eb-02a8-4f5d-8dea-54d83479ea1e
+langcode: es
+status: true
+dependencies:
+  config:
+    - commerce_stock_local.commerce_stock_location_type.default
+id: commerce_stock_location.default
+target_entity_type_id: commerce_stock_location
+target_bundle: default
+default_langcode: site_default
+language_alterable: false

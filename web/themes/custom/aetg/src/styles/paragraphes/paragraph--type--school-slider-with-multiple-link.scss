@@ -1,0 +1,212 @@
+.paragraph--type--school-slider-with-multiple-link {
+	> .layout--twocol-section {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		flex-wrap: nowrap;
+		
+		@include breakpoint(IPad-Pro) {
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: flex-start;
+		}
+		
+		> .layout__region {
+			flex: unset;
+			width: calc(50% - 15px);
+			
+			@include breakpoint(IPad-Pro) {
+				width: 100%;
+			}
+
+			&--second {
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-start;
+				align-items: flex-start;
+
+				@include breakpoint(IPad-Pro) {
+					margin-top: 20px;
+				}
+			}
+		}
+	}
+	
+	.field--type-entity-reference-revisions {
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		padding: 0;
+		margin: 0 -15px;
+
+		@include breakpoint(tablet-m) {
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: flex-start;
+			margin: 0;
+		}
+		
+		> .field__item {
+			margin: 0 15px;
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
+
+			@include breakpoint(tablet-m) {
+				margin: 0;
+			}
+
+			&:not(:last-child) {
+				@include breakpoint(tablet-m) {
+					margin-bottom: 16px;
+				}
+			}
+		}
+	}
+	
+	.field--name-field-title {
+		margin-bottom: 40px;
+		
+		@include breakpoint(tablet-md) {
+			margin-bottom: 25px;
+		}
+		
+		@include breakpoint(mobile-middle) {
+			margin-bottom: 20px;
+		}
+	}
+}
+
+// .paragraph--type--school-slider, 
+.view-random-profiles.view-display-id-block_2 { // school
+
+	* {
+		margin-bottom: unset;
+	}
+
+	.slick__slider {
+		width: 100%;
+		margin-bottom: 0;
+		
+		.layout--twocol-section {
+			justify-content: flex-start;
+			align-items: center;
+			flex-wrap: nowrap;
+
+			@include breakpoint(mobile-middle) {
+				flex-direction: column;
+				justify-content: flex-start;
+				align-items: flex-start;
+			}
+
+			> .layout__region {
+				@include breakpoint(mobile-middle) {
+					width: 100%;
+				}
+			}
+		}
+		
+		@include breakpoint(IPad-Pro) {
+			max-width: unset;
+			width: 100%;
+			margin-bottom: 30px;
+		}
+		
+		@include breakpoint(tablet) {
+			margin-bottom: 15px;
+		}
+	}
+	
+	.slick-dots {
+		@include dots-violet;
+		text-align: left;
+		position: static;
+		margin-left: 130px;
+		margin-top: 12px;
+		
+		@include breakpoint(mobile-middle) {
+			margin-left: 0;
+		}
+	}
+	
+	.field--type-image {
+		@include mini-slider-image;
+		border: none;
+		margin-right: 30px;
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		
+		> img {
+			@include mini-slider-image;
+			overflow: hidden;
+		}
+	}
+	
+	.field--name-field-school-name {
+		font-weight: 700;
+		font-size: 1.2em;
+		line-height: 22px;
+		letter-spacing: .05em;
+		text-transform: capitalize;
+		color: $color-1;
+		margin-bottom: 8px;
+		
+		@include breakpoint(mobile-middle) {
+			font-size: 14px;
+			line-height: 18px;
+		}		
+	}
+	
+	.slick__slide {
+		position: relative;
+		.layout__region  {
+			flex: unset;
+			display: block;
+			width: auto;
+		}
+		
+		.layout--twocol-section {
+			position: relative;
+		}
+		
+		@include breakpoint(tablet) {
+			margin-right: 0;
+		}
+	}
+	
+	.field--name-field-invoicing-address div {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		flex-wrap: wrap;
+		white-space: nowrap;
+
+		@include text-fz-14-lh-20;
+		color: $color-76;
+		
+		> span {
+			display: block;
+			white-space: nowrap;
+
+			> br {
+				display: none;
+			}
+			
+			@include breakpoint(mobile-large) {
+				white-space: normal;
+			}
+		}
+		
+		> span:not(:last-of-type) {
+			margin-right: 5px;
+		}
+		
+		@include breakpoint(mobile-large) {
+			font-size: 16px;
+			line-height: 24px;
+		}
+	}
+}

@@ -1,0 +1,11 @@
+uuid: 3b9d6144-1c1d-42f4-b06d-4c3d5b194c91
+langcode: es
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.school_slider_with_multiple_link
+id: paragraph.school_slider_with_multiple_link
+target_entity_type_id: paragraph
+target_bundle: school_slider_with_multiple_link
+default_langcode: site_default
+language_alterable: false

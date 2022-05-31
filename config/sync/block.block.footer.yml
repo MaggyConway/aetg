@@ -1,0 +1,31 @@
+uuid: 22cde0a0-eea0-4945-97cd-f64db64edc8b
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - menu_block
+  theme:
+    - aetg
+id: footer
+theme: aetg
+region: footer
+weight: -21
+provider: null
+plugin: 'menu_block:footer'
+settings:
+  id: 'menu_block:footer'
+  label: 'La Asociación'
+  provider: menu_block
+  label_display: '0'
+  follow: false
+  follow_parent: child
+  level: 1
+  depth: 0
+  expand_all_items: false
+  parent: 'footer:menu_link_content:b99a6953-e9ae-434b-981d-eedc51e514f4'
+  suggestion: footer
+  label_type: fixed
+  label_link: true
+visibility: {  }

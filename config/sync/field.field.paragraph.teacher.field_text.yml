@@ -1,0 +1,21 @@
+uuid: 422ea1f1-b6a4-4561-b720-38da9c678a4a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text
+    - paragraphs.paragraphs_type.teacher
+  module:
+    - text
+id: paragraph.teacher.field_text
+field_name: field_text
+entity_type: paragraph
+bundle: teacher
+label: 'Brief presentation'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

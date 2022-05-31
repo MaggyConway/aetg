@@ -1,0 +1,10 @@
+uuid: 57f3450e-5086-4839-abba-b30713a013ad
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.associate
+label: Associate
+targetEntityType: user
+cache: true

@@ -1,0 +1,217 @@
+uuid: edab21fe-7c7c-49d0-a637-d170a5bf0eae
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.member_slider_with_multiple_link.field_link
+    - field.field.paragraph.member_slider_with_multiple_link.field_paragraphs
+    - field.field.paragraph.member_slider_with_multiple_link.field_text
+    - field.field.paragraph.member_slider_with_multiple_link.field_title
+    - field.field.paragraph.member_slider_with_multiple_link.field_views_slider
+    - paragraphs.paragraphs_type.member_slider_with_multiple_link
+  module:
+    - entity_reference_revisions
+    - layout_builder
+    - layout_discovery
+    - link
+    - text
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          dcce4ab8-9cda-48d4-bb9f-1a218001fa4f:
+            uuid: dcce4ab8-9cda-48d4-bb9f-1a218001fa4f
+            region: content
+            configuration:
+              id: 'field_block:paragraph:member_slider_with_multiple_link:field_title'
+              label: Title
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: ''
+          column_widths: 50-50
+          layout_builder_styles_style: ''
+        components:
+          7fe9c9cb-c537-4372-b778-01c5550c7703:
+            uuid: 7fe9c9cb-c537-4372-b778-01c5550c7703
+            region: first
+            configuration:
+              id: 'field_block:paragraph:member_slider_with_multiple_link:field_text'
+              label: Text
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 2
+          85082830-4f84-4bcd-8957-bc34a52d09b5:
+            uuid: 85082830-4f84-4bcd-8957-bc34a52d09b5
+            region: second
+            configuration:
+              id: 'field_block:paragraph:member_slider_with_multiple_link:field_views_slider'
+              label: 'Views Slider'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: viewsreference_formatter
+                settings:
+                  plugin_types:
+                    block: block
+                    default: 0
+                    page: 0
+                    attachment: 0
+                    entity_reference: 0
+                    data_export: 0
+                    feed: 0
+                    embed: 0
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional:
+              layout_builder_styles_style: ''
+            weight: 1
+          63b98f42-82a5-4911-97c2-75cab67e6e03:
+            uuid: 63b98f42-82a5-4911-97c2-75cab67e6e03
+            region: first
+            configuration:
+              id: 'field_block:paragraph:member_slider_with_multiple_link:field_link'
+              label: Link
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: link
+                settings:
+                  trim_length: 80
+                  url_only: false
+                  url_plain: false
+                  rel: '0'
+                  target: '0'
+                third_party_settings:
+                  field_formatter_class:
+                    class: btn-primary
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 3
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+          layout_builder_styles_style: ''
+        components:
+          1124c42e-9b50-4c00-899e-5f2eb0cc3d2f:
+            uuid: 1124c42e-9b50-4c00-899e-5f2eb0cc3d2f
+            region: content
+            configuration:
+              id: 'field_block:paragraph:member_slider_with_multiple_link:field_paragraphs'
+              label: 'Multiple links'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_revisions_entity_view
+                settings:
+                  view_mode: default
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+id: paragraph.member_slider_with_multiple_link.default
+targetEntityType: paragraph
+bundle: member_slider_with_multiple_link
+mode: default
+content:
+  field_link:
+    weight: 4
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_paragraphs:
+    weight: 3
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_slider:
+    weight: 2
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_text:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_title:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  breadcrumbs: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_views_slider: true
+  search_api_excerpt: true

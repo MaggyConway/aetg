@@ -1,0 +1,92 @@
+uuid: 326622a2-c346-4408-9d58-8017b0876930
+langcode: es
+status: true
+dependencies:
+  config:
+    - commerce_invoice.commerce_invoice_type.file_invoice
+  module:
+    - commerce_invoice
+    - entity_reference_revisions
+    - user
+id: commerce_invoice.file_invoice.default
+targetEntityType: commerce_invoice
+bundle: file_invoice
+mode: default
+content:
+  billing_profile:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    region: content
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+  due_date:
+    label: above
+    type: timestamp
+    weight: 3
+    region: content
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+    third_party_settings: {  }
+  invoice_date:
+    label: above
+    type: timestamp
+    weight: 1
+    region: content
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+    third_party_settings: {  }
+  invoice_items:
+    label: hidden
+    type: commerce_invoice_item_table
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  invoice_number:
+    type: string
+    weight: 0
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  mail:
+    label: above
+    type: basic_string
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  total_price:
+    label: hidden
+    type: commerce_invoice_total_summary
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  uid:
+    label: above
+    type: author
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  breadcrumbs: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  invoice_file: true
+  langcode: true
+  orders: true
+  search_api_excerpt: true
+  state: true
+  store_id: true
+  total_paid: true

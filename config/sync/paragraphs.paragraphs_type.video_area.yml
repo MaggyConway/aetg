@@ -1,0 +1,18 @@
+uuid: 2e175f84-a5cd-43ea-9b93-34a6d038924b
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraph_view_mode
+    - paragraphs_browser
+third_party_settings:
+  paragraphs_browser:
+    image_path: 'public://video.png'
+  paragraph_view_mode:
+    enabled: false
+id: video_area
+label: 'Video area (Youtube or Vimeo)'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

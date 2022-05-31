@@ -1,0 +1,13 @@
+uuid: 945ce2da-cb74-4c46-9c4c-89d1301e5957
+langcode: es
+status: true
+dependencies:
+  module:
+    - webform
+_core:
+  default_config_hash: begZ0-RmTzO_zDAwEKA2lKvtGYw1vbFOzbQOJzUbZX0
+id: webform_submission_make_unlock_action
+label: 'Desbloquear el envío'
+type: webform_submission
+plugin: webform_submission_make_unlock_action
+configuration: {  }

@@ -1,0 +1,15 @@
+uuid: 3846b3de-c458-4cca-b67a-9aa05564ad5e
+langcode: es
+status: true
+dependencies: {  }
+id: ct_especializaciones
+label: 'CT Especializaciones'
+description: ''
+entityType: node
+entityBundle: especializacion
+language: es
+breadcrumbPaths: "/directorios\r\n/directorios/especializaciones"
+breadcrumbTitles: "Directorios\r\nEspecializaciones y Postgrados"
+type: '1'
+pathPattern: ''
+extraCacheContexts: ''

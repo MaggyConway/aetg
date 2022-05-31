@@ -1,0 +1,188 @@
+uuid: 5859aaf6-8afe-4100-aa92-0108ba5670f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.profile.edit_profile
+    - field.field.profile.escuela.field_bic
+    - field.field.profile.escuela.field_cronograma
+    - field.field.profile.escuela.field_descripcion_escuela
+    - field.field.profile.escuela.field_direccion
+    - field.field.profile.escuela.field_direccion_web
+    - field.field.profile.escuela.field_director_escuela
+    - field.field.profile.escuela.field_dni_cif
+    - field.field.profile.escuela.field_docentes_aetg
+    - field.field.profile.escuela.field_domiciliacion_banco
+    - field.field.profile.escuela.field_email
+    - field.field.profile.escuela.field_envio_de_email
+    - field.field.profile.escuela.field_fax
+    - field.field.profile.escuela.field_fecha_de_firma_de_la_domic
+    - field.field.profile.escuela.field_geofield
+    - field.field.profile.escuela.field_iban_
+    - field.field.profile.escuela.field_imagen_logo
+    - field.field.profile.escuela.field_justificante_bancario
+    - field.field.profile.escuela.field_moroso
+    - field.field.profile.escuela.field_motivo_baja_aetg
+    - field.field.profile.escuela.field_nombre_de_escuela
+    - field.field.profile.escuela.field_profesorado
+    - field.field.profile.escuela.field_programa_detallado
+    - field.field.profile.escuela.field_responsable_formacion_esc
+    - field.field.profile.escuela.field_telefono
+    - field.field.profile.escuela.field_telefono_2
+    - field.field.profile.escuela.field_tipo_de_miembro
+    - image.style.thumbnail
+    - profile.type.escuela
+  module:
+    - address
+    - image
+    - link
+    - text
+id: profile.escuela.edit_profile
+targetEntityType: profile
+bundle: escuela
+mode: edit_profile
+content:
+  field_cronograma:
+    weight: 16
+    type: text_textarea
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_descripcion_escuela:
+    weight: 13
+    type: text_textarea
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_direccion:
+    weight: 3
+    type: address_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_direccion_web:
+    weight: 11
+    type: link_default
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    region: content
+  field_director_escuela:
+    weight: 4
+    type: string_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_dni_cif:
+    type: string_textfield
+    weight: 8
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_email:
+    weight: 2
+    type: email_default
+    settings:
+      placeholder: ''
+      size: 60
+    third_party_settings: {  }
+    region: content
+  field_fax:
+    weight: 10
+    type: string_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_imagen_logo:
+    weight: 1
+    type: image_image
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    region: content
+  field_moroso:
+    type: boolean_checkbox
+    weight: 9
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_nombre_de_escuela:
+    weight: 0
+    type: string_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_profesorado:
+    weight: 14
+    type: text_textarea
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_programa_detallado:
+    weight: 15
+    type: text_textarea_with_summary
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+    region: content
+  field_responsable_formacion_esc:
+    weight: 12
+    type: string_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_telefono:
+    weight: 5
+    type: string_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_telefono_2:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_tipo_de_miembro:
+    type: options_buttons
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_bic: true
+  field_docentes_aetg: true
+  field_domiciliacion_banco: true
+  field_envio_de_email: true
+  field_fecha_de_firma_de_la_domic: true
+  field_geofield: true
+  field_iban_: true
+  field_justificante_bancario: true
+  field_motivo_baja_aetg: true
+  is_default: true

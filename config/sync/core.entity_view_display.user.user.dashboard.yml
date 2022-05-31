@@ -1,0 +1,503 @@
+uuid: d0bb5302-6c37-41ad-a91b-1bc16a02e7a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.user.dashboard
+    - field.field.user.user.commerce_remote_id
+    - field.field.user.user.field_alta_aetg
+    - field.field.user.user.field_alta_feap
+    - field.field.user.user.field_baja
+    - field.field.user.user.field_baja_aetg
+    - field.field.user.user.field_baja_feap
+    - field.field.user.user.field_dni_cif
+    - field.field.user.user.field_envios_comerciales
+    - field.field.user.user.field_full_name
+    - field.field.user.user.field_invoicing_address
+    - field.field.user.user.field_moroso
+    - field.field.user.user.field_motivo_baja_aetg
+    - field.field.user.user.field_notas
+    - field.field.user.user.field_pendiente
+    - field.field.user.user.field_phone_number
+    - field.field.user.user.field_tipo_de_miembro
+    - field.field.user.user.user_picture
+    - image.style.thumbnail
+    - simple_block.simple_block.member_forms
+    - simple_block.simple_block.no_asociados_form
+    - simple_block.simple_block.reclamo
+    - simple_block.simple_block.school_forms
+    - views.view.commerce_order_item_table
+    - views.view.commerce_user_invoices
+    - views.view.user_dashboard
+  module:
+    - address
+    - image
+    - layout_builder
+    - layout_discovery
+    - simple_block
+    - user
+    - views
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: Header
+          layout_builder_styles_style: ''
+        components:
+          9d9688e1-eda8-40d1-8d21-badc748ac333:
+            uuid: 9d9688e1-eda8-40d1-8d21-badc748ac333
+            region: content
+            configuration:
+              id: 'field_block:user:user:informacion_privada_profiles'
+              label: 'Información privada profiles'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: dashboard_header
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+              context_mapping:
+                entity: '@user.current_user_context:current_user'
+                view_mode: view_mode
+            additional:
+              visibility:
+                c454bbb7-5c9e-4409-a683-4e81abbf87cd:
+                  id: user_role
+                  roles:
+                    asociado: asociado
+                  negate: 0
+                  uuid: c454bbb7-5c9e-4409-a683-4e81abbf87cd
+                  context_mapping:
+                    user: '@user.current_user_context:current_user'
+              visibility_operator: and
+            weight: 0
+          2301e5a2-2c9f-4307-9519-e198ec9a5773:
+            uuid: 2301e5a2-2c9f-4307-9519-e198ec9a5773
+            region: content
+            configuration:
+              id: 'field_block:user:user:escuela_profiles'
+              label: 'Información escuela profiles'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: dashboard_header
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+              context_mapping:
+                entity: '@user.current_user_context:current_user'
+                view_mode: view_mode
+            additional:
+              visibility:
+                42bbc5f3-074b-448c-a12f-ad89a193adda:
+                  id: user_role
+                  roles:
+                    escuela: escuela
+                  negate: 0
+                  uuid: 42bbc5f3-074b-448c-a12f-ad89a193adda
+                  context_mapping:
+                    user: '@user.current_user_context:current_user'
+              visibility_operator: and
+            weight: 2
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: 'My anonimous profile'
+          column_widths: 33-67
+          layout_builder_styles_style: ''
+        components:
+          824fd61c-0a8a-4a54-ae1c-8f6edb45ec85:
+            uuid: 824fd61c-0a8a-4a54-ae1c-8f6edb45ec85
+            region: first
+            configuration:
+              id: 'field_block:user:user:customer_profiles'
+              label: 'Mi Perfil'
+              provider: layout_builder
+              label_display: visible
+              formatter:
+                label: hidden
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: dashboard_my_profile
+                third_party_settings:
+                  empty_fields:
+                    handler: ''
+                  field_formatter_class:
+                    class: ''
+              context_mapping:
+                entity: '@user.current_user_context:current_user'
+                view_mode: view_mode
+            additional:
+              visibility:
+                07e287ac-6d63-4b6c-8d81-8deaa859b27c:
+                  id: user_role
+                  roles:
+                    asociado: asociado
+                    escuela: escuela
+                  negate: 1
+                  uuid: 07e287ac-6d63-4b6c-8d81-8deaa859b27c
+                  context_mapping:
+                    user: '@user.current_user_context:current_user'
+              visibility_operator: and
+              layout_builder_styles_style: ''
+            weight: 3
+          0bab02bb-a08e-430c-b040-a23149225f6f:
+            uuid: 0bab02bb-a08e-430c-b040-a23149225f6f
+            region: first
+            configuration:
+              id: 'views_block:user_dashboard-block_1'
+              label: ''
+              provider: views
+              label_display: '0'
+              views_label: ''
+              items_per_page: none
+              context_mapping: {  }
+            additional:
+              layout_builder_styles_style: ''
+              visibility:
+                e5b71803-7545-443d-9c0b-56577c78196b:
+                  id: user_role
+                  roles:
+                    asociado: asociado
+                  negate: 1
+                  uuid: e5b71803-7545-443d-9c0b-56577c78196b
+                  context_mapping:
+                    user: '@user.current_user_context:current_user'
+                1b4b702e-78f0-4c7d-8aad-90e4ce72d2d3:
+                  id: user_role
+                  roles:
+                    escuela: escuela
+                  negate: 1
+                  uuid: 1b4b702e-78f0-4c7d-8aad-90e4ce72d2d3
+                  context_mapping:
+                    user: '@user.current_user_context:current_user'
+              visibility_operator: and
+            weight: 4
+          08b1a648-bf37-4362-be2d-8ce52bcb5017:
+            uuid: 08b1a648-bf37-4362-be2d-8ce52bcb5017
+            region: first
+            configuration:
+              id: 'simple_block:reclamo'
+            additional:
+              layout_builder_styles_style: selected
+              visibility:
+                19da0cd8-a04c-4966-9b1e-c18d64dc4f83:
+                  id: user_role
+                  roles:
+                    asociado: asociado
+                    escuela: escuela
+                  negate: 1
+                  uuid: 19da0cd8-a04c-4966-9b1e-c18d64dc4f83
+                  context_mapping:
+                    user: '@user.current_user_context:current_user'
+              visibility_operator: and
+            weight: 5
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: 'My profile'
+          layout_builder_styles_style: ''
+        components:
+          b08065b5-0b80-4ea0-ae13-709fdc264ed1:
+            uuid: b08065b5-0b80-4ea0-ae13-709fdc264ed1
+            region: content
+            configuration:
+              id: 'field_block:user:user:escuela_profiles'
+              label: 'Mi Perfil'
+              provider: layout_builder
+              label_display: visible
+              formatter:
+                label: hidden
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: dashboard_my_profile
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+              context_mapping:
+                entity: '@user.current_user_context:current_user'
+                view_mode: view_mode
+            additional:
+              visibility:
+                71769b3d-8673-4ba9-85bf-6ab3007f2bf2:
+                  id: user_role
+                  roles:
+                    escuela: escuela
+                  negate: 0
+                  uuid: 71769b3d-8673-4ba9-85bf-6ab3007f2bf2
+                  context_mapping:
+                    user: '@user.current_user_context:current_user'
+              visibility_operator: and
+              layout_builder_styles_style: ''
+            weight: -8
+          28106975-d80a-4492-9c82-82f5ce36429a:
+            uuid: 28106975-d80a-4492-9c82-82f5ce36429a
+            region: content
+            configuration:
+              id: 'field_block:user:user:informacion_privada_profiles'
+              label: 'Mi Perfil'
+              provider: layout_builder
+              label_display: visible
+              formatter:
+                label: hidden
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: dashboard_my_profile
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+              context_mapping:
+                entity: '@user.current_user_context:current_user'
+                view_mode: view_mode
+            additional:
+              visibility:
+                d354a891-b062-45ff-adba-89008ff48dfe:
+                  id: user_role
+                  roles:
+                    asociado: asociado
+                  negate: 0
+                  uuid: d354a891-b062-45ff-adba-89008ff48dfe
+                  context_mapping:
+                    user: '@user.current_user_context:current_user'
+              visibility_operator: and
+              layout_builder_styles_style: ''
+            weight: -7
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: Forms
+          layout_builder_styles_style: ''
+        components:
+          16fa5339-1660-4472-ae7e-c769c614afb8:
+            uuid: 16fa5339-1660-4472-ae7e-c769c614afb8
+            region: content
+            configuration:
+              id: 'simple_block:member_forms'
+              label: 'Trámites para asociados'
+              provider: simple_block
+              label_display: visible
+              context_mapping: {  }
+            additional:
+              layout_builder_styles_style: selected
+              visibility:
+                7e88a7e3-5b6a-4dba-b725-079a69c6c0b1:
+                  id: user_role
+                  roles:
+                    administrator: administrator
+                    asociado: asociado
+                    personal_aetg: personal_aetg
+                  negate: 0
+                  uuid: 7e88a7e3-5b6a-4dba-b725-079a69c6c0b1
+                  context_mapping:
+                    user: '@user.current_user_context:current_user'
+              visibility_operator: and
+            weight: 3
+          6c3da644-934d-4b6f-a668-f5675482e3b3:
+            uuid: 6c3da644-934d-4b6f-a668-f5675482e3b3
+            region: content
+            configuration:
+              id: 'simple_block:school_forms'
+              label: 'Trámites para escuelas'
+              provider: simple_block
+              label_display: visible
+              context_mapping: {  }
+            additional:
+              layout_builder_styles_style: selected
+              visibility:
+                8d8a2c5d-dff5-4c6e-8f85-f62c373242cd:
+                  id: user_role
+                  roles:
+                    administrator: administrator
+                    escuela: escuela
+                    personal_aetg: personal_aetg
+                  negate: 0
+                  uuid: 8d8a2c5d-dff5-4c6e-8f85-f62c373242cd
+                  context_mapping:
+                    user: '@user.current_user_context:current_user'
+              visibility_operator: and
+            weight: 4
+          95d14bbf-8bd4-444f-88db-2f2196e2c006:
+            uuid: 95d14bbf-8bd4-444f-88db-2f2196e2c006
+            region: content
+            configuration:
+              id: 'simple_block:no_asociados_form'
+              label: 'Trámites para no asociados'
+              provider: simple_block
+              label_display: visible
+              context_mapping: {  }
+            additional:
+              layout_builder_styles_style: selected
+              visibility:
+                268d6ae2-d2d0-4ef4-843a-f4558d462c66:
+                  id: user_role
+                  roles:
+                    asociado: asociado
+                    escuela: escuela
+                  negate: 1
+                  uuid: 268d6ae2-d2d0-4ef4-843a-f4558d462c66
+                  context_mapping:
+                    user: '@user.current_user_context:current_user'
+              visibility_operator: and
+            weight: 5
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: ''
+          column_widths: 50-50
+          layout_builder_styles_style: ''
+        components:
+          f8bd64d5-b9ca-4791-a051-dd3efe553895:
+            uuid: f8bd64d5-b9ca-4791-a051-dd3efe553895
+            region: second
+            configuration:
+              id: 'views_block:commerce_order_item_table-block_2'
+              label: ''
+              provider: views
+              label_display: '0'
+              views_label: ''
+              items_per_page: '5'
+              context_mapping: {  }
+            additional:
+              layout_builder_styles_style: ''
+            weight: 0
+          697561ee-1cc9-4f48-90e4-0d68c3967ac5:
+            uuid: 697561ee-1cc9-4f48-90e4-0d68c3967ac5
+            region: first
+            configuration:
+              id: 'views_block:commerce_order_item_table-block_1'
+              label: ''
+              provider: views
+              label_display: '0'
+              views_label: ''
+              items_per_page: '5'
+              context_mapping: {  }
+            additional:
+              layout_builder_styles_style: ''
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+          layout_builder_styles_style: ''
+        components:
+          af58516b-7356-4a22-bab6-fafaff01b266:
+            uuid: af58516b-7356-4a22-bab6-fafaff01b266
+            region: content
+            configuration:
+              id: 'views_block:commerce_user_invoices-block_1'
+              label: ''
+              provider: views
+              label_display: '0'
+              views_label: ''
+              items_per_page: '10'
+              context_mapping: {  }
+            additional:
+              layout_builder_styles_style: ''
+            weight: 0
+        third_party_settings: {  }
+_core:
+  default_config_hash: V51QPCKkgNREKtSmB9Iu2wmAMEpktVpnzklWaZV8UYo
+id: user.user.dashboard
+targetEntityType: user
+bundle: user
+mode: dashboard
+content:
+  associate_profiles:
+    type: entity_reference_label
+    weight: 6
+    region: content
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_dni_cif:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_full_name:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_invoicing_address:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
+    region: content
+  member_for:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  school_profiles:
+    type: entity_reference_label
+    weight: 5
+    region: content
+    label: above
+    settings:
+      link: true
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+  user_picture:
+    type: image
+    weight: 0
+    region: content
+    settings:
+      image_style: thumbnail
+      image_link: content
+    third_party_settings: {  }
+    label: hidden
+hidden:
+  base_profiles: true
+  breadcrumbs: true
+  commerce_remote_id: true
+  customer_profiles: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  escuela_profiles: true
+  field_alta_aetg: true
+  field_alta_feap: true
+  field_baja: true
+  field_baja_aetg: true
+  field_baja_feap: true
+  field_envios_comerciales: true
+  field_moroso: true
+  field_motivo_baja_aetg: true
+  field_notas: true
+  field_pendiente: true
+  field_phone_number: true
+  field_tipo_de_miembro: true
+  informacion_privada_profiles: true
+  informacion_profesional_profiles: true
+  langcode: true
+  linked_username: true
+  private_message_link: true
+  school_professional_information_profiles: true
+  search_api_excerpt: true

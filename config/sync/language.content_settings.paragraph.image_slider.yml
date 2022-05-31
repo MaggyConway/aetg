@@ -1,0 +1,11 @@
+uuid: 2e5cdc4a-5fbf-4256-a5d2-84bcb5e412d3
+langcode: es
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.image_slider
+id: paragraph.image_slider
+target_entity_type_id: paragraph
+target_bundle: image_slider
+default_langcode: site_default
+language_alterable: false

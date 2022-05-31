@@ -1,0 +1,24 @@
+uuid: 434db170-211c-4201-83b1-ca2bd5e73434
+langcode: es
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - profile
+    - taxonomy
+third_party_settings:
+  field_permissions:
+    permission_type: custom
+id: profile.field_motivo_baja_aetg
+field_name: field_motivo_baja_aetg
+entity_type: profile
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

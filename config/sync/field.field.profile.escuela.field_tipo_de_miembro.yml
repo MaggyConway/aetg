@@ -1,0 +1,29 @@
+uuid: 4f4827fa-4055-4891-95b6-3075d2965cc7
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_tipo_de_miembro
+    - profile.type.escuela
+    - taxonomy.vocabulary.tipo_de_miembro
+id: profile.escuela.field_tipo_de_miembro
+field_name: field_tipo_de_miembro
+entity_type: profile
+bundle: escuela
+label: 'Tipo de miembro'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tipo_de_miembro: tipo_de_miembro
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

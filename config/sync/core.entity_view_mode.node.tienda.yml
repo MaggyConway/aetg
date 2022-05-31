@@ -1,0 +1,10 @@
+uuid: d0ba481a-8239-44d7-b610-cdbcbae08602
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: node.tienda
+label: Tienda
+targetEntityType: node
+cache: true

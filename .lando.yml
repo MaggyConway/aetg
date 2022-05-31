@@ -1,0 +1,46 @@
+name: aetg
+recipe: drupal8
+config:
+  webroot: web
+  php: '7.3'
+  xdebug: true
+  composer_version: '1.10.13'
+env_file:
+  - .env
+proxy:
+  appserver:
+    - aetg.d8.lndo.site
+  adminer:
+    - adminer.aetg.d8.lndo.site:8080
+  mailhog:
+    - mail.aetg.d8.lndo.site
+services:
+  legacy:
+    type: mysql
+    portforward: 3600
+  appserver:
+    build_as_root:
+      - curl -sL https://deb.nodesource.com/setup_10.x | bash -
+      - apt install -y nodejs
+      - apt-get install -y libgmp-dev re2c libmhash-dev libmcrypt-dev file
+      - docker-php-ext-configure gmp
+      - docker-php-ext-install gmp
+  adminer:
+    type: compose
+    services:
+      image: adminer
+      environment:
+        - ADMINER_DEFAULT_SERVER=database
+      command: docker-php-entrypoint php -S [::]:8080 -t /var/www/html
+  node:
+    type: node:10
+  mailhog:
+    type: mailhog
+    hogfrom:
+      - appserver
+tooling:
+  npm:
+    service: node
+  node:
+    service: node
+

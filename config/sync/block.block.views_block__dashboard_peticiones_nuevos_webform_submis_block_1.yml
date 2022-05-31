@@ -1,0 +1,27 @@
+uuid: b53152ec-df7e-4b1e-a889-996957bf5a8e
+langcode: es
+status: false
+dependencies:
+  config:
+    - views.view.dashboard_peticiones_de_nuevos_usuarios_webform_submission
+  module:
+    - views
+  theme:
+    - adminimal_theme
+id: views_block__dashboard_peticiones_nuevos_webform_submis_block_1
+theme: adminimal_theme
+region: header
+weight: null
+provider: null
+plugin: 'views_block:dashboard_peticiones_de_nuevos_usuarios_webform_submission-block_1'
+settings:
+  id: 'views_block:dashboard_peticiones_de_nuevos_usuarios_webform_submission-block_1'
+  label: 'Solicitudes de socios nuevos pendientes de revisar'
+  provider: views
+  label_display: visible
+  views_label: 'Solicitudes de socios nuevos pendientes de revisar'
+  items_per_page: none
+  override:
+    items_per_page: none
+  views_label_checkbox: 1
+visibility: {  }

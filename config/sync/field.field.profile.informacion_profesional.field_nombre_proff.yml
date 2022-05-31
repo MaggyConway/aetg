@@ -1,0 +1,19 @@
+uuid: 7bbf4574-7797-44b4-b78f-dc23f4edf4e5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_nombre_proff
+    - profile.type.informacion_profesional
+id: profile.informacion_profesional.field_nombre_proff
+field_name: field_nombre_proff
+entity_type: profile
+bundle: informacion_profesional
+label: Nombre
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

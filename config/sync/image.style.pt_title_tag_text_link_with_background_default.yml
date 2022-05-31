@@ -1,0 +1,15 @@
+uuid: c70b8e9e-d3ab-414e-ac5c-3a2c92c4d91a
+langcode: en
+status: true
+dependencies: {  }
+name: pt_title_tag_text_link_with_background_default
+label: 'PT Title, tag, text, link with background: Default'
+effects:
+  68f8551e-d69f-4d03-bc19-2256b107d787:
+    uuid: 68f8551e-d69f-4d03-bc19-2256b107d787
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1980
+      height: 600
+      anchor: center-center

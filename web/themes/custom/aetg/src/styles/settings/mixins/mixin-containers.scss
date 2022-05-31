@@ -1,0 +1,113 @@
+@mixin main-container {
+   max-width: 1266px;
+   margin: 0 auto;
+
+   @include breakpoint(desktop-small) {
+      padding-left: 20px;
+      padding-right: 20px;
+   }
+
+   @include breakpoint(mobile-middle) {
+      padding-left: 10px;
+      padding-right: 10px;
+   }
+}
+
+@mixin node_formbox {
+   max-width: 408px;
+   margin: 0 auto;
+}
+
+@mixin white-box {
+   background-color: #fff;
+   width: 100%;
+   padding: 32px 111px 115px;
+   overflow: hidden;
+
+   @include breakpoint(desktop-small) {
+      padding: 20px 70px 80px;
+   }
+
+   @include breakpoint(tablet-m) {
+      padding: 20px 40px 50px;
+   }
+
+   @include breakpoint(mobile-large) {
+      padding: 15px 25px 35px;
+   }
+
+   @include breakpoint(mobile-small) {
+      padding: 15px 15px 20px;
+   }
+
+
+   .field--name-field-title {
+      @include h2;
+      margin-bottom: 16px;
+   }
+}
+
+@mixin landing-white-box {
+   background-color: #fff;
+   width: 100%;
+   overflow: hidden;
+   padding: 125px 108px;
+
+   @include breakpoint(laptop) {
+      padding: 60px 50px;
+   }
+
+   @include breakpoint(tablet) {
+      padding: 40px 30px;
+   }
+
+   @include breakpoint(mobile-small) {
+      padding: 30px 20px;
+   }
+}
+
+@mixin webform-box {
+   max-width: 608px;
+   background-color: #fff;
+   padding: 55px 100px 90px;
+   margin: 131px auto;
+   text-align: left;
+
+   @include breakpoint(tablet-m) {
+      margin: 50px auto;
+   }
+
+   @include breakpoint(mobile-large) {
+      margin: 40px;
+      max-width: 100%;
+      padding: 40px;
+   }
+
+   @include breakpoint(mobile-middle) {
+      margin: 30px;
+   }
+
+   @include breakpoint(mobile-small) {
+      margin: 20px;
+      padding: 20px;
+   }
+}
+
+@mixin gray-paggings-wrapper {
+   padding: 50px;
+   @include breakpoint(tablet) {
+      padding: 40px;
+   }
+
+   @include breakpoint(mobile-large) {
+      padding: 20px;
+   }
+
+   @include breakpoint(mobile-middle) {
+      padding: 10px;
+   }
+}
+
+// @mixin white-landing-block-paddings {
+
+// }

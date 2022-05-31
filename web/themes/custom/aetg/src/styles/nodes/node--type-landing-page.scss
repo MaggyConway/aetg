@@ -1,0 +1,7 @@
+.node--type-landing-page {
+	.block-layout-builder {
+		> .field--name-field-title {
+			@include h2;
+		}
+	}
+}

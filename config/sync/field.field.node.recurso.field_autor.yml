@@ -1,0 +1,28 @@
+uuid: abe26ac7-357f-4ce0-8cc1-eff008473262
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_autor
+    - node.type.recurso
+    - taxonomy.vocabulary.autor
+id: node.recurso.field_autor
+field_name: field_autor
+entity_type: node
+bundle: recurso
+label: Autor/a
+description: 'Al escribir el nombre de una persona como autor/a, se ha de escribir entrecomillado "Apellido1 Apellido2, Nombre". Para separar varios autores se usa la coma "Autora 1", "Autor 2".'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      autor: autor
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,236 @@
+footer {
+  background-color: #fff;
+  padding-top: 62px;
+  padding-bottom: 0;
+
+  @include breakpoint(tablet-m) {
+    padding-bottom: 0;
+  }
+
+  .footer-container {
+    @include main-container;
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @include breakpoint(IPad-Pro) {
+      flex-direction: column;
+    }
+
+    .region-second-footer {
+      margin-right: 0;
+
+      @include breakpoint(IPad-Pro) {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: 0;
+        margin-bottom: 30px;
+      }
+
+      @include breakpoint(tablet-m) {
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        margin-bottom: 0;
+      }
+
+      @include breakpoint(mobile-large) {
+        flex-wrap: wrap;
+      }
+
+      #block-aetg-sitebranding {
+        margin-bottom: 25px;
+
+        @include breakpoint(IPad-Pro) {
+          order: 0;
+          width: calc(33% - 30px);
+          margin-right: 30px;
+        }
+
+        @include breakpoint(tablet-m) {
+          width: calc(50% - 20px);
+        }
+
+        @include breakpoint(mobile-large) {
+          width: 100%;
+          margin: 0 0 20px;
+        }
+      }
+
+      #block-contacts {
+        margin-bottom: 20px;
+
+        @include breakpoint(IPad-Pro) {
+          order: 2;
+          width: calc(50% - 30px);
+          margin-right: 30px;
+          margin-bottom: 0;
+        }
+
+        @include breakpoint(mobile-large) {
+          width: 100%;
+          margin-right: 0;
+        }
+
+        p {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 22px;
+
+          strong {
+            font-weight: 400;
+          }
+
+          &:first-of-type {
+            margin-bottom: 25px;
+          }
+
+          a {
+            @include link-fz-14-lh-22;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 22px;
+            color: $blue !important;
+            white-space: nowrap;
+
+            img {
+              transition: all 0.2s ease;
+            }
+
+            &:hover {
+              img {
+                opacity: 0.6;
+              }
+            }
+
+            svg {
+              display: none;
+            }
+          }
+        }
+      }
+
+      .menu--footer {
+        margin-bottom: 20px;
+
+        @include breakpoint(IPad-Pro) {
+          order: 1;
+          width: 50%;
+          margin-bottom: 0;
+        }
+
+        @include breakpoint(mobile-middle) {
+          order: 1;
+          width: 100%;
+          margin-right: 0;
+          margin-bottom: 30px;
+        }
+
+        .menu {
+          @include list-reset;
+          display: flex;
+          justify-content: space-between;
+
+          .menu-item {
+            margin-right: 15px;
+
+            &:last-child {
+              margin-right: 0;
+            }
+
+            a {
+              @include subtitle-fz-14-lh-20-bold-upper;
+              color: $color-1 !important;
+            }
+          }
+        }
+      }
+
+      #block-copyright {
+        @include breakpoint(IPad-Pro) {
+          order: 3;
+          width: 50%;
+
+          br {
+            display: none;
+          }
+        }
+
+        p {
+          @include text-fz-12-lh-18-fw-300;
+          font-size: 14px;
+          color: $color-76;
+        }
+      }
+    }
+
+    .region-footer {
+      display: flex;
+
+      @include breakpoint(tablet-m) {
+        flex-wrap: wrap;
+      }
+
+      @include breakpoint(mobile-middle) {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+      }
+
+      .menu--footer {
+        margin-right: 47px;
+        flex: 1;
+
+        @include breakpoint(tablet-m) {
+          flex: 50%;
+          margin-bottom: 30px;
+          margin-right: 0;
+        }
+
+        @include breakpoint(mobile-large) {
+          margin-bottom: 8px;
+        }
+
+        &:nth-child(even) {
+          @include breakpoint(tablet-m) {
+            padding-right: 0;
+          }
+        }
+
+        &:last-child {
+          padding-right: 0;
+        }
+
+        h2 {
+          @include title-fz-16-lh-26-fw-600;
+          color: $color-1;
+          margin-bottom: 20px;
+        }
+
+        .menu {
+          @include list-reset;
+
+          .menu-item {
+            margin-bottom: 18px;
+            padding-top: 0;
+
+            @include breakpoint(IPad-Pro) {
+              margin-bottom: 8px;
+            }
+
+            a {
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 22px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.view-footer {
+  display: flex;
+  justify-content: center;
+}

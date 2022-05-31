@@ -1,0 +1,22 @@
+uuid: a61491bf-7114-4120-b717-2732a087349d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: especializacion
+label: Especialización
+type: 'canonical_entities:node'
+pattern: 'directorios/especializaciones/[node:title]'
+selection_criteria:
+  1053f2c2-cb55-4920-96d2-da7bd80f1bd2:
+    id: 'entity_bundle:node'
+    bundles:
+      especializacion: especializacion
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 1053f2c2-cb55-4920-96d2-da7bd80f1bd2
+selection_logic: and
+weight: -5
+relationships: {  }

@@ -1,0 +1,10 @@
+name: "AETG Cart"
+type: module
+description: "Provides cart functionality."
+core: 8.x
+package: "Custom"
+dependencies:
+  - commerce:commerce
+  - commerce:commerce_cart
+  - commerce:commerce_checkout
+  - commerce_invoice:commerce_invoice

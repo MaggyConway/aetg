@@ -1,0 +1,10 @@
+uuid: 25048f23-8005-4683-ae3e-0d8ecaa5d9e5
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.media_left
+label: 'Media Left'
+targetEntityType: paragraph
+cache: true

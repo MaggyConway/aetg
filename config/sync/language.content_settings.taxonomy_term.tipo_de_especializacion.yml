@@ -1,0 +1,11 @@
+uuid: fd6e6f78-8f3e-4e73-9e91-510967f69d12
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.tipo_de_especializacion
+id: taxonomy_term.tipo_de_especializacion
+target_entity_type_id: taxonomy_term
+target_bundle: tipo_de_especializacion
+default_langcode: site_default
+language_alterable: false

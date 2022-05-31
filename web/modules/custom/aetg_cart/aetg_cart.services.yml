@@ -1,0 +1,13 @@
+services:
+  aetg_cart.cart_subscriber:
+    decorates: commerce_cart.cart_subscriber
+    class: Drupal\aetg_cart\EventSubscriber\CartEventSubscriber
+    arguments: ['@commerce_cart.cart_manager', '@commerce_cart.cart_provider', '@commerce_cart.cart_session', '@entity_type.manager', '@current_user', '@messenger', '@string_translation', '@tempstore.private', '@path.current', '@request_stack']
+    tags:
+    - { name: event_subscriber }
+  aetg_cart.invoice_confirmation_subscriber:
+    class: Drupal\aetg_cart\EventSubscriber\InvoicePaidSubscriber
+    arguments: ['@entity_type.manager', '@commerce_invoice.invoice_confirmation_mail']
+    tags:
+      - { name: event_subscriber }
+      - { name: needs_destruction }

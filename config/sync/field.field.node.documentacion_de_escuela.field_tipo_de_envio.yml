@@ -1,0 +1,26 @@
+uuid: 3f422d17-77cf-41be-8ede-8834cbd53d0e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tipo_de_envio
+    - node.type.documentacion_de_escuela
+    - taxonomy.vocabulary.tipo_documentacion_escuela
+id: node.documentacion_de_escuela.field_tipo_de_envio
+field_name: field_tipo_de_envio
+entity_type: node
+bundle: documentacion_de_escuela
+label: 'Tipo de envío'
+description: 'Marcar el tipo de documentación que se esté enviando.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    sort:
+      field: _none
+    target_bundles:
+      tipo_documentacion_escuela: tipo_documentacion_escuela
+  handler: 'default:taxonomy_term'
+field_type: entity_reference

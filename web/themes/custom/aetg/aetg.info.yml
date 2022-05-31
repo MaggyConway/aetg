@@ -1,0 +1,24 @@
+name: AETG
+type: theme
+description: AETG sub theme of Classy.
+core: 8.x
+# Defines the base theme
+base theme: classy
+# Defines libraries group in which we can add css/js.
+libraries:
+  - aetg/global-styling
+  - aetg/global-scripts
+# Regions
+regions:
+  preheader_left: Left preheader
+  preheader_right: Right preheader
+  header: Header
+  top: Top
+  content: Content
+  sidebar_first: First sidebar
+  sidebar_second: Second sidebar
+  footer: Footer
+  second_footer: Second footer
+  footer_bottom_left: Left footer bottom
+  footer_bottom_middle: Middle footer bottom
+  footer_bottom_right: Right footer bottom

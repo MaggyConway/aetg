@@ -1,0 +1,15 @@
+uuid: 62f2ba40-1ac7-4984-9e5e-ebd041c8b377
+langcode: en
+status: true
+dependencies: {  }
+name: ct_school_documentation_slide
+label: 'CT School documentation: Slide'
+effects:
+  4df147fe-785e-4440-a9a0-4a6adce09cbd:
+    uuid: 4df147fe-785e-4440-a9a0-4a6adce09cbd
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 300
+      height: 300
+      anchor: center-center

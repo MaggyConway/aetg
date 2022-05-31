@@ -1,0 +1,11 @@
+uuid: e3e8ba1f-019a-423f-ba08-7777c310d15b
+langcode: es
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+id: member_forms
+title: 'Trámites para asociados'
+content:
+  value: "<ol class=\"tramites\">\r\n\t<li><a href=\"/secretaria/procedimiento-solicitud-para-ser-miembro-titular\">Ser miembro titular</a></li>\r\n\t<li><a href=\"/secretaria/procedimiento-solicitud-para-ser-miembro-didacta\">Ser miembro didacta</a></li>\r\n\t<li><a href=\"/secretaria/procedimiento-solicitud-para-ser-miembro-supervisor\">Ser miembro supervisor</a></li>\r\n\t<li><a href=\"/secretaria/contratacion-seguro-responsabilidad-civil-profesional-mapfre\">Seguro de responsabilidad civil profesional (MAPFRE)</a></li>\r\n\t<li><a href=\"/secretaria/contratacion-seguros-salud\">Seguros de salud</a></li>\r\n\t<li><a href=\"/secretaria/asesoramiento-fiscal-juridico-gratuito\">Asesoramiento fiscal y jurídico gratuito</a></li>\r\n\t<li><a href=\"/secretaria/contratacion-seguro-incapacidad-laboral-temporal-ilt\">Seguro de Incapacidad Laboral Temporal (ILT)</a></li>\r\n\t<li><a href=\"/secretaria/ser-miembro-psicoterapeuta-feap\">Solicitud de adhesión a la FEAP</a></li>\r\n\t<li><a href=\"/sites/default/files/2022-05/modelos-delegacion-voto-para-asamblea.docx\">Modelos de delegación de voto para Asamblea</a></li>\r\n\t<li><a href=\"/secretaria/modelos-certificados-avales\">Modelos de certificados y avales</a></li>\r\n\t<li><a href=\"/secretaria/procedimiento-para-obtener-acreditacion-postgrado\">Obtención de acreditación de un postgrado</a></li>\r\n\t<li><a href=\"/secretaria/procedimiento-para-convalidacion-formaciones-extranjeras\">Convalidación de formaciones extranjeras</a></li>\r\n\t<li><a href=\"/secretaria/procedimiento-para-avalar-programa-formacion-gestalt-aplicada-infancia\">Avalar un programa de formación Gestalt aplicada a la infancia</a></li>\r\n\t<li><a href=\"https://tesinas.aetg.es\">Plataforma de tesinas</a></li>\r\n\t<li><a href=\"/baja-asociados\">Darse de baja</a></li>\r\n</ol>\r\n"
+  format: full_html

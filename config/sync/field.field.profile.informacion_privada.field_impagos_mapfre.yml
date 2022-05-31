@@ -1,0 +1,19 @@
+uuid: e3e56062-003b-412d-a7d8-e3b24b82cabd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_impagos_mapfre
+    - profile.type.informacion_privada
+id: profile.informacion_privada.field_impagos_mapfre
+field_name: field_impagos_mapfre
+entity_type: profile
+bundle: informacion_privada
+label: 'Información de impagos'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

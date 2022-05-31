@@ -1,0 +1,11 @@
+uuid: 13e135fa-14f2-4462-abaa-4de50cc12e48
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.tipo_doc_administrativo
+id: taxonomy_term.tipo_doc_administrativo
+target_entity_type_id: taxonomy_term
+target_bundle: tipo_doc_administrativo
+default_langcode: site_default
+language_alterable: false

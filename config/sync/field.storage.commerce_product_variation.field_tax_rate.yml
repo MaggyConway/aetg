@@ -1,0 +1,23 @@
+uuid: 940d9c2d-feeb-4ad8-bcec-ca52d3e521c5
+langcode: es
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - commerce_product_tax
+    - field_permissions
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: commerce_product_variation.field_tax_rate
+field_name: field_tax_rate
+entity_type: commerce_product_variation
+type: commerce_tax_rate
+settings: {  }
+module: commerce_product_tax
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

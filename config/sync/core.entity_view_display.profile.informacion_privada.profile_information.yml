@@ -1,0 +1,420 @@
+uuid: f2c26bd9-9a76-4f9a-b847-35ba0e07ed3f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.profile.profile_information
+    - field.field.profile.informacion_privada.field_aetg_membership_type
+    - field.field.profile.informacion_privada.field_alta_aetg
+    - field.field.profile.informacion_privada.field_alta_feap
+    - field.field.profile.informacion_privada.field_alta_mapfre
+    - field.field.profile.informacion_privada.field_apellidos
+    - field.field.profile.informacion_privada.field_archivos_del_usuario
+    - field.field.profile.informacion_privada.field_area_de_formacion
+    - field.field.profile.informacion_privada.field_baja
+    - field.field.profile.informacion_privada.field_baja_aetg
+    - field.field.profile.informacion_privada.field_baja_feap
+    - field.field.profile.informacion_privada.field_baja_mapfre
+    - field.field.profile.informacion_privada.field_bic
+    - field.field.profile.informacion_privada.field_centro_donde_trabaja
+    - field.field.profile.informacion_privada.field_dni
+    - field.field.profile.informacion_privada.field_domiciliacion_banco
+    - field.field.profile.informacion_privada.field_domicilio_particular
+    - field.field.profile.informacion_privada.field_email
+    - field.field.profile.informacion_privada.field_envio_de_email
+    - field.field.profile.informacion_privada.field_feap_membership_type
+    - field.field.profile.informacion_privada.field_fecha_de_firma_de_la_domic
+    - field.field.profile.informacion_privada.field_fecha_nacimiento
+    - field.field.profile.informacion_privada.field_formacion
+    - field.field.profile.informacion_privada.field_formacion_universitaria
+    - field.field.profile.informacion_privada.field_geofield
+    - field.field.profile.informacion_privada.field_iban_
+    - field.field.profile.informacion_privada.field_imagen_usuario
+    - field.field.profile.informacion_privada.field_impagos_mapfre
+    - field.field.profile.informacion_privada.field_insurances
+    - field.field.profile.informacion_privada.field_justificante_bancario
+    - field.field.profile.informacion_privada.field_lugar_nacimiento
+    - field.field.profile.informacion_privada.field_moroso
+    - field.field.profile.informacion_privada.field_moroso_mapfre
+    - field.field.profile.informacion_privada.field_motivo_baja_aetg
+    - field.field.profile.informacion_privada.field_motivo_baja_mapfre
+    - field.field.profile.informacion_privada.field_nombre
+    - field.field.profile.informacion_privada.field_notas
+    - field.field.profile.informacion_privada.field_num_socio_string
+    - field.field.profile.informacion_privada.field_ocupacion
+    - field.field.profile.informacion_privada.field_pendiente
+    - field.field.profile.informacion_privada.field_seguro_mapfre
+    - field.field.profile.informacion_privada.field_telefono
+    - field.field.profile.informacion_privada.field_telefono_2
+    - field.field.profile.informacion_privada.field_tipo_de_miembro
+    - profile.type.informacion_privada
+  module:
+    - field_group
+    - layout_builder
+    - layout_discovery
+third_party_settings:
+  field_group:
+    group_datos_bancarios:
+      children: {  }
+      parent_name: group_datos_4
+      weight: 2
+      label: 'Datos bancarios'
+      format_settings:
+        formatter: ''
+        classes: ' group-datos-bancarios field-group-htabs'
+        direction: horizontal
+      format_type: tabs
+      region: hidden
+    group_datos_1:
+      children:
+        - field_apellidos
+        - field_dni
+        - field_fecha_nacimiento
+        - field_lugar_nacimiento
+        - field_nombre
+        - field_num_socio_string
+      parent_name: ''
+      weight: 3
+      label: 'Datos personales'
+      format_settings:
+        formatter: collapsible
+        classes: ' group-datos-1 field-group-div'
+        description: ''
+        show_label: false
+        label_element: h3
+        effect: none
+        speed: fast
+        id: profile2_informacion_privada_full_group_datos_1
+        element: div
+      format_type: html_element
+      region: hidden
+    group_datos_2:
+      children:
+        - field_domicilio_particular
+        - field_telefono
+        - field_telefono_2
+      parent_name: group_datos_4
+      weight: 4
+      label: Contacto
+      format_settings:
+        formatter: collapsible
+        classes: ' group-datos-2 field-group-div'
+        description: ''
+        show_label: false
+        label_element: h3
+        effect: none
+        speed: fast
+        id: profile2_informacion_privada_full_group_datos_2
+        element: div
+      format_type: html_element
+      region: hidden
+    group_datos_3:
+      children:
+        - field_centro_donde_trabaja
+        - field_formacion
+        - field_formacion_universitaria
+      parent_name: group_datos_4
+      weight: 1
+      label: 'Formación '
+      format_settings:
+        formatter: collapsible
+        classes: ' group-datos-3 field-group-div'
+        description: ''
+        show_label: false
+        label_element: h3
+        effect: none
+        speed: fast
+        id: profile2_informacion_privada_full_group_datos_3
+        element: div
+      format_type: html_element
+      region: hidden
+    group_datos_4:
+      children:
+        - field_domiciliacion_banco
+        - field_justificante_bancario
+        - group_datos_3
+        - group_datos_bancarios
+        - group_datos_2
+      parent_name: ''
+      weight: 2
+      label: 'Datos bancarios'
+      format_settings:
+        formatter: collapsible
+        classes: ' group-datos-4 field-group-div'
+        description: ''
+        show_label: false
+        label_element: h3
+        effect: none
+        speed: fast
+        id: profile2_informacion_privada_full_group_datos_4
+        element: div
+      format_type: html_element
+      region: hidden
+    group_archivos:
+      children:
+        - field_archivos_del_usuario
+      parent_name: ''
+      weight: 4
+      label: 'Archivos del usuario'
+      format_settings:
+        formatter: collapsible
+        description: ''
+        show_label: true
+        label_element: h3
+        effect: none
+        speed: fast
+        classes: 'group-archivos field-group-div'
+        id: ''
+        element: div
+      format_type: html_element
+      region: hidden
+  layout_builder:
+    allow_custom: false
+    enabled: true
+    sections:
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: 'Contact information'
+          column_widths: 50-50
+          layout_builder_styles_style: ''
+        components:
+          a9432c6b-2c3d-4332-bb96-0ab366755afc:
+            uuid: a9432c6b-2c3d-4332-bb96-0ab366755afc
+            region: first
+            configuration:
+              id: 'field_block:profile:informacion_privada:field_telefono'
+              label: 'Teléfono principal'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+          960fb069-cce6-492d-a84d-8ff7b7515a61:
+            uuid: 960fb069-cce6-492d-a84d-8ff7b7515a61
+            region: first
+            configuration:
+              id: 'field_block:profile:informacion_privada:field_telefono_2'
+              label: 'Otro teléfono'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 1
+          887db382-6d8f-4e41-bf39-c3848bfe67b0:
+            uuid: 887db382-6d8f-4e41-bf39-c3848bfe67b0
+            region: first
+            configuration:
+              id: 'field_block:profile:informacion_privada:field_email'
+              label: Email
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: basic_string
+                settings: {  }
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 2
+          bf56d017-ddd2-4516-beed-6d8cc272407d:
+            uuid: bf56d017-ddd2-4516-beed-6d8cc272407d
+            region: second
+            configuration:
+              id: 'field_block:profile:informacion_privada:field_domicilio_particular'
+              label: 'Domicilio particular'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: address_display_formatter
+                settings:
+                  address_display:
+                    organization:
+                      glue: ''
+                      weight: '-10'
+                      display: 0
+                    address_line1:
+                      display: '1'
+                      glue: ' <br>'
+                      weight: '-9'
+                    address_line2:
+                      display: '1'
+                      glue: ' '
+                      weight: '-8'
+                    postal_code:
+                      display: '1'
+                      glue: ', '
+                      weight: '-7'
+                    locality:
+                      display: '1'
+                      glue: ' <br>'
+                      weight: '-6'
+                    langcode:
+                      glue: ','
+                      weight: '-5'
+                      display: 0
+                    administrative_area:
+                      display: '1'
+                      glue: ', '
+                      weight: '-4'
+                    country_code:
+                      display: '1'
+                      glue: ', '
+                      weight: '-3'
+                    dependent_locality:
+                      glue: ','
+                      weight: '-2'
+                      display: 0
+                    sorting_code:
+                      glue: ','
+                      weight: '-1'
+                      display: 0
+                    given_name:
+                      glue: ''
+                      weight: '0'
+                      display: 0
+                    family_name:
+                      glue: ','
+                      weight: '1'
+                      display: 0
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional:
+              layout_builder_styles_style: ''
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+          layout_builder_styles_style: ''
+        components:
+          2a3516a3-ce7e-4701-8f68-3ec023849556:
+            uuid: 2a3516a3-ce7e-4701-8f68-3ec023849556
+            region: content
+            configuration:
+              id: 'field_block:profile:informacion_privada:field_aetg_membership_type'
+              label: 'AETG Membership Type'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: entity_reference_revisions_entity_view
+                settings:
+                  view_mode: default
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional:
+              layout_builder_styles_style: profile_table
+            weight: 0
+          421c476f-c010-48af-9e18-36574a51fdb0:
+            uuid: 421c476f-c010-48af-9e18-36574a51fdb0
+            region: content
+            configuration:
+              id: 'field_block:profile:informacion_privada:field_feap_membership_type'
+              label: 'FEAP Membership Type'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: entity_reference_revisions_entity_view
+                settings:
+                  view_mode: default
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional:
+              layout_builder_styles_style: profile_table
+            weight: 1
+        third_party_settings: {  }
+id: profile.informacion_privada.profile_information
+targetEntityType: profile
+bundle: informacion_privada
+mode: profile_information
+content: {  }
+hidden:
+  addtoany: true
+  breadcrumbs: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_aetg_membership_type: true
+  field_alta_aetg: true
+  field_alta_feap: true
+  field_alta_mapfre: true
+  field_apellidos: true
+  field_archivos_del_usuario: true
+  field_area_de_formacion: true
+  field_baja: true
+  field_baja_aetg: true
+  field_baja_feap: true
+  field_baja_mapfre: true
+  field_bic: true
+  field_centro_donde_trabaja: true
+  field_dni: true
+  field_domiciliacion_banco: true
+  field_domicilio_particular: true
+  field_email: true
+  field_envio_de_email: true
+  field_feap_membership_type: true
+  field_fecha_de_firma_de_la_domic: true
+  field_fecha_nacimiento: true
+  field_formacion: true
+  field_formacion_universitaria: true
+  field_geofield: true
+  field_iban_: true
+  field_imagen_usuario: true
+  field_impagos_mapfre: true
+  field_insurances: true
+  field_justificante_bancario: true
+  field_lugar_nacimiento: true
+  field_moroso: true
+  field_moroso_mapfre: true
+  field_motivo_baja_aetg: true
+  field_motivo_baja_mapfre: true
+  field_nombre: true
+  field_notas: true
+  field_num_socio_string: true
+  field_ocupacion: true
+  field_pendiente: true
+  field_seguro_mapfre: true
+  field_telefono: true
+  field_telefono_2: true
+  field_tipo_de_miembro: true
+  search_api_excerpt: true

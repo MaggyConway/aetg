@@ -1,0 +1,10 @@
+uuid: c3c3b447-2991-43a3-aacf-6184808f6c1f
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.ct_news_default_header_image
+label: 'CT News: Default - Header Image'
+targetEntityType: media
+cache: true

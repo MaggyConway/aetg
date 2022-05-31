@@ -1,0 +1,20 @@
+uuid: 59d84fe8-7fb6-46cc-ac5e-8700564bca80
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_dni_cif
+  module:
+    - user
+id: user.user.field_dni_cif
+field_name: field_dni_cif
+entity_type: user
+bundle: user
+label: DNI/CIF
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

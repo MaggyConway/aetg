@@ -1,0 +1,17 @@
+uuid: a46590a3-f44e-4112-92fb-1eb060b9e9bc
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Recurso
+type: recurso
+description: 'Información relacionada con la terapia gestalt: tesinas, artículos, revistas, etc.'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

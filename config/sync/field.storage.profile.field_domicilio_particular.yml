@@ -1,0 +1,23 @@
+uuid: 2134aacc-6117-4606-af8a-8d94b36c135a
+langcode: und
+status: true
+dependencies:
+  module:
+    - address
+    - field_permissions
+    - profile
+third_party_settings:
+  field_permissions:
+    permission_type: custom
+id: profile.field_domicilio_particular
+field_name: field_domicilio_particular
+entity_type: profile
+type: address
+settings: {  }
+module: address
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

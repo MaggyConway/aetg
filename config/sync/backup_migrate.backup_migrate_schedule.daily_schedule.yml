@@ -1,0 +1,15 @@
+uuid: e46576f4-a9d5-49ba-b534-f7465d4c06fc
+langcode: es
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: j-rE9LRcHAh5WPmOIg9glR7GKLw1CkvVnJvKNe376vM
+id: daily_schedule
+label: 'Programa diario'
+enabled: null
+keep: null
+period: null
+cron: null
+source_id: null
+destination_id: null
+settings_profile_id: null

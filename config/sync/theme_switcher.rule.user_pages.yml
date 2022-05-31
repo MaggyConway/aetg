@@ -1,0 +1,16 @@
+uuid: 483c41b8-4606-4e2c-8fb1-c55d12ff8690
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: user_pages
+label: 'User pages'
+weight: 0
+theme: aetg
+admin_theme: aetg
+visibility:
+  request_path:
+    id: request_path
+    pages: '/user/*'
+    negate: false

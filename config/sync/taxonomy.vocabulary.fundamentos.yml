@@ -1,0 +1,8 @@
+uuid: 22dd85ff-413b-4c0b-8f23-a5b629e59274
+langcode: es
+status: true
+dependencies: {  }
+name: 'Fundamentos e influencias'
+vid: fundamentos
+description: 'Terapia Gestalt, Psicoanálisis, Eneagrama, Bioenergética, etc.'
+weight: 0

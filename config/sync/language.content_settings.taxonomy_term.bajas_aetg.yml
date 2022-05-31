@@ -1,0 +1,11 @@
+uuid: a8afc38a-1df0-4630-a24f-5eb3e437e536
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.bajas_aetg
+id: taxonomy_term.bajas_aetg
+target_entity_type_id: taxonomy_term
+target_bundle: bajas_aetg
+default_langcode: site_default
+language_alterable: false

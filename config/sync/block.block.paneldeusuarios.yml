@@ -1,0 +1,22 @@
+uuid: 8af50dc5-2fb7-46d1-870f-4e3d98ea75ee
+langcode: es
+status: false
+dependencies:
+  config:
+    - simple_block.simple_block.dashboard_panel_de_usuarios
+  module:
+    - simple_block
+  theme:
+    - adminimal_theme
+id: paneldeusuarios
+theme: adminimal_theme
+region: header
+weight: null
+provider: null
+plugin: 'simple_block:dashboard_panel_de_usuarios'
+settings:
+  id: 'simple_block:dashboard_panel_de_usuarios'
+  label: 'Panel de usuarios'
+  provider: simple_block
+  label_display: visible
+visibility: {  }

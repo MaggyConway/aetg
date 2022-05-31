@@ -1,0 +1,21 @@
+uuid: e68234c1-0155-4653-8818-3eaa617b80c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_profesorado
+    - profile.type.escuela
+  module:
+    - text
+id: profile.escuela.field_profesorado
+field_name: field_profesorado
+entity_type: profile
+bundle: escuela
+label: Profesorado
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

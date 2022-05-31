@@ -1,0 +1,142 @@
+uuid: a41b381b-7e74-4806-be65-51f9488f2732
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.user.nombre_de_socio_con_tipo
+    - field.field.user.user.commerce_remote_id
+    - field.field.user.user.field_alta_aetg
+    - field.field.user.user.field_alta_feap
+    - field.field.user.user.field_baja
+    - field.field.user.user.field_baja_aetg
+    - field.field.user.user.field_baja_feap
+    - field.field.user.user.field_dni_cif
+    - field.field.user.user.field_envios_comerciales
+    - field.field.user.user.field_full_name
+    - field.field.user.user.field_invoicing_address
+    - field.field.user.user.field_moroso
+    - field.field.user.user.field_motivo_baja_aetg
+    - field.field.user.user.field_notas
+    - field.field.user.user.field_pendiente
+    - field.field.user.user.field_phone_number
+    - field.field.user.user.field_tipo_de_miembro
+    - field.field.user.user.user_picture
+  module:
+    - address_display
+    - empty_fields
+    - field_formatter_class
+    - user
+id: user.user.nombre_de_socio_con_tipo
+targetEntityType: user
+bundle: user
+mode: nombre_de_socio_con_tipo
+content:
+  field_full_name:
+    type: string
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_invoicing_address:
+    type: address_display_formatter
+    weight: 2
+    region: content
+    label: above
+    settings:
+      address_display:
+        organization:
+          glue: ''
+          weight: '-10'
+          display: 0
+        address_line1:
+          display: '1'
+          glue: '<br/>'
+          weight: '-9'
+        address_line2:
+          glue: ''
+          weight: '-8'
+          display: 0
+        postal_code:
+          display: '1'
+          glue: ''
+          weight: '-7'
+        locality:
+          display: '1'
+          glue: ' ('
+          weight: '-6'
+        administrative_area:
+          display: '1'
+          glue: ' )<br/>'
+          weight: '-5'
+        country_code:
+          display: '1'
+          glue: ''
+          weight: '-4'
+        langcode:
+          glue: ','
+          weight: '-3'
+          display: 0
+        dependent_locality:
+          glue: ','
+          weight: '-2'
+          display: 0
+        sorting_code:
+          glue: ','
+          weight: '-1'
+          display: 0
+        given_name:
+          glue: ''
+          weight: '0'
+          display: 0
+        family_name:
+          glue: ''
+          weight: '1'
+          display: 0
+    third_party_settings:
+      empty_fields:
+        handler: ''
+      field_formatter_class:
+        class: ''
+  field_tipo_de_miembro:
+    type: entity_reference_label
+    weight: 1
+    region: content
+    label: inline
+    settings:
+      link: false
+    third_party_settings:
+      empty_fields:
+        handler: ''
+      field_formatter_class:
+        class: ''
+hidden:
+  associate_profiles: true
+  breadcrumbs: true
+  commerce_remote_id: true
+  customer_profiles: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  escuela_profiles: true
+  field_alta_aetg: true
+  field_alta_feap: true
+  field_baja: true
+  field_baja_aetg: true
+  field_baja_feap: true
+  field_dni_cif: true
+  field_envios_comerciales: true
+  field_moroso: true
+  field_motivo_baja_aetg: true
+  field_notas: true
+  field_pendiente: true
+  field_phone_number: true
+  informacion_privada_profiles: true
+  informacion_profesional_profiles: true
+  langcode: true
+  member_for: true
+  school_professional_information_profiles: true
+  school_profiles: true
+  search_api_excerpt: true
+  user_picture: true

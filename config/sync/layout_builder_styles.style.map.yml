@@ -1,0 +1,11 @@
+uuid: 388db7c7-d980-49dd-a894-b66d50067925
+langcode: en
+status: true
+dependencies: {  }
+id: map
+label: Map
+classes: map-row
+type: section
+weight: 0
+block_restrictions: {  }
+layout_restrictions: {  }

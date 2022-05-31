@@ -1,0 +1,8 @@
+uuid: 3269b71a-f26a-4ea4-8a7d-6e7e6b0d26a1
+langcode: es
+status: true
+dependencies: {  }
+name: 'Tipos de documentos administrativos'
+vid: tipo_doc_administrativo
+description: 'Tipos de documentos administrativos: normativa, actas, solicitudes, etc.'
+weight: 0

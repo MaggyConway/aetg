@@ -1,0 +1,11 @@
+uuid: 67c0386d-aa0a-4ed8-80bc-4c95d84b5742
+langcode: es
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+id: dashboard_panel_de_usuarios
+title: 'Panel de usuarios'
+content:
+  value: "<ul>\r\n\t<li><a href=\"/admin/dashboard/panel-de-usuarios\">Acceder al Panel de Usuarios Asociados</a></li>\r\n\t<li><a href=\"/admin/dashboard/panel-de-escuelas\">Acceder al Panel de Escuelas</a></li>\r\n</ul>\r\n"
+  format: basic_html

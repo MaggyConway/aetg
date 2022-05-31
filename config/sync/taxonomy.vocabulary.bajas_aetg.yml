@@ -1,0 +1,8 @@
+uuid: 44569fcb-6208-4396-a6a2-b217140503ec
+langcode: es
+status: true
+dependencies: {  }
+name: 'Bajas AETG'
+vid: bajas_aetg
+description: ''
+weight: 0

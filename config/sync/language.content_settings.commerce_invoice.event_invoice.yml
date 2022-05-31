@@ -1,0 +1,16 @@
+uuid: a795726a-6e00-45d6-aa92-3592a0a5bb4f
+langcode: es
+status: true
+dependencies:
+  config:
+    - commerce_invoice.commerce_invoice_type.event_invoice
+  module:
+    - commerce_invoice
+third_party_settings:
+  commerce_invoice:
+    generate_translations: false
+id: commerce_invoice.event_invoice
+target_entity_type_id: commerce_invoice
+target_bundle: event_invoice
+default_langcode: site_default
+language_alterable: false

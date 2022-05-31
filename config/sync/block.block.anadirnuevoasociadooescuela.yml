@@ -1,0 +1,22 @@
+uuid: 3bd2a287-c13c-4431-b7b4-3d81fe160f71
+langcode: es
+status: false
+dependencies:
+  config:
+    - simple_block.simple_block.dashboard_anadir_perfiles
+  module:
+    - simple_block
+  theme:
+    - adminimal_theme
+id: anadirnuevoasociadooescuela
+theme: adminimal_theme
+region: header
+weight: null
+provider: null
+plugin: 'simple_block:dashboard_anadir_perfiles'
+settings:
+  id: 'simple_block:dashboard_anadir_perfiles'
+  label: 'Añadir nuevo Asociado ó Escuela'
+  provider: simple_block
+  label_display: visible
+visibility: {  }

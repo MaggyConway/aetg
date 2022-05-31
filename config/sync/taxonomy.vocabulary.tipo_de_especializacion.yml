@@ -1,0 +1,8 @@
+uuid: b2773c07-6603-485d-aade-dc54c5850b1b
+langcode: es
+status: true
+dependencies: {  }
+name: 'Tipos de especializaciones'
+vid: tipo_de_especializacion
+description: ''
+weight: 0

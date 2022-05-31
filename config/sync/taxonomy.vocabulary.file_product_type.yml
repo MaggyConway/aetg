@@ -1,0 +1,8 @@
+uuid: 947242d6-ab3f-40e1-bdc1-95d698536fe0
+langcode: es
+status: true
+dependencies: {  }
+name: 'File product type'
+vid: file_product_type
+description: 'magazines, books, etc'
+weight: 0

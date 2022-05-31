@@ -1,0 +1,19 @@
+uuid: 43dff256-c80d-47b9-963a-18f8c26e206e
+langcode: und
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_sitio_web_esp
+field_name: field_sitio_web_esp
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

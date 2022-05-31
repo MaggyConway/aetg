@@ -1,0 +1,11 @@
+uuid: 4328a65c-1c4e-4d2d-abe3-469a232bb725
+langcode: es
+status: true
+dependencies:
+  config:
+    - filter.format.filtered_html
+id: no_asociados_form
+title: 'Trámites para no asociados'
+content:
+  value: "<ol class=\"tramites\">\r\n\t<li><a href=\"/secretaria/hazte-socio-aetg\">Hazte socio</a></li>\r\n\t<li><a href=\"/asociacion/ventajas-servicios-para-socios\">Ventajas de ser socio</a></li>\r\n\t<li><a href=\"/contacto\">Contacta con nosotros</a></li>\r\n\t<li><a href=\"/baja\">Darse de baja</a></li>\r\n</ol>\r\n"
+  format: filtered_html

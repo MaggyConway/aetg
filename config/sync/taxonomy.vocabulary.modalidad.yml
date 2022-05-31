@@ -1,0 +1,8 @@
+uuid: 53e04ce2-11f0-4fd2-91b6-6cdf27e0d32c
+langcode: es
+status: true
+dependencies: {  }
+name: Modalidades
+vid: modalidad
+description: 'A quién va dirigido el trabajo terapéutico'
+weight: 0

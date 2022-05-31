@@ -1,0 +1,15 @@
+p.rrss {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  a {
+    img {
+      border-radius: 0px;
+      width: 22px;
+      height: 22px;
+      margin: 15px 8px;
+    }
+  }
+}

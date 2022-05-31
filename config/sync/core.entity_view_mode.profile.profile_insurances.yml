@@ -1,0 +1,10 @@
+uuid: 8ba651ad-3cb0-4897-bdc4-b56460ab230e
+langcode: en
+status: true
+dependencies:
+  module:
+    - profile
+id: profile.profile_insurances
+label: 'Profile: Insurances'
+targetEntityType: profile
+cache: true

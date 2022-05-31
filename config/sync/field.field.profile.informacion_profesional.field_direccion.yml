@@ -1,0 +1,41 @@
+uuid: f4574e74-ca5a-4ffe-ac6d-2ada525898c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_direccion
+    - profile.type.informacion_profesional
+  module:
+    - address
+id: profile.informacion_profesional.field_direccion
+field_name: field_direccion
+entity_type: profile
+bundle: informacion_profesional
+label: Dirección
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    langcode: es
+    country_code: ES
+    administrative_area: ''
+    locality: ''
+    dependent_locality: null
+    postal_code: ''
+    sorting_code: null
+    address_line1: ''
+    address_line2: ''
+    organization: ''
+    given_name: ''
+    additional_name: null
+    family_name: ''
+default_value_callback: ''
+settings:
+  available_countries: {  }
+  langcode_override: es
+  field_overrides:
+    addressLine2:
+      override: hidden
+  fields: {  }
+field_type: address

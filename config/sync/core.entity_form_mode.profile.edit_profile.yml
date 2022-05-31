@@ -1,0 +1,10 @@
+uuid: a1887c0e-0d1c-47cf-8fc0-000fc7c1023d
+langcode: en
+status: true
+dependencies:
+  module:
+    - profile
+id: profile.edit_profile
+label: 'Edit profile'
+targetEntityType: profile
+cache: true

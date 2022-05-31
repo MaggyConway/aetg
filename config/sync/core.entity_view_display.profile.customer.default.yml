@@ -1,0 +1,99 @@
+uuid: 7a14ddc4-919c-442d-a5a7-bafb3650c0ec
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.profile.customer.address
+    - field.field.profile.customer.tax_number
+    - profile.type.customer
+  enforced:
+    module:
+      - commerce_order
+  module:
+    - address_display
+    - commerce_tax
+    - empty_fields
+    - field_formatter_class
+_core:
+  default_config_hash: zA0MBGUGdWqnBBoC762uDcH92qRZHC8KllbkpOjNUcs
+id: profile.customer.default
+targetEntityType: profile
+bundle: customer
+mode: default
+content:
+  address:
+    type: address_display_formatter
+    weight: 0
+    label: hidden
+    settings:
+      address_display:
+        given_name:
+          display: '1'
+          glue: ''
+          weight: '-10'
+        family_name:
+          display: '1'
+          glue: '<br>'
+          weight: '-9'
+        organization:
+          display: '1'
+          glue: '<br>'
+          weight: '-8'
+        address_line1:
+          display: '1'
+          glue: '<br>'
+          weight: '-7'
+        address_line2:
+          glue: ''
+          weight: '-6'
+          display: 0
+        postal_code:
+          display: '1'
+          glue: ''
+          weight: '-5'
+        locality:
+          display: '1'
+          glue: ' ( '
+          weight: '-4'
+        langcode:
+          glue: ''
+          weight: '-3'
+          display: 0
+        administrative_area:
+          display: '1'
+          glue: ' )<br>'
+          weight: '-2'
+        country_code:
+          display: '1'
+          glue: ''
+          weight: '-1'
+        dependent_locality:
+          glue: ','
+          weight: '0'
+          display: 0
+        sorting_code:
+          glue: ','
+          weight: '1'
+          display: 0
+    third_party_settings:
+      empty_fields:
+        handler: ''
+      field_formatter_class:
+        class: ''
+    region: content
+  tax_number:
+    type: commerce_tax_number_default
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      show_verification: false
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  breadcrumbs: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  private_message_link: true
+  search_api_excerpt: true

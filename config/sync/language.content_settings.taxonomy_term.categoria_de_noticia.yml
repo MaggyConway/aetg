@@ -1,0 +1,11 @@
+uuid: d4be6630-db09-4c42-8f34-7105c09c5251
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.categoria_de_noticia
+id: taxonomy_term.categoria_de_noticia
+target_entity_type_id: taxonomy_term
+target_bundle: categoria_de_noticia
+default_langcode: site_default
+language_alterable: false

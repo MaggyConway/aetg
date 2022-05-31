@@ -1,0 +1,11 @@
+uuid: 6ab130fa-08bc-40b6-aef6-bfb3537373db
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.tema_de_consulta
+id: taxonomy_term.tema_de_consulta
+target_entity_type_id: taxonomy_term
+target_bundle: tema_de_consulta
+default_langcode: site_default
+language_alterable: false

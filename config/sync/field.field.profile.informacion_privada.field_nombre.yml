@@ -1,0 +1,19 @@
+uuid: 1b712107-5b55-44e2-9819-653f07291349
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_nombre
+    - profile.type.informacion_privada
+id: profile.informacion_privada.field_nombre
+field_name: field_nombre
+entity_type: profile
+bundle: informacion_privada
+label: 'Nombre Completo'
+description: 'Si se tienen dos nombres han de ponerse ambos (ej. José Enrique)'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

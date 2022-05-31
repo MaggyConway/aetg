@@ -1,0 +1,29 @@
+uuid: 07c881fb-cb36-41e4-904c-06a0c2aaf06e
+langcode: es
+status: true
+dependencies:
+  config:
+    - facets.facet.videos_filtrar_por_tecnicas
+  module:
+    - facets
+    - system
+  theme:
+    - aetg
+id: videosfiltrarportecnicas
+theme: aetg
+region: content
+weight: -3
+provider: null
+plugin: 'facet_block:videos_filtrar_por_tecnicas'
+settings:
+  id: 'facet_block:videos_filtrar_por_tecnicas'
+  label: 'Videos: Filtrar por técnicas'
+  provider: facets
+  label_display: '0'
+  block_id: videosfiltrarportecnicas
+visibility:
+  request_path:
+    id: request_path
+    pages: /gestalt/recursos/videos
+    negate: false
+    context_mapping: {  }

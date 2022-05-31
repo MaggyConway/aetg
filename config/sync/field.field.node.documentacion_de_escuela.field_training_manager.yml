@@ -1,0 +1,21 @@
+uuid: e98084c5-2b87-4713-b5c6-d439707a5b2a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_training_manager
+    - node.type.documentacion_de_escuela
+id: node.documentacion_de_escuela.field_training_manager
+field_name: field_training_manager
+entity_type: node
+bundle: documentacion_de_escuela
+label: 'Responsable de formación'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: '[current-user:escuela:field_responsable_formacion_esc]'
+default_value_callback: field_default_token_default_value_callback
+settings: {  }
+field_type: string

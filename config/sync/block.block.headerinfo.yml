@@ -1,0 +1,22 @@
+uuid: 39493f6e-f113-492f-b6ba-30f9856d9380
+langcode: es
+status: true
+dependencies:
+  config:
+    - simple_block.simple_block.header_info
+  module:
+    - simple_block
+  theme:
+    - aetg
+id: headerinfo
+theme: aetg
+region: preheader_left
+weight: 0
+provider: null
+plugin: 'simple_block:header_info'
+settings:
+  id: 'simple_block:header_info'
+  label: 'Header info'
+  provider: simple_block
+  label_display: '0'
+visibility: {  }

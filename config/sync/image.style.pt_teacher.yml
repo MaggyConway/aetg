@@ -1,0 +1,15 @@
+uuid: bb8cfb24-264b-42b7-b402-f5df0b082fcc
+langcode: en
+status: true
+dependencies: {  }
+name: pt_teacher
+label: 'PT Teacher'
+effects:
+  64dc7645-6984-4af2-a852-8a1f09571d35:
+    uuid: 64dc7645-6984-4af2-a852-8a1f09571d35
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 100
+      height: 100
+      anchor: center-center

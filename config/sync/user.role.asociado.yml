@@ -1,0 +1,50 @@
+uuid: cee1b026-3c2e-48d9-8a6c-d59e92822de8
+langcode: en
+status: true
+dependencies: {  }
+id: asociado
+label: asociado
+weight: 3
+is_admin: null
+permissions:
+  - 'access own webform results'
+  - 'access own webform submissions'
+  - 'create field_localizacion'
+  - 'create field_nombre_proff'
+  - 'create field_ocupacion'
+  - 'create informacion_privada profile'
+  - 'create informacion_profesional profile'
+  - 'delete own informacion_profesional profile'
+  - 'delete privatemsg'
+  - 'delete terms in 4'
+  - 'edit own account'
+  - 'edit own field_localizacion'
+  - 'edit own field_nombre_proff'
+  - 'edit own informacion_privada profile'
+  - 'edit own informacion_profesional profile'
+  - 'edit terms in 4'
+  - 'read privatemsg'
+  - 'skip CAPTCHA'
+  - 'update own informacion_privada profile'
+  - 'update own informacion_profesional profile'
+  - 'use  The form mode associate linked to  user entity( user )'
+  - 'use  The form mode default linked to  profile entity( informacion_privada )'
+  - 'use  The form mode default linked to  profile entity( informacion_profesional )'
+  - 'use  The form mode edit_account linked to  user entity( user )'
+  - 'use  The form mode edit_profile linked to  profile entity( informacion_privada )'
+  - 'use  The form mode edit_profile linked to  profile entity( informacion_profesional )'
+  - 'use link to login one time'
+  - 'use user.associate form mode'
+  - 'view Terms and Conditions'
+  - 'view field_adjunto'
+  - 'view field_apellidos_prof'
+  - 'view field_descargas_privadas'
+  - 'view field_localizacion'
+  - 'view field_nombre_proff'
+  - 'view own field_apellidos_prof'
+  - 'view own field_descargas_privadas'
+  - 'view own field_localizacion'
+  - 'view own field_nombre_proff'
+  - 'view own informacion_privada profile'
+  - 'view own informacion_profesional profile'
+  - 'view own profile'

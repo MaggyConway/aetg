@@ -1,0 +1,47 @@
+uuid: 8941ebc2-e169-462a-b220-3743cf6fbdc0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.feap_membership_type.field_end_date
+    - field.field.paragraph.feap_membership_type.field_start_date
+    - field.field.paragraph.feap_membership_type.field_taxonomy_term
+    - field.field.paragraph.feap_membership_type.field_text
+    - paragraphs.paragraphs_type.feap_membership_type
+  module:
+    - datetime
+    - text
+id: paragraph.feap_membership_type.default
+targetEntityType: paragraph
+bundle: feap_membership_type
+mode: default
+content:
+  field_end_date:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_start_date:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_taxonomy_term:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_text:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+hidden:
+  created: true
+  status: true

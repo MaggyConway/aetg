@@ -1,0 +1,272 @@
+header {
+    width: 100%;
+    .preheader {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-right: calc((100% - 1266px) / 2);
+        padding-left: calc((100% - 1266px) / 2);
+        padding-top: 15px;
+        padding-bottom: 15px;
+        background-color: #f7f7f7;
+        color: #3a3b3c;
+        font-size: 13px;
+        margin-bottom: 0;
+
+        @include breakpoint(desktop-small) {
+            padding: 15px 30px;
+        }
+
+        @include breakpoint(mobile-large) {
+            padding: 15px 20px;
+        }
+
+        @include breakpoint(mobile-small) {
+            padding: 15px 10px;
+            flex-direction: column-reverse;
+            justify-content: flex-start;
+            align-items: flex-start;
+            width: 100%;
+        }
+
+        > .region {
+            width: auto;
+            max-width: 50%;
+
+            &.region-preheader-left {
+                .block-simple-blockheader-info {
+                    > .str {
+                        @include breakpoint(mobile-middle) {
+                            display: flex;
+                            justify-content: flex-start;
+                            align-items: flex-start;
+                            flex-wrap: wrap;
+                            width: auto;
+                            font-size: 0;
+                            line-height: 0;
+                            margin-right: 20px;
+                        }
+
+                        @include breakpoint(mobile-small) {
+                            margin-right: 0;
+                        }
+
+                        a, p {
+                            line-height: 22px;
+                            @include breakpoint(mobile-middle) {
+                                font-size: 13px;
+                            }
+                        }
+
+                        a {
+                            white-space: nowrap;
+                        }
+                    }
+                }
+
+                a {
+                    margin-right: 40px;
+                    @include breakpoint(tablet) {
+                        width: 48%;
+                    }
+
+                    @include breakpoint(mobile-middle) {
+                        width: 100%;
+                        display: flex;
+                        flex-wrap: nowrap;
+                        justify-content: flex-start;
+                        align-items: center;
+                        white-space: nowrap;
+                    }
+                }
+            }
+
+            &.region-preheader-right {
+                display: flex;
+                max-width: max-content;
+                justify-content: flex-end;
+                align-items: center;
+                > nav {
+                    margin-right: 25px;
+                }
+
+                @include breakpoint(mobile-small) {
+                    margin: 0 auto 10px;
+                }
+            }
+
+            @include breakpoint(IPad-Pro) {
+                max-width: unset;
+            }
+        }
+
+        #block-aetg-account-menu {
+            position: relative;
+            > .menu {
+                @include list-reset;
+
+                .user-login-link {
+                    padding-top: 0;
+                    line-height: 20px;
+                    a, span {
+                        @include subtitle-fz-14-lh-20-bold-upper;
+                        color: $blue;
+                        transition: color 0.3s ease;
+                        &:hover {
+                            color: $blue-hover;
+                        }
+
+                        &:after {
+                            display: none;
+                        }
+                    }
+                }
+
+                > .user-icon {
+                    padding-left: 0;
+
+                    &::marker {
+                        content: "";
+                    }
+
+                    > span {
+                        display: flex;
+                        justify-content: flex-end;
+                        user-select: none;
+                        width: 40px;
+                        height: 40px;
+                        overflow: hidden;
+                        color: transparent;
+                        border-radius: 50%;
+                        cursor: pointer;
+                        background: #ededed url(/themes/custom/aetg/dist/images/user-profile-icon.svg) no-repeat 50%;
+                        background-size: 16px;
+                    }
+
+                    > .menu {
+                        @include list-reset;
+                        position: absolute;
+                        opacity: 0;
+                        visibility: hidden;
+                        transition: all .3s ease-in-out;
+                        z-index: 9999;
+                        top: 55px;
+                        right: -30px;
+                        background-color: #fff;
+                        box-shadow: 0px 20px 100px $shadow-color;
+                        border-radius: 5px;
+                        padding: 46px 25px 41px;
+                        min-width: 210px;
+
+                        &:before {
+                            position: absolute;
+                            content: "";
+                            right: 45px;
+                            top: -5px;
+                            background: #fff;
+                            transform: rotate(45deg);
+                            width: 15px;
+                            height: 15px;
+                            z-index: 30;
+                        }
+
+                        > .menu-item {
+                            width: 100%;
+                            &::marker {
+                                content: '';
+                                display: none;
+                            }
+
+                            a {
+                                @include text-fz-14-lh-20;
+                                text-transform: capitalize;
+                                color: $color-1;
+                                white-space: nowrap;
+                                position: relative;
+                                padding-left: 30px;
+                                width: 100%;
+
+                                &:before {
+                                    position: absolute;
+                                    content: "";
+                                    left: 0;
+                                    top: 55%;
+                                    transform: translateY(-50%);
+                                    width: 16px;
+                                    height: 16px;
+                                    background: url("../../assets/images/account-menu/default.svg") no-repeat center center;
+                                }
+
+                                &.user-account {
+                                    &:before {
+                                        background: url("../../assets/images/account-menu/user-profile-icon.svg") no-repeat center center;
+                                    }
+                                }
+
+                                &.user-dashboard {
+                                    &:before {
+                                        background: url("../../assets/images/account-menu/panel.svg") no-repeat center center;
+                                    }
+                                }
+
+                                &[data-drupal-link-system-path="user/logout"] {
+                                    &:before { // icon
+                                        background: url("../../assets/images/account-menu/logout.svg") no-repeat center center;
+                                    }
+                                }
+
+                                &.user-cart {
+                                    &:before {
+                                        background: url("../../assets/images/account-menu/cart.svg") no-repeat center center;
+                                    }
+                                }
+                            }
+
+                            &:not(:last-of-type) {
+                                margin-bottom: 20px;
+                            }
+
+                            &:last-of-type {
+                                position: relative;
+                                padding-top: 10px;
+
+                                &:after { // border on top
+                                    position: absolute;
+                                    content: "";
+                                    top: 0;
+                                    left: 0;
+                                    width: 100%;
+                                    height: 1px;
+                                    background-color: $color-F2;
+                                }
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        > .menu {
+                            opacity: 1;
+                            visibility: visible;
+                        }
+
+                        @include breakpoint(IPad-Pro) {
+                            > .menu {
+                                opacity: 0;
+                                visibility: hidden;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.opened {
+                @include breakpoint(IPad-Pro) {
+                    > .menu > .user-icon > .menu {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+uuid: 473b4bfc-4a26-4418-90c7-f1559dd9701e
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraph_view_mode
+third_party_settings:
+  paragraph_view_mode:
+    enabled: false
+id: mapfre_insurances
+label: Insurances
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

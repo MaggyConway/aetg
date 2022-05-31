@@ -1,0 +1,255 @@
+uuid: ef523628-824d-453e-9d1e-02924afceeac
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.recurso.body
+    - field.field.node.recurso.field_adjunto
+    - field.field.node.recurso.field_autor
+    - field.field.node.recurso.field_editorial
+    - field.field.node.recurso.field_fecha_de_publicacion
+    - field.field.node.recurso.field_fundamentos
+    - field.field.node.recurso.field_has_physical_file
+    - field.field.node.recurso.field_image
+    - field.field.node.recurso.field_imagen
+    - field.field.node.recurso.field_imagen_grande
+    - field.field.node.recurso.field_links
+    - field.field.node.recurso.field_media
+    - field.field.node.recurso.field_modalidad
+    - field.field.node.recurso.field_product_reference
+    - field.field.node.recurso.field_relacionados
+    - field.field.node.recurso.field_tecnicas
+    - field.field.node.recurso.field_temas
+    - field.field.node.recurso.field_tipo_de_recurso
+    - field.field.node.recurso.field_tutor_tesina
+    - field.field.node.recurso.field_video
+    - image.style.ct_resource_teaser
+    - node.type.recurso
+  module:
+    - datetime
+    - field_formatter_class
+    - image
+    - layout_builder
+    - layout_discovery
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: Header
+          layout_builder_styles_style: ''
+        components:
+          f11ac578-4204-4c6a-bb32-1c6dafe4abd5:
+            uuid: f11ac578-4204-4c6a-bb32-1c6dafe4abd5
+            region: content
+            configuration:
+              id: 'field_block:node:recurso:field_media'
+              label: 'Header image'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: ct_resource_teaser
+                third_party_settings:
+                  empty_fields:
+                    handler: ''
+                  field_formatter_class:
+                    class: ''
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional:
+              layout_builder_styles_style: ''
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          7fedc5a3-e946-4eae-8aa5-cd4407453019:
+            uuid: 7fedc5a3-e946-4eae-8aa5-cd4407453019
+            region: content
+            configuration:
+              id: 'field_block:node:recurso:field_autor'
+              label: Autor/a
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_label
+                settings:
+                  link: true
+                third_party_settings:
+                  empty_fields:
+                    handler: ''
+                  field_formatter_class:
+                    class: ''
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional:
+              layout_builder_styles_style: ''
+            weight: 2
+          7cba3b75-7cdd-4c14-abe8-11ac4ca9b9b0:
+            uuid: 7cba3b75-7cdd-4c14-abe8-11ac4ca9b9b0
+            region: content
+            configuration:
+              id: 'field_block:node:recurso:field_fecha_de_publicacion'
+              label: 'Fecha de publicación'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: datetime_custom
+                settings:
+                  timezone_override: ''
+                  date_format: 'j \d\e F \d\e Y'
+                third_party_settings:
+                  empty_fields:
+                    handler: ''
+                  field_formatter_class:
+                    class: ''
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional:
+              layout_builder_styles_style: ''
+            weight: 3
+          2868be28-3a2e-4e9c-8310-141c8da0ea60:
+            uuid: 2868be28-3a2e-4e9c-8310-141c8da0ea60
+            region: content
+            configuration:
+              id: 'field_block:node:recurso:field_modalidad'
+              label: Modalidad
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_label
+                settings:
+                  link: true
+                third_party_settings:
+                  empty_fields:
+                    handler: ''
+                  field_formatter_class:
+                    class: ''
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional:
+              layout_builder_styles_style: ''
+            weight: 5
+          3b1a723d-f4c4-4a86-b817-a79df64152ec:
+            uuid: 3b1a723d-f4c4-4a86-b817-a79df64152ec
+            region: content
+            configuration:
+              id: 'field_block:node:recurso:title'
+              label: Título
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: string
+                settings:
+                  link_to_entity: true
+                third_party_settings:
+                  empty_fields:
+                    handler: ''
+                  field_formatter_class:
+                    class: ''
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional:
+              layout_builder_styles_style: ''
+            weight: 1
+        third_party_settings: {  }
+id: node.recurso.teaser
+targetEntityType: node
+bundle: recurso
+mode: teaser
+content:
+  field_autor:
+    label: inline
+    weight: 1
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_fecha_de_publicacion:
+    label: inline
+    weight: 2
+    type: datetime_default
+    settings:
+      format_type: fecha_de_publicacion
+      timezone_override: ''
+    third_party_settings: {  }
+    region: content
+  field_fundamentos:
+    type: entity_reference_label
+    weight: 3
+    region: content
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_image:
+    type: image
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: ct_resource_teaser
+      image_link: content
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+  field_modalidad:
+    type: entity_reference_label
+    weight: 4
+    region: content
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_temas:
+    type: entity_reference_label
+    weight: 5
+    region: content
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  body: true
+  breadcrumbs: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_adjunto: true
+  field_editorial: true
+  field_has_physical_file: true
+  field_imagen: true
+  field_imagen_grande: true
+  field_links: true
+  field_media: true
+  field_product_reference: true
+  field_relacionados: true
+  field_tecnicas: true
+  field_tipo_de_recurso: true
+  field_tutor_tesina: true
+  field_video: true
+  langcode: true
+  links: true
+  private_message_link: true
+  search_api_excerpt: true

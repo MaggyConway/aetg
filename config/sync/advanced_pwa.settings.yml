@@ -1,0 +1,17 @@
+status:
+  all: 1
+name: AETG
+short_name: AETG
+icons:
+  icon:
+    - '29671'
+start_url: /
+background_color: '#e5e5e5'
+theme_color: '#ffffff'
+display: standalone
+orientation: portrait
+prompt_timing: 3
+_core:
+  default_config_hash: JqWa8QbtEoe7XmjZKW3EhsaxgqdFAsxFUC18xUULtBo
+langcode: es
+display_type: modal

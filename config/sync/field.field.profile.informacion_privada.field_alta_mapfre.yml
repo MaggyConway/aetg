@@ -1,0 +1,21 @@
+uuid: cfeea1da-e78c-405c-92a8-894b6a0bbab7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_alta_mapfre
+    - profile.type.informacion_privada
+  module:
+    - datetime
+id: profile.informacion_privada.field_alta_mapfre
+field_name: field_alta_mapfre
+entity_type: profile
+bundle: informacion_privada
+label: 'Alta Mapfre'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

@@ -1,0 +1,19 @@
+uuid: fb982a9f-123c-461b-8e9b-81e5c6db5432
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_director_escuela
+    - profile.type.escuela
+id: profile.escuela.field_director_escuela
+field_name: field_director_escuela
+entity_type: profile
+bundle: escuela
+label: Director/as
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

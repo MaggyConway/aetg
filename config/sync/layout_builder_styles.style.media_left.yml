@@ -1,0 +1,11 @@
+uuid: 416d186f-80e9-4465-9a34-9a4635a9bfba
+langcode: en
+status: true
+dependencies: {  }
+id: media_left
+label: 'Media Left'
+classes: media-left
+type: section
+weight: 0
+block_restrictions: {  }
+layout_restrictions: {  }

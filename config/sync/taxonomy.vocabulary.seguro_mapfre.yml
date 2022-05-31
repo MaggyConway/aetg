@@ -1,0 +1,8 @@
+uuid: a9765c20-686b-471f-868b-31bc9c0a2245
+langcode: es
+status: true
+dependencies: {  }
+name: Seguros
+vid: seguro_mapfre
+description: ''
+weight: 0

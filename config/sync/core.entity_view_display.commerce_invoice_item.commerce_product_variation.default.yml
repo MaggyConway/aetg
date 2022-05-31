@@ -1,0 +1,17 @@
+uuid: 028e421b-4963-4378-b5e3-50d13b3b8557
+langcode: es
+status: true
+dependencies:
+  module:
+    - commerce_invoice
+    - text
+id: commerce_invoice_item.commerce_product_variation.default
+targetEntityType: commerce_invoice_item
+bundle: commerce_product_variation
+mode: default
+content: {  }
+hidden:
+  breadcrumbs: true
+  langcode: true
+  search_api_excerpt: true
+  unit_price: true

@@ -1,0 +1,25 @@
+aetg_common.user.profile:
+  path: "/user/profile"
+  defaults:
+    _controller: '\Drupal\aetg_common\Controller\AetgController::profile'
+  requirements:
+    _user_is_logged_in: "TRUE"
+aetg_common.user.orders:
+  path: "/user/orders"
+  defaults:
+    _controller: '\Drupal\aetg_common\Controller\AetgController::orders'
+  requirements:
+    _user_is_logged_in: "TRUE"
+aetg_common.user.invoices:
+  path: "/user/invoices"
+  defaults:
+    _controller: '\Drupal\aetg_common\Controller\AetgController::invoices'
+  requirements:
+    _user_is_logged_in: "TRUE"
+aetg_common.dashboard:
+  path: '/admin/dashboard'
+  defaults:
+    _controller: '\Drupal\aetg_common\Controller\AetgController::dashboard'
+    _title: 'Dashboard'
+  requirements:
+    _role: 'administrator+personal_aetg'

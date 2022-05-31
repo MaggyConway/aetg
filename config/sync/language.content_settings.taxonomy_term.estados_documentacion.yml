@@ -1,0 +1,11 @@
+uuid: f2034c96-d8bc-4ca7-8457-99215c60fb0c
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.estados_documentacion
+id: taxonomy_term.estados_documentacion
+target_entity_type_id: taxonomy_term
+target_bundle: estados_documentacion
+default_langcode: site_default
+language_alterable: false

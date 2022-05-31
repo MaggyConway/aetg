@@ -1,0 +1,15 @@
+uuid: c0d68cae-bac8-4521-8613-3c840b46a7b1
+name: AETG
+mail: info@aetg.es
+slogan: 'Asociación Española de Terapia Gestalt'
+page:
+  403: ''
+  404: ''
+  front: /node/2
+admin_compact_mode: false
+weight_select_max: 100
+langcode: es
+default_langcode: es
+_core:
+  default_config_hash: yTxtFqBHnEWxQswuWvkjE8mKw2t8oKuCL1q8KnfHuGE
+mail_notification: info@aetg.es

@@ -1,0 +1,222 @@
+uuid: 6c15f761-3766-4c72-a367-c8080ce32122
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.related_event
+    - field.field.node.event.body
+    - field.field.node.event.field_address
+    - field.field.node.event.field_adjunto
+    - field.field.node.event.field_date_range
+    - field.field.node.event.field_documento_adjunto_publico
+    - field.field.node.event.field_event_type
+    - field.field.node.event.field_is_online
+    - field.field.node.event.field_media
+    - field.field.node.event.field_organizers
+    - field.field.node.event.field_paragraphs
+    - field.field.node.event.field_product_reference
+    - field.field.node.event.field_relacionados
+    - node.type.event
+  module:
+    - address
+    - layout_builder
+    - layout_discovery
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: ''
+          column_widths: 25-75
+          layout_builder_styles_style: ''
+        components:
+          5df870de-4ca0-44ee-a28f-33a34409e5e9:
+            uuid: 5df870de-4ca0-44ee-a28f-33a34409e5e9
+            region: first
+            configuration:
+              id: 'field_block:node:event:field_media'
+              label: 'Header image'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: ct_event_related_event
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+          91d93dc2-d099-4d62-b38f-987e3578e0f5:
+            uuid: 91d93dc2-d099-4d62-b38f-987e3578e0f5
+            region: second
+            configuration:
+              id: 'field_block:node:event:field_address'
+              label: Address
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: address_display_formatter
+                settings:
+                  address_display:
+                    organization:
+                      glue: ''
+                      weight: '-1'
+                      display: 0
+                    address_line1:
+                      glue: ''
+                      weight: '0'
+                      display: 0
+                    address_line2:
+                      glue: ','
+                      weight: '1'
+                      display: 0
+                    locality:
+                      display: '1'
+                      glue: ','
+                      weight: '2'
+                    postal_code:
+                      glue: ''
+                      weight: '3'
+                      display: 0
+                    country_code:
+                      glue: ''
+                      weight: '4'
+                      display: 0
+                    langcode:
+                      glue: ','
+                      weight: '100'
+                      display: 0
+                    administrative_area:
+                      glue: ','
+                      weight: '100'
+                      display: 0
+                    dependent_locality:
+                      glue: ','
+                      weight: '100'
+                      display: 0
+                    sorting_code:
+                      glue: ','
+                      weight: '100'
+                      display: 0
+                    given_name:
+                      glue: ''
+                      weight: '100'
+                      display: 0
+                    family_name:
+                      glue: ','
+                      weight: '100'
+                      display: 0
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional:
+              layout_builder_styles_style: ''
+            weight: 2
+          866613ff-d54a-4cda-8067-0e1077162054:
+            uuid: 866613ff-d54a-4cda-8067-0e1077162054
+            region: second
+            configuration:
+              id: 'field_block:node:event:title'
+              label: Title
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: string
+                settings:
+                  link_to_entity: true
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+          8bb7855b-6c7e-4400-a1bf-029afce920c2:
+            uuid: 8bb7855b-6c7e-4400-a1bf-029afce920c2
+            region: second
+            configuration:
+              id: 'field_block:node:event:field_date_range'
+              label: 'Date range'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: daterange_custom
+                settings:
+                  timezone_override: ''
+                  date_format: 'j \d\e F \d\e Y'
+                  separator: '-'
+                third_party_settings:
+                  empty_fields:
+                    handler: ''
+                  field_formatter_class:
+                    class: ''
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional:
+              layout_builder_styles_style: ''
+            weight: 1
+        third_party_settings: {  }
+id: node.event.related_event
+targetEntityType: node
+bundle: event
+mode: related_event
+content:
+  field_address:
+    type: address_default
+    weight: 1
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_media:
+    type: entity_reference_entity_view
+    weight: 0
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+hidden:
+  addtoany: true
+  body: true
+  breadcrumbs: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_adjunto: true
+  field_date_range: true
+  field_documento_adjunto_publico: true
+  field_event_type: true
+  field_is_online: true
+  field_organizers: true
+  field_paragraphs: true
+  field_product_reference: true
+  field_relacionados: true
+  langcode: true
+  links: true
+  private_message_link: true
+  search_api_excerpt: true

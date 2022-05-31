@@ -1,0 +1,15 @@
+uuid: e4706ba6-d990-4c5a-9a07-39edd225b9f8
+langcode: en
+status: true
+dependencies: {  }
+name: ct_event_teaser
+label: 'CT Event: Teaser'
+effects:
+  90c80d14-fd29-4e67-8d7c-b08d34d05732:
+    uuid: 90c80d14-fd29-4e67-8d7c-b08d34d05732
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 350
+      height: 233
+      anchor: center-center

@@ -1,0 +1,19 @@
+uuid: 818898e1-043e-4623-9c19-0168955c4d58
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_fax
+    - profile.type.escuela
+id: profile.escuela.field_fax
+field_name: field_fax
+entity_type: profile
+bundle: escuela
+label: Fax
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

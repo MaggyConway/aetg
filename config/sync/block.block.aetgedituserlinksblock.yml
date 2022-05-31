@@ -1,0 +1,26 @@
+uuid: 5035fb79-45d0-4c62-a8c7-dd3e0937e80b
+langcode: en
+status: true
+dependencies:
+  module:
+    - aetg_common
+    - system
+  theme:
+    - aetg
+id: aetgedituserlinksblock
+theme: aetg
+region: content
+weight: 1
+provider: null
+plugin: aetg_edit_user_links
+settings:
+  id: aetg_edit_user_links
+  label: 'AETG Edit user links block'
+  provider: aetg_common
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: "/user/*/edit\r\n/user/*/informacion_privada\r\n/user/*/informacion_profesional\r\n/user/*/school_professional_information\r\n/user/*/escuela"
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,24 @@
+uuid: 2e370439-4442-45a8-a1d3-f1362a558ad2
+langcode: es
+status: true
+dependencies:
+  module:
+    - datetime
+    - field_permissions
+    - profile
+third_party_settings:
+  field_permissions:
+    permission_type: custom
+id: profile.field_baja_feap
+field_name: field_baja_feap
+entity_type: profile
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,23 @@
+uuid: 8311a757-3f81-4979-8421-1421b894c1dd
+langcode: es
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.event
+    - field.storage.commerce_product_variation.field_member_price
+id: commerce_product_variation.event.field_member_price
+field_name: field_member_price
+entity_type: commerce_product_variation
+bundle: event
+label: 'Precio para usuarios asociados'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: €
+  suffix: ''
+field_type: float

@@ -1,0 +1,18 @@
+uuid: a0b563d7-e50b-468d-8d0a-8776129fad4d
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraph_view_mode
+    - paragraphs_browser
+third_party_settings:
+  paragraph_view_mode:
+    enabled: true
+  paragraphs_browser:
+    image_path: 'public://image_title_text_link.png'
+id: image_title_text_and_link
+label: 'Image, title, text and link'
+icon_uuid: null
+icon_default: null
+description: 'Secretaría, La Tienda Online'
+behavior_plugins: {  }

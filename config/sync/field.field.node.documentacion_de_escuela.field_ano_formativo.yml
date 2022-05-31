@@ -1,0 +1,21 @@
+uuid: b4a233ab-8447-4423-ac34-f1c0c7d47469
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ano_formativo
+    - node.type.documentacion_de_escuela
+  module:
+    - datetime
+id: node.documentacion_de_escuela.field_ano_formativo
+field_name: field_ano_formativo
+entity_type: node
+bundle: documentacion_de_escuela
+label: 'Año formativo'
+description: '* En el campo <strong>Título</strong> se ha de indicar una frase que resuma el tipo de envío y año sobre el que versa la documentación. Ejemplo: "Acreditaciones de alumnos 2018" o "Certificados de horas de supervisión de ''Alumno 1'' 2030".'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

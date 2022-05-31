@@ -1,0 +1,34 @@
+uuid: 5d61f4eb-08b8-47d3-936b-f0a795d9b931
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_relacionados
+    - node.type.documento_secretaria
+    - node.type.page
+    - node.type.recurso
+id: node.page.field_relacionados
+field_name: field_relacionados
+entity_type: node
+bundle: page
+label: 'Véase también'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      actividad: actividad
+      documento_secretaria: documento_secretaria
+      recurso: recurso
+      page: page
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 0
+field_type: entity_reference

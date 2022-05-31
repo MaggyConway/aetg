@@ -1,0 +1,11 @@
+uuid: 3d9a08de-6f4d-4312-a47f-3116ed1181c1
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.grupo_de_envio
+id: taxonomy_term.grupo_de_envio
+target_entity_type_id: taxonomy_term
+target_bundle: grupo_de_envio
+default_langcode: site_default
+language_alterable: false

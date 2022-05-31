@@ -1,0 +1,29 @@
+uuid: 2972879d-6d87-4ca6-9745-843adb8a52cc
+langcode: es
+status: true
+dependencies:
+  config:
+    - facets.facet.tesinas_filtrar_por_fundamentos_e_influencias
+  module:
+    - facets
+    - system
+  theme:
+    - aetg
+id: tesinasfiltrarporfundamentoseinfluencias
+theme: aetg
+region: content
+weight: -13
+provider: null
+plugin: 'facet_block:tesinas_filtrar_por_fundamentos_e_influencias'
+settings:
+  id: 'facet_block:tesinas_filtrar_por_fundamentos_e_influencias'
+  label: 'Tesinas: Filtrar por fundamentos e influencias'
+  provider: facets
+  label_display: '0'
+  block_id: tesinasfiltrarporfundamentoseinfluencias
+visibility:
+  request_path:
+    id: request_path
+    pages: /gestalt/recursos/tesinas
+    negate: false
+    context_mapping: {  }

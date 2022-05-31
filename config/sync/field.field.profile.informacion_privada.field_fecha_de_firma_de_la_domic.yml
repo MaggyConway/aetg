@@ -1,0 +1,19 @@
+uuid: 8ae6cbc1-5b93-4fd6-ae18-adcd9b0f16fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_fecha_de_firma_de_la_domic
+    - profile.type.informacion_privada
+id: profile.informacion_privada.field_fecha_de_firma_de_la_domic
+field_name: field_fecha_de_firma_de_la_domic
+entity_type: profile
+bundle: informacion_privada
+label: 'Fecha de firma de la domiciliación bancaria'
+description: 'Ejemplo: 16-04-2022 (DD-MM-AAAA)'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

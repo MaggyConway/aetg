@@ -1,0 +1,9 @@
+uuid: 7f088aea-8c44-4d29-9a41-c0dc80f3cc1f
+langcode: es
+status: true
+dependencies: {  }
+id: analitica
+label: Analíticas
+description: 'Cookies relacionadas con el análisis y estadísticas de uso de la página web.'
+checkbox_default_state: unchecked
+weight: -8

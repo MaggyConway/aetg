@@ -1,0 +1,11 @@
+uuid: 25b3cb33-075c-4d8d-9861-1a2021eaf7c3
+langcode: es
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+id: footer_luthiers
+title: 'Footer Luthiers'
+content:
+  value: "<p><a href=\"https://paginaswebparapsicologos.com\">Páginas web para psicólogos</a>\r\n<span>by Luthiers de Webs.</span></p>\r\n"
+  format: full_html

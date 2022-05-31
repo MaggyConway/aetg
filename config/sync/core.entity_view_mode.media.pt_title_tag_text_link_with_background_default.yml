@@ -1,0 +1,10 @@
+uuid: f60d93d2-efe7-4aea-bbf9-15b5abce0c03
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.pt_title_tag_text_link_with_background_default
+label: 'PT Title, tag, text, link with background: Default'
+targetEntityType: media
+cache: true

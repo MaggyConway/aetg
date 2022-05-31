@@ -1,0 +1,287 @@
+uuid: 9e59e4a4-dd73-462a-b787-251d5e2eff3b
+langcode: es
+status: open
+dependencies:
+  module:
+    - aetg_common
+open: null
+close: null
+weight: 0
+uid: 1
+template: false
+archive: false
+id: become_associated_user
+title: 'Hazte socio'
+description: ''
+category: ''
+elements: "header:\n  '#type': processed_text\n  '#text': |\n    <h3>Hola, [current-user:field_full_name]</h3>\n    \n    <p>[current-user:mail]</p>\n    \n    <p>Hazte socia/o rellenando el siguiente formulario. Te recordamos que has de rellenar todos los datos, por lo que ten preparada toda la información solicitada, así como la documentación necesaria antes de empezar a completarlo.</p>\n    \n  '#format': basic_html\nnota:\n  '#type': processed_text\n  '#display_on': both\n  '#text': |\n    <p>* No escribir en mayúsculas.</p>\n    \n  '#format': basic_html\npersonal_information:\n  '#type': fieldset\n  '#title': 'Datos personales'\n  '#required': true\n  full_name:\n    '#type': textfield\n    '#title': 'Nombre completo'\n    '#required': true\n    '#default_value': '[current-user:field_full_name]'\n  surnames:\n    '#type': textfield\n    '#title': Apellidos\n    '#required': true\n  dni_nie:\n    '#type': textfield\n    '#title': 'DNI/NIE o Pasaporte'\n    '#required': true\n    '#default_value': '[current-user:field_dni_cif]'\n  num_socio:\n    '#type': textfield\n    '#title': 'Num socio'\n    '#access_create_roles':\n      - administrator\n      - personal_aetg\n    '#access_update_roles':\n      - administrator\n      - personal_aetg\n    '#access_view_roles':\n      - administrator\n      - personal_aetg\n  image:\n    '#type': webform_image_file\n    '#title': Imagen\n    '#required': true\n  birthplace:\n    '#type': textfield\n    '#title': 'Lugar de nacimiento'\n    '#required': true\n  birthday:\n    '#type': date\n    '#title': 'Fecha de nacimiento'\n    '#required': true\n    '#date_date_format': ''\ncontacts:\n  '#type': fieldset\n  '#title': 'Datos de contacto'\n  '#required': true\n  address:\n    '#type': address\n    '#title': 'Domicilio particular'\n    '#title_display': before\n    '#required': true\n    '#default_value':\n      country_code: '[current-user:field_invoicing_address:country_code]'\n      langcode: es\n      given_name: null\n      family_name: null\n      organization: null\n      address_line1: '[current-user:field_invoicing_address:address_line1]'\n      address_line2: '[current-user:field_invoicing_address:address_line2]'\n      locality: '[current-user:field_invoicing_address:locality]'\n      administrative_area: '[current-user:field_invoicing_address:administrative_area]'\n      postal_code: '[current-user:field_invoicing_address:postal_code]'\n    '#available_countries':\n      - ES\n    '#langcode_override': es\n    '#field_overrides':\n      givenName: hidden\n      additionalName: hidden\n      familyName: hidden\n      organization: hidden\n      addressLine1: required\n      addressLine2: hidden\n      postalCode: required\n      sortingCode: hidden\n      dependentLocality: hidden\n      locality: required\n      administrativeArea: required\n  email:\n    '#type': email\n    '#title': 'Correo electrónico'\n    '#required': true\n    '#default_value': '[current-user:mail]'\n  phone:\n    '#type': textfield\n    '#title': Teléfono\n  mobile:\n    '#type': textfield\n    '#title': Móvil\ntraining_and_experience:\n  '#type': fieldset\n  '#title': 'Formación y experiencia profesional'\n  '#required': true\n  training_area:\n    '#type': webform_term_select\n    '#title': 'Área de formación'\n    '#required': true\n    '#vocabulary': area_de_formacion\n    '#breadcrumb_delimiter': ''\n  university_training:\n    '#type': textarea\n    '#title': 'Formación universitaria'\n    '#access': false\n  non_university_training:\n    '#type': textarea\n    '#title': 'Formación no universitaria'\n    '#access': false\n  profession:\n    '#type': textfield\n    '#title': 'Centro donde trabaja'\n  ocupacion_principal:\n    '#type': entity_autocomplete\n    '#title': 'Ocupación Principal'\n    '#required': true\n    '#required_error': 'Ha de marcar obligatoriamente una ocupación principal.'\n    '#target_type': taxonomy_term\n    '#selection_handler': 'default:taxonomy_term'\n    '#selection_settings':\n      target_bundles:\n        areas_of_work: areas_of_work\n      sort:\n        field: name\n        direction: ASC\n      auto_create: false\n      auto_create_bundle: areas_of_work\nbank_data:\n  '#type': fieldset\n  '#title': 'Datos bancarios'\n  '#required': true\n  iban:\n    '#type': textfield\n    '#title': IBAN\n    '#required': true\n  bic:\n    '#type': textfield\n    '#title': BIC\n  date_of_signature_of_the_direct_debit:\n    '#type': textfield\n    '#title': 'Fecha de firma de la domiciliación bancaria'\n    '#description': 'Ejemplo: 16-04-2017 (dd-mm-aaaa)'\n    '#title_display': before\n    '#description_display': after\n    '#input_mask': 99-99-9999\n    '#required': true\n  bank_direct_debit:\n    '#type': webform_document_file\n    '#title': 'Domiciliación bancaria'\n    '#required': true\n    '#file_extensions': pdf\n  bank_receipt:\n    '#type': webform_document_file\n    '#title': 'Justificante bancario'\n    '#required': true\n    '#file_extensions': pdf\nprivacy_policy:\n  '#type': checkbox\n  '#title': 'He leído y acepto las Políticas de Privacidad.'\n  '#description': 'He le&iacute;do y acepto las <a href=\"/documentos/politica-privacidad\" target=\"_blank\">Pol&iacute;ticas de Privacidad</a>.'\n  '#title_display': invisible\n  '#required_error': 'Es obligatorio marcar la casilla de aceptación de políticas de privacidad.'\n  '#required': true\nprocessed_text:\n  '#type': processed_text\n  '#text': |\n    <h5><strong>Responsable de tratamiento</strong><br />\n    Asociación Española de Terapia Gestalt – AETG (CIF: G78254729)</h5>\n    \n    <h5><strong>Finalidad</strong><br />\n    Desarrollo de la relación asociativa y profesional.</h5>\n    \n    <h5><strong>Legitimación</strong><br />\n    Consentimiento del propio interesado. Derecho de Asociación.</h5>\n    \n    <h5><strong>Destinatarios</strong><br />\n    No están previstas cesiones ni comunicaciones.</h5>\n    \n    <h5><strong>Derechos</strong><br />\n    Acceso, rectificación, oposición, supresión y limitación del tratamiento.<br />\n    Retirada del consentimiento y portabilidad.</h5>\n    \n    <h5><strong>Información Adicional</strong><br />\n    Puede consultar la información adicional en el siguiente enlace del <a href=\"/documentos/politica-privacidad\">anexo</a>.</h5>\n    \n  '#format': full_html\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#submit__label': Enviar"
+css: ''
+javascript: ''
+settings:
+  ajax: false
+  ajax_scroll_top: form
+  ajax_progress_type: ''
+  ajax_effect: ''
+  ajax_speed: null
+  page: true
+  page_submit_path: /hazte-socio
+  page_confirm_path: ''
+  page_theme_name: ''
+  form_title: source_entity_webform
+  form_submit_once: false
+  form_exception_message: ''
+  form_open_message: ''
+  form_close_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_disable_remote_addr: false
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_reset: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_disable_inline_errors: false
+  form_required: false
+  form_unsaved: true
+  form_disable_back: false
+  form_submit_back: false
+  form_autofocus: false
+  form_details_toggle: false
+  form_access_denied: default
+  form_access_denied_title: ''
+  form_access_denied_message: ''
+  form_access_denied_attributes: {  }
+  form_file_limit: ''
+  form_method: ''
+  form_action: ''
+  form_attributes: {  }
+  share: false
+  share_node: false
+  share_theme_name: ''
+  share_title: true
+  share_page_body_attributes: {  }
+  submission_label: ''
+  submission_log: false
+  submission_views: {  }
+  submission_views_replace: {  }
+  submission_user_columns: {  }
+  submission_user_duplicate: false
+  submission_access_denied: default
+  submission_access_denied_title: ''
+  submission_access_denied_message: ''
+  submission_access_denied_attributes: {  }
+  submission_exception_message: ''
+  submission_locked_message: ''
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
+  previous_submission_message: ''
+  previous_submissions_message: ''
+  autofill: true
+  autofill_message: ''
+  autofill_excluded_elements: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_progress_link: false
+  wizard_progress_states: false
+  wizard_auto_forward: true
+  wizard_auto_forward_hide_next_button: false
+  wizard_keyboard: true
+  wizard_start_label: ''
+  wizard_preview_link: false
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_track: ''
+  wizard_prev_button_label: ''
+  wizard_next_button_label: ''
+  wizard_toggle: true
+  wizard_toggle_show_label: ''
+  wizard_toggle_hide_label: ''
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  preview_exclude_empty_checkbox: false
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  draft_pending_single_message: ''
+  draft_pending_multiple_message: ''
+  confirmation_type: inline
+  confirmation_title: 'Se ha enviado correctamente su solicitud'
+  confirmation_message: "<h3>Se ha registrado correctamente tu solicitud. En breve recibir&aacute;s un email de confirmaci&oacute;n.</h3>\r\n<br />\r\n<img alt=\"Logo del 40 aniversdario de la Asociación Española de Terapia Gestalt\" height=\"124\" src=\"/sites/default/files/Logo%20Asociaci%C3%B3n%20Espa%C3%B1ola%20de%20Terapia%20Gestalt%20AETG_40_aniversario_negro.png\" width=\"223\" />"
+  confirmation_url: ''
+  confirmation_attributes:
+    class:
+      - center
+  confirmation_back: true
+  confirmation_back_label: 'Regresar al formulario'
+  confirmation_back_attributes:
+    class:
+      - btn-primary
+  confirmation_exclude_query: true
+  confirmation_exclude_token: false
+  confirmation_update: true
+  limit_total: null
+  limit_total_interval: null
+  limit_total_message: ''
+  limit_total_unique: false
+  limit_user: null
+  limit_user_interval: null
+  limit_user_message: ''
+  limit_user_unique: false
+  entity_limit_total: null
+  entity_limit_total_interval: null
+  entity_limit_user: null
+  entity_limit_user_interval: null
+  purge: none
+  purge_days: null
+  results_disabled: false
+  results_disabled_ignore: false
+  results_customize: false
+  token_view: false
+  token_update: false
+  token_delete: false
+  serial_disabled: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  administer:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  test:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  configuration:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+handlers:
+  aetg_associated_profile:
+    id: aetg_associated_profile
+    label: 'AETG Associated profile'
+    notes: ''
+    handler_id: aetg_associated_profile
+    status: true
+    conditions: {  }
+    weight: 0
+    settings: {  }
+  correo_electronico:
+    id: email
+    label: 'Correo electrónico'
+    notes: ''
+    handler_id: correo_electronico
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      states:
+        - completed
+      to_mail: info@aetg.es
+      to_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      from_mail: info@aetg.es
+      from_options: {  }
+      from_name: default
+      subject: 'Hazte socio'
+      body: _default
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      debug: false
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      theme_name: ''
+      parameters: {  }
+  correo_electronico_2:
+    id: email
+    label: 'Correo electrónico 2'
+    notes: ''
+    handler_id: correo_electronico_2
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      states:
+        - completed
+      to_mail: '[webform_submission:values:email:raw]'
+      to_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      from_mail: info@aetg.es
+      from_options: {  }
+      from_name: _default
+      subject: _default
+      body: "Tu formulario ha sido enviado con &eacute;xito. Nos pondremos en contacto contigo a la mayor brevedad posible.<br />\r\n<br />\r\nAtentamente,&nbsp;<br />\r\nAETG.<br />\r\n<br />\r\nEnviado el [webform_submission:created]<br />\r\nEnviado por: [webform_submission:user]<br />\r\nLos valores enviados son:<br />\r\n[webform_submission:values]"
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      debug: false
+      reply_to: info@aetg.es
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      theme_name: ''
+      parameters: {  }
+variants: {  }

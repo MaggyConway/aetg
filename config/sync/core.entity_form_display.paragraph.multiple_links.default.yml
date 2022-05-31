@@ -1,0 +1,34 @@
+uuid: ce55af69-871f-4379-ac75-0c36304a1e36
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.multiple_links.field_links
+    - field.field.paragraph.multiple_links.field_title
+    - paragraphs.paragraphs_type.multiple_links
+  module:
+    - link
+id: paragraph.multiple_links.default
+targetEntityType: paragraph
+bundle: multiple_links
+mode: default
+content:
+  field_links:
+    weight: 1
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

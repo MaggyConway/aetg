@@ -1,0 +1,10 @@
+uuid: 35d95216-890a-421d-a135-ccba0686859b
+langcode: en
+status: true
+dependencies:
+  module:
+    - profile
+id: profile.tab_training_program
+label: 'Tab: Training program'
+targetEntityType: profile
+cache: true

@@ -1,0 +1,21 @@
+uuid: 280fa348-7f0c-4f0b-878a-b54681ce3fb4
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_director
+    - node.type.documentacion_de_escuela
+id: node.documentacion_de_escuela.field_director
+field_name: field_director
+entity_type: node
+bundle: documentacion_de_escuela
+label: Director
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: '[current-user:escuela:field_director_escuela]'
+default_value_callback: field_default_token_default_value_callback
+settings: {  }
+field_type: string

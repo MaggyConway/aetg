@@ -1,0 +1,20 @@
+uuid: d28eca6d-2ba4-4055-b8d1-18527c4f40d9
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - user
+id: node.field_docentes_aetg_esp
+field_name: field_docentes_aetg_esp
+entity_type: node
+type: entity_reference
+settings:
+  target_type: user
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

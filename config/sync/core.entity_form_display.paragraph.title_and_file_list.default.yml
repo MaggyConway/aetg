@@ -1,0 +1,43 @@
+uuid: d947032b-14b4-4c33-8e39-c4fe660da7de
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.title_and_file_list.field_descargas
+    - field.field.paragraph.title_and_file_list.field_title
+    - paragraphs.paragraphs_type.title_and_file_list
+  module:
+    - inline_entity_form
+id: paragraph.title_and_file_list.default
+targetEntityType: paragraph
+bundle: title_and_file_list
+mode: default
+content:
+  field_descargas:
+    type: inline_entity_form_complex
+    weight: 2
+    settings:
+      form_mode: default
+      label_singular: ''
+      label_plural: ''
+      collapsible: true
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      revision: false
+      override_labels: false
+      collapsed: false
+      allow_duplicate: false
+    third_party_settings: {  }
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

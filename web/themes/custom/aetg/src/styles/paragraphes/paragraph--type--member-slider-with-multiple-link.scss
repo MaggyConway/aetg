@@ -1,0 +1,212 @@
+// stylelint-disable
+
+.paragraph--type--member-slider-with-multiple-link {
+	position: relative;
+	
+	.field--name-field-title {
+		margin-bottom: 40px;
+		
+		@include breakpoint(tablet-md) {
+			margin-bottom: 25px;
+		}
+		
+		@include breakpoint(mobile-middle) {
+			margin-bottom: 20px;
+		}
+	}
+	
+	.field--name-field-text {
+		@include text-fz-18-lh-32;
+		margin-bottom: 30px;
+
+		@include breakpoint(IPad-Pro) {
+			margin-top: 20px;
+		}
+		
+		@include breakpoint(tablet-md) {
+			margin-bottom: 15px;
+		}
+		
+		@include breakpoint(mobile-large) {
+			font-size: 16px;
+			line-height: 24px;
+		}
+	}
+	
+	.field--name-field-paragraphs {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: nowrap;		
+		> .field__item {
+
+			@include breakpoint(IPad-Pro) {
+				width: calc(50% - 15px);
+			}
+
+			@include breakpoint(tablet-m) {
+				margin: 0;
+				width: 100%;
+			}
+
+			&:not(:last-child) {
+				@include breakpoint(tablet-m) {
+					margin-bottom: 16px;
+				}
+			}
+		}
+
+		@include breakpoint(IPad-Pro) {
+			flex-wrap: wrap;
+		}
+
+		@include breakpoint(tablet-m) {
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: flex-start;
+			margin: 0;
+		}
+		
+		@include breakpoint(mobile-middle) {
+			flex-direction: column;
+		}
+		
+	}
+	
+	> .layout--twocol-section {
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		
+		@include breakpoint(IPad-Pro) {
+			flex-direction: column-reverse;
+			justify-content: flex-start;
+			align-items: flex-start;
+			width: 100%;
+		}
+	}
+	
+	.layout__region {
+		flex: unset !important;
+		&--first {
+			margin-right: 30px;
+			width: auto;
+
+			@include breakpoint(mobile-middle) {
+				margin-bottom: 8px;
+				margin-right: 0;
+			}
+		}
+		
+		&--second {
+			width: 400px;
+
+			@include breakpoint(IPad-Pro) {
+				width: 100%;
+			}
+		}
+	}
+	
+	.field--type-image {
+		@include mini-slider-image;
+		position: relative;
+		border: none;
+		
+		> img {
+			position: relative;
+			z-index: 500;
+			background-color: #fff;
+		}
+	}
+	
+	.field--name-field-full-name {
+		font-weight: 700;
+		font-size: 1.2em;
+		line-height: 22px;
+		letter-spacing: .05em;
+		text-transform: capitalize;
+		color: $color-1;
+		margin-bottom: 8px;
+		max-width: 292px;
+
+		@include breakpoint(IPad-Pro) {
+			max-width: 100%;
+		}
+		
+		@include breakpoint(mobile-middle) {
+			font-size: 14px;
+			line-height: 18px;
+		}
+	}
+	
+	.field--name-field-invoicing-address {		
+		> div {
+			color: $color-76;
+			@include text-fz-14-lh-20;
+			
+			position: static;
+			max-width: 288px;
+			
+			@include breakpoint(IPad-Pro) {
+				max-width: 100%;
+			}
+		}
+	}
+	
+	.field--type-entity-reference {
+		.layout__region--second {
+			width: auto;
+			min-width: unset;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: flex-start;
+		}
+	}
+}
+
+// .paragraph--type--member-slider, 
+.view-random-profiles.view-display-id-block_1 { // member
+	.slick__slider {
+		@include breakpoint(tablet-md) {
+			margin-bottom: 20px;
+		}
+	}
+	
+	.slick-dots {
+		@include dots-violet;
+		position: static;
+		text-align: left;
+		margin-left: 130px;
+		margin-top: 12px;
+		
+		@include breakpoint(mobile-middle) {
+			margin-left: 0;
+		}
+	}
+	
+	.slick__slide {
+		margin: 0;
+		.layout__region--content {
+			.layout--twocol-section {
+				align-items: flex-start;
+			}
+		}
+	}
+}
+
+.profile--type--informacion-profesional.profile--view-mode--slider {
+	.layout--twocol-section {
+		flex-wrap: nowrap;
+
+		@include breakpoint(mobile-middle) {
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: flex-start;
+		}
+
+		> .layout__region {
+			@include breakpoint(mobile-middle) {
+				width: 100%;
+			}
+		}
+	}
+}

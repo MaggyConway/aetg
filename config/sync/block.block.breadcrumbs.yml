@@ -1,0 +1,25 @@
+uuid: 07f4bb8b-6551-4ee1-a6d5-77431bffd062
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - aetg
+id: breadcrumbs
+theme: aetg
+region: top
+weight: -21
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: 'Menú de migas de pan'
+  provider: system
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: "/node/*\r\n/user/login\r\n/user/register\r\n/user/password\r\n/user/reset/*"
+    negate: true
+    context_mapping: {  }

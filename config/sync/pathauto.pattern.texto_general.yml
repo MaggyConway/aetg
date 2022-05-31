@@ -1,0 +1,22 @@
+uuid: f05d0639-9662-47d7-b4f8-b68dd02e4600
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: texto_general
+label: 'Texto general'
+type: 'canonical_entities:node'
+pattern: '/[node:field_seccion]/[node:title]'
+selection_criteria:
+  9f29ee44-5424-41d4-80ee-459bcee68687:
+    id: 'entity_bundle:node'
+    bundles:
+      page: page
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 9f29ee44-5424-41d4-80ee-459bcee68687
+selection_logic: and
+weight: -5
+relationships: {  }

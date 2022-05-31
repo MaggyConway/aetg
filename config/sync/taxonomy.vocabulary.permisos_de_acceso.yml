@@ -1,0 +1,8 @@
+uuid: d7bb77e8-d540-41c8-aa22-8db3bd7e43f4
+langcode: es
+status: true
+dependencies: {  }
+name: 'Permisos de acceso'
+vid: permisos_de_acceso
+description: 'Taxonomía que controla qué usuarios pueden acceder a qué contenido.'
+weight: 0

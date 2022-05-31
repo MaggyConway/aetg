@@ -1,0 +1,127 @@
+uuid: 82b8b2aa-5c29-47a0-9fee-0ef85c0796a4
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_profile2_informacion_profesional
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Configuration
+migration_group: migrate_drupal_7
+label: 'Profile2 ()'
+source:
+  key: legacy
+  plugin: d7_associate_profile2
+  constants:
+    status: 1
+    is_default: 1
+  bundle: informacion_profesional
+process:
+  profile_id:
+    -
+      plugin: get
+      source: pid
+  type:
+    -
+      plugin: get
+      source: type
+  uid:
+    -
+      plugin: get
+      source: uid
+  status:
+    -
+      plugin: get
+      source: constants/status
+  is_default:
+    -
+      plugin: get
+      source: constants/is_default
+  created:
+    -
+      plugin: get
+      source: created
+  changed:
+    -
+      plugin: get
+      source: changed
+  field_public_email:
+    -
+      plugin: sub_process
+      source: field_email
+      process:
+        value: email
+  field_direccion:
+    -
+      plugin: addressfield
+      source: field_direccion
+  field_invoicing_address:
+    -
+      plugin: addressfield
+      source: field_direccion
+  field_url:
+    -
+      plugin: field_link
+      source: field_url
+  field_imagen_logo:
+    -
+      plugin: sub_process
+      source: field_imagen_usuario
+      process:
+        target_id: fid
+        alt: alt
+        title: title
+        width: width
+        height: height
+  field_imagen_usuario:
+    -
+      plugin: sub_process
+      source: field_imagen_usuario
+      process:
+        target_id: fid
+        alt: alt
+        title: title
+        width: width
+        height: height
+  field_bio:
+    -
+      plugin: get
+      source: field_bio
+  field_localizacion:
+    -
+      plugin: get
+      source: field_localizacion
+  field_centro:
+    -
+      plugin: get
+      source: field_centro
+  field_ambito_trabajo:
+    -
+      plugin: sub_process
+      source: field_ambito_trabajo
+      process:
+        target_id: tid
+  field_nombre_proff:
+    -
+      plugin: get
+      source: field_nombre_proff
+  field_apellidos_prof:
+    -
+      plugin: get
+      source: field_apellidos_prof
+  field_telefono_prof:
+    -
+      plugin: get
+      source: field_telefono_prof
+  field_full_name:
+    -
+      plugin: get
+      source: field_nombre_proff
+destination:
+  plugin: 'entity:profile'
+  default_bundle: informacion_profesional
+migration_dependencies:
+  optional:
+    - upgrade_d7_field_instance

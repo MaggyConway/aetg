@@ -1,0 +1,15 @@
+uuid: 715d4a8c-ec1e-40cc-a4cc-5e37148277ff
+langcode: en
+status: true
+dependencies: {  }
+name: pt_image_title_text_and_multiple_links
+label: 'PT Image, title, text and multiple links'
+effects:
+  adc5789c-52ed-49c0-bfaa-457f61a0bb73:
+    uuid: adc5789c-52ed-49c0-bfaa-457f61a0bb73
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 600
+      height: 400
+      anchor: center-center

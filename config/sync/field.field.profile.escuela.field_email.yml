@@ -1,0 +1,19 @@
+uuid: 05eed63f-cd3a-4f25-bb5a-e53c880ac3f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_email
+    - profile.type.escuela
+id: profile.escuela.field_email
+field_name: field_email
+entity_type: profile
+bundle: escuela
+label: 'Dirección de correo electrónico'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

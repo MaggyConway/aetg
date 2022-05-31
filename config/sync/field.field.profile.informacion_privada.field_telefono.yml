@@ -1,0 +1,19 @@
+uuid: 8295dc69-892a-40e7-923f-14d4a415f962
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_telefono
+    - profile.type.informacion_privada
+id: profile.informacion_privada.field_telefono
+field_name: field_telefono
+entity_type: profile
+bundle: informacion_privada
+label: 'Teléfono principal'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

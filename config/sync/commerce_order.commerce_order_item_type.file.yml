@@ -1,0 +1,16 @@
+uuid: 7b3f444f-e309-4027-8ed0-cdb4ef854357
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_tax
+third_party_settings:
+  commerce_tax:
+    taxable_type: digital_goods
+label: Archivo
+id: file
+purchasableEntityType: commerce_product_variation
+orderType: file
+traits:
+  - commerce_license_order_item_type
+locked: false

@@ -1,0 +1,7 @@
+services:
+  aetg_price.price_resolver:
+    class: Drupal\aetg_price\Resolver\PriceResolver
+    arguments: ['@entity_type.manager', '@current_user']
+    tags:
+      - { name: commerce_price.price_resolver, priority: 200 }
+

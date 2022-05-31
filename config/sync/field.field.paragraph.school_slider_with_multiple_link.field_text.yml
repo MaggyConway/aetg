@@ -1,0 +1,21 @@
+uuid: 14123fae-ac36-4e2f-a800-ada611cd7c0d
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text
+    - paragraphs.paragraphs_type.school_slider_with_multiple_link
+  module:
+    - text
+id: paragraph.school_slider_with_multiple_link.field_text
+field_name: field_text
+entity_type: paragraph
+bundle: school_slider_with_multiple_link
+label: Text
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

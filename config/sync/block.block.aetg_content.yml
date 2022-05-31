@@ -1,0 +1,22 @@
+uuid: aae46824-a756-446b-85fd-fe5772f83a57
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - aetg
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: aetg_content
+theme: aetg
+region: content
+weight: 4
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

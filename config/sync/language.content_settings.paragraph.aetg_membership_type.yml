@@ -1,0 +1,11 @@
+uuid: 35a03808-40df-42b1-a4ec-716d11da3cc1
+langcode: es
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.aetg_membership_type
+id: paragraph.aetg_membership_type
+target_entity_type_id: paragraph
+target_bundle: aetg_membership_type
+default_langcode: site_default
+language_alterable: false

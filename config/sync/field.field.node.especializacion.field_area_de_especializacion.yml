@@ -1,0 +1,26 @@
+uuid: 3e38b3c2-12d7-4cd2-968a-44dfe324ae03
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_area_de_especializacion
+    - node.type.especializacion
+    - taxonomy.vocabulary.area_de_especializacion
+id: node.especializacion.field_area_de_especializacion
+field_name: field_area_de_especializacion
+entity_type: node
+bundle: especializacion
+label: 'Área de especialización'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    sort:
+      field: _none
+    target_bundles:
+      area_de_especializacion: area_de_especializacion
+  handler: 'default:taxonomy_term'
+field_type: entity_reference

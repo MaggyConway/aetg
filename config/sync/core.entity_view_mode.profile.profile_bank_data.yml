@@ -1,0 +1,10 @@
+uuid: 4d824ca0-579c-4f69-867a-87d8ac6c9c1f
+langcode: en
+status: true
+dependencies:
+  module:
+    - profile
+id: profile.profile_bank_data
+label: 'Profile: Bank data'
+targetEntityType: profile
+cache: true

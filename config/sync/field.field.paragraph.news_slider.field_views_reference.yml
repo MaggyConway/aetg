@@ -1,0 +1,88 @@
+uuid: cc374311-7c5f-4e3a-b712-6b42c7d744d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_views_reference
+    - paragraphs.paragraphs_type.news_slider
+    - views.view.news_slider
+  module:
+    - viewsreference
+id: paragraph.news_slider.field_views_reference
+field_name: field_views_reference
+entity_type: paragraph
+bundle: news_slider
+label: 'Views reference'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    options:
+      title: 0
+      argument: ''
+    display_id: block_1
+    argument: null
+    title: 0
+    data: null
+    target_uuid: 77615dba-bd31-46b3-a93a-23020250b4ae
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: 0
+  plugin_types:
+    block: block
+    default: 0
+    page: 0
+    entity_reference: 0
+    feed: 0
+    embed: 0
+  preselect_views:
+    news_slider: news_slider
+    advancedqueue_jobs: 0
+    block_content: 0
+    comment: 0
+    comments_recent: 0
+    commerce_carts: 0
+    commerce_cart_block: 0
+    commerce_cart_form: 0
+    commerce_checkout_order_summary: 0
+    commerce_file_my_files: 0
+    commerce_invoices: 0
+    commerce_invoice_item_table: 0
+    commerce_licenses: 0
+    commerce_orders: 0
+    commerce_order_item_table: 0
+    commerce_products: 0
+    commerce_promotion_coupons: 0
+    commerce_stores: 0
+    commerce_user_invoices: 0
+    commerce_user_orders: 0
+    content: 0
+    content_recent: 0
+    event_search: 0
+    feeds_feed: 0
+    files: 0
+    file_product_search: 0
+    filter_by_profiles: 0
+    filter_profiles: 0
+    frontpage: 0
+    latest_news: 0
+    legal_terms: 0
+    legal_users: 0
+    media: 0
+    media_library: 0
+    online_library_search: 0
+    order_invoices: 0
+    profiles: 0
+    taxonomy_term: 0
+    user_admin_people: 0
+    user_blocks_with_profile_fields: 0
+    user_dashboard: 0
+    watchdog: 0
+    webform_submissions: 0
+    who_s_new: 0
+    who_s_online: 0
+field_type: viewsreference

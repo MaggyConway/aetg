@@ -1,0 +1,10 @@
+uuid: f68dd353-b0b1-4254-83f6-58d6abd0fa27
+langcode: en
+status: true
+dependencies:
+  module:
+    - profile
+id: profile.profile_information
+label: 'Profile: Information'
+targetEntityType: profile
+cache: true

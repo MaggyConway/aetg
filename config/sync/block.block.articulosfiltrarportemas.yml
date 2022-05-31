@@ -1,0 +1,29 @@
+uuid: 57526b6a-9b08-418f-b0ea-4eee63d73a0f
+langcode: es
+status: true
+dependencies:
+  config:
+    - facets.facet.articulos_filtrar_por_temas
+  module:
+    - facets
+    - system
+  theme:
+    - aetg
+id: articulosfiltrarportemas
+theme: aetg
+region: content
+weight: -8
+provider: null
+plugin: 'facet_block:articulos_filtrar_por_temas'
+settings:
+  id: 'facet_block:articulos_filtrar_por_temas'
+  label: 'Artículos: Filtrar por temas'
+  provider: facets
+  label_display: '0'
+  block_id: articulosfiltrarportemas
+visibility:
+  request_path:
+    id: request_path
+    pages: /gestalt/recursos/articulos
+    negate: false
+    context_mapping: {  }

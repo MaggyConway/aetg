@@ -1,0 +1,11 @@
+uuid: 3bbb4531-7897-4e73-a599-a3dc0921b5db
+langcode: es
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+id: informes
+title: Informes
+content:
+  value: "<p><strong>Informes de asociados:</strong></p>\r\n\r\n<ul>\r\n\t<li><a href=\"/admin/dashboard/altas-bajas-aetg\">Informe de Altas y Bajas</a></li>\r\n\t<li><a href=\"/admin/dashboard/etiquetas-socios\">Informe para la generación de etiquetas</a></li>\r\n\t<li><a href=\"/admin/dashboard/seguros\">Informe de Seguros</a></li>\r\n\t<li><a href=\"/admin/dashboard/informe-de-campos-vacios\">Informe de campos vacíos</a></li>\r\n\t<li><a href=\"/admin/dashboard/la-caixa\">Domiciliaciones La Caixa ASOCIADOS</a></li>\r\n\t<li><a href=\"/admin/dashboard/la-caixa-cuota-mapfre\">Domiciliaciones La Caixa SEGURO MAPFRE</a></li>\r\n</ul>\r\n\r\n<p><strong>Informes de escuelas:</strong></p>\r\n\r\n<ul>\r\n\t<li><a href=\"/admin/dashboard/envios-de-escuelas\">Documentación enviada por las escuelas</a></li>\r\n\t<li><a href=\"/admin/dashboard/etiquetas-de-escuelas\">Informe para la generación de etiquetas de escuelas</a></li>\r\n\t<li><a href=\"/admin/dashboard/la-caixa-cuota-escuelas\">Domiciliaciones La Caixa ESCUELAS</a></li>\r\n\t<li><a href=\"/admin/dashboard/informe-escuelas\">Informe de perfiles públicos de escuelas</a></li>\r\n</ul>\r\n"
+  format: basic_html

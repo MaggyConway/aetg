@@ -1,0 +1,23 @@
+uuid: b9acd39c-db8f-4777-80f8-d3321aecba57
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_moroso_mapfre
+    - profile.type.informacion_privada
+id: profile.informacion_privada.field_moroso_mapfre
+field_name: field_moroso_mapfre
+entity_type: profile
+bundle: informacion_privada
+label: 'Moroso Mapfre'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Sí
+  off_label: 'No'
+field_type: boolean

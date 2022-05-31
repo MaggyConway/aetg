@@ -1,0 +1,10 @@
+uuid: beb33044-ac77-4371-aec2-4b0983a3ebfb
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.pt_image_slider_item_default
+label: 'PT Image Slider Item: Default'
+targetEntityType: media
+cache: true

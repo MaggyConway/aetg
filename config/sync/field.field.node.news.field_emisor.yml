@@ -1,0 +1,29 @@
+uuid: 485e8aec-7536-4111-821d-713182f1fa6e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_emisor
+    - node.type.news
+    - taxonomy.vocabulary.emisor_de_noticia
+id: node.news.field_emisor
+field_name: field_emisor
+entity_type: node
+bundle: news
+label: 'Emisor de noticia'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      emisor_de_noticia: emisor_de_noticia
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

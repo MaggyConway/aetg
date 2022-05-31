@@ -1,0 +1,127 @@
+uuid: 58e04ca0-92fa-41f1-9b3a-6659e5f83e84
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_views_slider
+    - paragraphs.paragraphs_type.school_slider_with_multiple_link
+    - views.view.random_profiles
+  module:
+    - viewsreference
+id: paragraph.school_slider_with_multiple_link.field_views_slider
+field_name: field_views_slider
+entity_type: paragraph
+bundle: school_slider_with_multiple_link
+label: 'Views Slider'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    options:
+      title: 0
+      argument: ''
+    display_id: block_2
+    argument: null
+    title: 0
+    data: null
+    target_uuid: 5ed2dc48-c31d-4869-8cc5-65653aa0934b
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: 0
+  plugin_types:
+    block: block
+    default: 0
+    page: 0
+    attachment: 0
+    entity_reference: 0
+    data_export: 0
+    feed: 0
+    embed: 0
+  preselect_views:
+    random_profiles: random_profiles
+    advancedqueue_jobs: 0
+    asociados: 0
+    asociados_profile: 0
+    autores: 0
+    block_content: 0
+    comment: 0
+    comments_recent: 0
+    commerce_carts: 0
+    commerce_cart_block: 0
+    commerce_cart_form: 0
+    commerce_checkout_order_summary: 0
+    commerce_file_my_files: 0
+    commerce_invoices: 0
+    commerce_invoice_item_table: 0
+    commerce_licenses: 0
+    commerce_orders: 0
+    commerce_order_item_table: 0
+    commerce_products: 0
+    commerce_promotion_coupons: 0
+    commerce_stores: 0
+    commerce_user_invoices: 0
+    commerce_user_orders: 0
+    content: 0
+    content_recent: 0
+    dashboard_documentos_de_escuelas: 0
+    dashboard_documentos_de_secretaria: 0
+    dashboard_escuelas_registradas_sin_activar: 0
+    dashboard_noticias: 0
+    dashboard_panel_de_escuelas: 0
+    dashboard_panel_de_usuarios_asociados: 0
+    dashboard_peticiones_de_nuevos_usuarios: 0
+    dashboard_peticiones_de_nuevos_usuarios_webform_submission: 0
+    dashboard_recursos: 0
+    dashboard_textos_generales: 0
+    dashboard_ultimos_webforms_recibidos: 0
+    docentes: 0
+    envios_de_escuelas: 0
+    envios_por_persona: 0
+    escuelas: 0
+    escuelas2: 0
+    escuelas_profile: 0
+    etiquetas: 0
+    etiquetas_de_escuelas: 0
+    etiquetas_de_socios: 0
+    event_search: 0
+    feeds_feed: 0
+    files: 0
+    file_product_search: 0
+    filter_by_profiles: 0
+    filter_profiles: 0
+    frontpage: 0
+    impagos_cuotas: 0
+    informe_de_campos_vacios: 0
+    latest_news: 0
+    la_caixa: 0
+    la_caixa_cuota_escuelas: 0
+    la_caixa_cuota_mapfre: 0
+    legal_terms: 0
+    legal_users: 0
+    listado_documentos_secretaria: 0
+    mapa_de_especializaciones: 0
+    media: 0
+    media_library: 0
+    news_slider: 0
+    noticias_destacadas: 0
+    noticias_privadas: 0
+    noticias_publicas: 0
+    online_library_search: 0
+    order_invoices: 0
+    profiles: 0
+    recursos: 0
+    taxonomy_term: 0
+    tutores: 0
+    user_admin_people: 0
+    user_blocks_with_profile_fields: 0
+    user_dashboard: 0
+    videos_de_eventos: 0
+    watchdog: 0
+    webform_submissions: 0
+    who_s_new: 0
+    who_s_online: 0
+field_type: viewsreference

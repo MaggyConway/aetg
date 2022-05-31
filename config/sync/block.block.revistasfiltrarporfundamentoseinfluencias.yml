@@ -1,0 +1,29 @@
+uuid: 284bf7cd-e893-42b6-aaa5-4f5923076403
+langcode: es
+status: true
+dependencies:
+  config:
+    - facets.facet.revistas_filtrar_por_fundamentos_e_influencias
+  module:
+    - facets
+    - system
+  theme:
+    - aetg
+id: revistasfiltrarporfundamentoseinfluencias
+theme: aetg
+region: content
+weight: -9
+provider: null
+plugin: 'facet_block:revistas_filtrar_por_fundamentos_e_influencias'
+settings:
+  id: 'facet_block:revistas_filtrar_por_fundamentos_e_influencias'
+  label: 'Revistas: Filtrar por fundamentos e influencias'
+  provider: facets
+  label_display: '0'
+  block_id: revistasfiltrarporfundamentoseinfluencias
+visibility:
+  request_path:
+    id: request_path
+    pages: /gestalt/recursos/revista
+    negate: false
+    context_mapping: {  }

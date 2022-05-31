@@ -1,0 +1,23 @@
+uuid: 43597191-5811-4be6-9edb-1e8e2e4eb464
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_baja
+    - profile.type.informacion_privada
+id: profile.informacion_privada.field_baja
+field_name: field_baja
+entity_type: profile
+bundle: informacion_privada
+label: Baja
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

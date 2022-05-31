@@ -1,0 +1,19 @@
+uuid: 9fbf22a5-43ab-409d-b693-8455304da143
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_email
+    - profile.type.informacion_privada
+id: profile.informacion_privada.field_email
+field_name: field_email
+entity_type: profile
+bundle: informacion_privada
+label: Email
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

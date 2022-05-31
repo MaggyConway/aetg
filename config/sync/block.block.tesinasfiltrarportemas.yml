@@ -1,0 +1,29 @@
+uuid: 88118bb6-62a3-4517-9ba9-4faa98be66fd
+langcode: es
+status: true
+dependencies:
+  config:
+    - facets.facet.tesinas_filtrar_por_temas
+  module:
+    - facets
+    - system
+  theme:
+    - aetg
+id: tesinasfiltrarportemas
+theme: aetg
+region: content
+weight: -16
+provider: null
+plugin: 'facet_block:tesinas_filtrar_por_temas'
+settings:
+  id: 'facet_block:tesinas_filtrar_por_temas'
+  label: 'Tesinas: Filtrar por temas'
+  provider: facets
+  label_display: '0'
+  block_id: tesinasfiltrarportemas
+visibility:
+  request_path:
+    id: request_path
+    pages: /gestalt/recursos/tesinas
+    negate: false
+    context_mapping: {  }

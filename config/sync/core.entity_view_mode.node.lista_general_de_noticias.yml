@@ -1,0 +1,10 @@
+uuid: 6c4ec3dc-8338-40d7-af23-a926e0ac32c4
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.lista_general_de_noticias
+label: lista_general_de_noticias
+targetEntityType: node
+cache: true

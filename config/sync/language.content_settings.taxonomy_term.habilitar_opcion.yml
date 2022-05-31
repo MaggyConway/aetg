@@ -1,0 +1,11 @@
+uuid: 33192af1-116e-4fa5-ba01-5e74faf45642
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.habilitar_opcion
+id: taxonomy_term.habilitar_opcion
+target_entity_type_id: taxonomy_term
+target_bundle: habilitar_opcion
+default_langcode: site_default
+language_alterable: false

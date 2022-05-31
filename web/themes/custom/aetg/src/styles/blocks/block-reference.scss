@@ -1,0 +1,105 @@
+.block-field-blocknoderecursofield-product-reference,
+.block-field-blocknodeeventfield-product-reference,
+.block-field-blocknodeeventfield-relacionados {
+    @include main-container;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    > .field--type-entity-reference > article {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        // flex-wrap: wrap;
+        max-width: 430px;
+        margin: 0 -8px;
+
+
+        > div {
+            margin-bottom: 0;
+
+            &.field {
+                margin-left: 8px;
+                margin-right: 8px;
+            }
+        }
+
+        .field__label {
+            // @include gray-label;
+            float: none !important;
+            color: #AAAAAA !important;
+            font-weight: normal !important;
+            font-size: 14px !important;
+            line-height: 20px !important;
+        }
+
+        .field--label-above {
+            .field__label {
+                color: $color-A !important;
+                font-weight: normal !important;
+                font-size: 14px !important;
+                line-height: 20px !important;
+                margin-bottom: 5px !important;         
+            }
+            
+            .field__item {
+                line-height: 26px;
+                
+                p, a {
+                    line-height: inherit;
+                }
+            }
+        }
+
+        .field--name-variations {
+            width: 100%;
+            // margin-top: 1em;
+            
+            form {
+                .form-actions {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin: 0;
+                    > .button {
+                        margin-right: 1.2em;
+                        overflow: visible;
+                    }
+                }
+                
+                .form-item-description {
+                    margin: 0;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+.block-field-blocknoderecursofield-product-reference {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.block-field-blocknodeeventfield-relacionados {
+    .field__label {
+        font-weight: 600 !important;
+        font-size: 24px !important;
+        line-height: 36px !important;
+        margin: 0 0 24px;
+        color: $color-1 !important;
+    }
+
+    .field__items {
+        margin-left: -25px;
+        margin-right: -25px;
+        column-count: 2;
+
+        > .field__item {
+            margin-left: 25px;
+            margin-right: 25px;
+        }
+
+        @include breakpoint(mobile-large) {
+            column-count: unset;
+        }
+    }
+}

@@ -1,0 +1,10 @@
+uuid: 4b64589f-ab72-43e0-be21-1bd9283dc813
+langcode: en
+status: true
+dependencies:
+  module:
+    - profile
+id: profile.dashboard_header
+label: 'Dashboard: Header'
+targetEntityType: profile
+cache: true

@@ -1,0 +1,26 @@
+uuid: c0866ce1-ce8c-4ea9-b8fc-ca3e05e425e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_temas
+    - node.type.recurso
+    - taxonomy.vocabulary.temas
+id: node.recurso.field_temas
+field_name: field_temas
+entity_type: node
+bundle: recurso
+label: Temas
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    sort:
+      field: _none
+    target_bundles:
+      temas: temas
+  handler: 'default:taxonomy_term'
+field_type: entity_reference

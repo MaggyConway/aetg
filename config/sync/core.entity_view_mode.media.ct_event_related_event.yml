@@ -1,0 +1,10 @@
+uuid: ea8250a8-2ce4-42a5-a5aa-3aaad727ab04
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.ct_event_related_event
+label: 'CT Event: Related event'
+targetEntityType: media
+cache: true

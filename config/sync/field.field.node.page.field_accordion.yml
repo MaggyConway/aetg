@@ -1,0 +1,91 @@
+uuid: 3558642a-378b-4281-b23a-59e5a6ad8a1a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_accordion
+    - node.type.page
+    - paragraphs.paragraphs_type.accordion
+  module:
+    - entity_reference_revisions
+id: node.page.field_accordion
+field_name: field_accordion
+entity_type: node
+bundle: page
+label: Acordeón
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      accordion: accordion
+    target_bundles_drag_drop:
+      accordion:
+        enabled: true
+        weight: 22
+      aetg_membership_type:
+        weight: 23
+        enabled: false
+      feap_membership_type:
+        weight: 24
+        enabled: false
+      header_with_slider:
+        weight: 25
+        enabled: false
+      image:
+        weight: 26
+        enabled: false
+      image_slider:
+        weight: 27
+        enabled: false
+      image_slider_item:
+        weight: 28
+        enabled: false
+      image_title_text_and_link:
+        weight: 29
+        enabled: false
+      image_title_text_multiple_links:
+        weight: 30
+        enabled: false
+      mapfre_insurances:
+        weight: 31
+        enabled: false
+      member_slider_with_multiple_link:
+        weight: 32
+        enabled: false
+      multiple_links:
+        weight: 33
+        enabled: false
+      news_slider:
+        weight: 34
+        enabled: false
+      school_slider_with_multiple_link:
+        weight: 35
+        enabled: false
+      slider:
+        weight: 36
+        enabled: false
+      teacher:
+        weight: 37
+        enabled: false
+      text:
+        weight: 38
+        enabled: false
+      title_and_file_list:
+        weight: 39
+        enabled: false
+      title_tag_text_and_link:
+        weight: 40
+        enabled: false
+      video_area:
+        weight: 41
+        enabled: false
+      webform:
+        weight: 42
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,25 @@
+uuid: d6fdc643-7bbf-4573-bd26-e12d8ef38a07
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_product_reference
+    - node.type.event
+id: node.event.field_product_reference
+field_name: field_product_reference
+entity_type: node
+bundle: event
+label: 'Product reference'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: select_product
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference

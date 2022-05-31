@@ -1,0 +1,22 @@
+uuid: d4ad312c-f57e-42f7-8c05-7eec9332151f
+langcode: es
+status: false
+dependencies:
+  config:
+    - simple_block.simple_block.dashboard_edicion_de_legales
+  module:
+    - simple_block
+  theme:
+    - adminimal_theme
+id: editaraspectoslegales
+theme: adminimal_theme
+region: header
+weight: null
+provider: null
+plugin: 'simple_block:dashboard_edicion_de_legales'
+settings:
+  id: 'simple_block:dashboard_edicion_de_legales'
+  label: 'Editar aspectos legales'
+  provider: simple_block
+  label_display: visible
+visibility: {  }

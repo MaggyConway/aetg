@@ -1,0 +1,10 @@
+uuid: 2a1566b2-9acc-47af-bcc2-b01dea0bc10b
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.school
+label: School
+targetEntityType: user
+cache: true

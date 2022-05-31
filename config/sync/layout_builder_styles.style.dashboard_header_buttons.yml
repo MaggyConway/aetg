@@ -1,0 +1,11 @@
+uuid: 0dec4b17-be8a-4168-958b-53cd67582442
+langcode: en
+status: true
+dependencies: {  }
+id: dashboard_header_buttons
+label: 'Dashboard Header buttons'
+classes: dashboard-header-buttons
+type: component
+weight: 0
+block_restrictions: {  }
+layout_restrictions: {  }

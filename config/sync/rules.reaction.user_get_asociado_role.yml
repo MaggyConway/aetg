@@ -1,0 +1,87 @@
+uuid: ef09f8d1-0d29-4110-955e-2f5478401226
+langcode: es
+status: true
+dependencies: {  }
+id: user_get_asociado_role
+label: 'user get asociado role'
+events:
+  -
+    event_name: 'rules_entity_update:user--user'
+description: ''
+tags: {  }
+config_version: '3'
+expression:
+  id: rules_rule
+  uuid: f037b0ca-8c93-4538-94a4-5744a2751af4
+  weight: 0
+  conditions:
+    id: rules_and
+    uuid: 12fd1352-9211-42bd-8dcc-4b6d5cec2c1f
+    weight: 0
+    conditions:
+      -
+        id: rules_condition
+        uuid: d203fec5-d03b-4bcb-bc6f-a03695dec1e8
+        weight: 0
+        context_values:
+          roles:
+            - asociado
+          operation: AND
+        context_mapping:
+          user: user_unchanged
+        context_processors:
+          roles:
+            rules_tokens: {  }
+          operation:
+            rules_tokens: {  }
+        provides_mapping: {  }
+        condition_id: rules_user_has_role
+        negate: true
+      -
+        id: rules_condition
+        uuid: f59a4045-6a0b-4ad0-a289-2a20d55a39c6
+        weight: 0
+        context_values:
+          roles:
+            - asociado
+          operation: AND
+        context_mapping:
+          user: user
+        context_processors:
+          roles:
+            rules_tokens: {  }
+          operation:
+            rules_tokens: {  }
+        provides_mapping: {  }
+        condition_id: rules_user_has_role
+        negate: false
+  actions:
+    id: rules_action_set
+    uuid: be99e304-2867-4ba4-930c-0924ed99b025
+    weight: 0
+    actions:
+      -
+        id: rules_action
+        uuid: 10afd2a4-dc03-40d2-ba31-b93d07d6f1e2
+        weight: 0
+        context_values:
+          subject: 'Bienvenida/o a la AETG'
+          message: "<img src=\"/sites/default/files/Logo%20Asociaci%C3%B3n%20Espa%C3%B1ola%20de%20Terapia%20Gestalt%20AETG_40_aniversario_negro.png\" style=\"text-align:center;width:250px;height:auto;\" />\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p style=\"text-align:right\">Madrid, {{ @rules.current_date_context:current_date }}</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Estimado/a socio/a {{ user.name.value }}:</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Te comunicamos que en la última reunión de la Junta Directiva de la A.E.T.G. fue admitida tu solicitud para ser miembro adherente de la Asociación Española de Terapia Gestalt.</p>\r\n\r\n<p>En breve, recibirás la Revista Gestalt.</p>\r\n\r\n<p>En la Página Web de la AETG <a href=\"{{ @rules.site_context:site.url }}\">{{ @rules.site_context:site.url }}</a> encontrarás listado de Tesinas, el Código Ético y los Estatutos de la AETG, además de otras informaciones de tu interés.</p>\r\n\r\n<p>Para acceder a tu espacio privado en la web de la AETG, tendrás que ir a: <a href=\"{{ @rules.site_context:site.url }}user/password\">{{ @rules.site_context:site.url }}user/password</a>.</p>\r\n\r\n<p>Ahí, pon tu dirección de email; en breve recibirás un email con información de cómo obtener una contraseña y poder modificar tus datos en web.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Sin más, recibe nuestra más cordial bienvenida.<br>\r\nSECRETARÍA TÉCNICA DE LA AETG</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<address>Calle Mayor, 58 – 5º F\r\n28013 Madrid\r\nTfl/fax: <a href=\"tel:+34915430625\">915430625</a>\r\ne-mail: <a href=\"mailto:info@aetg.es\">info@aetg.es</a>\r\n</address>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>ACERCA DE ESTA COMUNICACIÓN.<br>\r\nLe informamos que usted recibe esta comunicación porque sus datos de carácter personal han sido incorporados al Fichero de Socios del que es responsable Asociación Española de Terapia Gestalt – AETG, previamente notificado a la Agencia Española de Protección de Datos e inscrito en su Registro General, siendo la finalidad del mismo el correcto desarrollo de nuestra relación asociativa, profesional o contractual. Los usuarios de esta información son los departamentos del responsable del fichero, garantizando en todo momento la más absoluta confidencialidad y secreto del contenido de sus datos y el cumplimiento de las medidas necesarias para salvaguardar la seguridad en el tratamiento de los mismos.<br>\r\nConforme a lo dispuesto en los arts. 15 – 22 del Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo de 27 de abril de 2016, se informa al interesado titular en su caso, que puede ejercitar sus derechos de acceso, rectificación o supresión y limitación u oposición o retirada del consentimiento para el tratamiento de sus datos, así como a la portabilidad de los mismos a fin de trasmitirlos a otro responsable, dirigiendo una comunicación escrita al responsable del fichero, a la dirección postal : Asociación Española de Terapia Gestalt – AETG en Calle Mayor, n.o58 - 5o F C.P.- 28013 – Madrid – (España) o mediante e-mail a la dirección electrónica : info@aetg.es</p>"
+          reply: ''
+          language: ''
+          key: rules_aetg_send_email
+        context_mapping:
+          to: user.mail.value
+        context_processors:
+          subject:
+            rules_tokens: {  }
+          message:
+            rules_tokens: {  }
+          reply:
+            rules_tokens: {  }
+          language:
+            rules_tokens: {  }
+          key:
+            rules_tokens: {  }
+        provides_mapping: {  }
+        action_id: rules_aetg_send_email

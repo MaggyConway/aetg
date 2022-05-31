@@ -1,0 +1,23 @@
+uuid: 4b1c5bfa-e080-4f57-aeda-4abf328555b7
+langcode: en
+status: true
+dependencies:
+  module:
+    - address
+    - field_permissions
+    - profile
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: profile.field_invoicing_address
+field_name: field_invoicing_address
+entity_type: profile
+type: address
+settings: {  }
+module: address
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

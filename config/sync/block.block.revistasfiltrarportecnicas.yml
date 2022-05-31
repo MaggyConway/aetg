@@ -1,0 +1,29 @@
+uuid: cf138b44-e83b-4025-9ee7-39979a161c83
+langcode: es
+status: true
+dependencies:
+  config:
+    - facets.facet.revistas_filtrar_por_tecnicas
+  module:
+    - facets
+    - system
+  theme:
+    - aetg
+id: revistasfiltrarportecnicas
+theme: aetg
+region: content
+weight: -11
+provider: null
+plugin: 'facet_block:revistas_filtrar_por_tecnicas'
+settings:
+  id: 'facet_block:revistas_filtrar_por_tecnicas'
+  label: 'Revistas: Filtrar por técnicas'
+  provider: facets
+  label_display: '0'
+  block_id: revistasfiltrarportecnicas
+visibility:
+  request_path:
+    id: request_path
+    pages: /gestalt/recursos/revista
+    negate: false
+    context_mapping: {  }

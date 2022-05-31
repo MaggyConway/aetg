@@ -1,0 +1,18 @@
+uuid: f6342f60-764e-465e-b180-d87b663e9c8e
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraph_view_mode
+    - paragraphs_browser
+third_party_settings:
+  paragraphs_browser:
+    image_path: 'public://la_biblioteca_online.png'
+  paragraph_view_mode:
+    enabled: false
+id: webform
+label: Webform
+icon_uuid: null
+icon_default: null
+description: 'La Biblioteca Online'
+behavior_plugins: {  }

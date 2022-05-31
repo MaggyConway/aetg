@@ -1,0 +1,22 @@
+uuid: a1574600-a84e-4e66-82cf-cd015d4d1f0c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: documentacion_de_escuela
+label: 'Documentación de escuela'
+type: 'canonical_entities:node'
+pattern: 'secretaria/escuelas/[node:title]'
+selection_criteria:
+  005304e5-6d09-4771-8e9d-eff56b984781:
+    id: 'entity_bundle:node'
+    bundles:
+      documentacion_de_escuela: documentacion_de_escuela
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 005304e5-6d09-4771-8e9d-eff56b984781
+selection_logic: and
+weight: -6
+relationships: {  }

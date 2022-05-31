@@ -1,0 +1,10 @@
+uuid: 71470c64-ebb2-450f-892b-78bb9242ea4f
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.dashboard
+label: Dashboard
+targetEntityType: user
+cache: true

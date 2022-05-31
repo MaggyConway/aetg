@@ -1,0 +1,21 @@
+uuid: cac112d5-d266-48f8-a1a8-d57ac743276f
+langcode: und
+status: true
+dependencies:
+  module:
+    - profile
+id: profile.field_apellidos_prof
+field_name: field_apellidos_prof
+entity_type: profile
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

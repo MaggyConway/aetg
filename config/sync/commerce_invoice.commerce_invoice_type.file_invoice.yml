@@ -1,0 +1,19 @@
+uuid: 6d5d803e-36e0-4d4c-9fcd-d59dba88bac7
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'file:file:9dce143d-3db6-47cf-975b-e928d9a462f3'
+_core:
+  default_config_hash: ccmJnYDefjjUJ1_S8QUpDMgN41yZcLULtiTOdR1sJmo
+label: 'De archivos'
+id: file_invoice
+numberPattern: file_invoice
+logo: 9dce143d-3db6-47cf-975b-e928d9a462f3
+dueDays: null
+paymentTerms: ''
+footerText: "<p><h3>Asociación Española de Terapia Gestalt</h3>\r\n<strong>Registro de Asociación nº</strong> 47.701<br/>\r\nC/ Mayor 58, 5ºF<br />28013 Madrid (España)<br/><strong>CIF:</strong> ESG78254729</p>\r\n<p><strong>Forma de pago:</strong> Pago mediante tarjeta de crédito/débito</p>"
+traits: {  }
+workflow: invoice_default
+sendConfirmation: true
+confirmationBcc: jlongaressegarra@gmail.com

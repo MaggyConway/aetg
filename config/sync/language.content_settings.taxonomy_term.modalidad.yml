@@ -1,0 +1,11 @@
+uuid: 4aa302cc-828c-4f68-8777-4e3056268b41
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.modalidad
+id: taxonomy_term.modalidad
+target_entity_type_id: taxonomy_term
+target_bundle: modalidad
+default_langcode: site_default
+language_alterable: false

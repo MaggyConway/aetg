@@ -1,0 +1,19 @@
+{#
+/**
+ * @file
+ * Default invoice total tax template.
+ *
+ * Available variables:
+ * - invoice_entity: The invoice entity.
+ * - total_tax: The array of invoice tax price.
+ *
+ * @ingroup themeable
+ */
+#}
+{% if total_tax %}
+  <div class="invoice-total-tax">
+    {% for tax in total_tax %}
+      <span class="invoice-total-tax-percentage">({{ tax.percentage * 100 }}%) </span><span class="invoice-total-tax-value">{{ tax.amount|commerce_price_format }}</span>
+    {% endfor %}
+  </div>
+{% endif %}

@@ -1,0 +1,32 @@
+uuid: d4eb74ee-018b-4add-81f8-eca3f721d899
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_docentes_aetg
+    - profile.type.escuela
+id: profile.escuela.field_docentes_aetg
+field_name: field_docentes_aetg
+entity_type: profile
+bundle: escuela
+label: 'Docentes AETG'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    view:
+      view_name: docentes
+      display_name: entityreference_1
+      args: {  }
+    behaviors:
+      views-select-list:
+        status: 0
+    target_bundles: null
+    sort:
+      field: _none
+      direction: ASC
+field_type: entity_reference

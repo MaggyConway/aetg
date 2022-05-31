@@ -1,0 +1,8 @@
+uuid: 0178cd90-39a7-47e1-8ef2-0b2632d34477
+langcode: es
+status: true
+dependencies: {  }
+name: 'Temas de consultas'
+vid: tema_de_consulta
+description: 'Una lista de temas para poder precisar mejor la consultas de los usuarios.'
+weight: 0

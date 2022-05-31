@@ -1,0 +1,10 @@
+uuid: a7801dd6-7450-4ac0-8dc6-d900ab8e600c
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.edit_account
+label: 'Edit account'
+targetEntityType: user
+cache: true

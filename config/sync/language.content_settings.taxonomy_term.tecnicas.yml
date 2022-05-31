@@ -1,0 +1,11 @@
+uuid: 0732401d-0f2a-4ed4-9ebd-e0ecffe2cf87
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.tecnicas
+id: taxonomy_term.tecnicas
+target_entity_type_id: taxonomy_term
+target_bundle: tecnicas
+default_langcode: site_default
+language_alterable: false

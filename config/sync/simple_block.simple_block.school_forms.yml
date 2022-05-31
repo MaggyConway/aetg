@@ -1,0 +1,11 @@
+uuid: 374ea999-7ff3-49a4-8904-d78734ad4fad
+langcode: es
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+id: school_forms
+title: 'Trámites para escuelas'
+content:
+  value: "<ol class=\"tramites\">\r\n\t<li><a href=\"/node/add/documentacion_de_escuela\">Envío de certificados</a></li>\r\n\t<li><a href=\"/sites/default/files/2022-05/modelos-delegacion-voto-para-reunion-escuelas.docx\">Modelos de delegación de voto para reunión de escuelas</a></li>\r\n\t<li><a href=\"/sites/default/files/2022-05/modelos-delegacion-voto-para-responsables-formacion.docx\">Modelos de delegación de voto para los responsables de Formación</a></li>\r\n\t<li><a href=\"/sites/default/files/2022-05/texto-informativo-entregar-alumnos-inicio-su-formacion.doc\">Texto informativo a entregar a los alumnos al inicio de su formación</a></li>\r\n\t<li><a href=\"/secretaria/procedimiento-para-obtener-acreditacion-postgrado\">Obtención de acreditación de un postgrado</a></li>\r\n\t<li><a href=\"/secretaria/procedimiento-para-avalar-programa-formacion-gestalt-aplicada-infancia\">Avalar un programa de formación Gestalt aplicada a la infancia</a></li>\r\n\t<li><a href=\"https://acreditaciones.aetg.es\">Plataforma de acreditaciones</a></li>\r\n</ol>\r\n"
+  format: full_html

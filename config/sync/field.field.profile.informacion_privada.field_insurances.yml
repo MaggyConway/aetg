@@ -1,0 +1,91 @@
+uuid: d2167650-8022-4d2b-a0c2-b76255bf49ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_insurances
+    - paragraphs.paragraphs_type.mapfre_insurances
+    - profile.type.informacion_privada
+  module:
+    - entity_reference_revisions
+id: profile.informacion_privada.field_insurances
+field_name: field_insurances
+entity_type: profile
+bundle: informacion_privada
+label: Seguros
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      mapfre_insurances: mapfre_insurances
+    target_bundles_drag_drop:
+      accordion:
+        weight: 22
+        enabled: false
+      aetg_membership_type:
+        weight: 26
+        enabled: false
+      feap_membership_type:
+        weight: 28
+        enabled: false
+      header_with_slider:
+        weight: 30
+        enabled: false
+      image:
+        weight: 31
+        enabled: false
+      image_slider:
+        weight: 32
+        enabled: false
+      image_slider_item:
+        weight: 33
+        enabled: false
+      image_title_text_and_link:
+        weight: 34
+        enabled: false
+      image_title_text_multiple_links:
+        weight: 35
+        enabled: false
+      mapfre_insurances:
+        enabled: true
+        weight: 36
+      member_slider_with_multiple_link:
+        weight: 39
+        enabled: false
+      multiple_links:
+        weight: 40
+        enabled: false
+      news_slider:
+        weight: 41
+        enabled: false
+      school_slider_with_multiple_link:
+        weight: 44
+        enabled: false
+      slider:
+        weight: 45
+        enabled: false
+      teacher:
+        weight: 37
+        enabled: false
+      text:
+        weight: 46
+        enabled: false
+      title_and_file_list:
+        weight: 47
+        enabled: false
+      title_tag_text_and_link:
+        weight: 48
+        enabled: false
+      video_area:
+        weight: 49
+        enabled: false
+      webform:
+        weight: 50
+        enabled: false
+field_type: entity_reference_revisions

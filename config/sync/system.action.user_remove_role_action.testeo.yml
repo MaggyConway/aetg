@@ -1,0 +1,14 @@
+uuid: 4d242c51-2986-4c24-a3b0-38e41b99c4c5
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.testeo
+  module:
+    - user
+id: user_remove_role_action.testeo
+label: 'Remove the testeo role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: testeo

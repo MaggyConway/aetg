@@ -1,0 +1,11 @@
+uuid: 0439de40-56a0-4b5b-b023-0ee52edef294
+langcode: es
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+id: hazte_socio
+title: 'Hazte socio'
+content:
+  value: "<div class=\"btn-primary\">\r\n  <a href=\"/secretaria/hazte-socio-aetg\">Hazte socio</a>\r\n</div>"
+  format: full_html

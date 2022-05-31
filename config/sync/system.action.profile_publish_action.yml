@@ -1,0 +1,16 @@
+uuid: 6e7c42d1-697b-4899-8f50-1263c2c3e550
+langcode: es
+status: true
+dependencies:
+  enforced:
+    module:
+      - profile
+  module:
+    - profile
+_core:
+  default_config_hash: jjClImKlBhvh__KZnX6YkW_Kc1yZvqXODbUHt30A8z4
+id: profile_publish_action
+label: 'Publicar el perfil seleccionado'
+type: profile
+plugin: 'entity:publish_action:profile'
+configuration: {  }

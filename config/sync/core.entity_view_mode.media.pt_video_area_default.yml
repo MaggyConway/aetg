@@ -1,0 +1,10 @@
+uuid: 608df853-ad19-4f50-b6a5-c3a36ee5305e
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.pt_video_area_default
+label: 'PT Video area (Youtube or Vimeo): Default'
+targetEntityType: media
+cache: true

@@ -1,0 +1,18 @@
+uuid: 01592773-3121-4f7e-9379-06c932520e65
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraph_view_mode
+    - paragraphs_browser
+third_party_settings:
+  paragraphs_browser:
+    image_path: 'public://image.png'
+  paragraph_view_mode:
+    enabled: false
+id: image
+label: Image
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

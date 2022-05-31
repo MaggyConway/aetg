@@ -1,0 +1,21 @@
+uuid: cb8deb2e-5dea-4922-8fc2-fcfb28351c14
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_school_name
+    - node.type.documentacion_de_escuela
+id: node.documentacion_de_escuela.field_school_name
+field_name: field_school_name
+entity_type: node
+bundle: documentacion_de_escuela
+label: 'Nombre de escuela'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: '[current-user:escuela:field_nombre_de_escuela]'
+default_value_callback: field_default_token_default_value_callback
+settings: {  }
+field_type: string

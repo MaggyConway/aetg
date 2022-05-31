@@ -1,0 +1,18 @@
+uuid: b9db9c59-4338-4ad3-8900-2e899d506001
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraph_view_mode
+    - paragraphs_browser
+third_party_settings:
+  paragraphs_browser:
+    image_path: 'public://multiple_links.png'
+  paragraph_view_mode:
+    enabled: false
+id: multiple_links
+label: 'Multiple links'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

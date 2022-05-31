@@ -1,0 +1,27 @@
+uuid: 0dae5af5-bf8e-4662-bfa4-bce69329d3b2
+langcode: es
+status: false
+dependencies:
+  config:
+    - views.view.dashboard_recursos
+  module:
+    - views
+  theme:
+    - adminimal_theme
+id: views_block__dashboard_recursos_block_1
+theme: adminimal_theme
+region: header
+weight: null
+provider: null
+plugin: 'views_block:dashboard_recursos-block_1'
+settings:
+  id: 'views_block:dashboard_recursos-block_1'
+  label: 'Panel de recursos'
+  provider: views
+  label_display: visible
+  views_label: 'Panel de recursos'
+  items_per_page: none
+  override:
+    items_per_page: none
+  views_label_checkbox: 0
+visibility: {  }

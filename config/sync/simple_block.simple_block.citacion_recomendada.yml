@@ -1,0 +1,11 @@
+uuid: ec4c71f0-4291-4faa-83c2-ee678122900b
+langcode: es
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+id: citacion_recomendada
+title: 'Citación recomendada'
+content:
+  value: "<h3>&nbsp;</h3>\r\n\r\n<h3>Normas de citación APA</h3>\r\n\r\n<p>Para citar cualquier recurso de la biblioteca online de la AETG te recomendamos que visites el <a href=\"https://normasapa.in/citar-apa-online\" alt=\"Generador de referencias según la normativa APA\" rel=\"nofollow noreferrer\" target=\"_blank\">generador de referencias según la normativa APA</a> donde aprenderás a citar todos los recursos existentes en nuestra biblioteca online.</p>\r\n\r\n<p>&nbsp;</p>\r\n"
+  format: full_html

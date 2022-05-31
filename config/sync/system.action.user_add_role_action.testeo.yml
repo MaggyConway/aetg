@@ -1,0 +1,14 @@
+uuid: 3f96ab4f-b131-488d-85b9-f6bd6ca9e522
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.testeo
+  module:
+    - user
+id: user_add_role_action.testeo
+label: 'Add the testeo role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: testeo

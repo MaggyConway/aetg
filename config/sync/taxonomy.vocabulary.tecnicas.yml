@@ -1,0 +1,8 @@
+uuid: 1e5fe04b-a765-49cc-8893-4e5ad615f78a
+langcode: es
+status: true
+dependencies: {  }
+name: Técnicas
+vid: tecnicas
+description: 'Terapia con mediadores artísticos, terapia con caballos, etc.'
+weight: 0

@@ -1,0 +1,38 @@
+uuid: 5f34836e-7e17-4228-a8d3-826c227e9939
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_geofield
+    - profile.type.escuela
+  module:
+    - geocoder_field
+    - geofield
+third_party_settings:
+  geocoder_field:
+    method: geocode
+    weight: 0
+    skip_not_empty_value: false
+    disabled: false
+    hidden: false
+    providers:
+      - arcgisonline
+    dumper: wkt
+    failure:
+      handling: preserve
+      status_message: true
+      log: true
+    field: field_direccion
+    delta_handling: default
+id: profile.escuela.field_geofield
+field_name: field_geofield
+entity_type: profile
+bundle: escuela
+label: Geofield
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: geofield

@@ -1,0 +1,15 @@
+uuid: ad8731df-b1df-42a4-98c0-65c942b459af
+langcode: en
+status: true
+dependencies: {  }
+name: ct_event_related_event
+label: 'CT Event: Related event'
+effects:
+  84afa94d-6c96-446b-9826-ffc2c82f0bd3:
+    uuid: 84afa94d-6c96-446b-9826-ffc2c82f0bd3
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 250
+      height: 166
+      anchor: center-center

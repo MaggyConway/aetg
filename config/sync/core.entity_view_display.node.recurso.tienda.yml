@@ -1,0 +1,246 @@
+uuid: 82d02485-2241-42c4-89b8-d508674f6d26
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.tienda
+    - field.field.node.recurso.body
+    - field.field.node.recurso.field_adjunto
+    - field.field.node.recurso.field_autor
+    - field.field.node.recurso.field_editorial
+    - field.field.node.recurso.field_fecha_de_publicacion
+    - field.field.node.recurso.field_fundamentos
+    - field.field.node.recurso.field_has_physical_file
+    - field.field.node.recurso.field_image
+    - field.field.node.recurso.field_imagen
+    - field.field.node.recurso.field_imagen_grande
+    - field.field.node.recurso.field_links
+    - field.field.node.recurso.field_media
+    - field.field.node.recurso.field_modalidad
+    - field.field.node.recurso.field_product_reference
+    - field.field.node.recurso.field_relacionados
+    - field.field.node.recurso.field_tecnicas
+    - field.field.node.recurso.field_temas
+    - field.field.node.recurso.field_tipo_de_recurso
+    - field.field.node.recurso.field_tutor_tesina
+    - field.field.node.recurso.field_video
+    - image.style.ct_resource_default_header_image
+    - node.type.recurso
+  module:
+    - datetime
+    - field_formatter_class
+    - image
+    - layout_builder
+    - layout_discovery
+    - link
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: Header
+          layout_builder_styles_style: ''
+        components:
+          11ed3bc8-e4eb-482a-8f80-d2aef8d3012d:
+            uuid: 11ed3bc8-e4eb-482a-8f80-d2aef8d3012d
+            region: content
+            configuration:
+              id: 'field_block:node:recurso:field_imagen'
+              label: Imagen
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: tienda
+                third_party_settings:
+                  empty_fields:
+                    handler: ''
+                  field_formatter_class:
+                    class: ''
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional:
+              layout_builder_styles_style: ''
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          968ccf55-2ae2-422a-bfab-3bf31c19a4ba:
+            uuid: 968ccf55-2ae2-422a-bfab-3bf31c19a4ba
+            region: content
+            configuration:
+              id: 'field_block:node:recurso:title'
+              label: Título
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: string
+                settings:
+                  link_to_entity: true
+                third_party_settings:
+                  empty_fields:
+                    handler: ''
+                  field_formatter_class:
+                    class: ''
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional:
+              layout_builder_styles_style: ''
+            weight: 0
+          b1a09b94-d0fd-48a0-a4f1-3894d9e0d5de:
+            uuid: b1a09b94-d0fd-48a0-a4f1-3894d9e0d5de
+            region: content
+            configuration:
+              id: 'field_block:node:recurso:field_product_reference'
+              label: 'Referencia a producto'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: default
+                third_party_settings:
+                  empty_fields:
+                    handler: ''
+                  field_formatter_class:
+                    class: ''
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional:
+              layout_builder_styles_style: ''
+            weight: 1
+        third_party_settings: {  }
+id: node.recurso.tienda
+targetEntityType: node
+bundle: recurso
+mode: tienda
+content:
+  body:
+    label: hidden
+    weight: 7
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  breadcrumbs:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_autor:
+    label: inline
+    weight: 2
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_editorial:
+    label: inline
+    weight: 4
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  field_fecha_de_publicacion:
+    label: inline
+    weight: 3
+    type: datetime_default
+    settings:
+      format_type: fecha_de_publicacion
+      timezone_override: ''
+    third_party_settings: {  }
+    region: content
+  field_image:
+    type: image
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      image_style: ct_resource_default_header_image
+      image_link: ''
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+  field_links:
+    weight: 10
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_media:
+    weight: 9
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_modalidad:
+    label: inline
+    weight: 5
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_product_reference:
+    weight: 8
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    type: entity_reference_entity_view
+    region: content
+  field_tipo_de_recurso:
+    type: entity_reference_label
+    weight: 6
+    region: content
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_adjunto: true
+  field_fundamentos: true
+  field_has_physical_file: true
+  field_imagen: true
+  field_imagen_grande: true
+  field_relacionados: true
+  field_tecnicas: true
+  field_temas: true
+  field_tutor_tesina: true
+  field_video: true
+  langcode: true
+  links: true
+  private_message_link: true
+  search_api_excerpt: true

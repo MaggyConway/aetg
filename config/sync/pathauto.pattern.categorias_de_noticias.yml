@@ -1,0 +1,23 @@
+uuid: 821bde73-18f8-42a1-9c56-463960ddaab5
+langcode: es
+status: true
+dependencies:
+  module:
+    - ctools
+    - taxonomy
+id: categorias_de_noticias
+label: 'Categorías de noticias'
+type: 'canonical_entities:taxonomy_term'
+pattern: '/noticias/[term:name]'
+selection_criteria:
+  f22caa11-9b7c-4fa6-8846-483c15b39644:
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      categoria_de_noticia: categoria_de_noticia
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    uuid: f22caa11-9b7c-4fa6-8846-483c15b39644
+selection_logic: and
+weight: -5
+relationships: {  }

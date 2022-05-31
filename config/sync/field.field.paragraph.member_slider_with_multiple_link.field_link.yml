@@ -1,0 +1,23 @@
+uuid: a25e2e4f-bfda-4f20-baf8-cbd9f98a21c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_link
+    - paragraphs.paragraphs_type.member_slider_with_multiple_link
+  module:
+    - link
+id: paragraph.member_slider_with_multiple_link.field_link
+field_name: field_link
+entity_type: paragraph
+bundle: member_slider_with_multiple_link
+label: Link
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

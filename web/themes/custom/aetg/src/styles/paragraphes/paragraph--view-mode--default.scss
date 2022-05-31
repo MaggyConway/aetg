@@ -1,0 +1,25 @@
+.paragraph--view-mode--default {
+    .view-news-slider {
+        > .view-header {
+            text-align: center;
+            > h2 {
+                margin-bottom: 40px;
+                text-align: center;
+            }
+        }
+    }
+
+    .block-field-blockparagraphimage-title-text-multiple-linksfield-title {
+        > .field--name-field-title {
+            margin-bottom: 30px;
+            margin-top: 40px;
+            text-align: center;
+        }
+    }
+
+    .field--name-field-paragraphs {
+        > .field__item {
+            text-align: inherit;
+        }
+    }
+}

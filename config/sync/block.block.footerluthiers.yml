@@ -1,0 +1,22 @@
+uuid: ce3ead6a-baa0-4c4d-8a53-3a8d6be6d84e
+langcode: es
+status: true
+dependencies:
+  config:
+    - simple_block.simple_block.footer_luthiers
+  module:
+    - simple_block
+  theme:
+    - aetg
+id: footerluthiers
+theme: aetg
+region: footer_bottom_middle
+weight: -22
+provider: null
+plugin: 'simple_block:footer_luthiers'
+settings:
+  id: 'simple_block:footer_luthiers'
+  label: 'Footer Luthiers'
+  provider: simple_block
+  label_display: '0'
+visibility: {  }

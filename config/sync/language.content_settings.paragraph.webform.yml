@@ -1,0 +1,11 @@
+uuid: 434cf2d4-1fe6-4084-9a99-9754371c736e
+langcode: es
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.webform
+id: paragraph.webform
+target_entity_type_id: paragraph
+target_bundle: webform
+default_langcode: site_default
+language_alterable: false

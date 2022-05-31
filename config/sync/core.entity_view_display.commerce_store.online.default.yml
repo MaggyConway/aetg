@@ -1,0 +1,36 @@
+uuid: 85de1fa8-ec38-4f82-a6f4-7d78c01c6fb6
+langcode: es
+status: true
+dependencies:
+  config:
+    - commerce_store.commerce_store_type.online
+  module:
+    - address
+_core:
+  default_config_hash: TXXGt2nhVIkNciw-z_ybNwsIZnsyMLKvqUFjsZFUmwI
+id: commerce_store.online.default
+targetEntityType: commerce_store
+bundle: online
+mode: default
+content:
+  address:
+    type: address_default
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  billing_countries: true
+  breadcrumbs: true
+  default_currency: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  is_default: true
+  langcode: true
+  mail: true
+  name: true
+  search_api_excerpt: true
+  timezone: true
+  uid: true

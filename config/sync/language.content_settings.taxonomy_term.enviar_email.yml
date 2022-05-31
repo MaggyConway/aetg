@@ -1,0 +1,11 @@
+uuid: dd9785e8-f09d-4937-b708-65e0b981f0fb
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.enviar_email
+id: taxonomy_term.enviar_email
+target_entity_type_id: taxonomy_term
+target_bundle: enviar_email
+default_langcode: site_default
+language_alterable: false

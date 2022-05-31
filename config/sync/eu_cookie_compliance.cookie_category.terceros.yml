@@ -1,0 +1,9 @@
+uuid: 1ba42170-0bfe-4353-9d63-e0bf3a10c157
+langcode: es
+status: true
+dependencies: {  }
+id: terceros
+label: 'De terceros'
+description: 'Cookies de Youtube, Vimeo o Google para el funcionamiento y seguimiento de uso de los vídeos y contenidos integrados en la web.'
+checkbox_default_state: unchecked
+weight: -7

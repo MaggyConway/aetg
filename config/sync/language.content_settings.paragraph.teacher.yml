@@ -1,0 +1,11 @@
+uuid: fd0f182a-a607-4735-8b4d-5ba3728d120f
+langcode: es
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.teacher
+id: paragraph.teacher
+target_entity_type_id: paragraph
+target_bundle: teacher
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,19 @@
+uuid: 70e93291-b247-4cd6-acd2-82dcb8d5b2c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_formacion_universitaria
+    - profile.type.informacion_privada
+id: profile.informacion_privada.field_formacion_universitaria
+field_name: field_formacion_universitaria
+entity_type: profile
+bundle: informacion_privada
+label: 'Formación universitaria'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

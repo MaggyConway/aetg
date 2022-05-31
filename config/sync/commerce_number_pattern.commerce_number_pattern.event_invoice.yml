@@ -1,0 +1,18 @@
+uuid: 4dbf43e9-a4cd-4aa7-a8d2-5889f8d4ad55
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - commerce_invoice
+_core:
+  default_config_hash: hp6r3xzLGwrIIC_hKth1N8BqtO9EasSw-VWXGQkkwO4
+id: event_invoice
+label: 'Factura de Evento'
+targetEntityType: commerce_invoice
+plugin: yearly
+configuration:
+  pattern: 'AETG[pattern:year]-E[pattern:number]'
+  initial_number: 1
+  padding: 4
+  per_store_sequence: true

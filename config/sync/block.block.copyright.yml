@@ -1,0 +1,22 @@
+uuid: 9fd91d71-0a58-4751-b820-c564c88ffdd8
+langcode: en
+status: true
+dependencies:
+  config:
+    - simple_block.simple_block.copyright
+  module:
+    - simple_block
+  theme:
+    - aetg
+id: copyright
+theme: aetg
+region: footer_bottom_left
+weight: -21
+provider: null
+plugin: 'simple_block:copyright'
+settings:
+  id: 'simple_block:copyright'
+  label: Copyright
+  provider: simple_block
+  label_display: '0'
+visibility: {  }

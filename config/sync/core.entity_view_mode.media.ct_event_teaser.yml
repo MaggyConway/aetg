@@ -1,0 +1,10 @@
+uuid: 7ec06178-7df3-4c78-ba0f-30825a0b97f5
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.ct_event_teaser
+label: 'CT Event: Teaser'
+targetEntityType: media
+cache: true

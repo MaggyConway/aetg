@@ -1,0 +1,8 @@
+uuid: fba6d342-8056-49da-b76e-f67965bcb70b
+langcode: es
+status: true
+dependencies: {  }
+name: 'Áreas de trabajo'
+vid: areas_of_work
+description: ''
+weight: 0

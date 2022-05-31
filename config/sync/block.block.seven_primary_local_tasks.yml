@@ -1,0 +1,22 @@
+uuid: 965b75d7-1d25-4e57-a5ca-a0b26386a9f2
+langcode: es
+status: true
+dependencies:
+  theme:
+    - seven
+_core:
+  default_config_hash: ddy1OsBbWxjwEI8VL1viD4I69qcLHOkul4BxbTqLBTs
+id: seven_primary_local_tasks
+theme: seven
+region: header
+weight: 0
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Solapas principales'
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: false
+visibility: {  }

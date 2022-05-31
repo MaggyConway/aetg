@@ -1,0 +1,23 @@
+uuid: 83d1343e-210a-4d29-80c7-68e62d0e27a2
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - profile
+    - text
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: profile.field_timetable
+field_name: field_timetable
+entity_type: profile
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

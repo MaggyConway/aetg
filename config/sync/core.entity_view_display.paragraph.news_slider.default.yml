@@ -1,0 +1,36 @@
+uuid: 01bbb84a-c622-4446-89c6-9d4e8f04485c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.news_slider.field_views_reference
+    - paragraphs.paragraphs_type.news_slider
+  module:
+    - field_formatter_class
+    - viewsreference
+id: paragraph.news_slider.default
+targetEntityType: paragraph
+bundle: news_slider
+mode: default
+content:
+  field_views_reference:
+    weight: 0
+    label: hidden
+    settings:
+      plugin_types:
+        block: block
+        default: 0
+        page: 0
+        feed: 0
+        embed: 0
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    type: viewsreference_formatter
+    region: content
+hidden:
+  breadcrumbs: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  search_api_excerpt: true

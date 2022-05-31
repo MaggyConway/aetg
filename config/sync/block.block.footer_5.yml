@@ -1,0 +1,31 @@
+uuid: f8093e28-0fc1-4cfc-adc1-f10e89590d51
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - menu_block
+  theme:
+    - aetg
+id: footer_5
+theme: aetg
+region: footer_bottom_right
+weight: -22
+provider: null
+plugin: 'menu_block:footer'
+settings:
+  id: 'menu_block:footer'
+  label: Menu
+  provider: menu_block
+  label_display: '0'
+  follow: false
+  follow_parent: child
+  level: 1
+  depth: 0
+  expand_all_items: false
+  parent: 'footer:menu_link_content:8c4746c3-587c-4136-a135-1fc83c7c31e9'
+  suggestion: footer
+  label_type: block
+  label_link: false
+visibility: {  }

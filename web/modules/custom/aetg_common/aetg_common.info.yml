@@ -1,0 +1,9 @@
+name: 'AETG Common'
+type: module
+description: 'Common functions'
+core: 8.x
+package: 'Custom'
+dependencies:
+  - rules
+  - custom_breadcrumbs
+  - pathauto

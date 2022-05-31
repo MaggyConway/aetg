@@ -1,0 +1,8 @@
+uuid: e5e5d402-bb33-4189-a52f-136d475ac190
+langcode: es
+status: true
+dependencies: {  }
+name: 'Tipos de actividades'
+vid: tipo_de_actividad
+description: ''
+weight: 0

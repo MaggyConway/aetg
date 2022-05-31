@@ -1,0 +1,725 @@
+.profile > .field--name-informacion-profesional-profiles,
+.profile > .field--name-school-professional-information-profiles {	
+	> .profile {		
+		> .layout--twocol-section--67-33 {
+			position: relative;
+			justify-content: space-between;
+			flex-wrap: nowrap;
+			
+			@include breakpoint(tablet-md) {
+				flex-direction: column;
+			}
+			
+			&.parent-tabs {
+				flex-wrap: wrap;
+				
+				@include breakpoint(tablet-md) {
+					flex-direction: column;
+				}
+				
+				> .layout__region--first {
+					width: calc(67% - 30px);
+					padding-right: 0;
+					
+					@include breakpoint(tablet-md) {
+						width: 100%;
+					}
+				}
+				
+				> .layout__region--second {
+					width: 33%;
+					
+					@include breakpoint(tablet-md) {
+						width: 100%;
+					}
+				}
+				
+				#profile--tabs {
+					width: 100%;
+					min-height: 50px;
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					padding-bottom: 20px;
+					margin-bottom: 16px;
+					position: relative;
+					
+					&:before {
+						position: absolute;
+						content: "";
+						left: 0;
+						bottom: 0;
+						width: 100%;
+						height: 1px;
+						background-color: $color-E6;
+					}
+					
+					@include breakpoint(tablet-m) {
+						flex-wrap: wrap;
+					}
+					
+					@include breakpoint(mobile-large) {
+						padding-bottom: 0px;
+					}
+					
+					h2 {
+						@include title-fz-18-lh-25-fw-600;
+						color: $color-A;
+						cursor: pointer;
+						user-select: none;
+						white-space: nowrap;
+						margin-bottom: 0;
+						
+						&.selected {
+							color: $color-1;
+						}
+						
+						@include breakpoint(tablet-m) {
+							font-size: 16px;
+							line-height: 20px;
+							width: 50%;
+							padding: 10px 0;
+						}
+						
+						@include breakpoint(mobile-small) {
+							white-space: normal;
+						}
+						
+						&:nth-child(even) {
+							@include breakpoint(mobile-large) {
+								text-align: right;
+							}
+						}
+						
+					}
+				}
+			}
+			
+			&.map-row {
+				width: 100%;
+				justify-content: space-between;
+				align-items: flex-start;
+				
+				> .layout__region--first {
+					width: calc(67% - 30px);
+					padding-right: 30px;
+					height: 216px;
+					border: 2px solid $color-A;
+					background-color: $color-F7;
+					overflow: hidden;
+					padding: 0;
+					border-radius: 5px;
+					
+					@include breakpoint(IPad-Pro) {
+						width: 100%;
+					}
+				}
+				
+				> .layout__region--second {
+					width: 33%;
+					
+					.field--name-field-invoicing-address {
+						> .field__item {
+							margin: 0;
+						}
+					}
+					
+					@include breakpoint(IPad-Pro) {
+						width: 100%;
+						margin-bottom: 20px;
+					}
+				}
+				
+				@include breakpoint(IPad-Pro) {
+					flex-direction: column-reverse;
+				}
+				
+				@include breakpoint(tablet-md) {
+					margin-top: 40px;
+				}
+			}
+			
+			.layout__region {
+				@include breakpoint(tablet-md) {
+					width: 100%;
+				}
+			}
+			
+			> .layout__region--first {
+				flex: unset;
+				width: calc(67% - 30px);
+				padding-right: 30px;
+				
+				@include breakpoint(tablet-md) {
+					width: 100%;
+					margin-right: 0;
+				}
+				
+				.block-entity-viewprofile {
+					> .profile {
+						display: none;
+						transition: all .3s ease-in-out;
+						width: 100%;
+						height: auto;
+					}
+					
+					&.selected {
+						> .profile {
+							display: block;
+						}
+					}
+				}
+			}
+			
+			> .layout__region--second {
+				flex: unset;
+				
+				.field--name-field-ambito-trabajo {
+					margin-bottom: 33px;
+				}
+				
+				.block-entity-viewprofile { // contacts
+					h2 {
+						@include title-fz-16-lh-26-fw-600;
+						color: $color-1;
+						margin-bottom: 16px;
+					}
+					
+					.field__label {
+						@include text-fz-14-lh-20;
+						color: $color-A;
+						margin-bottom: 5px;
+					}
+					
+					.field--label-above {
+						&:not(:last-child) {
+							margin-bottom: 16px;
+						}
+						
+						.field__item {
+							margin: 0;
+							
+							a {
+								@include text-fz-16-lh-26;
+								color: $color-1;
+								
+								// svg {
+								// 	display: none;
+								// }
+							}
+						}
+					}
+				}
+			}
+			
+			.field__label {
+				@include title-fz-16-lh-26-fw-600;
+				color: $color-1;
+				margin-bottom: 16px;
+			}
+			
+			.field__item {
+				@include text-fz-16-lh-26;
+				color: $color-1;
+				margin-bottom: 40px;
+				
+				strong {
+					font-weight: 600;
+				}
+				
+				@include breakpoint(mobile-middle) {
+					margin-bottom: 30px;
+				}
+			}
+		}
+	}
+	
+	.profile--view-mode--professional-card-header {
+		display: flex;
+		flex-direction:column;
+		justify-content: flex-start;
+		align-items: center;
+		margin-bottom: 50px;
+		width: 100%;
+		overflow: hidden;
+		
+		@include breakpoint(tablet-md) {
+			align-items: flex-start;
+		}
+		
+		@include breakpoint(mobile-middle) {
+			margin-bottom: 30px;
+		}
+		
+		> .layout {
+			justify-content: center;
+			align-items: center;
+			flex-wrap: nowrap;
+			width: 580px;
+			margin-bottom: 28px;
+			
+			@include breakpoint(tablet) {
+				width: 100%;
+			}
+			
+			> .layout__region {
+				flex: unset;
+				
+				&--first {
+					@include mini-slider-image;
+					margin-right: 28px;
+					overflow: hidden;
+
+					> .block, .field--type-image {
+						width: 100%;
+						height: 100%;
+					}
+					
+					img {
+						@include mini-slider-image;
+					}
+					
+					@include breakpoint(mobile-large) {
+						margin-right: 15px;
+						margin-bottom: 15px;
+					}
+				}
+			}
+		}
+		
+		> .layout--onecol > .layout__region--content {
+			display: flex;
+			flex-direction: row-reverse;
+			justify-content: flex-end;
+			align-items: center;
+			flex-wrap: nowrap;
+			width: 100%;
+			
+			@include breakpoint(tablet) {
+				flex-direction: column-reverse;
+			}
+			
+			.block-extra-field-blockprofileschool-professional-informationaddtoany {
+				@include breakpoint(tablet) {
+					width: 60%;
+				}
+				
+				@include breakpoint(mobile-middle) {
+					width: 100%;
+				}
+			}
+		}
+		
+		.field--type-string {
+			@include h3;
+			color: $color-1;
+			
+			@include breakpoint(mobile-large) {
+				font-size: 18px;
+				line-height: 24px;
+			}
+		}
+		
+		.block-extra-field-blockprofileinformacion-profesionaladdtoany {
+			@include breakpoint(tablet) {
+				width: 60%;
+			}
+			
+			@include breakpoint(mobile-middle) {
+				width: 100%;
+			}
+		}
+		
+		.addtoany_list {			
+			@include breakpoint(tablet) {
+				margin-left: 0;
+			}
+			
+			svg {
+				display: none;
+			}
+			
+			.addtoany_share {
+				@include btn-black;
+				padding: 0;
+				width: 115px;
+				min-width: 115px;
+				height: 40px;
+				position: relative;
+				
+				@include breakpoint(tablet) {
+					width: 100%;
+				}
+				
+				span {
+					width: 100%;
+					height: 100%;
+					background: none !important;
+				}
+				
+				&:before {
+					position: absolute;
+					content: "Compartir";
+					@include text-fz-14-lh-20;
+					color: #fff;
+					text-align: center;
+					left: 50%;
+					top: 50%;
+					transform: translate(-50%, -50%);
+					z-index: 50;
+				}
+			}
+		}
+		
+		.block-aetg-profile-operations-link {
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			
+			@include breakpoint(tablet) {
+				width: 100%;
+				justify-content: space-between;
+				flex-wrap: wrap;
+				margin: -8px 0;
+			}
+			
+			@include breakpoint(mobile-middle) {
+				flex-direction: column;
+			}
+			
+			a {
+				@include text-fz-14-lh-20;
+				width: auto;
+				height: 40px;
+				white-space: nowrap;
+				margin: 0 16px 0 0;
+				
+				@include breakpoint(tablet) {
+					width: 60%;
+					margin: 0 auto 16px;
+				}
+				
+				@include breakpoint(mobile-middle) {
+					width: 100%;
+					margin-bottom: 15px;
+				}
+				
+				&.view-link {
+					@include btn-white;
+				}
+				
+				&.edit-link {
+					@include btn-white;
+				}
+				
+				&.delete-link {
+					@include btn-red;
+				}
+				
+				&.view-link, &.edit-link, &.delete-link {
+					@include breakpoint(tablet-m) {
+						padding: 11px 16px 9px;
+					}
+				}
+				
+			}
+		}
+	}
+	
+	p.address {
+		position: static;
+		max-width: 200px;
+		@include text-fz-16-lh-26;
+		color: $color-1;
+	}
+	
+	.field--name-field-ambito-trabajo {
+		.field__item {
+			margin-bottom: 7px !important;
+			
+			a {
+				font-size: 16px;
+				line-height: 26px;
+				color: $blue;
+				&:hover {
+					color: $blue-hover;
+				}
+			}
+		}
+	}
+	
+	.paragraph--type--teacher {
+		> .layout--twocol-section--25-75 {
+			flex-wrap: nowrap;
+			align-items: flex-start;
+			> .layout__region {
+				flex: unset;
+				
+				&--first {
+					margin-right: 28px;
+					width: 40px;
+					min-width: 40px;
+					height: 40px;
+					position: relative;
+					background-color: transparent;
+					border-radius: 9px 9px 0 9px;
+					border: none;
+
+					&:before {
+						position: absolute;
+						content: '';
+						right: 0;
+						top: 8px;
+						// transform: translateY(-50%);
+						background: $color-F7 url('../../assets/images/no-image.svg') no-repeat center center;
+						background-size: 16px 16px;
+						width: 40px;
+						height: 40px;
+						border: 1px solid $color-E6;
+						border-radius: 5px 5px 0 5px;
+				  }
+					
+					img {
+						@include mini-slider-image;
+						// object-fit: contain;
+					}
+					
+					@include breakpoint(mobile-large) {
+						margin-right: 15px;
+						margin-bottom: 15px;
+					}
+				}
+			}
+		}
+		
+		.block-field-blockparagraphteacherfield-image {
+			> .field {
+				margin: 0;
+			}
+			
+			.field--name-field-media-image {
+				> .field__item {
+					@include mini-slider-image;
+					border-radius: 5px;
+					overflow: hidden;
+					border: 1px solid $color-E6;
+					margin: 0 30px 0 0;
+					background-color: $color-F7;
+					
+					img {
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+					}
+					
+					@include breakpoint(mobile-large) {
+						margin-right: 15px;
+					}
+				}
+			}
+		}
+		
+		
+		.layout__region--second {
+			.field--name-field-title {
+				font-weight: 600 !important;
+				font-size: 24px !important;
+				line-height: 36px !important;
+				margin-bottom: 0 !important;
+			}
+			
+			.field--name-field-text {
+				@include text-fz-14-lh-20;
+				margin-bottom: 0;
+				
+				p {
+					line-height: inherit;
+				}
+			}
+			
+			.field--name-field-user {
+				margin: 10px 0 0;
+				a {
+					@include btn-white;
+					padding: 11px 14px 9px;
+				}
+			}
+		}
+	}
+	
+	.field--name-field-detailed-training-program, .field--name-field-timetable {
+		* {
+			@include text-fz-16-lh-26;
+		}
+		
+		ul {
+			margin: 0 0 16px 0;
+		}
+	}
+	
+	.field--name-field-url {
+		margin-bottom: 70px;
+		
+		@include breakpoint(tablet) {
+			margin-bottom: 30px;
+		}
+		
+		> .field__label {
+			margin-bottom: 10px !important;
+		}
+		
+		.field__items {
+			width: 200px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: flex-start;
+			align-items: center;
+		}
+		
+		.field__item {
+			a {
+				clear: both;
+				float: none;
+				margin-bottom: 10px;
+				display: block;
+			}
+			
+			a.ext {
+				&:after {  // blue stripe
+					background: none repeat scroll 0 0 transparent;
+					content: "";
+					display: block;
+					height: 2px;
+					left: 0;
+					position: relative;
+					background-color: #5fbcd5;
+					-webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+					transition: width 0.3s ease 0s, left 0.3s ease 0s;
+					width: 0;
+					margin-top: 3px;
+				}
+
+				&:hover {
+					color: $blue !important;
+
+					&:after {
+						width: 45px;
+					}
+				}
+			}
+
+			a[href*=linkedin], a[href*=facebook], a[href*=instagram],
+			a[href*=twitter], a[href*=vimeo], a[href*=pinterest], a[href*=tiktok],
+			a[href*=youtube], a[href*=google] {
+				width: 17px;
+				height: 17px;
+				overflow: hidden;
+				color: transparent !important;
+				background-size: contain;
+				clear: unset;
+				margin-right: 16px;
+				text-decoration: none;
+				transition: all .2s ease-in-out;
+				&:hover {
+					opacity: .6;
+					color: transparent !important;
+				}
+
+				svg {
+					display: none;
+				}
+			}
+			
+			
+			a[href*=linkedin] {
+				background: url("../../assets/images/social_icons/linkedin.svg") no-repeat center center;
+			}
+			
+			a[href*=facebook] {
+				background: url("../../assets/images/social_icons/fb.svg") no-repeat center center;
+			}
+			
+			a[href*=instagram] {
+				background: url("../../assets/images/social_icons/inst.svg") no-repeat center center;
+			}
+			
+			a[href*=twitter] {
+				background: url("../../assets/images/social_icons/tw.svg") no-repeat center center;
+			}
+			
+			a[href*=vimeo] {
+				background: url("../../assets/images/social_icons/vimeo.svg") no-repeat center center;
+			}
+			
+			a[href*=pinterest] {
+				background: url("../../assets/images/social_icons/pin.svg") no-repeat center center;
+				width: 22px;
+				height: 22px;
+			}
+			
+			a[href*=tiktok] {
+				background: url("../../assets/images/social_icons/tiktok.svg") no-repeat center center;
+				width: 22px;
+				height: 22px;
+			}
+			
+			a[href*=youtube] {
+				background: url("../../assets/images/social_icons/youtube.svg") no-repeat center center;
+				width: 22px;
+				height: 22px;
+			}
+			
+			a[href*=google] {
+				background: url("../../assets/images/social_icons/google.svg") no-repeat center center;
+			}
+			
+		}
+	}
+}
+
+.profile--type--school-professional-information {
+	&.profile--view-mode--tab-faculty {
+		> .field {
+			padding: 0;
+			> .field__item {
+				margin-bottom: 16px;
+			}
+		}
+	}
+	
+	&.profile--view-mode--teaser {
+		h3 {
+			font-size: 18px;
+		}
+	}
+}
+
+#profile--tabs {
+	flex-wrap: nowrap;
+	margin: -5px 0;
+	min-height: 50px;
+	
+	@include breakpoint(tablet) {
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	
+	h2 {
+		padding: 10px 20px;
+		margin: 5px 0;
+		text-align: center;
+		
+		@include breakpoint(tablet) {
+			width: 50%;
+		}
+	}
+}
+
+svg.ext {
+	width: 1em;
+	height: 1em;
+	padding-right: 0.2em;
+	fill: #5fbcd5;
+	font-weight: 900;
+	margin-left: 5px;
+}

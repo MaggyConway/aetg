@@ -1,0 +1,37 @@
+uuid: f4f76648-4c72-45bf-ae52-b0ced5a9f6bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.seguro_mapfre.field_cuota
+    - taxonomy.vocabulary.seguro_mapfre
+  module:
+    - text
+id: taxonomy_term.seguro_mapfre.default
+targetEntityType: taxonomy_term
+bundle: seguro_mapfre
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_cuota:
+    label: above
+    weight: 0
+    type: number_integer
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    region: content
+hidden:
+  breadcrumbs: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  langcode: true
+  search_api_excerpt: true

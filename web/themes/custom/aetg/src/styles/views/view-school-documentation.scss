@@ -1,0 +1,16 @@
+.view-school-documentation {
+    .view-header {
+        width: 100% !important;
+        margin: 0 !important;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        > a {
+            @include btn-white;
+        }
+    }
+
+    .view-empty {
+        padding: 16px;
+    }
+}

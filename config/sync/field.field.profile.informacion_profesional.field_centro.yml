@@ -1,0 +1,19 @@
+uuid: 39730ff0-f1e2-4234-b592-77f32a1418f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_centro
+    - profile.type.informacion_profesional
+id: profile.informacion_profesional.field_centro
+field_name: field_centro
+entity_type: profile
+bundle: informacion_profesional
+label: 'Centro de trabajo'
+description: 'Centro de terapia o formación donde desarrolla su actividad. Se puede dejar en blanco en caso de trabajar en consulta privada que no tenga un nombre propio, diferente del nombre del propio profesional. '
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

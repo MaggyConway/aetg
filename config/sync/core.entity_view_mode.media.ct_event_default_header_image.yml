@@ -1,0 +1,10 @@
+uuid: 2d864db6-0500-4c5d-bb67-28272141e47c
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.ct_event_default_header_image
+label: 'CT Event: Default - Header Image'
+targetEntityType: media
+cache: true

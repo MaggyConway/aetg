@@ -1,0 +1,27 @@
+uuid: c198ce7d-098b-454d-b807-0edf7940513d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_documentos_de_escuela
+    - node.type.documentacion_de_escuela
+  module:
+    - file
+id: node.documentacion_de_escuela.field_documentos_de_escuela
+field_name: field_documentos_de_escuela
+entity_type: node
+bundle: documentacion_de_escuela
+label: 'Documentos de la escuela'
+description: '<strong>No se pueden enviar documentos con certificados de varios alumnos</strong>. Cada documento ha de contener el nombre, apellidos, y tipo de certificados de <strong>un único alumno</strong>. Por ejemplo, se enviaría un archivo "Certificado de horas de Terapia individual de Juan García Muñoz" y otro con el "Certificado de horas de Supervisión individual de Juan García Muñoz".'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: ''
+  file_extensions: 'pdf doc docx txt'
+  max_filesize: ''
+  description_field: true
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

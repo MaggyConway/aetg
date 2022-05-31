@@ -1,0 +1,21 @@
+uuid: 5d6fe331-ed6d-4837-8cce-07ddca3599d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_bio
+    - profile.type.informacion_profesional
+  module:
+    - text
+id: profile.informacion_profesional.field_bio
+field_name: field_bio
+entity_type: profile
+bundle: informacion_profesional
+label: Descripción
+description: 'Información sobre el profesional. Esto puede incluir currículum, presentación personal, enfoque terapéutico, formación u orientación, etc.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,15 @@
+uuid: 7acab9c8-67db-434c-9eaf-b149ad3ac4b6
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_tax
+third_party_settings:
+  commerce_tax:
+    taxable_type: events
+label: Evento
+id: event
+purchasableEntityType: commerce_product_variation
+orderType: event
+traits: {  }
+locked: false

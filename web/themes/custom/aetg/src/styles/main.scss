@@ -1,0 +1,89 @@
+/* Normalize css */
+@import '~normalize.css/normalize.css';
+
+/* Fonts */
+// @import '../assets/fonts/main.css';
+
+/* Setup */
+@import './settings/variables';
+
+/* Media */
+@import './base/media';
+
+/* Mixins */
+@import './settings/mixins/mixins-base';
+@import './settings/mixins/mixin-containers';
+@import './settings/mixins/mixin-fonts';
+@import './settings/mixins/mixin-buttons';
+@import './settings/mixins/mixin-links';
+
+/* Base styles */
+@import './base/elements';
+@import './base/fonts';
+@import './base/typography';
+
+/* Components */
+@import './components/header';
+@import './components/footer';
+@import './components/pager';
+@import './components/slick';
+@import './components/form';
+@import './components/login-reg';
+@import './components/contact-form';
+@import "./components/default-image";
+@import './components/checkout';
+@import './components/preheader';
+@import './components/footer-bottom';
+
+/* blocks */
+@import './blocks/block-field-blocknodenewsfield-eventos';
+@import './blocks/block-system-breadcrumb-block';
+@import './blocks/block-reference';
+@import './blocks/block-contacts';
+
+/* fields */
+@import './fields/base';
+@import './fields/field--name-field-paragraphs';
+@import './fields/informacion-profesional-profiles';
+
+/* paragraphes */
+@import './paragraphes/base';
+@import './paragraphes/paragraph--type--image-title-text-multiple-links';
+@import './paragraphes/paragraph--type--image-title-text-and-link';
+@import './paragraphes/paragraph--type--news-slider';
+@import './paragraphes/paragraph--type--webform';
+@import './paragraphes/paragraph--type--multiple-links';
+@import './paragraphes/paragraph--type--title-and-file-list';
+@import './paragraphes/paragraph--type--image';
+@import './paragraphes/paragraph--type--header-with-slider';
+@import './paragraphes/paragraph--type--school-slider-with-multiple-link';
+@import './paragraphes/paragraph--type--member-slider-with-multiple-link';
+@import './paragraphes/paragraph--type--image-slider';
+@import './paragraphes/paragraph--view-mode--default';
+
+/* nodes */
+@import './nodes/base';
+@import './nodes/node--type-news';
+@import './nodes/node--type-event';
+@import './nodes/node--type-recurso';
+@import './nodes/node--type-landing-page';
+@import './nodes/node--type-documento-secretaria';
+@import './nodes/node-documentacion-de-escuela-form';
+@import './nodes/node-type-especializacion';
+
+
+/* views */
+@import './views/base';
+@import './views/list-card';
+@import './views/view-profiles';
+@import './views/view-user-dashboard';
+// @import './views/view-latest-news';
+@import './views/view-event-search';
+@import './views/view-online-library-search';
+@import './views/view-taxonomy-term';
+@import './views/view-edit-profile';
+@import './views/view-escuelas-profile';
+@import './views/view-asociados-profile';
+@import './views/view-school-documentation';
+@import './views/view-commerce-user-orders';
+

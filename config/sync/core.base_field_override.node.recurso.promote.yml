@@ -1,0 +1,22 @@
+uuid: 9f0ee0a2-ac9d-4a86-8eee-03fb37f558d0
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.recurso
+id: node.recurso.promote
+field_name: promote
+entity_type: node
+bundle: recurso
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

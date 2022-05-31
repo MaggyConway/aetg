@@ -1,0 +1,24 @@
+<?php
+
+function aetg_preprocess_commerce_file_download_link(array &$variables) {
+  /** @var \Drupal\file\FileInterface $file */
+  $file = $variables['file'];
+  $split_filename = preg_split("/[.]/", $file->getFilename());
+  if (is_array($split_filename)) {
+    $variables['file_extension'] = end($split_filename);
+  }
+}
+
+/**
+ * Implements template_preprocess_page().
+ */
+function aetg_preprocess_page(&$variables) {
+  $variables['user_has_toolbar'] = Drupal::currentUser()->hasPermission('access toolbar');
+}
+
+/**
+ * Implements template_preprocess_html().
+ */
+function aetg_preprocess_html(&$variables) {
+  $variables['is_registration_form'] = $user = in_array(\Drupal::routeMatch()->getRouteName(), ['user.pass', 'user.register', 'user.login','user.reset.login', 'user.reset.form']);
+}

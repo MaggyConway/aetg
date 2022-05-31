@@ -1,0 +1,84 @@
+uuid: fe7b7a5f-08cc-450c-ba91-725f9a0993eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_order.commerce_order_item_type.file
+    - field.field.commerce_order_item.file.license
+  module:
+    - commerce_price
+    - empty_fields
+    - field_formatter_class
+id: commerce_order_item.file.default
+targetEntityType: commerce_order_item
+bundle: file
+mode: default
+content:
+  created:
+    label: hidden
+    type: timestamp
+    weight: 1
+    region: content
+    settings:
+      date_format: medium
+      custom_date_format: ''
+      timezone: ''
+    third_party_settings: {  }
+  purchased_entity:
+    type: entity_reference_entity_view
+    weight: 0
+    region: content
+    label: above
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+  quantity:
+    type: number_decimal
+    weight: 2
+    region: content
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 0
+      prefix_suffix: true
+    third_party_settings:
+      empty_fields:
+        handler: ''
+      field_formatter_class:
+        class: ''
+  total_price:
+    type: commerce_price_default
+    weight: 4
+    region: content
+    label: above
+    settings:
+      strip_trailing_zeroes: true
+      currency_display: symbol
+    third_party_settings:
+      empty_fields:
+        handler: ''
+      field_formatter_class:
+        class: ''
+  unit_price:
+    type: commerce_price_default
+    weight: 3
+    region: content
+    label: above
+    settings:
+      strip_trailing_zeroes: true
+      currency_display: symbol
+    third_party_settings:
+      empty_fields:
+        handler: ''
+      field_formatter_class:
+        class: ''
+hidden:
+  adjustments: true
+  breadcrumbs: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  license: true
+  search_api_excerpt: true

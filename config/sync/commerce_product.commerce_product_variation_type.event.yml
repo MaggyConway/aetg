@@ -1,0 +1,10 @@
+uuid: 16657e80-fbeb-4129-abde-8614a7c30b75
+langcode: en
+status: true
+dependencies: {  }
+id: event
+label: Evento
+orderItemType: event
+generateTitle: false
+traits: {  }
+locked: false

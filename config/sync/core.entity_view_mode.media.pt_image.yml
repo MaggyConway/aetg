@@ -1,0 +1,10 @@
+uuid: 729451f1-014f-4389-97de-36351eccd69b
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.pt_image
+label: 'PT Image'
+targetEntityType: media
+cache: true

@@ -1,0 +1,182 @@
+uuid: 869f0423-9fac-4074-a6af-8250c7d48a99
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_user
+class: Drupal\user\Plugin\migrate\User
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'User accounts'
+source:
+  key: legacy
+  plugin: d7_user2
+  bundle: informacion_privada
+process:
+  uid:
+    -
+      plugin: get
+      source: uid
+  name:
+    -
+      plugin: get
+      source: name
+  pass:
+    -
+      plugin: get
+      source: pass
+  mail:
+    -
+      plugin: get
+      source: mail
+  created:
+    -
+      plugin: get
+      source: created
+  access:
+    -
+      plugin: get
+      source: access
+  login:
+    -
+      plugin: get
+      source: login
+  status:
+    -
+      plugin: get
+      source: status
+  timezone:
+    -
+      plugin: get
+      source: timezone
+  langcode:
+    -
+      plugin: user_langcode
+      source: entity_language
+      fallback_to_site_default: true
+  preferred_langcode:
+    -
+      plugin: user_langcode
+      source: language
+      fallback_to_site_default: true
+  preferred_admin_langcode:
+    -
+      plugin: user_langcode
+      source: language
+      fallback_to_site_default: true
+  init:
+    -
+      plugin: get
+      source: init
+  roles:
+    -
+      plugin: migration_lookup
+      migration: upgrade_d7_user_role
+      source: roles
+  user_picture:
+    -
+      plugin: default_value
+      source: picture
+      default_value: null
+    -
+      plugin: migration_lookup
+      migration: upgrade_d7_file
+  field_tipo_de_miembro:
+    -
+      plugin: sub_process
+      source: field_tipo_de_miembro
+      process:
+        target_id: tid
+  field_pendiente:
+    -
+      plugin: get
+      source: field_pendiente
+  field_baja:
+    -
+      plugin: get
+      source: field_baja
+  field_baja_aetg:
+    -
+      plugin: sub_process
+      source: field_baja_aetg
+      process:
+        value:
+          plugin: format_date
+          from_format: 'Y-m-d H:i:s'
+          to_format: Y-m-d
+          source: value
+  field_alta_aetg:
+    -
+      plugin: sub_process
+      source: field_alta_aetg
+      process:
+        value:
+          plugin: format_date
+          from_format: 'Y-m-d H:i:s'
+          to_format: Y-m-d
+          source: value
+  field_motivo_baja_aetg:
+    -
+      plugin: sub_process
+      source: field_motivo_baja_aetg
+      process:
+        target_id: tid
+  field_alta_feap:
+    -
+      plugin: sub_process
+      source: field_alta_feap
+      process:
+        value:
+          plugin: format_date
+          from_format: 'Y-m-d H:i:s'
+          to_format: Y-m-d
+          source: value
+  field_baja_feap:
+    -
+      plugin: sub_process
+      source: field_baja_feap
+      process:
+        value:
+          plugin: format_date
+          from_format: 'Y-m-d H:i:s'
+          to_format: Y-m-d
+          source: value
+  field_notas:
+    -
+      plugin: get
+      source: field_notas
+  field_moroso:
+    -
+      plugin: get
+      source: field_moroso
+  field_envio_de_email:
+    -
+      plugin: sub_process
+      source: field_envio_de_email
+      process:
+        target_id: tid
+  field_invoicing_address:
+    -
+      plugin: addressfield
+      source: field_domicilio_particular
+  field_full_name:
+    -
+      plugin: get
+      source: field_nombre
+  field_dni_cif:
+    -
+      plugin: get
+      source: field_dni
+destination:
+  plugin: 'entity:user'
+migration_dependencies:
+  optional:
+    - upgrade_d7_field_instance
+    - upgrade_d7_file
+    - upgrade_user_picture_field_instance
+    - upgrade_user_picture_entity_display
+    - upgrade_user_picture_entity_form_display
+    - upgrade_d7_user_role

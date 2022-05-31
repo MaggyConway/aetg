@@ -1,0 +1,14 @@
+global-styling:
+  css:
+    base:
+      dist/vendors/style.css: {}
+      dist/main/style.css: {}
+      https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,600,700|IBM+Plex+Sans+Condensed:400,500,500i,600,700: { type: external }
+  js:
+    dist/runtime/index.js: {}
+    dist/vendors/index.js: {}
+    dist/main/index.js: {}
+  dependencies:
+  - core/drupal
+  - core/jquery
+  - core/jquery.once

@@ -1,0 +1,29 @@
+uuid: bf57a90b-82de-450c-9e2f-f9972da793be
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_taxonomy_term
+    - paragraphs.paragraphs_type.mapfre_insurances
+    - taxonomy.vocabulary.seguro_mapfre
+id: paragraph.mapfre_insurances.field_taxonomy_term
+field_name: field_taxonomy_term
+entity_type: paragraph
+bundle: mapfre_insurances
+label: 'Tipo de seguro'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      seguro_mapfre: seguro_mapfre
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

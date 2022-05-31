@@ -1,0 +1,58 @@
+definitions:
+  standard__front_page:
+    enabled: false
+    menu_name: main
+    parent: ''
+    expanded: false
+    weight: -50
+  user__logout:
+    parent: user.icon
+    menu_name: account
+    weight: -44
+    expanded: false
+    enabled: true
+  user__page:
+    weight: -50
+    menu_name: account
+    parent: user.icon
+    expanded: false
+    enabled: true
+  user__edit_account:
+    enabled: false
+    menu_name: account
+    parent: user.page
+    expanded: false
+    weight: -49
+  user__profile:
+    weight: -49
+    menu_name: account
+    parent: user.icon
+    expanded: false
+    enabled: true
+  user__orders:
+    weight: -45
+    menu_name: account
+    parent: user.icon
+    expanded: false
+    enabled: true
+  user__login:
+    weight: -48
+    menu_name: account
+    parent: ''
+    expanded: false
+    enabled: true
+  user__icon:
+    menu_name: account
+    parent: ''
+    weight: -50
+    expanded: true
+    enabled: true
+  user__invoices:
+    weight: -46
+    menu_name: account
+    parent: user.icon
+    enabled: true
+    expanded: false
+_core:
+  default_config_hash: o4bYR9ZupWb3AsOIizTUG4g-nu1mdJqA59UB7QT-ifQ
+langcode: es

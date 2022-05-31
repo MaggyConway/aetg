@@ -1,0 +1,19 @@
+uuid: 129313be-22b6-4f81-b48e-e2ff3f976112
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_programa_esp
+field_name: field_programa_esp
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

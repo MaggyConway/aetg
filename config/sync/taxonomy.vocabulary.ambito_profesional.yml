@@ -1,0 +1,8 @@
+uuid: 7e7b8d0e-89c1-407e-8be7-bcb76e965aeb
+langcode: es
+status: true
+dependencies: {  }
+name: 'Ámbitos profesionales'
+vid: ambito_profesional
+description: 'Ámbito de trabajo de un profesional'
+weight: 0

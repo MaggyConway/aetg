@@ -1,0 +1,96 @@
+<?php
+
+/**
+ * @file
+ * Contains aetg_invoice.module.
+ */
+
+use Drupal\aetg_price\Plugin\Field\FieldFormatter\AetgPriceCalculatedFormatter;
+use Drupal\commerce_order\Adjustment;
+use Drupal\commerce_order\Entity\OrderInterface;
+use Drupal\commerce_price\Price;
+use Drupal\Core\Routing\RouteMatchInterface;
+
+
+/**
+ * Implements hook_help().
+ */
+function aetg_invoice_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.aetg_invoice':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Provides invoice functionality.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function aetg_invoice_theme($existing, $type, $theme, $path) {
+  return [
+    'aetg_commerce_invoice_total_tax' => [
+      'variables' => [
+        'invoice_entity' => NULL,
+        'total_tax' => NULL,
+      ],
+    ],
+    'aetg_commerce_invoice_total_price_without_tax' => [
+      'variables' => [
+        'invoice_entity' => NULL,
+        'total_without_tax' => NULL,
+      ],
+    ],
+  ];
+}
+
+
+/**
+ * Prepares variables for invoice templates.
+ *
+ * Default template: commerce-invoice.html.twig.
+ */
+function aetg_invoice_preprocess_commerce_invoice(array &$variables) {
+  /** @var Drupal\commerce_invoice\Entity\InvoiceInterface $invoice */
+  $invoice = $variables['elements']['#commerce_invoice'];
+  /** @var \Drupal\aetg_invoice\InvoiceService $invoice_service */
+  $invoice_service = Drupal::service('aetg_invoice.invoice_service');
+  $total_tax = $invoice_service->getTotalTaxAmount($invoice);
+
+  $variables['totals']['without_tax'] = $invoice->getTotalPrice()->subtract($total_tax);
+}
+
+/**
+ * Prepares variables for order total summary templates.
+ *
+ * Default template: commerce-order-total-summary.html.twig.
+ */
+function aetg_invoice_preprocess_commerce_order_total_summary(array &$variables) {
+  $order = $variables['order_entity'];
+
+  if ($order instanceof OrderInterface) {
+    $variables['totals']['without_tax'] = _get_total_without_tax($order);
+  }
+}
+
+/**
+ * @param \Drupal\commerce_order\Entity\OrderInterface $order
+ * @return Price|null
+ */
+function _get_total_without_tax(OrderInterface $order) {
+  $all_taxes = new Price('0', 'EUR');
+
+  foreach ($order->getItems() as $order_item) {
+    $tax = current($order_item->getAdjustments(['tax']));
+
+    if ($tax instanceof Adjustment) {
+      $tax_amount = $tax->getAmount();
+      $all_taxes = $all_taxes->add($tax_amount);
+    }
+  }
+
+  return $order->getTotalPrice()->subtract($all_taxes);
+}

@@ -1,0 +1,431 @@
+.view-profiles {
+	&.view-id-profiles.view-display-id-page_1 {
+		.views-row {
+			display: flex;
+			align-items: flex-start;
+		}
+
+		.view-header {
+			max-width: 100%;
+      	width: 580px;
+			margin: 0 auto;
+
+			@include breakpoint(mobile-large) {
+				width: 100%;
+				margin: 0;
+			}
+
+			.views-row {
+				justify-content: center;
+
+				@include breakpoint(mobile-large) {
+					justify-content: flex-start;
+					position: relative;
+				}
+
+				@include breakpoint(mobile-middle) {
+					flex-direction: column;
+					align-items: flex-start;
+				}
+			}
+
+			.view-header-buttons {
+				margin-top: 20px;
+
+				@include breakpoint(mobile-small) {
+					width: 100%;
+				}
+
+				> .layout__region > .block {
+					display: flex;
+					justify-content: flex-start;
+					align-items: center;
+
+					@include breakpoint(mobile-middle) {
+						justify-content: center;
+					}
+				}
+
+				.view-link {
+					@include btn-black;
+					margin-top: 0;
+					margin-right: 16px;
+					white-space: nowrap;
+
+					@include breakpoint(mobile-middle) {
+						min-width: 110px;
+					}
+
+					@include breakpoint(mobile-small) {
+						width: 50%;
+						margin-right: 10px;
+					}
+				}
+
+				.edit-link {
+					@include btn-white;
+					margin-top: 0;
+					white-space: nowrap;
+
+					@include breakpoint(mobile-middle) {
+						min-width: 110px;
+					}
+
+					@include breakpoint(mobile-small) {
+						width: 50%;
+					}
+				}
+			}
+		}
+
+		.views-field {
+			img {
+				@include mini-slider-image;
+				object-fit: cover;
+				background-color: $color-F7;
+				border-radius: 5px;
+				border: 1px solid $color-E6;
+			}
+		}
+
+		.views-field-nothing {
+			margin-left: 30px;
+
+			@include breakpoint(mobile-middle) {
+				margin-left: 0;
+				margin-top: 15px;
+			}
+
+			.field-full-name {
+				@include h3;
+				color: $color-1;
+				margin-top: -8px;
+
+				@include breakpoint(mobile-middle) {
+					margin-top: -5px;
+				}
+			}
+
+			.field-num-socio-string {
+				@include text-fz-14-lh-20;
+				color: $color-2;
+				margin-bottom: 10px;
+			}
+
+			.field-moroso {
+				@include text-fz-12-lh-18-fw-300;
+				color: #fff;
+				background-color: $red;
+				text-align: center;
+				padding: 0 11px 2px;
+				margin-bottom: 0;
+				display: inline-flex;
+				overflow: hidden;
+				border-radius: 5px;
+				user-select: none;
+			}
+
+			.links {
+				.edit-link {
+					width: 87px;
+					height: 42px;
+					text-align: center;
+					@include text-fz-14-lh-20;
+					color: $color-1;
+					background-color: #fff;
+					display: inline-flex;
+					padding: 11px 24px 10px;
+					overflow: hidden;
+					border-radius: 5px;
+					border: .5px solid $color-C;
+					user-select: none;
+					cursor: pointer;
+				}
+			}
+		}
+
+		.view-header + .view-content {
+			margin-top: 38px;
+			position: relative;
+
+			@include breakpoint(mobile-large) {
+				margin-top: 20px;
+			}
+
+			&:before {
+				position: absolute;
+				content: "";
+				left: 0;
+				top: 52px;
+				width: 100%;
+				height: 1px;
+				background-color: $color-E6;
+
+				@include breakpoint(tablet) {
+					top: 75px;
+				}
+
+				@include breakpoint(mobile-large) {
+					top: 60px;
+				}
+
+				@include breakpoint(mobile-middle) {
+					top: 95px;
+				}
+			}
+
+			#profile--tabs {
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+
+				@include breakpoint(mobile-small) {
+					justify-content: center;
+					flex-wrap: wrap;
+				}
+
+				h2 {
+					@include title-fz-18-lh-25-fw-600;
+					color: $color-A;
+					cursor: pointer;
+					user-select: none;
+					white-space: nowrap;
+					margin-bottom: 0;
+
+					&.selected {
+						color: $color-1;
+					}
+
+					@include breakpoint(mobile-large) {
+						font-size: 16px;
+						line-height: 20px;
+					}
+
+					@include breakpoint(mobile-middle) {
+						width: 100%;
+					}
+				}
+			}
+
+			> .views-row {
+				> .profile--view-mode--default {
+					width: 100%;
+				}
+			}
+
+			.parent-tabs {
+				> .layout__region {
+					> .block {
+						> .profile {
+							display: none;
+							transition: all .3s ease-in-out;
+							width: 100%;
+							height: auto;
+							padding-top: 40px;
+
+							@include breakpoint(mobile-large) {
+								padding-top: 30px;
+							}
+						}
+
+						&.selected {
+							> .profile {
+								display: block;
+							}
+						}
+					}
+
+					.field__label {
+						@include text-fz-14-lh-20;
+						color: $color-A;
+						margin-bottom: 5px;
+					}
+
+					.field__item {
+						@include text-fz-16-lh-26;
+						color: $color-1;
+
+						p {
+							@include text-fz-16-lh-26;
+							color: $color-1;
+						}
+
+						a {
+							@include text-fz-16-lh-26;
+							color: $blue;
+							// text-decoration: underline;
+							&:hover {
+								// text-decoration: none;
+								color: $blue-hover;
+							}
+						}
+
+						&:not(:first-child) {
+							> .paragraph {
+								.field__label {
+									display: none;
+								}
+							}
+						}
+					}
+
+					.block-layout-builder {
+						margin-bottom: 16px;
+					}
+
+					p.address {
+						position: static;
+						display: block;
+						@include text-fz-16-lh-26;
+						color: $color-1;
+
+						@include breakpoint(mobile-small) {
+							white-space: normal;
+						}
+					}
+				}
+			}
+		}
+
+		.table-container {
+			&:not(:last-child) {
+				margin-bottom: 40px !important;
+
+				@include breakpoint(mobile-large) {
+					margin-bottom: 25px !important;
+				}
+			}
+
+			&:last-child {
+				margin-bottom: 0 !important;
+			}
+
+			.view-header {
+				margin: 0 0 0 auto;
+				width: 100%;
+				display: flex;
+				justify-content: flex-end;
+				position: relative;
+				margin-bottom: -22px;
+				margin-top: 16px;
+				a {
+					@include btn-white;
+					@include text-fz-14-lh-20;
+					padding: 11px 25px 9px;
+				}
+
+				@include breakpoint(mobile-small) {
+					justify-content: flex-start;
+				}
+			}
+
+			.view-content {
+				&:before {
+					display: none;
+				}
+			}
+
+			.paragraph--type--aetg-membership-type,
+			.paragraph--type--feap-membership-type {
+				display: flex;
+				justify-content: space-between;
+				align-items: flex-start;
+
+
+				> .field {
+					width: 100%;
+
+					> .field__label {
+						color: $color-76 !important;
+						background-color: $color-F2;
+						padding: 15px 20px 16px;
+						text-align: left;
+
+						@include breakpoint(mobile-small) {
+							padding: 10px;
+						}
+					}
+
+					.field__item {
+						padding: 12px 20px 13px;
+						text-align: left;
+						background-color: #fff;
+						color: $color-2;
+
+						@include breakpoint(mobile-small) {
+							padding: 10px;
+						}
+					}
+				}
+			}
+
+			.field__item {
+				margin: 0;
+			}
+
+			> .field.field--label-above > .field__label {
+				font-weight: 600 !important;
+				font-size: 18px !important;
+				line-height: 25px !important;
+				margin-bottom: 16px !important;
+				color: $color-1 !important;
+			}
+
+			.paragraph--type--aetg-membership-type-list,
+			.paragraph--type--feap-membership-type-list {
+
+				@include breakpoint(tablet-m) {
+					width: 600px;
+					min-width: 600px;
+				}
+
+				> .field--name-field-paragraphs {
+					> .field__item:not(:first-child) {
+						.field__label {
+							display: none;
+						}
+					}
+				}
+			}
+
+			.file--application-pdf {
+				padding-left: 22px;
+			}
+		}
+
+		.profile--view-mode--profile-information {
+			> .layout--twocol-section {
+				margin-bottom: 24px;
+				flex-wrap: nowrap;
+
+				@include breakpoint(tablet) {
+					flex-wrap: wrap;
+				}
+
+				@include breakpoint(mobile-large) {
+					margin-bottom: 10px;
+				}
+			}
+		}
+
+
+		.profile--view-mode--profile-user-files {
+			.view-content {
+				margin-top: 0;
+				&:before {
+					display: none;
+				}
+			}
+		}
+
+		.field--name-field-paragraphs {
+			max-width: 100%;
+			margin: 0;
+			padding: 0;
+		}
+	}
+
+	.horizontal-tabs {
+		display: none;
+	}
+}

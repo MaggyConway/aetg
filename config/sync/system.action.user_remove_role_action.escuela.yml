@@ -1,0 +1,14 @@
+uuid: 66935737-2fff-464e-9928-bfa238a3bbf7
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.escuela
+  module:
+    - user
+id: user_remove_role_action.escuela
+label: 'Remove the escuela role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: escuela

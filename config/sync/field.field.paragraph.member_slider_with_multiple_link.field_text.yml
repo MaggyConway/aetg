@@ -1,0 +1,21 @@
+uuid: ae06bcdb-c244-44dc-86a5-22624d7e2816
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text
+    - paragraphs.paragraphs_type.member_slider_with_multiple_link
+  module:
+    - text
+id: paragraph.member_slider_with_multiple_link.field_text
+field_name: field_text
+entity_type: paragraph
+bundle: member_slider_with_multiple_link
+label: Text
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,170 @@
+uuid: 354e6204-ea52-4ef4-b677-aefb7e19f985
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.user.user.commerce_remote_id
+    - field.field.user.user.field_alta_aetg
+    - field.field.user.user.field_alta_feap
+    - field.field.user.user.field_baja
+    - field.field.user.user.field_baja_aetg
+    - field.field.user.user.field_baja_feap
+    - field.field.user.user.field_dni_cif
+    - field.field.user.user.field_envios_comerciales
+    - field.field.user.user.field_full_name
+    - field.field.user.user.field_invoicing_address
+    - field.field.user.user.field_moroso
+    - field.field.user.user.field_motivo_baja_aetg
+    - field.field.user.user.field_notas
+    - field.field.user.user.field_pendiente
+    - field.field.user.user.field_phone_number
+    - field.field.user.user.field_tipo_de_miembro
+    - field.field.user.user.user_picture
+  module:
+    - field_group
+    - user
+third_party_settings:
+  field_group:
+    group_alta:
+      children:
+        - field_alta_aetg
+        - field_pendiente
+      parent_name: group_solapas2
+      weight: 4
+      label: Alta
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: 'group-alta field-group-tab'
+        required_fields: true
+      format_type: tab
+      region: hidden
+    group_baja:
+      children:
+        - field_baja
+        - field_baja_aetg
+        - field_moroso
+        - field_motivo_baja_aetg
+      parent_name: group_solapas2
+      weight: 5
+      label: Baja
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: 'group-baja field-group-tab'
+        required_fields: true
+      format_type: tab
+      region: hidden
+    group_feap:
+      children:
+        - field_alta_feap
+        - field_baja_feap
+        - field_notas
+      parent_name: group_solapas2
+      weight: 6
+      label: FEAP
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: 'group-feap field-group-tab'
+        required_fields: true
+      format_type: tab
+      region: hidden
+    group_solapas2:
+      children:
+        - group_alta
+        - group_baja
+        - group_feap
+        - group_otros
+      parent_name: ''
+      weight: 19
+      label: ''
+      format_settings:
+        formatter: ''
+        classes: 'group-solapas2 field-group-tabs'
+        id: ''
+        direction: vertical
+      format_type: tabs
+      region: hidden
+    group_otros:
+      children: {  }
+      parent_name: group_solapas2
+      weight: 8
+      label: Otros
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: 'group-otros field-group-tab'
+        required_fields: true
+      format_type: tab
+      region: hidden
+_core:
+  default_config_hash: K-1rBM8mTIkFp9RqOC2tMRUukOQ1xbRCfSKK8dEddnA
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content:
+  account:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  contact:
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_envios_comerciales:
+    type: boolean_checkbox
+    weight: 2
+    region: content
+    settings:
+      display_label: false
+    third_party_settings: {  }
+  field_full_name:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  private_messages:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  timezone:
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  associate_profiles: true
+  base_profiles: true
+  commerce_remote_id: true
+  customer_profiles: true
+  escuela_profiles: true
+  field_alta_aetg: true
+  field_alta_feap: true
+  field_baja: true
+  field_baja_aetg: true
+  field_baja_feap: true
+  field_dni_cif: true
+  field_invoicing_address: true
+  field_moroso: true
+  field_motivo_baja_aetg: true
+  field_notas: true
+  field_pendiente: true
+  field_phone_number: true
+  field_tipo_de_miembro: true
+  google_analytics: true
+  informacion_privada_profiles: true
+  informacion_profesional_profiles: true
+  langcode: true
+  language: true
+  path: true
+  school_professional_information_profiles: true
+  school_profiles: true
+  user_picture: true

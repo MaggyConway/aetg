@@ -1,0 +1,18 @@
+uuid: 99377779-a229-4cbb-b00d-3dab8dea3de9
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - commerce_invoice
+_core:
+  default_config_hash: hp6r3xzLGwrIIC_hKth1N8BqtO9EasSw-VWXGQkkwO4
+id: file_invoice
+label: 'Factura de Archivo'
+targetEntityType: commerce_invoice
+plugin: yearly
+configuration:
+  pattern: 'AETG[pattern:year]-R[pattern:number]'
+  initial_number: 1
+  padding: 4
+  per_store_sequence: true

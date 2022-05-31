@@ -1,0 +1,10 @@
+uuid: 788f2c46-79c0-42e1-959b-74e79d26ec7f
+langcode: en
+status: true
+dependencies:
+  module:
+    - profile
+id: profile.profile_user_files
+label: 'Profile: User files'
+targetEntityType: profile
+cache: true

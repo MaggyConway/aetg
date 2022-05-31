@@ -1,0 +1,10 @@
+uuid: d89ebd28-8df0-4095-ac1e-4e02608c943a
+langcode: en
+status: true
+dependencies: {  }
+id: aetg_membership_type
+label: 'AETG Membership Type'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

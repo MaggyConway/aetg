@@ -1,0 +1,29 @@
+uuid: e8d68779-2205-4e84-ac8c-b39feeff6f74
+langcode: es
+status: true
+dependencies:
+  config:
+    - facets.facet.tecnicas
+  module:
+    - facets
+    - system
+  theme:
+    - aetg
+id: filtrarportecnicas
+theme: aetg
+region: content
+weight: -19
+provider: null
+plugin: 'facet_block:tecnicas'
+settings:
+  id: 'facet_block:tecnicas'
+  label: 'Filtrar por técnicas:'
+  provider: facets
+  label_display: '0'
+  block_id: filtrarportecnicas
+visibility:
+  request_path:
+    id: request_path
+    pages: /gestalt/recursos
+    negate: false
+    context_mapping: {  }

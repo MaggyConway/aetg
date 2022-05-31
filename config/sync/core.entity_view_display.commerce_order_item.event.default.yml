@@ -1,0 +1,39 @@
+uuid: 8feccc8f-d40b-482c-89e4-1ccbd9a1833b
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_order.commerce_order_item_type.event
+  module:
+    - empty_fields
+    - field_formatter_class
+id: commerce_order_item.event.default
+targetEntityType: commerce_order_item
+bundle: event
+mode: default
+content:
+  created:
+    label: hidden
+    type: timestamp
+    weight: 0
+    region: content
+    settings:
+      date_format: long
+      custom_date_format: ''
+      timezone: ''
+    third_party_settings:
+      empty_fields:
+        handler: ''
+      field_formatter_class:
+        class: ''
+hidden:
+  adjustments: true
+  breadcrumbs: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  purchased_entity: true
+  quantity: true
+  search_api_excerpt: true
+  total_price: true
+  unit_price: true

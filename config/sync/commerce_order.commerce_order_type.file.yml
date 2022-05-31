@@ -1,0 +1,30 @@
+uuid: 03f9f8d9-e726-4a8a-bd2f-39df1af3fe53
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_cart
+    - commerce_checkout
+    - commerce_invoice
+third_party_settings:
+  commerce_cart:
+    cart_form_view: commerce_cart_form
+    cart_block_view: commerce_cart_block
+    cart_expiration: {  }
+  commerce_checkout:
+    checkout_flow: aetg
+  commerce_invoice:
+    invoice_type: file_invoice
+    order_placed_generation: true
+_core:
+  default_config_hash: bROz7kd1J83kDf06qdZztYFSezi6UrfwftyJo53rNt4
+label: Archivo
+id: file
+workflow: order_default
+numberPattern: null
+refresh_mode: customer
+refresh_frequency: 300
+sendReceipt: true
+receiptBcc: ''
+traits: {  }
+locked: false

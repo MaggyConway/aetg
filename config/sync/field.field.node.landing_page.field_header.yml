@@ -1,0 +1,55 @@
+uuid: e5e17971-f514-4d7b-99a3-2b2b862b56cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_header
+    - node.type.landing_page
+    - paragraphs.paragraphs_type.header_with_slider
+  module:
+    - entity_reference_revisions
+id: node.landing_page.field_header
+field_name: field_header
+entity_type: node
+bundle: landing_page
+label: Header
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      header_with_slider: header_with_slider
+    target_bundles_drag_drop:
+      header_with_slider:
+        enabled: true
+        weight: 10
+      image_title_text_and_link:
+        weight: 11
+        enabled: false
+      image_title_text_multiple_links:
+        weight: 12
+        enabled: false
+      multiple_links:
+        weight: 13
+        enabled: false
+      school_slider:
+        weight: 14
+        enabled: false
+      school_slider_item:
+        weight: 15
+        enabled: false
+      school_slider_with_multiple_link:
+        weight: 16
+        enabled: false
+      slider:
+        weight: 17
+        enabled: false
+      title_tag_text_and_link:
+        weight: 18
+        enabled: false
+field_type: entity_reference_revisions

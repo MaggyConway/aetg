@@ -1,0 +1,109 @@
+/* Mixins */
+
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin btn-reset {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+}
+
+@mixin clearfix {
+  &::after {
+    display: block;
+    clear: both;
+    content: '';
+  }
+}
+
+@mixin text-hide {
+  font-size: 0;
+  line-height: 0;
+  color: transparent;
+}
+
+@mixin absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+@mixin absolute-vertical-center {
+  position: absolute;
+  top: 50%;
+  transform: translate3d(0, -50%, 0);
+}
+
+@mixin absolute-horizontal-center {
+  position: absolute;
+  left: 50%;
+  transform: translate3d(-50%, 0, 0);
+}
+
+@mixin element-cover {
+  width: auto;
+  min-width: 100%;
+  max-width: none;
+  height: auto;
+  min-height: 100%;
+  max-height: none;
+}
+
+@mixin element-100 {
+  width: 100%;
+  height: 100%;
+}
+
+@mixin element-absolute-100 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+}
+
+@mixin dots-violet {
+  height: 6px;
+  
+  li {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: #ccc;
+    padding: 0;
+
+    button {
+      display: none;
+    }
+
+    &:not(:last-of-type) {
+      margin: 0 5px 0 0;
+    }
+
+    &:last-of-type {
+      margin: 0;
+    }
+  }
+
+  .slick-active {
+    background-color: $blue;
+  }
+}
+
+@mixin mini-slider-image {
+  width: 100px;
+  min-width: 100px;
+  max-height: 100px;
+  height: auto;
+  object-fit: contain;
+}

@@ -1,0 +1,190 @@
+uuid: ea88b5d6-ee0e-454d-b30d-acd7657bafa7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.image_title_text_multiple_links.field_image
+    - field.field.paragraph.image_title_text_multiple_links.field_link
+    - field.field.paragraph.image_title_text_multiple_links.field_paragraphs
+    - field.field.paragraph.image_title_text_multiple_links.field_text
+    - field.field.paragraph.image_title_text_multiple_links.field_title
+    - field.field.paragraph.image_title_text_multiple_links.paragraph_view_mode
+    - paragraphs.paragraphs_type.image_title_text_multiple_links
+  module:
+    - entity_reference_revisions
+    - field_formatter_class
+    - layout_builder
+    - layout_discovery
+    - link
+    - text
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+          layout_builder_styles_style: ''
+        components:
+          c42b5cc9-5cbc-466f-9b2c-4690545b781c:
+            uuid: c42b5cc9-5cbc-466f-9b2c-4690545b781c
+            region: content
+            configuration:
+              id: 'field_block:paragraph:image_title_text_multiple_links:field_image'
+              label: Image
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: pt_image_title_text_and_multiple_links
+                third_party_settings:
+                  empty_fields:
+                    handler: ''
+                  field_formatter_class:
+                    class: ''
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional:
+              layout_builder_styles_style: ''
+            weight: 0
+          22dd9d9a-111b-48ed-b747-e0a9ebed3218:
+            uuid: 22dd9d9a-111b-48ed-b747-e0a9ebed3218
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:paragraph:image_title_text_multiple_links:field_title'
+              formatter:
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+                type: string
+            additional: {  }
+            weight: 1
+          76948a83-fb8d-44f3-bfa3-85305c0e55c7:
+            uuid: 76948a83-fb8d-44f3-bfa3-85305c0e55c7
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:paragraph:image_title_text_multiple_links:field_text'
+              formatter:
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+                type: text_default
+            additional: {  }
+            weight: 2
+          f86bdb89-45c8-4758-aa9c-a03706317626:
+            uuid: f86bdb89-45c8-4758-aa9c-a03706317626
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:paragraph:image_title_text_multiple_links:field_link'
+              formatter:
+                label: hidden
+                settings:
+                  trim_length: 80
+                  url_only: false
+                  url_plain: false
+                  rel: '0'
+                  target: '0'
+                third_party_settings:
+                  field_formatter_class:
+                    class: btn-primary
+                type: link
+            additional: {  }
+            weight: 3
+          b2893164-947d-4c76-a950-61a31234dd84:
+            uuid: b2893164-947d-4c76-a950-61a31234dd84
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:paragraph:image_title_text_multiple_links:field_paragraphs'
+              formatter:
+                type: entity_reference_revisions_entity_view
+                label: hidden
+                settings:
+                  view_mode: default
+                  link: ''
+                third_party_settings: {  }
+            additional: {  }
+            weight: 4
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+          layout_builder_styles_style: ''
+        components: {  }
+        third_party_settings: {  }
+id: paragraph.image_title_text_multiple_links.default
+targetEntityType: paragraph
+bundle: image_title_text_multiple_links
+mode: default
+content:
+  field_image:
+    weight: 0
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_link:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      field_formatter_class:
+        class: btn-primary
+    type: link
+    region: content
+  field_paragraphs:
+    type: entity_reference_revisions_entity_view
+    weight: 4
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_text:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  breadcrumbs: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  paragraph_view_mode: true
+  search_api_excerpt: true

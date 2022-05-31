@@ -1,0 +1,46 @@
+uuid: b52968c9-8183-49e0-b306-94ebe58453e5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_domiciliacion_banco
+    - profile.type.informacion_privada
+  module:
+    - file
+    - filefield_paths
+third_party_settings:
+  filefield_paths:
+    enabled: true
+    file_path:
+      value: ''
+      options:
+        slashes: false
+        pathauto: false
+        transliterate: false
+    redirect: false
+    retroactive_update: false
+    active_updating: false
+    file_name:
+      value: '[file:ffp-name-only-original].[file:ffp-extension-original]'
+      options:
+        slashes: false
+        pathauto: false
+        transliterate: false
+id: profile.informacion_privada.field_domiciliacion_banco
+field_name: field_domiciliacion_banco
+entity_type: profile
+bundle: informacion_privada
+label: 'Domiciliación bancaria'
+description: 'Es necesario que adjunte aquí una copia de la domiciliación bancaria firmada por usted, indicando su nombre y apellidos. La legislación vigente nos obliga a tenerla, por tanto en el caso de que cambiase de entidad o cualquier otro dato bancario es necesario que comunique el cambio a la secretaría de la AETG'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: ''
+  file_extensions: 'txt pdf odt docx doc jpg png'
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

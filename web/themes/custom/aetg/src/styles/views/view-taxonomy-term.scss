@@ -1,0 +1,26 @@
+.view-taxonomy-term {
+	> .view-content {
+		display: flex;
+		align-items: stretch;
+		flex-wrap: wrap;
+		margin: -20px;
+		
+		@include breakpoint(tablet) {
+			margin: -20px 0;
+		}
+		
+		> .views-row {
+			margin: 20px;
+			width: calc(100% / 3 - 40px);
+			
+			@include breakpoint(IPad-Pro) {
+				width: calc(100% / 2 - 40px);
+			}
+
+			@include breakpoint(tablet) {
+				width: 100%;
+				margin: 20px 0;
+			}
+		}
+	}
+}

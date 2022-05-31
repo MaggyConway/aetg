@@ -1,0 +1,21 @@
+uuid: d07101d7-f94a-4926-931b-dd64566ba20f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_detailed_training_program
+    - profile.type.school_professional_information
+  module:
+    - text
+id: profile.school_professional_information.field_detailed_training_program
+field_name: field_detailed_training_program
+entity_type: profile
+bundle: school_professional_information
+label: 'Programa detallado'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

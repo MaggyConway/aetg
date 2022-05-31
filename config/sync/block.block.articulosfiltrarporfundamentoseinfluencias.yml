@@ -1,0 +1,29 @@
+uuid: 02b1d98d-fb48-4ca8-b4c9-ea649576b7b9
+langcode: es
+status: true
+dependencies:
+  config:
+    - facets.facet.articulos_filtrar_por_fundamentos_e_influencias
+  module:
+    - facets
+    - system
+  theme:
+    - aetg
+id: articulosfiltrarporfundamentoseinfluencias
+theme: aetg
+region: content
+weight: -5
+provider: null
+plugin: 'facet_block:articulos_filtrar_por_fundamentos_e_influencias'
+settings:
+  id: 'facet_block:articulos_filtrar_por_fundamentos_e_influencias'
+  label: 'Artículos: Filtrar por fundamentos e influencias'
+  provider: facets
+  label_display: '0'
+  block_id: articulosfiltrarporfundamentoseinfluencias
+visibility:
+  request_path:
+    id: request_path
+    pages: /gestalt/recursos/articulos
+    negate: false
+    context_mapping: {  }

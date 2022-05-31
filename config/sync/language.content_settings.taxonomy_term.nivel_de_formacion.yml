@@ -1,0 +1,11 @@
+uuid: 9d2f360c-9b2a-46c3-ab11-aa863c964314
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.nivel_de_formacion
+id: taxonomy_term.nivel_de_formacion
+target_entity_type_id: taxonomy_term
+target_bundle: nivel_de_formacion
+default_langcode: site_default
+language_alterable: false

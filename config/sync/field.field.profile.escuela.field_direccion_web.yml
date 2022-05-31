@@ -1,0 +1,23 @@
+uuid: 5b94908f-de19-4ad9-823d-3cbde60bf3c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_direccion_web
+    - profile.type.escuela
+  module:
+    - link
+id: profile.escuela.field_direccion_web
+field_name: field_direccion_web
+entity_type: profile
+bundle: escuela
+label: 'Página web'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

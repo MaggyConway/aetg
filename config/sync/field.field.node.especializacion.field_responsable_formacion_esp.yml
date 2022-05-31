@@ -1,0 +1,19 @@
+uuid: d894eaf6-9843-4f94-bd66-bddf76dd6876
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_responsable_formacion_esp
+    - node.type.especializacion
+id: node.especializacion.field_responsable_formacion_esp
+field_name: field_responsable_formacion_esp
+entity_type: node
+bundle: especializacion
+label: 'Responsable de formación'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

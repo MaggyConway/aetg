@@ -1,0 +1,16 @@
+uuid: 5631c4f8-11d9-42d3-8bb9-14aad1c7f9d9
+langcode: es
+status: true
+dependencies:
+  config:
+    - commerce_invoice.commerce_invoice_type.file_invoice
+  module:
+    - commerce_invoice
+third_party_settings:
+  commerce_invoice:
+    generate_translations: false
+id: commerce_invoice.file_invoice
+target_entity_type_id: commerce_invoice
+target_bundle: file_invoice
+default_langcode: site_default
+language_alterable: false

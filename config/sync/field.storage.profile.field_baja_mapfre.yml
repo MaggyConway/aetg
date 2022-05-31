@@ -1,0 +1,24 @@
+uuid: 22a31048-3195-439d-af43-a140fc1a0e42
+langcode: und
+status: true
+dependencies:
+  module:
+    - datetime
+    - field_permissions
+    - profile
+third_party_settings:
+  field_permissions:
+    permission_type: custom
+id: profile.field_baja_mapfre
+field_name: field_baja_mapfre
+entity_type: profile
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

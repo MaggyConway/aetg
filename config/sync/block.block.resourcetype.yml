@@ -1,0 +1,29 @@
+uuid: 8787ff1c-7e24-4aeb-a7a5-4abb5bd54819
+langcode: es
+status: true
+dependencies:
+  config:
+    - facets.facet.resource_type
+  module:
+    - facets
+    - system
+  theme:
+    - aetg
+id: resourcetype
+theme: aetg
+region: content
+weight: -21
+provider: null
+plugin: 'facet_block:resource_type'
+settings:
+  id: 'facet_block:resource_type'
+  label: 'Filtrar por tipo de recurso:'
+  provider: facets
+  label_display: '0'
+  block_id: resourcetype
+visibility:
+  request_path:
+    id: request_path
+    pages: /gestalt/recursos
+    negate: false
+    context_mapping: {  }

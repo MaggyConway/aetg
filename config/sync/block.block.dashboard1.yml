@@ -1,0 +1,26 @@
+uuid: b25ae7c2-89a2-412c-bbc5-998cd4e12508
+langcode: es
+status: true
+dependencies:
+  module:
+    - draggable_dashboard
+    - system
+  theme:
+    - adminimal_theme
+id: dashboard1
+theme: adminimal_theme
+region: content
+weight: 0
+provider: null
+plugin: 'draggable_dashboard_block:draggable_dashboard_1636451937'
+settings:
+  id: 'draggable_dashboard_block:draggable_dashboard_1636451937'
+  label: 'Dashboard #1'
+  provider: draggable_dashboard
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: /admin/dashboard
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,23 @@
+uuid: 06235eea-f182-4fcf-bf5e-6d9d14b64000
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_moroso
+    - profile.type.escuela
+id: profile.escuela.field_moroso
+field_name: field_moroso
+entity_type: profile
+bundle: escuela
+label: moroso
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Deudor/a
+  off_label: 'Off'
+field_type: boolean

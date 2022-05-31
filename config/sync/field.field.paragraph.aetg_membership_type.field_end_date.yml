@@ -1,0 +1,21 @@
+uuid: 16ced8a6-d70d-4040-b4b8-0113e69ce8f7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_end_date
+    - paragraphs.paragraphs_type.aetg_membership_type
+  module:
+    - datetime
+id: paragraph.aetg_membership_type.field_end_date
+field_name: field_end_date
+entity_type: paragraph
+bundle: aetg_membership_type
+label: 'Fecha de Baja'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

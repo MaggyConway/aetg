@@ -1,0 +1,8 @@
+uuid: e3575804-246c-4c87-a711-9dd81f131c36
+langcode: es
+status: true
+dependencies: {  }
+name: 'Grupos de envío'
+vid: grupo_de_envio
+description: ''
+weight: 0

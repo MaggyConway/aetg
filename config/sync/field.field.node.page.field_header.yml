@@ -1,0 +1,91 @@
+uuid: d69c5590-4fea-48b4-9150-10e8ff620249
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_header
+    - node.type.page
+    - paragraphs.paragraphs_type.header_with_slider
+  module:
+    - entity_reference_revisions
+id: node.page.field_header
+field_name: field_header
+entity_type: node
+bundle: page
+label: Encabezado
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      header_with_slider: header_with_slider
+    target_bundles_drag_drop:
+      accordion:
+        weight: 22
+        enabled: false
+      aetg_membership_type:
+        weight: 27
+        enabled: false
+      feap_membership_type:
+        weight: 29
+        enabled: false
+      header_with_slider:
+        enabled: true
+        weight: 31
+      image:
+        weight: 32
+        enabled: false
+      image_slider:
+        weight: 33
+        enabled: false
+      image_slider_item:
+        weight: 34
+        enabled: false
+      image_title_text_and_link:
+        weight: 35
+        enabled: false
+      image_title_text_multiple_links:
+        weight: 36
+        enabled: false
+      mapfre_insurances:
+        weight: 37
+        enabled: false
+      member_slider_with_multiple_link:
+        weight: 40
+        enabled: false
+      multiple_links:
+        weight: 41
+        enabled: false
+      news_slider:
+        weight: 42
+        enabled: false
+      school_slider_with_multiple_link:
+        weight: 45
+        enabled: false
+      slider:
+        weight: 46
+        enabled: false
+      teacher:
+        weight: 47
+        enabled: false
+      text:
+        weight: 48
+        enabled: false
+      title_and_file_list:
+        weight: 49
+        enabled: false
+      title_tag_text_and_link:
+        weight: 50
+        enabled: false
+      video_area:
+        weight: 51
+        enabled: false
+      webform:
+        weight: 52
+        enabled: false
+field_type: entity_reference_revisions

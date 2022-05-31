@@ -1,0 +1,26 @@
+uuid: 1c5ff0b0-0ce5-4642-9259-ad3247c93981
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fundamentos
+    - node.type.recurso
+    - taxonomy.vocabulary.fundamentos
+id: node.recurso.field_fundamentos
+field_name: field_fundamentos
+entity_type: node
+bundle: recurso
+label: 'Fundamentos e influencias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    sort:
+      field: _none
+    target_bundles:
+      fundamentos: fundamentos
+  handler: 'default:taxonomy_term'
+field_type: entity_reference

@@ -1,0 +1,17 @@
+uuid: 4753c93e-2542-4cb1-9901-7b914db16fe8
+langcode: es
+status: true
+dependencies:
+  enforced:
+    module:
+      - commerce_order
+  module:
+    - commerce_order
+    - entity
+_core:
+  default_config_hash: Wfu6EDwNNNV0FZiMAndYyWpKCyCZ2TfdZ2QkPUFOINY
+id: commerce_order_delete_action
+label: 'Borrar pedido'
+type: commerce_order
+plugin: 'entity_delete_action:commerce_order'
+configuration: {  }

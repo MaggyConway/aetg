@@ -1,0 +1,46 @@
+uuid: 650536c8-2139-4293-a7a4-580cc7bd2de7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_justificante_bancario
+    - profile.type.informacion_privada
+  module:
+    - file
+    - filefield_paths
+third_party_settings:
+  filefield_paths:
+    enabled: true
+    file_path:
+      value: ''
+      options:
+        slashes: false
+        pathauto: false
+        transliterate: false
+    redirect: false
+    retroactive_update: false
+    active_updating: false
+    file_name:
+      value: '[file:ffp-name-only-original].[file:ffp-extension-original]'
+      options:
+        slashes: false
+        pathauto: false
+        transliterate: false
+id: profile.informacion_privada.field_justificante_bancario
+field_name: field_justificante_bancario
+entity_type: profile
+bundle: informacion_privada
+label: 'Justificante bancario'
+description: 'Adjunte aquí el documento que acredita el pago bancario.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: ''
+  file_extensions: 'txt pdf odt docx doc jpg png'
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

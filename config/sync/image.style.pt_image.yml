@@ -1,0 +1,15 @@
+uuid: 78189621-5d0e-4696-b1ec-947ffb78948d
+langcode: en
+status: true
+dependencies: {  }
+name: pt_image
+label: 'PT Image'
+effects:
+  26f6edc3-0764-470b-a0b5-d7a09a551beb:
+    uuid: 26f6edc3-0764-470b-a0b5-d7a09a551beb
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 850
+      height: 450
+      anchor: center-center

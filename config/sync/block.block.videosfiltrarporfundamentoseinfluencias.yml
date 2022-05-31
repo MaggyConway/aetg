@@ -1,0 +1,29 @@
+uuid: 2a9d76e1-4222-4188-914c-ce873e03e2ae
+langcode: es
+status: true
+dependencies:
+  config:
+    - facets.facet.videos_filtrar_por_fundamentos_e_influencias
+  module:
+    - facets
+    - system
+  theme:
+    - aetg
+id: videosfiltrarporfundamentoseinfluencias
+theme: aetg
+region: content
+weight: -1
+provider: null
+plugin: 'facet_block:videos_filtrar_por_fundamentos_e_influencias'
+settings:
+  id: 'facet_block:videos_filtrar_por_fundamentos_e_influencias'
+  label: 'Videos: Filtrar por fundamentos e influencias'
+  provider: facets
+  label_display: '0'
+  block_id: videosfiltrarporfundamentoseinfluencias
+visibility:
+  request_path:
+    id: request_path
+    pages: /gestalt/recursos/videos
+    negate: false
+    context_mapping: {  }

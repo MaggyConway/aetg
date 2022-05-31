@@ -1,0 +1,23 @@
+uuid: a6cff0d8-c6b0-411e-b6df-0d3428a810c7
+langcode: es
+status: true
+dependencies:
+  module:
+    - ctools
+    - taxonomy
+id: autores
+label: Autores
+type: 'canonical_entities:taxonomy_term'
+pattern: '/autor/[term:name]'
+selection_criteria:
+  6b6bd0ca-bfee-4e21-9472-81f0d88a88ed:
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      autor: autor
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    uuid: 6b6bd0ca-bfee-4e21-9472-81f0d88a88ed
+selection_logic: and
+weight: -5
+relationships: {  }

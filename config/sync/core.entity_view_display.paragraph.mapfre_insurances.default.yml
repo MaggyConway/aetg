@@ -1,0 +1,73 @@
+uuid: ed7a80d1-0f46-4a30-ac45-9cc49ce4e2ed
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.mapfre_insurances.field_end_date
+    - field.field.paragraph.mapfre_insurances.field_is_debtor
+    - field.field.paragraph.mapfre_insurances.field_start_date
+    - field.field.paragraph.mapfre_insurances.field_taxonomy_term
+    - field.field.paragraph.mapfre_insurances.field_text
+    - paragraphs.paragraphs_type.mapfre_insurances
+  module:
+    - datetime
+    - layout_builder
+    - text
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: paragraph.mapfre_insurances.default
+targetEntityType: paragraph
+bundle: mapfre_insurances
+mode: default
+content:
+  field_end_date:
+    weight: 2
+    label: hidden
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_is_debtor:
+    weight: 3
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_start_date:
+    weight: 1
+    label: hidden
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_taxonomy_term:
+    weight: 0
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_text:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden:
+  breadcrumbs: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  search_api_excerpt: true

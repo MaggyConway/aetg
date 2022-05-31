@@ -1,0 +1,11 @@
+uuid: bb16be34-aa93-4738-95d8-494f0bbda3e6
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.documentacion_de_escuela
+id: node.documentacion_de_escuela
+target_entity_type_id: node
+target_bundle: documentacion_de_escuela
+default_langcode: site_default
+language_alterable: false

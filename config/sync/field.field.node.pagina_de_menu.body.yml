@@ -1,0 +1,23 @@
+uuid: 939ee52b-0533-4f8c-9285-80b26e655f9e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.pagina_de_menu
+  module:
+    - text
+id: node.pagina_de_menu.body
+field_name: body
+entity_type: node
+bundle: pagina_de_menu
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

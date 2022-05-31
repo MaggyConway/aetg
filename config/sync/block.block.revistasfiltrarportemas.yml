@@ -1,0 +1,29 @@
+uuid: b2b68e61-ee2c-4680-ba2a-d0338060410c
+langcode: es
+status: true
+dependencies:
+  config:
+    - facets.facet.revistas_filtrar_por_temas
+  module:
+    - facets
+    - system
+  theme:
+    - aetg
+id: revistasfiltrarportemas
+theme: aetg
+region: content
+weight: -12
+provider: null
+plugin: 'facet_block:revistas_filtrar_por_temas'
+settings:
+  id: 'facet_block:revistas_filtrar_por_temas'
+  label: 'Revistas: Filtrar por temas'
+  provider: facets
+  label_display: '0'
+  block_id: revistasfiltrarportemas
+visibility:
+  request_path:
+    id: request_path
+    pages: /gestalt/recursos/revista
+    negate: false
+    context_mapping: {  }

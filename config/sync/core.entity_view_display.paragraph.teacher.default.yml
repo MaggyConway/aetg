@@ -1,0 +1,145 @@
+uuid: 56c01a85-351a-4715-9b7a-71d5691f73e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.teacher.field_image
+    - field.field.paragraph.teacher.field_text
+    - field.field.paragraph.teacher.field_title
+    - field.field.paragraph.teacher.field_user
+    - paragraphs.paragraphs_type.teacher
+  module:
+    - aetg_common
+    - field_formatter_class
+    - layout_builder
+    - text
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: true
+    sections:
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: ''
+          column_widths: 25-75
+          layout_builder_styles_style: ''
+        components:
+          f65fa76d-ce38-40de-9d8e-ecd3f5886025:
+            uuid: f65fa76d-ce38-40de-9d8e-ecd3f5886025
+            region: first
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:paragraph:teacher:field_image'
+              formatter:
+                label: hidden
+                settings:
+                  view_mode: pt_teacher
+                  link: false
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+                type: entity_reference_entity_view
+            additional: {  }
+            weight: 0
+          b740eed3-0922-40a4-bd53-f78f1b9f2797:
+            uuid: b740eed3-0922-40a4-bd53-f78f1b9f2797
+            region: second
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:paragraph:teacher:field_text'
+              formatter:
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+                type: text_default
+            additional: {  }
+            weight: 1
+          a72cb5be-ea50-4243-922a-7e9ccd6f21de:
+            uuid: a72cb5be-ea50-4243-922a-7e9ccd6f21de
+            region: second
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:paragraph:teacher:field_title'
+              formatter:
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+                type: string
+            additional: {  }
+            weight: 0
+          a4915ed0-da2d-4ffd-96c1-5101b7b4d306:
+            uuid: a4915ed0-da2d-4ffd-96c1-5101b7b4d306
+            region: second
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:paragraph:teacher:field_user'
+              formatter:
+                label: hidden
+                settings:
+                  text: 'Ver perfil'
+                  link: true
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+                type: aetg_entity_reference_link
+            additional: {  }
+            weight: 2
+        third_party_settings: {  }
+id: paragraph.teacher.default
+targetEntityType: paragraph
+bundle: teacher
+mode: default
+content:
+  field_image:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: pt_teacher
+      link: false
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    type: entity_reference_entity_view
+    region: content
+  field_text:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_user:
+    weight: 3
+    label: hidden
+    settings:
+      text: 'Ver perfil'
+      link: true
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    type: aetg_entity_reference_link
+    region: content
+hidden:
+  breadcrumbs: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  search_api_excerpt: true

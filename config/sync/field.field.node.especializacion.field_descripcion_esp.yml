@@ -1,0 +1,23 @@
+uuid: bbf3ca6b-058c-49e4-af6d-52aa90df4d58
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_descripcion_esp
+    - node.type.especializacion
+  module:
+    - text
+id: node.especializacion.field_descripcion_esp
+field_name: field_descripcion_esp
+entity_type: node
+bundle: especializacion
+label: Descripción
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

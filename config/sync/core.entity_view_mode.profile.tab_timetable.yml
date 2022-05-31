@@ -1,0 +1,10 @@
+uuid: fbb4e5ea-cf0e-4fa5-862c-ba771a866452
+langcode: en
+status: true
+dependencies:
+  module:
+    - profile
+id: profile.tab_timetable
+label: 'Tab: Timetable'
+targetEntityType: profile
+cache: true

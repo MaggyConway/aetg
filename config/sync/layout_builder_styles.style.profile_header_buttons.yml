@@ -1,0 +1,11 @@
+uuid: 4922fa86-9580-4f51-ac60-3afe0e9bcb5a
+langcode: en
+status: true
+dependencies: {  }
+id: profile_header_buttons
+label: 'Profile Header Buttons'
+classes: view-header-buttons
+type: section
+weight: 0
+block_restrictions: {  }
+layout_restrictions: {  }

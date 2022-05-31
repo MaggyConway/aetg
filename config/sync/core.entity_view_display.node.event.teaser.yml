@@ -1,0 +1,207 @@
+uuid: 148c4c52-09fe-4005-9d53-fa7e08c92c88
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.event.body
+    - field.field.node.event.field_address
+    - field.field.node.event.field_adjunto
+    - field.field.node.event.field_date_range
+    - field.field.node.event.field_documento_adjunto_publico
+    - field.field.node.event.field_event_type
+    - field.field.node.event.field_is_online
+    - field.field.node.event.field_media
+    - field.field.node.event.field_organizers
+    - field.field.node.event.field_paragraphs
+    - field.field.node.event.field_product_reference
+    - field.field.node.event.field_relacionados
+    - node.type.event
+  module:
+    - datetime_range
+    - field_formatter_class
+    - layout_builder
+    - layout_discovery
+    - smart_trim
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          1621add4-e9b2-4e7b-b77e-e9936918fa6f:
+            uuid: 1621add4-e9b2-4e7b-b77e-e9936918fa6f
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:event:field_media'
+              formatter:
+                type: entity_reference_entity_view
+                label: hidden
+                settings:
+                  view_mode: ct_event_teaser
+                  link: false
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            additional: {  }
+            weight: 0
+          2ed91d80-348e-4def-ad1c-9495fd658471:
+            uuid: 2ed91d80-348e-4def-ad1c-9495fd658471
+            region: content
+            configuration:
+              id: 'field_block:node:event:field_date_range'
+              label: 'Date range'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: daterange_custom
+                settings:
+                  timezone_override: ''
+                  date_format: 'j \d\e F \d\e Y'
+                  separator: '-'
+                third_party_settings:
+                  empty_fields:
+                    handler: ''
+                  field_formatter_class:
+                    class: ''
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional:
+              layout_builder_styles_style: ''
+            weight: 2
+          86b37f56-55c2-4a78-92df-895c21e4a217:
+            uuid: 86b37f56-55c2-4a78-92df-895c21e4a217
+            region: content
+            configuration:
+              id: 'field_block:node:event:body'
+              label: 'Texto teaser'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: smart_trim
+                settings:
+                  trim_length: 150
+                  trim_type: chars
+                  trim_suffix: ...
+                  wrap_output: false
+                  wrap_class: trimmed
+                  more_link: false
+                  more_text: 'Leer más'
+                  more_class: more-link
+                  summary_handler: trim
+                  trim_options:
+                    text: false
+                    trim_zero: false
+                third_party_settings:
+                  empty_fields:
+                    handler: ''
+                  field_formatter_class:
+                    class: ''
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional:
+              layout_builder_styles_style: ''
+            weight: 3
+          7e10d734-76fe-468a-8dc4-73bfae3f6ef7:
+            uuid: 7e10d734-76fe-468a-8dc4-73bfae3f6ef7
+            region: content
+            configuration:
+              id: 'field_block:node:event:title'
+              label: Title
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: string
+                settings:
+                  link_to_entity: true
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional:
+              layout_builder_styles_style: ''
+            weight: 1
+        third_party_settings: {  }
+id: node.event.teaser
+targetEntityType: node
+bundle: event
+mode: teaser
+content:
+  body:
+    type: smart_trim
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      trim_length: 55
+      trim_type: words
+      trim_suffix: ...
+      wrap_class: trimmed
+      more_link: true
+      more_text: 'Leer más'
+      more_class: more-link
+      summary_handler: trim
+      wrap_output: false
+      trim_options:
+        text: false
+        trim_zero: false
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+  field_date_range:
+    type: daterange_default
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: medium
+      separator: '-'
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+  field_media:
+    type: entity_reference_entity_view
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      view_mode: ct_event_teaser
+      link: false
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+hidden:
+  addtoany: true
+  breadcrumbs: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_address: true
+  field_adjunto: true
+  field_documento_adjunto_publico: true
+  field_event_type: true
+  field_is_online: true
+  field_organizers: true
+  field_paragraphs: true
+  field_product_reference: true
+  field_relacionados: true
+  langcode: true
+  links: true
+  private_message_link: true
+  search_api_excerpt: true

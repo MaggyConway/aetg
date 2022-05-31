@@ -1,0 +1,293 @@
+{
+    "name": "drupal/recommended-project",
+    "description": "Project template for Drupal 8 projects with a relocated document root",
+    "type": "project",
+    "license": "GPL-2.0-or-later",
+    "homepage": "https://www.drupal.org/project/drupal",
+    "support": {
+        "docs": "https://www.drupal.org/docs/user_guide/en/index.html",
+        "chat": "https://www.drupal.org/node/314178"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "kenwheeler/slick",
+                "type": "drupal-library",
+                "version": "1.8.0",
+                "dist": {
+                    "type": "zip",
+                    "url": "https://github.com/kenwheeler/slick/archive/1.8.0.zip"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "dinbror/blazy",
+                "type": "drupal-library",
+                "version": "1.8.2",
+                "dist": {
+                    "type": "zip",
+                    "url": "https://github.com/dinbror/blazy/archive/1.8.2.zip"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "jackmoore/colorbox",
+                "version": "1.6.4",
+                "type": "drupal-library",
+                "dist": {
+                    "type": "zip",
+                    "url": "https://github.com/jackmoore/colorbox/archive/1.6.4.zip"
+                }
+            }
+        }
+    ],
+    "require": {
+        "composer/installers": "^1.2",
+        "cweagans/composer-patches": "^1.7",
+        "dinbror/blazy": "^1.8",
+        "drupal/address": "^1.9",
+        "drupal/address_display": "1.x-dev@dev",
+        "drupal/addtoany": "^1.15",
+        "drupal/admin_toolbar": "^3.0",
+        "drupal/adminimal_theme": "^1.6",
+        "drupal/advanced_pwa": "1.x-dev@dev",
+        "drupal/asset_injector": "^2.8",
+        "drupal/backup_migrate": "^4.1",
+        "drupal/better_exposed_filters": "^5.0@beta",
+        "drupal/block_class": "^1.3",
+        "drupal/captcha": "^1.2",
+        "drupal/colorbox": "^1.7",
+        "drupal/commerce": "^2.26",
+        "drupal/commerce_file": "^2.0@beta",
+        "drupal/commerce_invoice": "^2.0@beta",
+        "drupal/commerce_license": "^2.0@alpha",
+        "drupal/commerce_product_tax": "^1.0@RC",
+        "drupal/commerce_sermepa": "^2.2",
+        "drupal/commerce_stock": "^1.0@alpha",
+        "drupal/config_delete": "^1.17",
+        "drupal/content_access": "^1.0@alpha",
+        "drupal/core-composer-scaffold": "^8.8",
+        "drupal/core-project-message": "^8.8",
+        "drupal/core-recommended": "^8.8",
+        "drupal/ctools": "^3.6",
+        "drupal/custom_breadcrumbs": "^1.0",
+        "drupal/devel": "^4.1",
+        "drupal/devel_php": "^1.3",
+        "drupal/draggable_dashboard": "^1.5",
+        "drupal/email_registration": "^1.1",
+        "drupal/empty_fields": "^1.0@beta",
+        "drupal/eu_cookie_compliance": "^1.14",
+        "drupal/exclude_node_title": "^1.2",
+        "drupal/extlink": "^1.6",
+        "drupal/facets": "^1.8",
+        "drupal/feeds": "^3.0@alpha",
+        "drupal/feeds_tamper": "^2.0@beta",
+        "drupal/field_default_token": "1.x-dev",
+        "drupal/field_formatter_class": "^1.5",
+        "drupal/field_group": "^3.1",
+        "drupal/field_permissions": "^1.1",
+        "drupal/field_validation": "^1.0@beta",
+        "drupal/filefield_paths": "^1.0@beta",
+        "drupal/flag": "4.0.0-beta2",
+        "drupal/form_mode_control": "^2.0",
+        "drupal/form_mode_manager": "^1.3",
+        "drupal/geocoder": "^3.20",
+        "drupal/google_analytics": "^3.1",
+        "drupal/honeypot": "^2.0",
+        "drupal/http_cache_control": "^2.0",
+        "drupal/imce": "^2.4",
+        "drupal/layout_builder_styles": "^1.0@beta",
+        "drupal/leaflet": "^2.1",
+        "drupal/legal": "^2.0",
+        "drupal/link_attributes": "^1.11",
+        "drupal/login_security": "^2.0",
+        "drupal/mail_safety": "^1.2",
+        "drupal/media_parent_entity_link": "^1.0",
+        "drupal/menu_block": "^1.7",
+        "drupal/menu_breadcrumb": "^1.16",
+        "drupal/metatag": "^1.16",
+        "drupal/migrate_plus": "^4.2",
+        "drupal/migrate_tools": "^4.0",
+        "drupal/migrate_upgrade": "^3.2",
+        "drupal/modules_weight": "^1.9",
+        "drupal/nocurrent_pass": "^1.0",
+        "drupal/node_class": "^1.0@beta",
+        "drupal/paragraph_view_mode": "^2.0",
+        "drupal/paragraphs": "^1.12",
+        "drupal/paragraphs_browser": "^1.0",
+        "drupal/paragraphs_jquery_ui_accordion": "^1.4",
+        "drupal/pathauto": "^1.8",
+        "drupal/private_message": "^1.3",
+        "drupal/profile": "1.x-dev@dev",
+        "drupal/pwa": "^1.5",
+        "drupal/r4032login": "^2.1",
+        "drupal/readonly_field_widget": "^1.4",
+        "drupal/reference_table_formatter": "^1.1",
+        "drupal/registration_types": "^1.0@beta",
+        "drupal/rpt": "^1.0",
+        "drupal/rules": "^3.0@alpha",
+        "drupal/search404": "^2.0",
+        "drupal/search_api": "^1.19",
+        "drupal/simple_block": "^1.2",
+        "drupal/slick": "^2.3",
+        "drupal/slick_paragraphs": "^2.1",
+        "drupal/slick_views": "^2.4",
+        "drupal/smart_trim": "^1.3",
+        "drupal/social_auth_google": "^2.1",
+        "drupal/stage_file_proxy": "^1.2",
+        "drupal/status_messages": "^4.2",
+        "drupal/swiftmailer": "^2.0",
+        "drupal/tac_lite": "^1.5",
+        "drupal/theme_switcher": "^1.2",
+        "drupal/token": "^1.9",
+        "drupal/ultimate_cron": "^2.0@alpha",
+        "drupal/user_registrationpassword": "^2.0@alpha",
+        "drupal/username_enumeration_prevention": "^1.2",
+        "drupal/userprotect": "^1.1",
+        "drupal/views_block_area": "^1.0@beta",
+        "drupal/views_bulk_operations": "^3.13",
+        "drupal/views_data_export": "^1.0",
+        "drupal/views_slideshow": "^4.8",
+        "drupal/viewsreference": "^1.7",
+        "drupal/webform": "^6.0",
+        "drupal/webform_migrate": "^1.2",
+        "drupal/xmlsitemap": "^1.0",
+        "drupal/yearonly": "^9.0",
+        "drupal/youtube": "^1.2",
+        "geocoder-php/arcgis-online-provider": "^4.3",
+        "jackmoore/colorbox": "^1.6",
+        "kenwheeler/slick": "^1.8",
+        "minishlink/web-push": "^4.0"
+    },
+    "conflict": {
+        "drupal/drupal": "*"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "composer-exit-on-patch-failure": true,
+        "patchLevel": {
+            "drupal/core": "-p2"
+        },
+        "patches": {
+            "drupal/address": {
+                "#3178689 Process addressfield's administrative area (province) during migration": "https://www.drupal.org/files/issues/2021-09-27/address-process_administrative_area_by_iso_code_on_D7_to_D8_migration-3178689-3.patch",
+                "#2812659 Integrate Address with Search API": "https://www.drupal.org/files/issues/2021-09-15/integrate-address-searchapi-2812659-58.patch"
+            },
+            "drupal/core": {
+                "#2985882" : "https://www.drupal.org/files/issues/2020-04-08/2985882-field-85.patch",
+                "#2916876 Add visibility control conditions to blocks within Layout Builder": "https://www.drupal.org/files/issues/2020-06-23/2916876-92.patch",
+                "#3008924 Callers of LayoutEntityHelperTrait::getEntitySections() do not account for the view mode": "https://www.drupal.org/files/issues/2019-06-20/3008924-5.patch",
+                "#3001188 Make it possible to add relationships to layout builder": "https://www.drupal.org/files/issues/2019-06-05/3001188-8.patch",
+                "#3039185 Allow field blocks to display the configuration label when set in Layout Builder": "https://www.drupal.org/files/issues/2020-04-17/allow-field-blocks-to-display-label-in-layout-builder-3039185-22.patch",
+                "#3150368 TypeError EntityViewsData::mapFieldDefinition() null given": "https://www.drupal.org/files/issues/2020-06-09/EntityViewsData_MapDefinition_Null-3150368-1.patch",
+                "#1810148 Grouped exposed taxonomy term filters do not work": "https://www.drupal.org/files/issues/2021-05-28/1810148-83.patch",
+                "#3108528 Call to a member function getTranslation() on null in ContentEntityBase": "https://www.drupal.org/files/issues/2021-03-29/getTranslation-on-null-3108528-16.patch",
+                "#2844620 FinishResponseSubscriber: Need warning/error when headers exceed 16k": "https://www.drupal.org/files/issues/2019-05-30/finish-response-subscriber--need-warning-error-when-headers-exceed-16k-2844620-20.patch",
+                "#2329937 Allow definition objects to provide options": "https://www.drupal.org/files/issues/2020-10-21/2329937-65.patch"
+            },
+            "drupal/ctools": {
+                "#3029323 Cannot use Entity View block in Layout Builder when there is no context": "https://www.drupal.org/files/issues/2021-05-24/ctools-layout_builder_context-3029323-12.patch",
+                "#2759445 How to manually pass an argument to a views block through interface": "https://www.drupal.org/files/issues/2020-11-03/ctools_views-pass_arguments_to_viewsblock-2759445-70.patch"
+            },
+            "drupal/profile": {
+                "#2957256" : "https://www.drupal.org/files/issues/2020-05-15/2957256-36.patch"
+            },
+            "drupal/inline_entity_form": {
+                "#3208279" : "https://www.drupal.org/files/issues/2021-04-12/inline_entity_form-n3208279-5.patch"
+            },
+            "drupal/rules": {
+                "#2800749 Support upcasting entity IDs to full entity contexts": "https://www.drupal.org/files/issues/2021-12-08/2800749-97.upcast.patch",
+                "#2816033 Rules registers no listeners on rare occasions.": "https://www.drupal.org/files/issues/2021-12-07/rules_registers_no_l-2816033-90.patch",
+                "#2724129 Change message field to textarea in Send email action": "https://www.drupal.org/files/issues/2021-03-15/email_text_area-2724129-69.patch",
+                "Allow single-valued data selector input to be passed as an array for 'multiple' context fields": "https://www.drupal.org/files/issues/2020-07-21/2723259-20.single-value-selector-to-array.patch"
+            },
+            "drupal/typed_data": {
+                "#3091923 Add a new \"text\" datatype for long text": "https://www.drupal.org/files/issues/2019-11-02/3091923-3.text-datatype.patch"
+            },
+            "drupal/mimemail": {
+                "#2928965 Port Rules actions \"Send HTML e-mail\" and \"Send HTML mail to all users of a role\" to D8": "https://www.drupal.org/files/issues/2019-04-27/2928965-11-mimemail-rules.patch"
+            },
+            "drupal/commerce": {
+                "#2860474#comment-13981746 Cart is not updated when Product is deleted or unpublished": "https://www.drupal.org/files/issues/2021-01-30/2860474_0.patch"
+            },
+            "drupal/advanced_pwa": {
+                "#0000 remember users's choice from modal ": "patches/advanced_pwa/remember-users-choice-url-in-broadcast.patch"
+            },
+            "drupal/commerce_product_tax": {
+                "#3159572 field formatter displays 'default|<an-uuid-alike-string>'": "https://git.drupalcode.org/project/commerce_product_tax/-/merge_requests/1.patch"
+            },
+            "drupal/commerce_invoice": {
+                "#3160462 Allow html markup in footer text": "https://www.drupal.org/files/issues/2020-07-21/3160462-2.patch"
+            },
+            "drupal/legal": {
+                "#3261075 Module Legal breaks the Drupal Commerce Checkout flow": "patches/legal/legal_add-commerce-checkout-login-compatibility.patch",
+                "#3074688 Password reset links no longer work": "https://www.drupal.org/files/issues/2021-06-01/3074688-28.patch"
+            }
+        },
+        "drupal-scaffold": {
+            "locations": {
+                "web-root": "web/"
+            }
+        },
+        "installer-paths": {
+            "web/core": [
+                "type:drupal-core"
+            ],
+            "web/libraries/{$name}": [
+                "type:drupal-library"
+            ],
+            "web/modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "web/profiles/contrib/{$name}": [
+                "type:drupal-profile"
+            ],
+            "web/themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ],
+            "drush/Commands/contrib/{$name}": [
+                "type:drupal-drush"
+            ],
+            "web/modules/custom/{$name}": [
+                "type:drupal-custom-module"
+            ],
+            "web/themes/custom/{$name}": [
+                "type:drupal-custom-theme"
+            ]
+        },
+        "drupal-core-project-message": {
+            "include-keys": [
+                "homepage",
+                "support"
+            ],
+            "post-create-project-cmd-message": [
+                "<bg=blue;fg=white>                                                         </>",
+                "<bg=blue;fg=white>  Congratulations, you’ve installed the Drupal codebase  </>",
+                "<bg=blue;fg=white>  from the drupal/recommended-project template!          </>",
+                "<bg=blue;fg=white>                                                         </>",
+                "",
+                "<bg=yellow;fg=black>Next steps</>:",
+                "  * Install the site: https://www.drupal.org/docs/8/install",
+                "  * Read the user guide: https://www.drupal.org/docs/user_guide/en/index.html",
+                "  * Get support: https://www.drupal.org/support",
+                "  * Get involved with the Drupal community:",
+                "      https://www.drupal.org/getting-involved",
+                "  * Remove the plugin that prints this message:",
+                "      composer remove drupal/core-project-message"
+            ]
+        }
+    }
+}

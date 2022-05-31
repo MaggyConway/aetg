@@ -1,0 +1,503 @@
+uuid: e8ddf2df-dad1-4e54-8845-21d1dd11b9f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.profile.edit_profile
+    - field.field.profile.informacion_privada.field_aetg_membership_type
+    - field.field.profile.informacion_privada.field_alta_aetg
+    - field.field.profile.informacion_privada.field_alta_feap
+    - field.field.profile.informacion_privada.field_alta_mapfre
+    - field.field.profile.informacion_privada.field_apellidos
+    - field.field.profile.informacion_privada.field_archivos_del_usuario
+    - field.field.profile.informacion_privada.field_area_de_formacion
+    - field.field.profile.informacion_privada.field_baja
+    - field.field.profile.informacion_privada.field_baja_aetg
+    - field.field.profile.informacion_privada.field_baja_feap
+    - field.field.profile.informacion_privada.field_baja_mapfre
+    - field.field.profile.informacion_privada.field_bic
+    - field.field.profile.informacion_privada.field_centro_donde_trabaja
+    - field.field.profile.informacion_privada.field_dni
+    - field.field.profile.informacion_privada.field_domiciliacion_banco
+    - field.field.profile.informacion_privada.field_domicilio_particular
+    - field.field.profile.informacion_privada.field_email
+    - field.field.profile.informacion_privada.field_envio_de_email
+    - field.field.profile.informacion_privada.field_feap_membership_type
+    - field.field.profile.informacion_privada.field_fecha_de_firma_de_la_domic
+    - field.field.profile.informacion_privada.field_fecha_nacimiento
+    - field.field.profile.informacion_privada.field_formacion
+    - field.field.profile.informacion_privada.field_formacion_universitaria
+    - field.field.profile.informacion_privada.field_geofield
+    - field.field.profile.informacion_privada.field_iban_
+    - field.field.profile.informacion_privada.field_imagen_usuario
+    - field.field.profile.informacion_privada.field_impagos_mapfre
+    - field.field.profile.informacion_privada.field_insurances
+    - field.field.profile.informacion_privada.field_justificante_bancario
+    - field.field.profile.informacion_privada.field_lugar_nacimiento
+    - field.field.profile.informacion_privada.field_moroso
+    - field.field.profile.informacion_privada.field_moroso_mapfre
+    - field.field.profile.informacion_privada.field_motivo_baja_aetg
+    - field.field.profile.informacion_privada.field_motivo_baja_mapfre
+    - field.field.profile.informacion_privada.field_nombre
+    - field.field.profile.informacion_privada.field_notas
+    - field.field.profile.informacion_privada.field_num_socio_string
+    - field.field.profile.informacion_privada.field_ocupacion
+    - field.field.profile.informacion_privada.field_pendiente
+    - field.field.profile.informacion_privada.field_seguro_mapfre
+    - field.field.profile.informacion_privada.field_telefono
+    - field.field.profile.informacion_privada.field_telefono_2
+    - field.field.profile.informacion_privada.field_tipo_de_miembro
+    - image.style.thumbnail
+    - profile.type.informacion_privada
+  module:
+    - address
+    - datetime
+    - field_group
+    - file
+    - image
+    - paragraphs
+    - paragraphs_browser
+third_party_settings:
+  field_group:
+    group_datos_bancarios:
+      children:
+        - field_iban_
+        - field_bic
+        - field_fecha_de_firma_de_la_domic
+        - field_domiciliacion_banco
+        - field_justificante_bancario
+      parent_name: group_solapas
+      weight: 14
+      label: 'Datos bancarios'
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        required_fields: true
+        id: ''
+      format_type: accordion_item
+      region: content
+    group_formacion:
+      children:
+        - field_area_de_formacion
+        - field_formacion_universitaria
+        - field_formacion
+        - field_centro_donde_trabaja
+        - field_ocupacion
+      parent_name: group_solapas
+      weight: 13
+      label: 'Formación y experiencia profesional'
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        required_fields: true
+        id: ''
+      format_type: accordion_item
+      region: content
+    group_datos_contacto:
+      children:
+        - field_domicilio_particular
+        - field_email
+        - field_telefono
+        - field_telefono_2
+      parent_name: group_solapas
+      weight: 12
+      label: 'Datos de contacto'
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        required_fields: true
+        id: ''
+      format_type: accordion_item
+      region: content
+    group_datos_personales:
+      children:
+        - field_nombre
+        - field_apellidos
+        - field_dni
+        - field_num_socio_string
+        - field_imagen_usuario
+        - field_lugar_nacimiento
+        - field_fecha_nacimiento
+      parent_name: group_solapas
+      weight: 11
+      label: 'Datos personales'
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        required_fields: true
+        id: ''
+      format_type: accordion_item
+      region: content
+    group_mapfre:
+      children:
+        - field_insurances
+      parent_name: group_solapas
+      weight: 15
+      label: Seguros
+      format_settings:
+        description: ''
+        formatter: closed
+        required_fields: true
+        id: ''
+        classes: ''
+        show_empty_fields: false
+      format_type: accordion_item
+      region: content
+    group_archivos:
+      children:
+        - field_archivos_del_usuario
+      parent_name: group_solapas
+      weight: 18
+      label: 'Archivos del usuario'
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ''
+        required_fields: true
+        id: ''
+      format_type: accordion_item
+      region: content
+    group_solapas:
+      children:
+        - group_datos_personales
+        - group_datos_contacto
+        - group_formacion
+        - group_datos_bancarios
+        - group_mapfre
+        - group_additions_and_removals
+        - group_bajas
+        - group_archivos
+      parent_name: ''
+      weight: 0
+      label: Información
+      format_settings:
+        show_empty_fields: true
+        effect: none
+        id: ''
+        classes: ''
+      format_type: accordion
+      region: content
+    group_additions_and_removals:
+      children:
+        - field_aetg_membership_type
+        - field_feap_membership_type
+      parent_name: group_solapas
+      weight: 16
+      format_type: accordion_item
+      region: content
+      format_settings:
+        formatter: closed
+        required_fields: true
+        id: ''
+        classes: ''
+        show_empty_fields: false
+      label: Membrecías
+    group_bajas:
+      children:
+        - field_moroso
+        - field_baja
+        - field_baja_aetg
+        - field_motivo_baja_aetg
+        - field_notas
+      parent_name: group_solapas
+      weight: 17
+      format_type: accordion_item
+      region: content
+      format_settings:
+        formatter: closed
+        required_fields: true
+        id: ''
+        classes: ''
+        show_empty_fields: false
+      label: Baja
+id: profile.informacion_privada.edit_profile
+targetEntityType: profile
+bundle: informacion_privada
+mode: edit_profile
+content:
+  field_aetg_membership_type:
+    type: paragraphs
+    weight: 4
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        add_above: '0'
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+    region: content
+  field_apellidos:
+    weight: 3
+    type: string_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_archivos_del_usuario:
+    weight: 45
+    type: file_generic
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    region: content
+  field_area_de_formacion:
+    weight: 14
+    type: entity_reference_autocomplete_tags
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_baja:
+    type: boolean_checkbox
+    weight: 1
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_baja_aetg:
+    type: datetime_default
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_bic:
+    weight: 35
+    type: string_textfield
+    settings:
+      size: 11
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_centro_donde_trabaja:
+    weight: 17
+    type: string_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_dni:
+    weight: 4
+    type: string_textfield
+    settings:
+      size: 20
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_domiciliacion_banco:
+    weight: 37
+    type: file_generic
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    region: content
+  field_domicilio_particular:
+    weight: 8
+    type: address_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_email:
+    weight: 9
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_feap_membership_type:
+    type: paragraphs
+    weight: 6
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        add_above: '0'
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+    region: content
+  field_fecha_de_firma_de_la_domic:
+    weight: 36
+    type: string_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_fecha_nacimiento:
+    weight: 9
+    type: datetime_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_formacion:
+    weight: 16
+    type: string_textarea
+    settings:
+      rows: 2
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_formacion_universitaria:
+    weight: 15
+    type: string_textarea
+    settings:
+      rows: 2
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_iban_:
+    weight: 33
+    type: string_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_imagen_usuario:
+    weight: 7
+    type: image_image
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    region: content
+  field_insurances:
+    type: paragraphs_browser
+    weight: 3
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: '0'
+      add_mode: paragraphs_browser
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        duplicate: duplicate
+        collapse_edit_all: collapse_edit_all
+        add_above: 0
+      paragraphs_browser: _na
+      modal_width: 80%
+      modal_height: auto
+    third_party_settings: {  }
+    region: content
+  field_justificante_bancario:
+    weight: 38
+    type: file_generic
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    region: content
+  field_lugar_nacimiento:
+    weight: 8
+    type: string_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_moroso:
+    type: boolean_checkbox
+    weight: 0
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_motivo_baja_aetg:
+    type: options_buttons
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_nombre:
+    weight: 2
+    type: string_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_notas:
+    type: string_textarea
+    weight: 4
+    region: content
+    settings:
+      rows: 2
+      placeholder: ''
+    third_party_settings: {  }
+  field_num_socio_string:
+    weight: 6
+    type: string_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_ocupacion:
+    type: entity_reference_autocomplete_tags
+    weight: 18
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_telefono:
+    weight: 10
+    type: string_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_telefono_2:
+    weight: 11
+    type: string_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_alta_aetg: true
+  field_alta_feap: true
+  field_alta_mapfre: true
+  field_baja_feap: true
+  field_baja_mapfre: true
+  field_envio_de_email: true
+  field_geofield: true
+  field_impagos_mapfre: true
+  field_moroso_mapfre: true
+  field_motivo_baja_mapfre: true
+  field_pendiente: true
+  field_seguro_mapfre: true
+  field_tipo_de_miembro: true
+  is_default: true

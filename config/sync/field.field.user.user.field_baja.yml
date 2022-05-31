@@ -1,0 +1,24 @@
+uuid: 601652b6-3235-4ccc-9809-5322aec1e519
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_baja
+  module:
+    - user
+id: user.user.field_baja
+field_name: field_baja
+entity_type: user
+bundle: user
+label: Baja
+description: 'Indica si una cuenta de usuario está dado de baja'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Sí
+  off_label: 'No'
+field_type: boolean

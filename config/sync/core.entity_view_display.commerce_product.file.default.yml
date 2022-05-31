@@ -1,0 +1,40 @@
+uuid: fd9a4d58-c4d0-45e4-b71d-9769a05d1458
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.file
+  module:
+    - commerce_product
+    - field_formatter_class
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: commerce_product.file.default
+targetEntityType: commerce_product
+bundle: file
+mode: default
+content:
+  variations:
+    type: commerce_add_to_cart
+    weight: 10
+    region: content
+    label: hidden
+    settings:
+      combine: false
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+hidden:
+  breadcrumbs: true
+  created: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  langcode: true
+  search_api_excerpt: true
+  stores: true
+  title: true
+  uid: true

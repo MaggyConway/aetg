@@ -1,0 +1,11 @@
+uuid: fdb89c29-dcfc-499f-b08c-bbc2ba5dc8d7
+langcode: es
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.file
+id: commerce_product.file
+target_entity_type_id: commerce_product
+target_bundle: file
+default_langcode: site_default
+language_alterable: false

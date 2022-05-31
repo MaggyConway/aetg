@@ -1,0 +1,23 @@
+uuid: 246c55bf-151a-48c3-9427-79b498a1057c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_pendiente
+    - profile.type.informacion_privada
+id: profile.informacion_privada.field_pendiente
+field_name: field_pendiente
+entity_type: profile
+bundle: informacion_privada
+label: Pendiente
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

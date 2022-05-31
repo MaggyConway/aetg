@@ -1,0 +1,28 @@
+uuid: 735b2d3d-c145-4c5a-8443-12535dcb3e78
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tutor_tesina
+    - node.type.recurso
+    - taxonomy.vocabulary.tutor_tesina
+id: node.recurso.field_tutor_tesina
+field_name: field_tutor_tesina
+entity_type: node
+bundle: recurso
+label: Director/a
+description: 'Elija aquí el director/a, coordinador/a o supervisor/a de la tesina. El campo viene normalizado con la siguiente estructura: "Apellido apellido2, Nombre". Si no tuviese segundo apellido: "Apellido, Nombre"'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tutor_tesina: tutor_tesina
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

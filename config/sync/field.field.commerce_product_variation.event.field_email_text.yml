@@ -1,0 +1,24 @@
+uuid: 54e0b194-9469-4d02-803d-fb6b83dbd079
+langcode: es
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.event
+    - field.storage.commerce_product_variation.field_email_text
+  module:
+    - text
+id: commerce_product_variation.event.field_email_text
+field_name: field_email_text
+entity_type: commerce_product_variation
+bundle: event
+label: 'Texto del email'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: "<p>Texto para los envíos de emails por defecto en los Eventos.</p>\r\n"
+    format: filtered_html
+default_value_callback: ''
+settings: {  }
+field_type: text_long

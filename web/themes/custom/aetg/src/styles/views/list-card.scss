@@ -1,0 +1,125 @@
+.view-list-cards, 
+.view-latest-news, 
+.view-event-search {
+
+  .view-filters {
+		margin-bottom: 40px;
+		
+		@include breakpoint(tablet-m) {
+			margin-bottom: 20px;
+		}
+
+		@include breakpoint(mobile-large) {
+			margin-bottom: 15px;
+		}
+		
+		form .form--inline {
+			display: flex;
+			justify-content: flex-start;
+			align-items: flex-end;
+			.form-type-textfield, .form-type-select {
+				margin: 0 30px 0 0;
+
+				@include breakpoint(IPad-Pro) {
+					margin: 10px;
+				}
+			}
+
+			.form-type-textfield {
+				input {
+					width: 100%;
+				}
+
+				@include breakpoint(IPad-Pro) {
+					width: 100%;
+				}
+			}
+
+			&:after {
+				display: none;
+			}
+
+			@include breakpoint(IPad-Pro) {
+				flex-wrap: wrap;
+				margin: -10px;
+			}
+		}
+
+		.form-type-select {
+			position: relative;
+
+			select {
+				padding: 5px 17px;
+				height: 40px;
+				width: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				cursor: pointer;
+			}
+
+			@include breakpoint(tablet) {
+				width: calc(50% - 20px);
+			}
+
+			@include breakpoint(mobile-small) {
+				width: 100%;
+				margin: 10px 0;
+			}
+		}
+
+		.form-actions {
+			margin: 0;
+
+			> input.button {
+				padding: 11px 17px 9px;
+				border: none;
+				min-width: unset;
+				width: 100%;
+			}
+
+			@include breakpoint(IPad-Pro) {
+				margin: 10px;
+			}
+
+			@include breakpoint(tablet) {
+				width: 100%;
+			}
+		}
+	}
+  
+  .view-content {
+    	display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		align-items: flex-start;
+		margin: 20px -20px -20px;
+
+    	@include breakpoint(tablet-md) {
+			margin: -20px -15px;
+		}
+
+		@include breakpoint(tablet) {
+			margin: 20px 0 0;
+		}
+
+    .views-row {
+      margin: 20px;
+		width: calc(100% / 3 - 40px);
+		
+		@include breakpoint(IPad-Pro) {
+			width: calc(100% / 2 - 40px);
+		}
+
+		@include breakpoint(tablet-md) {
+			margin: 20px 15px;
+			width: calc(100% / 2 - 30px);
+		}
+
+		@include breakpoint(tablet) {
+			width: 100%;
+			margin: 0 0 20px;
+		}
+    }
+  }
+}

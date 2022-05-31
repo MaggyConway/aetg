@@ -1,0 +1,11 @@
+uuid: 569f9b1c-a0a1-4b43-8ed0-1a1bd635b871
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.permisos_de_acceso
+id: taxonomy_term.permisos_de_acceso
+target_entity_type_id: taxonomy_term
+target_bundle: permisos_de_acceso
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,29 @@
+uuid: 1c497080-e627-4dce-ae75-3ec53a6676d6
+langcode: es
+status: true
+dependencies:
+  config:
+    - facets.facet.revistas_filtrar_por_modalidad
+  module:
+    - facets
+    - system
+  theme:
+    - aetg
+id: revistasfiltrarpormodalidad
+theme: aetg
+region: content
+weight: -10
+provider: null
+plugin: 'facet_block:revistas_filtrar_por_modalidad'
+settings:
+  id: 'facet_block:revistas_filtrar_por_modalidad'
+  label: 'Revistas: Filtrar por modalidad'
+  provider: facets
+  label_display: '0'
+  block_id: revistasfiltrarpormodalidad
+visibility:
+  request_path:
+    id: request_path
+    pages: /gestalt/recursos/revista
+    negate: false
+    context_mapping: {  }

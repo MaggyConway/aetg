@@ -1,0 +1,8 @@
+uuid: cb03d0db-537c-4c6d-8fee-59f208125c86
+langcode: es
+status: true
+dependencies: {  }
+name: 'Tipos de documentación de escuela'
+vid: tipo_documentacion_escuela
+description: ''
+weight: 0

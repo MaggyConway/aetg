@@ -1,0 +1,29 @@
+uuid: 9c94427b-fb6a-4ba2-b30f-207b61c39d8e
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_ocupacion
+    - profile.type.informacion_privada
+    - taxonomy.vocabulary.areas_of_work
+id: profile.informacion_privada.field_ocupacion
+field_name: field_ocupacion
+entity_type: profile
+bundle: informacion_privada
+label: 'Ocupación principal'
+description: 'Escribe tu ocupación principal y selecciona la más afín a tu situación.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      areas_of_work: areas_of_work
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,11 @@
+uuid: ba578445-fae8-409a-8a31-8b4b9144ab4a
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.tipo_documentacion_escuela
+id: taxonomy_term.tipo_documentacion_escuela
+target_entity_type_id: taxonomy_term
+target_bundle: tipo_documentacion_escuela
+default_langcode: site_default
+language_alterable: false

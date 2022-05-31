@@ -1,0 +1,161 @@
+uuid: 87e0ab93-bd5e-49fe-a008-3f33f3159bf2
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.profile.edit_profile
+    - field.field.profile.school_professional_information.field_description
+    - field.field.profile.school_professional_information.field_detailed_training_program
+    - field.field.profile.school_professional_information.field_director
+    - field.field.profile.school_professional_information.field_geofield
+    - field.field.profile.school_professional_information.field_imagen_logo
+    - field.field.profile.school_professional_information.field_invoicing_address
+    - field.field.profile.school_professional_information.field_mobile
+    - field.field.profile.school_professional_information.field_paragraphs
+    - field.field.profile.school_professional_information.field_phone
+    - field.field.profile.school_professional_information.field_public_email
+    - field.field.profile.school_professional_information.field_school_name
+    - field.field.profile.school_professional_information.field_timetable
+    - field.field.profile.school_professional_information.field_training_manager
+    - field.field.profile.school_professional_information.field_url
+    - field.field.profile.school_professional_information.field_website
+    - image.style.thumbnail
+    - profile.type.school_professional_information
+  module:
+    - address
+    - image
+    - link
+    - paragraphs_browser
+    - text
+id: profile.school_professional_information.edit_profile
+targetEntityType: profile
+bundle: school_professional_information
+mode: edit_profile
+content:
+  field_description:
+    weight: 12
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_detailed_training_program:
+    weight: 10
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_director:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_imagen_logo:
+    weight: 0
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_invoicing_address:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
+    region: content
+  field_mobile:
+    weight: 7
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_paragraphs:
+    type: paragraphs_browser
+    weight: 13
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: '0'
+      add_mode: paragraphs_browser
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        duplicate: duplicate
+        collapse_edit_all: collapse_edit_all
+        add_above: 0
+      paragraphs_browser: _na
+      modal_width: 80%
+      modal_height: auto
+    third_party_settings: {  }
+    region: content
+  field_phone:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_public_email:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_school_name:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_timetable:
+    weight: 11
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_training_manager:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_url:
+    weight: 9
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_website:
+    weight: 8
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+hidden:
+  field_geofield: true
+  is_default: true

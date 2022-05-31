@@ -1,0 +1,19 @@
+uuid: 7028cec3-3a82-47e8-8ea5-982a70747136
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'file:file:62ba18d7-5840-457d-b6a0-677e7ec5d996'
+_core:
+  default_config_hash: iswHHsQHYcOMRngM9CAcOy-Gjs62tJtrpVm6AxgklkQ
+label: 'Nota de crédito'
+id: credit_memo
+numberPattern: invoice_credit_memo
+logo: 62ba18d7-5840-457d-b6a0-677e7ec5d996
+dueDays: null
+paymentTerms: ''
+footerText: ''
+traits: {  }
+workflow: invoice_default
+sendConfirmation: true
+confirmationBcc: example@mail.com

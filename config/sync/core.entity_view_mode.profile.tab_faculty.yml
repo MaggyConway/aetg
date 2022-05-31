@@ -1,0 +1,10 @@
+uuid: ad6dfd30-2676-4970-a971-78d737acbe58
+langcode: en
+status: true
+dependencies:
+  module:
+    - profile
+id: profile.tab_faculty
+label: 'Tab: Faculty'
+targetEntityType: profile
+cache: true

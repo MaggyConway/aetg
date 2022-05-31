@@ -1,0 +1,14 @@
+uuid: b6ee687f-2267-4a06-a22b-ad3efe051e64
+langcode: es
+status: true
+dependencies:
+  enforced:
+    module:
+      - webform
+_core:
+  default_config_hash: Mb_L3vE-0IBZH5s2rjpk2LNn0QHClQP9AARQdCmVLt4
+id: translations
+label: Traducciones
+category: Idioma
+likert: false
+options: ''

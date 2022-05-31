@@ -1,0 +1,8 @@
+uuid: 15876fbe-9ebe-4fb6-9f6e-9c634803614e
+langcode: es
+status: true
+dependencies: {  }
+name: Secciones
+vid: seccion
+description: 'Sección en la que está un documento (textos generales)'
+weight: 0

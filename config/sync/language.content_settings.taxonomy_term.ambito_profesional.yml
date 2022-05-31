@@ -1,0 +1,11 @@
+uuid: a0b33e88-81d6-4a19-a44b-b7c7514a16e7
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.ambito_profesional
+id: taxonomy_term.ambito_profesional
+target_entity_type_id: taxonomy_term
+target_bundle: ambito_profesional
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,20 @@
+uuid: c2f79b08-2143-4fc0-85d2-1d92a335d04c
+langcode: und
+status: true
+dependencies:
+  module:
+    - datetime
+    - user
+id: user.field_alta_aetg
+field_name: field_alta_aetg
+entity_type: user
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

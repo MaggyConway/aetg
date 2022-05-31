@@ -1,0 +1,19 @@
+uuid: 6b53ec6a-d93e-4b56-b741-42e8f491641d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_telefono_2
+    - profile.type.escuela
+id: profile.escuela.field_telefono_2
+field_name: field_telefono_2
+entity_type: profile
+bundle: escuela
+label: Móvil
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

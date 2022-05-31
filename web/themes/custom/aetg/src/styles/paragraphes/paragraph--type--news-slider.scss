@@ -1,0 +1,84 @@
+.paragraph--type--news-slider.paragraph--view-mode--default {
+  @include breakpoint(IPad-Pro) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .view-news-slider > .view-header h2 {
+    margin-bottom: 16px;
+  }
+
+  .view-header {
+    @include breakpoint(IPad-Pro) {
+      margin-bottom: 30px;
+    }
+  }
+
+  .views-element-container {
+    @include breakpoint(desktop-small) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    @include breakpoint(laptop) {
+      padding-left: 30px;
+      padding-right: 30px;
+      width: 100%;
+      margin: 0;
+    }
+
+    @include breakpoint(mobile-small) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+
+  .slick {
+    .slick__slide {
+      margin-right: 20px;
+      margin-left: 20px;
+    }
+
+    .slick-list {
+      margin-left: -20px;
+      margin-right: -20px;
+    }
+
+    nav.slick__arrow {
+      button.slick-arrow {
+        @include breakpoint(mobile-small) {
+          width: 14px;
+          height: 24px;
+          padding: 0;
+        }
+
+        &.slick-prev {
+          left: -50px;
+          @include breakpoint(mobile-small) {
+            left: -30px;
+          }
+        }
+
+        &.slick-next {
+          right: -50px;
+          @include breakpoint(mobile-small) {
+            right: -30px;
+          }
+        }
+      }
+    }
+  }
+
+  .view-footer {
+    .btn-primary {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 30px 0 0;
+
+      @include breakpoint(mobile-middle) {
+        margin-top: 20px;
+      }
+    }
+  }
+}

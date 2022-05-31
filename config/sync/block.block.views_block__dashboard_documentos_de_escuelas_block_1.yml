@@ -1,0 +1,27 @@
+uuid: 44f0e2e0-3eaa-4eb4-a51b-16f8cfcb8b2c
+langcode: es
+status: false
+dependencies:
+  config:
+    - views.view.dashboard_documentos_de_escuelas
+  module:
+    - views
+  theme:
+    - adminimal_theme
+id: views_block__dashboard_documentos_de_escuelas_block_1
+theme: adminimal_theme
+region: header
+weight: null
+provider: null
+plugin: 'views_block:dashboard_documentos_de_escuelas-block_1'
+settings:
+  id: 'views_block:dashboard_documentos_de_escuelas-block_1'
+  label: 'Documentos de escuelas'
+  provider: views
+  label_display: visible
+  views_label: 'Documentos de escuelas'
+  items_per_page: none
+  override:
+    items_per_page: none
+  views_label_checkbox: 0
+visibility: {  }

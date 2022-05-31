@@ -1,0 +1,10 @@
+uuid: 0bbc8cee-3f91-4372-9527-28e38d90273c
+langcode: es
+status: true
+dependencies:
+  module:
+    - media
+id: media.ct_resource_default_header_image
+label: 'CT Resource: Default - Header Image'
+targetEntityType: media
+cache: true

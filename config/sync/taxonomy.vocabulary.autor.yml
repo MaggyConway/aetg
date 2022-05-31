@@ -1,0 +1,8 @@
+uuid: b26897c9-c3e8-415c-ad06-9ac4bf6c263c
+langcode: es
+status: true
+dependencies: {  }
+name: Autoras/es
+vid: autor
+description: 'Autor del documento (tesina, artículo, etc.)'
+weight: 0

@@ -1,0 +1,17 @@
+uuid: 17a658ee-7fc7-44cf-a878-f23c784810d7
+langcode: es
+status: true
+dependencies:
+  module:
+    - xmlsitemap
+title: 'Default cron handler'
+id: xmlsitemap_cron
+weight: 0
+module: xmlsitemap
+callback: xmlsitemap_cron
+scheduler:
+  id: simple
+launcher:
+  id: serial
+logger:
+  id: database

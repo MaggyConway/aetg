@@ -1,0 +1,24 @@
+uuid: d86d595a-df92-40d8-bfde-b2fca482cd02
+langcode: es
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.file
+    - field.storage.commerce_product_variation.field_email_text
+  module:
+    - text
+id: commerce_product_variation.file.field_email_text
+field_name: field_email_text
+entity_type: commerce_product_variation
+bundle: file
+label: 'Texto para Email'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: "<p>Texto por defecto para el Email de los Archivos digitales.</p>\r\n"
+    format: filtered_html
+default_value_callback: ''
+settings: {  }
+field_type: text_long

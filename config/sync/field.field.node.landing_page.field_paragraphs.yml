@@ -1,0 +1,107 @@
+uuid: 7eb6a451-d3ec-4d08-8167-5524d83922de
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_paragraphs
+    - node.type.landing_page
+    - paragraphs.paragraphs_type.image_slider
+    - paragraphs.paragraphs_type.image_title_text_and_link
+    - paragraphs.paragraphs_type.image_title_text_multiple_links
+    - paragraphs.paragraphs_type.member_slider_with_multiple_link
+    - paragraphs.paragraphs_type.multiple_links
+    - paragraphs.paragraphs_type.news_slider
+    - paragraphs.paragraphs_type.school_slider_with_multiple_link
+    - paragraphs.paragraphs_type.text
+    - paragraphs.paragraphs_type.webform
+  module:
+    - entity_reference_revisions
+id: node.landing_page.field_paragraphs
+field_name: field_paragraphs
+entity_type: node
+bundle: landing_page
+label: Paragraphs
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      image_title_text_and_link: image_title_text_and_link
+      image_title_text_multiple_links: image_title_text_multiple_links
+      multiple_links: multiple_links
+      school_slider_with_multiple_link: school_slider_with_multiple_link
+      image_slider: image_slider
+      webform: webform
+      news_slider: news_slider
+      member_slider_with_multiple_link: member_slider_with_multiple_link
+      text: text
+    target_bundles_drag_drop:
+      accordion:
+        weight: 22
+        enabled: false
+      aetg_membership_type:
+        weight: 25
+        enabled: false
+      feap_membership_type:
+        weight: 27
+        enabled: false
+      header_with_slider:
+        weight: 10
+        enabled: false
+      image:
+        weight: 30
+        enabled: false
+      image_slider:
+        enabled: true
+        weight: 19
+      image_slider_item:
+        weight: 20
+        enabled: false
+      image_title_text_and_link:
+        enabled: true
+        weight: 2
+      image_title_text_multiple_links:
+        enabled: true
+        weight: 5
+      mapfre_insurances:
+        weight: 37
+        enabled: false
+      member_slider_with_multiple_link:
+        enabled: true
+        weight: 37
+      multiple_links:
+        enabled: true
+        weight: 6
+      news_slider:
+        enabled: true
+        weight: 25
+      school_slider_with_multiple_link:
+        enabled: true
+        weight: 16
+      slider:
+        weight: 17
+        enabled: false
+      teacher:
+        weight: 47
+        enabled: false
+      text:
+        enabled: true
+        weight: 44
+      title_and_file_list:
+        weight: 30
+        enabled: false
+      title_tag_text_and_link:
+        weight: 18
+        enabled: false
+      video_area:
+        weight: 33
+        enabled: false
+      webform:
+        enabled: true
+        weight: 20
+field_type: entity_reference_revisions

@@ -1,0 +1,248 @@
+uuid: 18739788-7bed-467b-a2bd-85b03c64d69f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.documentacion_de_escuela.field_administrative_area
+    - field.field.node.documentacion_de_escuela.field_alumnos
+    - field.field.node.documentacion_de_escuela.field_ano_formativo
+    - field.field.node.documentacion_de_escuela.field_correo_electronico
+    - field.field.node.documentacion_de_escuela.field_country
+    - field.field.node.documentacion_de_escuela.field_director
+    - field.field.node.documentacion_de_escuela.field_documentos_de_escuela
+    - field.field.node.documentacion_de_escuela.field_locality
+    - field.field.node.documentacion_de_escuela.field_mobile
+    - field.field.node.documentacion_de_escuela.field_phone
+    - field.field.node.documentacion_de_escuela.field_postal_code
+    - field.field.node.documentacion_de_escuela.field_school_name
+    - field.field.node.documentacion_de_escuela.field_street
+    - field.field.node.documentacion_de_escuela.field_tipo_de_envio
+    - field.field.node.documentacion_de_escuela.field_training_manager
+    - node.type.documentacion_de_escuela
+  module:
+    - datetime
+    - field_group
+    - file
+    - path
+    - readonly_field_widget
+third_party_settings:
+  field_group:
+    group_direccion:
+      children:
+        - field_country
+        - field_street
+        - field_locality
+        - field_postal_code
+        - field_administrative_area
+      parent_name: ''
+      weight: 6
+      format_type: fieldset
+      region: content
+      format_settings:
+        show_empty_fields: false
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Dirección
+id: node.documentacion_de_escuela.default
+targetEntityType: node
+bundle: documentacion_de_escuela
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 16
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_administrative_area:
+    weight: 25
+    settings:
+      label: above
+      formatter_type: null
+      formatter_settings: null
+      show_description: false
+    third_party_settings: {  }
+    type: readonly_field_widget
+    region: content
+  field_alumnos:
+    weight: 11
+    type: string_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_ano_formativo:
+    weight: 8
+    type: datetime_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_correo_electronico:
+    weight: 3
+    settings:
+      label: above
+      formatter_type: null
+      formatter_settings: null
+      show_description: false
+    third_party_settings: {  }
+    type: readonly_field_widget
+    region: content
+  field_country:
+    weight: 21
+    settings:
+      label: above
+      formatter_type: null
+      formatter_settings: null
+      show_description: false
+    third_party_settings: {  }
+    type: readonly_field_widget
+    region: content
+  field_director:
+    weight: 1
+    settings:
+      label: above
+      formatter_type: null
+      formatter_settings: null
+      show_description: false
+    third_party_settings: {  }
+    type: readonly_field_widget
+    region: content
+  field_documentos_de_escuela:
+    weight: 13
+    type: file_generic
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    region: content
+  field_locality:
+    weight: 23
+    settings:
+      label: above
+      formatter_type: null
+      formatter_settings: null
+      show_description: false
+    third_party_settings: {  }
+    type: readonly_field_widget
+    region: content
+  field_mobile:
+    weight: 5
+    settings:
+      label: above
+      formatter_type: null
+      formatter_settings: null
+      show_description: false
+    third_party_settings: {  }
+    type: readonly_field_widget
+    region: content
+  field_phone:
+    weight: 4
+    settings:
+      label: above
+      formatter_type: null
+      formatter_settings: null
+      show_description: false
+    third_party_settings: {  }
+    type: readonly_field_widget
+    region: content
+  field_postal_code:
+    weight: 24
+    settings:
+      label: above
+      formatter_type: null
+      formatter_settings: null
+      show_description: false
+    third_party_settings: {  }
+    type: readonly_field_widget
+    region: content
+  field_school_name:
+    weight: 0
+    settings:
+      label: above
+      formatter_type: null
+      formatter_settings: null
+      show_description: false
+    third_party_settings: {  }
+    type: readonly_field_widget
+    region: content
+  field_street:
+    weight: 22
+    settings:
+      label: above
+      formatter_type: null
+      formatter_settings: null
+      show_description: false
+    third_party_settings: {  }
+    type: readonly_field_widget
+    region: content
+  field_tipo_de_envio:
+    weight: 10
+    type: options_buttons
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_training_manager:
+    weight: 2
+    settings:
+      label: above
+      formatter_type: null
+      formatter_settings: null
+      show_description: false
+    third_party_settings: {  }
+    type: readonly_field_widget
+    region: content
+  langcode:
+    type: language_select
+    weight: 9
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 19
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 17
+    region: content
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 20
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 18
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 7
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 12
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    region: content
+    third_party_settings: {  }
+hidden: {  }

@@ -1,0 +1,15 @@
+uuid: 5ef9eece-70cc-48aa-a6bb-612ca45b72d1
+langcode: en
+status: true
+dependencies: {  }
+name: ct_event_default_header_image
+label: 'CT Event: Default - Header Image'
+effects:
+  664bdc03-6985-4539-bdde-fcb546c830ac:
+    uuid: 664bdc03-6985-4539-bdde-fcb546c830ac
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1980
+      height: 600
+      anchor: center-center

@@ -1,0 +1,15 @@
+uuid: 6b99bf8e-ec04-40d1-a993-85b2d8f0e4d3
+langcode: es
+status: true
+dependencies: {  }
+name: ct_especializacion_full
+label: 'CT Especializacion: full'
+effects:
+  38bbeaa2-9444-44bf-a1f1-3ea1311bd912:
+    uuid: 38bbeaa2-9444-44bf-a1f1-3ea1311bd912
+    id: image_scale
+    weight: 1
+    data:
+      width: 100
+      height: 100
+      upscale: true

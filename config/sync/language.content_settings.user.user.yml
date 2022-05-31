@@ -1,0 +1,11 @@
+uuid: 5e7496c8-d8b2-4da4-a00e-4dd3f21e5df5
+langcode: es
+status: true
+dependencies:
+  module:
+    - user
+id: user.user
+target_entity_type_id: user
+target_bundle: user
+default_langcode: site_default
+language_alterable: false

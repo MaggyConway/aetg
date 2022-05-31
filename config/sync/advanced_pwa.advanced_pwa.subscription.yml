@@ -1,0 +1,12 @@
+enabled_content_types:
+  event: event
+  news: news
+  recurso: recurso
+  documentacion_de_escuela: '0'
+  documento_secretaria: '0'
+  especializacion: '0'
+  homepage: '0'
+  landing_page: '0'
+  page: '0'
+  pagina_de_menu: '0'
+activate_feature: 1

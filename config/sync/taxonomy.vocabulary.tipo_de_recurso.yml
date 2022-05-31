@@ -1,0 +1,8 @@
+uuid: 21b34095-8f5a-4a4f-a764-54a17f0e2aa8
+langcode: es
+status: true
+dependencies: {  }
+name: 'Tipos de recursos'
+vid: tipo_de_recurso
+description: 'Tesinas, artículos, revistas, etc.'
+weight: 0

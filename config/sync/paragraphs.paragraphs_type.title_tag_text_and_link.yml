@@ -1,0 +1,15 @@
+uuid: e2884a41-fd29-49d2-b9a9-58a313cbcb98
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraph_view_mode
+third_party_settings:
+  paragraph_view_mode:
+    enabled: false
+id: title_tag_text_and_link
+label: 'Title, tag, text, link with background'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

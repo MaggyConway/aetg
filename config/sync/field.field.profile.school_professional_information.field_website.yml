@@ -1,0 +1,23 @@
+uuid: 7611b21b-8749-472b-9203-5ec6da1b7cfa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_website
+    - profile.type.school_professional_information
+  module:
+    - link
+id: profile.school_professional_information.field_website
+field_name: field_website
+entity_type: profile
+bundle: school_professional_information
+label: 'Página web'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

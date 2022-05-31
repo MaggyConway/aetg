@@ -1,0 +1,27 @@
+uuid: ca0cf9cf-62ab-46d2-bbac-adeea72c42a2
+langcode: es
+status: false
+dependencies:
+  config:
+    - views.view.dashboard_textos_generales
+  module:
+    - views
+  theme:
+    - adminimal_theme
+id: views_block__dashboard_textos_generales_block_1
+theme: adminimal_theme
+region: header
+weight: null
+provider: null
+plugin: 'views_block:dashboard_textos_generales-block_1'
+settings:
+  id: 'views_block:dashboard_textos_generales-block_1'
+  label: 'Panel textos generales'
+  provider: views
+  label_display: visible
+  views_label: 'Panel textos generales'
+  items_per_page: none
+  override:
+    items_per_page: none
+  views_label_checkbox: 0
+visibility: {  }

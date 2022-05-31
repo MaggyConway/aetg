@@ -1,0 +1,26 @@
+uuid: 5bce9fc9-32dd-4d9f-83b8-871716ec5bc1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tecnicas
+    - node.type.recurso
+    - taxonomy.vocabulary.tecnicas
+id: node.recurso.field_tecnicas
+field_name: field_tecnicas
+entity_type: node
+bundle: recurso
+label: Técnicas
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    sort:
+      field: _none
+    target_bundles:
+      tecnicas: tecnicas
+  handler: 'default:taxonomy_term'
+field_type: entity_reference

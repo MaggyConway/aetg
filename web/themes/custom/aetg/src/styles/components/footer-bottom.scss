@@ -1,0 +1,67 @@
+footer {
+    .footer-bottom {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        // margin-top: 0 auto;
+        width: 100%;
+        font-size: 14px;
+        
+        @include breakpoint(tablet) {
+            flex-wrap: wrap;
+        }
+        
+        > .region {            
+            width: 100%;
+            max-width:100%;
+            margin: 0 15px;
+            text-align: center;
+            text-align: -webkit-center;
+            
+            @include breakpoint(tablet) {
+                width: 100%;
+                max-width: 100%;
+                margin-bottom: 20px;
+            }
+            
+            .menu {
+                @include breakpoint(tablet) {
+                    margin-left: 0;
+                }
+            }
+            
+            h2 {
+                @include title-fz-16-lh-26-fw-600;
+                color: $color-1;
+                margin-bottom: 20px;
+            }
+            
+            > .block {
+                &:not(:first-child) {
+                    margin-top: 16px;
+                }
+            }
+            
+            span {
+                font-size: 13px;
+            }
+        }
+        
+        ul.menu {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .menu--footer .menu .menu-item {
+            margin-right: 20px;
+            a {
+                font-weight: 700;
+                line-height: 20px;
+                letter-spacing: .05em;
+                text-transform: uppercase;
+                color: $color-1;
+            }
+        }
+    }
+}

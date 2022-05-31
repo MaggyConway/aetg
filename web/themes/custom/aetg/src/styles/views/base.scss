@@ -1,0 +1,129 @@
+#block-aetg-content {
+	> .views-element-container {
+		> .view {
+			img {				
+				&.leaflet-marker-icon {
+					object-fit: contain;
+				}
+			}
+		}
+	}
+}
+
+.view-escuelas-profile,
+.view-asociados-profile {
+	.view-filters {
+		form {
+			.form-item {
+				&-sort-by {
+					width: auto;
+					position: relative;
+					
+					> select {
+						padding-left: 73px;
+						padding-right: 54px;
+						width: 100% !important;
+					}
+					
+					> label {
+						position: absolute;
+						left: 17px;
+						top: 50%;
+						transform: translateY(-50%);
+						font-weight: 700;
+						&:after {
+							content: ':';
+							@include title-fz-14-lh-18-bold;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.leaflet-shadow-pane {
+	display: none;
+}
+
+.leaflet-container {
+	@include breakpoint(tablet) {
+		height: 300px !important;
+	}
+	
+	@include breakpoint(mobile-middle) {
+		height: 200px !important;
+	}
+}
+
+.view-empty {
+	@include text-fz-16-lh-26;
+	color: $color-1;
+}
+
+.view-header {
+	margin-bottom: 40px;
+}
+
+.view {
+	.field--name-field-autor {
+		> .field__item {
+			a {
+				color: #333;
+				&:hover {
+					color: #3d99b1;
+				}
+			}
+		}
+	}
+}
+
+.node--type-recurso.node--view-mode-teaser .block-field-blocknoderecursotitle .field--name-title>a:hover, 
+.view-random-profiles.view-display-id-block_2 .field--name-field-school-name:hover, 
+.paragraph--type--member-slider-with-multiple-link .field--name-field-full-name:hover {
+	color: #3d99b1;
+}
+
+header .region-header #block-aetg-main-menu>.menu .menu-item a:hover, 
+header .region-header #block-aetg-main-menu>.menu .menu-item span:hover, 
+.path-biblioteca #block-local-tasks-block ul.tabs>li>a:hover, 
+form.webform-submission-online-library-form #edit-resource-type>p a.link-library:hover {
+	color: #5fbcd5;
+}
+
+.view-id-media_library {
+	.views-exposed-form {
+		.form--inline {
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+
+			> .form-item, > .form-wrapper {
+				float: none;
+				margin: 1em 0.5em;
+			}
+
+			> .form-wrapper {
+				margin-top: 44px;
+			}
+		}
+
+		select {
+			padding-right: 40px;	
+		}
+	}
+}
+
+.media-library-views-form {
+	> .media-library-item {
+		padding: 20px;
+		&.is-hover {
+			background-color: $color-F7;
+			cursor: pointer;
+		}
+
+		&.checked {
+			background-color: $color-E6;
+		}
+	}
+}

@@ -1,0 +1,11 @@
+uuid: 4e27a9f4-3c44-4398-beaf-6b0765c2e521
+langcode: es
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+id: autores_y_tutores
+title: 'Autores y tutores:'
+content:
+  value: "<ul class=\"facetapi-facetapi-links\">\r\n\t<li class=\"leaf\"><a href=\"/gestalt/recursos/autores\">Ver listado de autores</a></li>\r\n\t<li class=\"leaf\"><a href=\"/gestalt/recursos/tutores\">Ver listado de tutores</a></li>\r\n</ul>\r\n"
+  format: full_html

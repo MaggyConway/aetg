@@ -1,0 +1,23 @@
+uuid: e03a277b-e919-4f47-9b8e-777e4f9f7303
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_url
+    - profile.type.school_professional_information
+  module:
+    - link
+id: profile.school_professional_information.field_url
+field_name: field_url
+entity_type: profile
+bundle: school_professional_information
+label: 'Redes sociales'
+description: 'The social networks that generate the icon, these being: Youtube, Vimeo, Facebook, Twitter, LinkedIn, Instagram, Pinterest and Tiktok.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

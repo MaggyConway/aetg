@@ -1,0 +1,17 @@
+uuid: 5e0ead19-567e-4d37-917e-4d3a6af3f027
+langcode: es
+status: true
+dependencies:
+  enforced:
+    module:
+      - commerce_product
+  module:
+    - commerce_product
+    - entity
+_core:
+  default_config_hash: wlvmNEgXVD81RVgOeQJVgSdT5t0RAwWJVyIXdLIONdg
+id: commerce_product_delete_action
+label: 'Borrar producto'
+type: commerce_product
+plugin: 'entity_delete_action:commerce_product'
+configuration: {  }

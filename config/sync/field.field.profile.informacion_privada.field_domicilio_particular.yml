@@ -1,0 +1,57 @@
+uuid: 24236696-23e6-49f7-b8e5-3d70da97b393
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_domicilio_particular
+    - profile.type.informacion_privada
+  module:
+    - address
+id: profile.informacion_privada.field_domicilio_particular
+field_name: field_domicilio_particular
+entity_type: profile
+bundle: informacion_privada
+label: 'Domicilio particular'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    langcode: es
+    country_code: ES
+    administrative_area: ''
+    locality: ''
+    dependent_locality: null
+    postal_code: ''
+    sorting_code: null
+    address_line1: ''
+    address_line2: null
+    organization: null
+    given_name: null
+    additional_name: null
+    family_name: null
+default_value_callback: ''
+settings:
+  available_countries: {  }
+  langcode_override: es
+  field_overrides:
+    givenName:
+      override: hidden
+    additionalName:
+      override: hidden
+    familyName:
+      override: hidden
+    organization:
+      override: hidden
+    addressLine1:
+      override: required
+    addressLine2:
+      override: hidden
+    postalCode:
+      override: required
+    locality:
+      override: required
+    administrativeArea:
+      override: required
+  fields: {  }
+field_type: address

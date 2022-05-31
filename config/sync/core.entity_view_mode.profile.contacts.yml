@@ -1,0 +1,10 @@
+uuid: 0bda41c4-507b-4ba7-b8af-376c398d1a87
+langcode: en
+status: true
+dependencies:
+  module:
+    - profile
+id: profile.contacts
+label: Contacts
+targetEntityType: profile
+cache: true

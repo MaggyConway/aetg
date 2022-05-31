@@ -1,0 +1,40 @@
+uuid: fd2ee5c5-9a62-470c-a894-30a657f1224d
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - field_permissions
+    - options
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: commerce_product_variation.field_allowed_user_roles
+field_name: field_allowed_user_roles
+entity_type: commerce_product_variation
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: anonymous
+      label: Anonymous
+    -
+      value: authenticated
+      label: 'Usuarios registrados'
+    -
+      value: escuela
+      label: Escuelas
+    -
+      value: asociado
+      label: Asociados
+    -
+      value: administrator
+      label: Administradores
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

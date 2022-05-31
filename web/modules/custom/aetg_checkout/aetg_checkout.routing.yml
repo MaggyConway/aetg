@@ -1,0 +1,8 @@
+aetg_checkout.cart.remove:
+  path: "/aetg-checkout/cart/remove/{order_id}"
+  defaults:
+    _controller: '\Drupal\aetg_checkout\Controller\CartController::emptyCart'
+  requirements:
+    _access: 'TRUE'
+  options:
+    no_cache: TRUE

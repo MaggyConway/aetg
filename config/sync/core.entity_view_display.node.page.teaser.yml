@@ -1,0 +1,58 @@
+uuid: 7458cb37-8718-4f8b-8c0c-3fe6b0b06139
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.page.body
+    - field.field.node.page.field_accordion
+    - field.field.node.page.field_adjunto
+    - field.field.node.page.field_header
+    - field.field.node.page.field_image
+    - field.field.node.page.field_paragraphs
+    - field.field.node.page.field_paragraphs2
+    - field.field.node.page.field_permisos_de_acceso
+    - field.field.node.page.field_relacionados
+    - field.field.node.page.field_seccion
+    - node.type.page
+  module:
+    - text
+    - user
+_core:
+  default_config_hash: cSv5lDnbIgDug475Hdz3woED2XMqYv3awI-J9u1JLbY
+id: node.page.teaser
+targetEntityType: node
+bundle: page
+mode: teaser
+content:
+  body:
+    label: hidden
+    weight: 0
+    type: text_summary_or_trimmed
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  breadcrumbs: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_accordion: true
+  field_adjunto: true
+  field_header: true
+  field_image: true
+  field_paragraphs: true
+  field_paragraphs2: true
+  field_permisos_de_acceso: true
+  field_relacionados: true
+  field_seccion: true
+  langcode: true
+  private_message_link: true
+  search_api_excerpt: true

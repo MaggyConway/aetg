@@ -1,0 +1,15 @@
+uuid: af860c34-16c8-4edf-90dc-cc33ca0aa432
+langcode: en
+status: true
+dependencies: {  }
+id: ct_resource
+label: 'CT Resource'
+description: ''
+entityType: node
+entityBundle: recurso
+language: es
+breadcrumbPaths: "/biblioteca\r\n/biblioteca/[node:field_tipo_de_recurso:entity:name]"
+breadcrumbTitles: "Biblioteca online\r\n[node:field_tipo_de_recurso:entity:name]"
+type: '1'
+pathPattern: ''
+extraCacheContexts: ''

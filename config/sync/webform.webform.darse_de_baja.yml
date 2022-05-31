@@ -1,0 +1,278 @@
+uuid: a41a77b1-ab89-4bad-aa34-297de41d916b
+langcode: es
+status: open
+dependencies:
+  enforced:
+    module:
+      - webform
+open: null
+close: null
+weight: 0
+uid: 1
+template: false
+archive: false
+id: darse_de_baja
+title: 'Formulario de solicitud de baja para asociados'
+description: 'Formulario para darse de baja como asociado/a.'
+category: ''
+elements: "header:\n  '#type': processed_text\n  '#text': |\n    <h2>Solicitud de baja como asociada/o</h2>\n    \n    <p>Lamentamos sinceramente tu decisión y te agradecemos haber contado con la AETG durante este tiempo.</p>\n    \n    <p>Tu opinión es muy importante para intentar mejorar nuestra gestión, por ello, te agradecemos que nos indiques el motivo por el cual te das de baja:</p>\n    \n    <p>&nbsp;</p>\n    \n  '#format': full_html\nname:\n  '#type': textfield\n  '#title': 'Nombre y apellidos'\n  '#title_display': none\n  '#placeholder': 'Nombre y apellidos'\n  '#required': true\n  '#default_value': '[current-user:field_full_name]'\nemail:\n  '#type': email\n  '#title': 'Correo electrónico'\n  '#description': 'Indique un correo electr&oacute;nico al que desee que les respondamos su constulta. Le recordamos que &uacute;nicamente lo utilizaremos para este fin.'\n  '#title_display': none\n  '#placeholder': 'Correo electrónico'\n  '#required': true\n  '#default_value': '[current-user:mail]'\nsubject:\n  '#type': webform_checkboxes_other\n  '#title': 'Motivo de la baja'\n  '#description': 'Puedes indicar m&aacute;s de un motivo.'\n  '#title_display': before\n  '#description_display': before\n  '#options':\n    motivos_economicos: 'Motivos económicos'\n    en_desacuerdo: 'Estoy en desacuerdo con las actuaciones de la AETG'\n    desinteres: 'Ya no me interesa la Terapia Gestalt'\n    jubilacion: 'Me he jubilado / He cesado mi actividad profesional'\n    en_extranjero: 'No resido en España'\n  '#sort_options': 0\n  '#options_none': true\n  '#options_none_value': ninguno\n  '#options_none_text': 'Ninguno de los anteriores'\n  '#other__option_label': 'Otro motivo...'\n  '#other__placeholder': 'Introduce otro motivo…'\n  '#required': true\n  '#format_items': 'checklist:boxes'\nmessage:\n  '#type': textarea\n  '#title': Comentarios\n  '#title_display': none\n  '#placeholder': Comentarios\n  '#test': 'Please ignore this email.'\nconfirmacion:\n  '#type': checkbox\n  '#title': 'Al marcar esta casilla confirmo que estoy solicitando formalmente darme de baja como asociado/a, y cerrar mi cuenta de usuario de la web de la AETG.'\n  '#title_display': inline\n  '#required': true\n  '#required_error': 'Es obligatorio marcar la confirmación de la baja para poder solicitar la baja de la cuenta.'\n  '#access_create_roles':\n    - administrator\n    - asociado\n    - personal_aetg\n  '#access_update_roles':\n    - administrator\n    - personal_aetg\n  '#access_view_roles':\n    - administrator\n    - personal_aetg\ncaptcha:\n  '#type': captcha\n  '#captcha_type': image_captcha/Image\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#submit__label': Enviar\nprocessed_text:\n  '#type': processed_text\n  '#text': |\n    <h5><strong>Responsable de tratamiento</strong><br />\n    Asociación Española de Terapia Gestalt – AETG (CIF: G78254729)</h5>\n    \n    <h5><strong>Finalidad</strong><br />\n    Desarrollo de la relación asociativa y profesional.</h5>\n    \n    <h5><strong>Legitimación</strong><br />\n    Consentimiento del propio interesado. Derecho de Asociación.</h5>\n    \n    <h5><strong>Destinatarios</strong><br />\n    No están previstas cesiones ni comunicaciones.</h5>\n    \n    <h5><strong>Derechos</strong><br />\n    Acceso, rectificación, oposición, supresión y limitación del tratamiento.<br />\n    Retirada del consentimiento y portabilidad.</h5>\n    \n    <h5><strong>Información Adicional</strong><br />\n    Puede consultar la información adicional en el siguiente enlace del <a href=\"/documentos/politica-privacidad\">anexo</a>.</h5>\n    \n  '#format': full_html"
+css: ''
+javascript: ''
+settings:
+  ajax: false
+  ajax_scroll_top: form
+  ajax_progress_type: ''
+  ajax_effect: ''
+  ajax_speed: null
+  page: true
+  page_submit_path: /baja-asociados
+  page_confirm_path: ''
+  page_theme_name: ''
+  form_title: source_entity_webform
+  form_submit_once: false
+  form_exception_message: ''
+  form_open_message: ''
+  form_close_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_disable_remote_addr: false
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_reset: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_disable_inline_errors: false
+  form_required: false
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
+  form_autofocus: false
+  form_details_toggle: false
+  form_access_denied: default
+  form_access_denied_title: ''
+  form_access_denied_message: ''
+  form_access_denied_attributes: {  }
+  form_file_limit: ''
+  form_method: ''
+  form_action: ''
+  form_attributes: {  }
+  share: false
+  share_node: false
+  share_theme_name: ''
+  share_title: true
+  share_page_body_attributes: {  }
+  submission_label: ''
+  submission_log: false
+  submission_views: {  }
+  submission_views_replace: {  }
+  submission_user_columns: {  }
+  submission_user_duplicate: false
+  submission_access_denied: default
+  submission_access_denied_title: ''
+  submission_access_denied_message: ''
+  submission_access_denied_attributes: {  }
+  submission_exception_message: ''
+  submission_locked_message: ''
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
+  previous_submission_message: ''
+  previous_submissions_message: ''
+  autofill: false
+  autofill_message: ''
+  autofill_excluded_elements: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_progress_link: false
+  wizard_progress_states: false
+  wizard_auto_forward: true
+  wizard_auto_forward_hide_next_button: false
+  wizard_keyboard: true
+  wizard_start_label: ''
+  wizard_preview_link: false
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_track: ''
+  wizard_prev_button_label: ''
+  wizard_next_button_label: ''
+  wizard_toggle: false
+  wizard_toggle_show_label: ''
+  wizard_toggle_hide_label: ''
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  preview_exclude_empty_checkbox: false
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  draft_pending_single_message: ''
+  draft_pending_multiple_message: ''
+  confirmation_type: inline
+  confirmation_title: ''
+  confirmation_message: "<p>Su solicitud de baja ha sido enviada.</p>\r\n\r\n<p>&nbsp;</p>\r\n<img alt=\"Logo de la AETG\" src=\"/sites/default/files/Logo%20Asociaci%C3%B3n%20Espa%C3%B1ola%20de%20Terapia%20Gestalt%20AETG_40_aniversario_negro243.png\" />"
+  confirmation_url: '<front>'
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  confirmation_exclude_query: false
+  confirmation_exclude_token: false
+  confirmation_update: false
+  limit_total: null
+  limit_total_interval: null
+  limit_total_message: ''
+  limit_total_unique: false
+  limit_user: null
+  limit_user_interval: null
+  limit_user_message: ''
+  limit_user_unique: false
+  entity_limit_total: null
+  entity_limit_total_interval: null
+  entity_limit_user: null
+  entity_limit_user_interval: null
+  purge: none
+  purge_days: null
+  results_disabled: false
+  results_disabled_ignore: false
+  results_customize: false
+  token_view: false
+  token_update: false
+  token_delete: false
+  serial_disabled: false
+access:
+  create:
+    roles:
+      - administrator
+      - asociado
+      - personal_aetg
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  administer:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  test:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  configuration:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+handlers:
+  email_confirmation:
+    id: email
+    label: 'Email confirmation'
+    notes: ''
+    handler_id: email_confirmation
+    status: true
+    conditions: {  }
+    weight: 1
+    settings:
+      states:
+        - completed
+      to_mail: '[current-user:mail]'
+      to_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      subject: '[webform_submission:values:subject:raw]'
+      body: '[webform_submission:values:message:value]'
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      debug: false
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      theme_name: ''
+      parameters: {  }
+  email_notification:
+    id: email
+    label: 'Email notification'
+    notes: ''
+    handler_id: email_notification
+    status: true
+    conditions: {  }
+    weight: 2
+    settings:
+      states:
+        - completed
+      to_mail: _default
+      to_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      from_mail: '[webform_submission:values:email:raw]'
+      from_options: {  }
+      from_name: '[webform_submission:values:name:raw]'
+      subject: '[webform_submission:values:subject:raw]'
+      body: '[webform_submission:values:message:value]'
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      debug: false
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      theme_name: ''
+      parameters: {  }
+variants: {  }
+_core:
+  default_config_hash: Q4QShRpLvlheaOjtXj4lKYXCOGMiuBopVI6GYCCWRK8

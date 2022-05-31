@@ -1,0 +1,10 @@
+uuid: d42d2887-21e0-42ba-8c85-f7bb8611e7d6
+langcode: en
+status: true
+dependencies: {  }
+id: feap_membership_type
+label: 'FEAP Membership Type'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

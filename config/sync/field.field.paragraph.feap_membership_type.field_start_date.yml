@@ -1,0 +1,21 @@
+uuid: 85c806ba-9251-494a-863b-f06f0ad422fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_start_date
+    - paragraphs.paragraphs_type.feap_membership_type
+  module:
+    - datetime
+id: paragraph.feap_membership_type.field_start_date
+field_name: field_start_date
+entity_type: paragraph
+bundle: feap_membership_type
+label: 'Fecha de Alta'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

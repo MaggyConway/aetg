@@ -1,0 +1,78 @@
+.field--name-field-paragraphs {
+   @include main-container;
+   overflow: hidden;
+
+   > .field__items {
+      @include main-container;
+   }
+}
+
+.field--name-field-tag, .field--name-field-event-type,
+.field--name-field-tipo-de-recurso {
+   margin-bottom: 10px;
+   width: auto;
+   height: 24px;
+   cursor: pointer;
+   padding: 3px 8px;
+   background: #D9D9D9;
+   border-radius: 5px;
+   display: inline-block;
+   a {
+      @include text-fz-12-lh-18-fw-300;
+      line-height: unset;
+      // text-decoration: none;
+      color: $color-76;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      &:hover {
+         color: #000;
+      }
+
+      @include breakpoint(mobile-large) {
+         font-size: 11px;
+      }
+   }
+
+   @include breakpoint(mobile-large) {
+      height: 21px;
+      padding: 0 8px;
+   }
+}
+
+@mixin gray-label {
+   float: none;
+   color: $color-A;
+   @include text-fz-14-lh-20;
+}
+
+@mixin text-after-gray-label {
+   color: $color-1;
+   @include text-fz-16-lh-26;
+}
+
+.field--label-above {
+   .field__label {
+      @include gray-label;
+      margin-bottom: 5px;
+   }
+
+   .field__item {
+      @include text-after-gray-label;
+   }
+}
+
+.field--label-inline {
+   display: flex;
+   align-items: center;
+
+   .field__label {
+      @include gray-label;
+   }
+
+   .field__item {
+      @include text-after-gray-label;
+   }
+}

@@ -1,0 +1,11 @@
+uuid: a036c84e-5f12-4dde-8b42-90314d2dc022
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+id: copyright
+title: Copyright
+content:
+  value: "<p>© Asociación Española de Terapia Gestalt, 2022.</p>\r\n"
+  format: full_html

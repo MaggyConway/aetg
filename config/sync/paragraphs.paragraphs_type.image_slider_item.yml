@@ -1,0 +1,10 @@
+uuid: f22744bd-8f89-4e59-9063-50e223b52512
+langcode: en
+status: true
+dependencies: {  }
+id: image_slider_item
+label: 'Image Slider Item'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,139 @@
+uuid: 623c0d55-4590-4411-b2f0-eab76f4b8446
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_profile2_escuela
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Configuration
+migration_group: migrate_drupal_7
+label: 'Profile2 ()'
+source:
+  key: legacy
+  plugin: d7_profile2
+  constants:
+    status: 1
+    is_default: 1
+  bundle: escuela
+process:
+  profile_id:
+    -
+      plugin: get
+      source: pid
+  type:
+    -
+      plugin: get
+      source: type
+  uid:
+    -
+      plugin: get
+      source: uid
+  status:
+    -
+      plugin: get
+      source: constants/status
+  is_default:
+    -
+      plugin: get
+      source: constants/is_default
+  created:
+    -
+      plugin: get
+      source: created
+  changed:
+    -
+      plugin: get
+      source: changed
+  field_nombre_de_escuela:
+    -
+      plugin: get
+      source: field_nombre_de_escuela
+  field_email:
+    -
+      plugin: sub_process
+      source: field_email
+      process:
+        value: email
+  field_direccion:
+    -
+      plugin: addressfield
+      source: field_direccion
+  field_direccion_web:
+    -
+      plugin: field_link
+      source: field_direccion_web
+  field_telefono:
+    -
+      plugin: get
+      source: field_telefono
+  field_fax:
+    -
+      plugin: get
+      source: field_fax
+  field_imagen_logo:
+    -
+      plugin: sub_process
+      source: field_imagen_logo
+      process:
+        target_id: fid
+        alt: alt
+        title: title
+        width: width
+        height: height
+  field_descripcion_escuela:
+    -
+      plugin: get
+      source: field_descripcion_escuela
+  field_programa_detallado:
+    -
+      plugin: get
+      source: field_programa_detallado
+  field_director_escuela:
+    -
+      plugin: get
+      source: field_director_escuela
+  field_localizacion:
+    -
+      plugin: get
+      source: field_localizacion
+  field_profesorado:
+    -
+      plugin: get
+      source: field_profesorado
+  field_cronograma:
+    -
+      plugin: get
+      source: field_cronograma
+  field_docentes_aetg:
+    -
+      plugin: get
+      source: field_docentes_aetg
+  field_iban_:
+    -
+      plugin: get
+      source: field_iban_
+  field_bic:
+    -
+      plugin: get
+      source: field_bic
+  field_fecha_de_firma_de_la_domic:
+    -
+      plugin: get
+      source: field_fecha_de_firma_de_la_domic
+  field_responsable_formacion_esc:
+    -
+      plugin: get
+      source: field_responsable_formacion_esc
+  field_dni_cif:
+    -
+      plugin: get
+      source: field_dni
+destination:
+  plugin: 'entity:profile'
+  default_bundle: escuela
+migration_dependencies:
+  optional:
+    - upgrade_d7_field_instance

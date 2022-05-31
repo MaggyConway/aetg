@@ -1,0 +1,295 @@
+uuid: c905c985-7c89-4e07-b97a-6c3570c5d311
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+    - search_api
+  config:
+    - field.storage.node.field_autor
+    - field.storage.node.body
+    - field.storage.node.field_tutor_tesina
+    - field.storage.node.field_editorial
+    - field.storage.node.field_fecha_de_publicacion
+    - field.storage.node.field_has_physical_file
+    - field.storage.node.field_fundamentos
+    - field.storage.node.field_modalidad
+    - field.storage.node.field_product_reference
+    - field.storage.node.field_tipo_de_recurso
+    - field.storage.node.field_temas
+    - field.storage.node.field_tecnicas
+    - search_api.server.database
+id: online_library_search
+name: 'Online Library Search'
+description: ''
+read_only: false
+field_settings:
+  body:
+    label: Descripción
+    datasource_id: 'entity:node'
+    property_path: body
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.body
+  created:
+    label: 'Authored on'
+    datasource_id: 'entity:node'
+    property_path: created
+    type: date
+    dependencies:
+      module:
+        - node
+  field_editorial:
+    label: Editorial
+    datasource_id: 'entity:node'
+    property_path: field_editorial
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_editorial
+  field_fecha_de_publicacion:
+    label: 'Fecha de publicación'
+    datasource_id: 'entity:node'
+    property_path: field_fecha_de_publicacion
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_fecha_de_publicacion
+  field_fundamentos:
+    label: 'Fundamentos e influencias'
+    datasource_id: 'entity:node'
+    property_path: field_fundamentos
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_fundamentos
+  field_has_physical_file:
+    label: 'Formulario para productos físicos'
+    datasource_id: 'entity:node'
+    property_path: field_has_physical_file
+    type: boolean
+    dependencies:
+      config:
+        - field.storage.node.field_has_physical_file
+  field_modalidad:
+    label: Modalidad
+    datasource_id: 'entity:node'
+    property_path: field_modalidad
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_modalidad
+  field_product_reference:
+    label: 'Referencia a producto'
+    datasource_id: 'entity:node'
+    property_path: field_product_reference
+    type: boolean
+    dependencies:
+      config:
+        - field.storage.node.field_product_reference
+  field_tecnicas:
+    label: Técnicas
+    datasource_id: 'entity:node'
+    property_path: field_tecnicas
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_tecnicas
+  field_temas:
+    label: Temas
+    datasource_id: 'entity:node'
+    property_path: field_temas
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_temas
+  field_tipo_de_recurso:
+    label: 'Resource type'
+    datasource_id: 'entity:node'
+    property_path: field_tipo_de_recurso
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_tipo_de_recurso
+  field_tutor_tesina:
+    label: Director
+    datasource_id: 'entity:node'
+    property_path: field_tutor_tesina
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_tutor_tesina
+  name:
+    label: 'Autor/a » Taxonomy term » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_autor:entity:name'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_autor
+      module:
+        - taxonomy
+  name_1:
+    label: 'Director/a » Taxonomy term » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_tutor_tesina:entity:name'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_tutor_tesina
+      module:
+        - taxonomy
+  node_grants:
+    label: 'Node access information'
+    property_path: search_api_node_grants
+    type: string
+    indexed_locked: true
+    type_locked: true
+    hidden: true
+  status:
+    label: status
+    datasource_id: 'entity:node'
+    property_path: status
+    type: boolean
+    indexed_locked: true
+    type_locked: true
+    dependencies:
+      module:
+        - node
+  title:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: title
+    type: text
+    boost: !!float 5
+    dependencies:
+      module:
+        - node
+  uid:
+    label: uid
+    datasource_id: 'entity:node'
+    property_path: uid
+    type: integer
+    indexed_locked: true
+    type_locked: true
+    dependencies:
+      module:
+        - node
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: false
+      selected:
+        - recurso
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  content_access:
+    weights:
+      preprocess_query: -30
+  entity_status: {  }
+  ignorecase:
+    all_fields: true
+    fields:
+      - body
+      - field_editorial
+      - name
+      - name_1
+      - title
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+  language_with_fallback: {  }
+  rendered_item: {  }
+  stopwords:
+    all_fields: false
+    fields:
+      - body
+      - field_editorial
+      - name
+      - name_1
+      - title
+    stopwords:
+      - a
+      - an
+      - and
+      - are
+      - as
+      - at
+      - be
+      - but
+      - by
+      - for
+      - if
+      - in
+      - into
+      - is
+      - it
+      - 'no'
+      - not
+      - of
+      - 'on'
+      - or
+      - s
+      - such
+      - t
+      - that
+      - the
+      - their
+      - then
+      - there
+      - these
+      - they
+      - this
+      - to
+      - was
+      - will
+      - with
+    weights:
+      preprocess_index: -5
+      preprocess_query: -2
+  tokenizer:
+    all_fields: false
+    fields:
+      - body
+      - field_editorial
+      - name
+      - name_1
+      - title
+    ignored: ._-
+    spaces: ''
+    overlap_cjk: 1
+    minimum_word_size: '3'
+    weights:
+      preprocess_index: -6
+      preprocess_query: -6
+  transliteration:
+    all_fields: false
+    fields:
+      - body
+      - field_editorial
+      - name
+      - name_1
+      - title
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+  type_boost:
+    boosts:
+      'entity:node':
+        datasource_boost: !!float 1
+    weights:
+      preprocess_index: 0
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  index_directly: true
+  cron_limit: 50
+  track_changes_in_references: true
+server: database

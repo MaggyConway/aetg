@@ -1,0 +1,32 @@
+uuid: 2190e7b8-46c4-4ad6-b5d4-d2d05b53391f
+langcode: es
+status: true
+dependencies:
+  enforced:
+    module:
+      - commerce_file
+  module:
+    - commerce_product
+    - field_permissions
+    - file
+third_party_settings:
+  field_permissions:
+    permission_type: public
+_core:
+  default_config_hash: XXmXsv007Nw-CwesHilmb7KA0kMWbYlPnixxEKXXsrM
+id: commerce_product_variation.commerce_file
+field_name: commerce_file
+entity_type: commerce_product_variation
+type: file
+settings:
+  display_field: false
+  display_default: false
+  uri_scheme: private
+  target_type: file
+module: file
+locked: false
+cardinality: -1
+translatable: false
+indexes: {  }
+persist_with_no_fields: true
+custom_storage: false

@@ -1,0 +1,31 @@
+uuid: 6c2c9510-c74e-42a2-9fda-b401b021ad9a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.image_slider_item.field_image
+    - paragraphs.paragraphs_type.image_slider_item
+  module:
+    - field_formatter_class
+id: paragraph.image_slider_item.default
+targetEntityType: paragraph
+bundle: image_slider_item
+mode: default
+content:
+  field_image:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: pt_image_slider_item_default
+      link: false
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    type: entity_reference_entity_view
+    region: content
+hidden:
+  breadcrumbs: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  search_api_excerpt: true

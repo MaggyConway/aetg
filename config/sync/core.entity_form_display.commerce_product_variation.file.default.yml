@@ -1,0 +1,133 @@
+uuid: 37403fec-7708-456a-8a86-404afa0940fa
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.file
+    - field.field.commerce_product_variation.file.commerce_file
+    - field.field.commerce_product_variation.file.field_description
+    - field.field.commerce_product_variation.file.field_email_text
+    - field.field.commerce_product_variation.file.field_member_price
+    - field.field.commerce_product_variation.file.field_node
+    - field.field.commerce_product_variation.file.field_school_price
+    - field.field.commerce_product_variation.file.field_tax_rate
+    - field.field.commerce_product_variation.file.license_expiration
+    - field.field.commerce_product_variation.file.license_type
+  module:
+    - commerce
+    - commerce_price
+    - commerce_product_tax
+    - file
+    - readonly_field_widget
+    - text
+id: commerce_product_variation.file.default
+targetEntityType: commerce_product_variation
+bundle: file
+mode: default
+content:
+  commerce_file:
+    type: file_generic
+    weight: 10
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    region: content
+  field_description:
+    weight: 12
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_email_text:
+    weight: 13
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_member_price:
+    weight: 4
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_node:
+    type: readonly_field_widget
+    weight: 11
+    region: content
+    settings:
+      label: above
+      formatter_type: null
+      formatter_settings: null
+      show_description: false
+    third_party_settings: {  }
+  field_school_price:
+    weight: 5
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_tax_rate:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: commerce_tax_rate_default
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  license_expiration:
+    type: commerce_plugin_select
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  license_type:
+    type: commerce_plugin_select
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  price:
+    type: commerce_price_default
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  sku:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 9
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  commerce_stock_always_in_stock: true
+  created: true
+  list_price: true
+  uid: true

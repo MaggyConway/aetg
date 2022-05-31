@@ -1,0 +1,57 @@
+uuid: 7d1969a3-da59-46da-9578-f000c36392cd
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_field_group
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+migration_group: migrate_drupal_7
+label: 'Field groups'
+source:
+  plugin: d7_field_group
+process:
+  entity_type:
+    0:
+      plugin: get
+      source: entity_type
+    profile:
+      plugin: static_map
+      map:
+        profile2: profile
+      bypass: true
+  bundle:
+    -
+      plugin: get
+      source: bundle
+  mode:
+    -
+      plugin: static_map
+      source: mode
+      bypass: true
+      map:
+        form: default
+  type:
+    -
+      plugin: static_map
+      source: mode
+      default_value: entity_view_display
+      map:
+        form: entity_form_display
+  group_name:
+    -
+      plugin: get
+      source: group_name
+  settings:
+    -
+      plugin: get
+      source: settings
+destination:
+  plugin: d7_field_group
+migration_dependencies:
+  required:
+    - upgrade_d7_field_formatter_settings
+  optional:
+    - upgrade_d7_profile2_type

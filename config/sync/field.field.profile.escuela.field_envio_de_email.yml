@@ -1,0 +1,29 @@
+uuid: 8feb6d6e-c5db-4f35-bdde-237b78e52a04
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_envio_de_email
+    - profile.type.escuela
+    - taxonomy.vocabulary.enviar_email
+id: profile.escuela.field_envio_de_email
+field_name: field_envio_de_email
+entity_type: profile
+bundle: escuela
+label: 'Envio de email'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      enviar_email: enviar_email
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

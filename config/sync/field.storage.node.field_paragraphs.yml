@@ -1,0 +1,25 @@
+uuid: 50f4d195-9b86-4877-8e09-568f3a4f208a
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_reference_revisions
+    - field_permissions
+    - node
+    - paragraphs
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_paragraphs
+field_name: field_paragraphs
+entity_type: node
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

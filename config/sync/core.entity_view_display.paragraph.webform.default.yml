@@ -1,0 +1,28 @@
+uuid: 538d0d84-ac4f-46d8-bbcd-0061958bf461
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.webform.field_webform_reference
+    - paragraphs.paragraphs_type.webform
+  module:
+    - webform
+id: paragraph.webform.default
+targetEntityType: paragraph
+bundle: webform
+mode: default
+content:
+  field_webform_reference:
+    weight: 0
+    label: hidden
+    settings:
+      source_entity: true
+    third_party_settings: {  }
+    type: webform_entity_reference_entity_view
+    region: content
+hidden:
+  breadcrumbs: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  search_api_excerpt: true

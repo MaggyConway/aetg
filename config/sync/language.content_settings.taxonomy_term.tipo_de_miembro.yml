@@ -1,0 +1,11 @@
+uuid: 0e3fc6a2-bba7-45ac-8500-5ed3a63c9181
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.tipo_de_miembro
+id: taxonomy_term.tipo_de_miembro
+target_entity_type_id: taxonomy_term
+target_bundle: tipo_de_miembro
+default_langcode: site_default
+language_alterable: false

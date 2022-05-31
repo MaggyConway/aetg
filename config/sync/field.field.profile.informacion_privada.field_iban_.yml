@@ -1,0 +1,19 @@
+uuid: a5645097-1b24-443f-ad1d-c3157438e346
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_iban_
+    - profile.type.informacion_privada
+id: profile.informacion_privada.field_iban_
+field_name: field_iban_
+entity_type: profile
+bundle: informacion_privada
+label: IBAN
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

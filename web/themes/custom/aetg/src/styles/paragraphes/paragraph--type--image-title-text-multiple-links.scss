@@ -1,0 +1,215 @@
+.paragraph--type--image-title-text-multiple-links {
+    .without-title {
+        padding-top: 46px;
+
+        @include breakpoint(IPad-Pro) {
+            padding-top: 0;
+        }
+    }
+    
+    .layout__region--second {
+        margin-bottom: 0;
+
+        .field--type-link.btn-primary {
+            margin: 0;
+
+            @include breakpoint(tablet-md) {
+                margin-bottom: 8px;
+            }
+        }
+    }
+    
+    @include breakpoint(IPad-Pro) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    
+    > .layout {
+        &.layout--twocol-section--50-50 {
+            max-width: 100%;
+            margin: 0;
+            width: 100%;
+
+            > .layout__region {
+                flex: unset;
+                width: 100%;
+            }
+        }
+    }
+    
+    > .layout--twocol-section {
+        margin-bottom: 40px;
+        align-items: center;
+        flex-wrap: nowrap;
+
+        @include breakpoint(tablet-md) {
+            flex-wrap: wrap-reverse;
+            margin-bottom: 30px;
+
+        }
+
+        > .layout__region {
+            @include breakpoint(tablet-md) {
+                flex: unset;
+                width: 100%;
+
+            }
+
+            &--first {
+                @include breakpoint(tablet-md) {
+                    margin-bottom: 26px;
+                }
+            }
+        }
+    }
+    
+    .block-field-blockparagraphimage-title-text-multiple-linksfield {
+        &-title {
+            margin-bottom: 16px;
+            .field--name-field-title {
+                @include h2;
+            }
+        }
+        
+        &-text {
+            line-height: 30px;
+            margin-bottom: 20px;
+        }
+        
+        &-paragraphs {
+            margin-bottom: -18px;            
+            @include breakpoint(tablet-m) {
+                margin-bottom: -8px;
+            }
+
+            > .field--type-entity-reference-revisions {
+                padding: 0 !important;
+            }
+        }
+        
+        &-image {
+            width: 407px;
+            height: 247px;
+            margin: 0 auto;
+
+            @include breakpoint(laptop-mini) {
+                margin: 0 50px 0 0;
+            }
+
+            @include breakpoint(tablet-md) {
+                margin: 0;
+                width: 100%;
+                height: auto;
+            }
+            
+            @include breakpoint(mobile-middle) {
+                width: 100%;
+                height: auto;
+                margin: 0;
+            }
+        }
+    }
+    
+    .field--name-field-paragraphs {
+        display: flex;
+        flex-wrap: nowrap;
+        margin: -22px;
+        
+        @include breakpoint(desktop-small) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        @include breakpoint(IPad-Pro) {
+            flex-wrap: wrap;
+            margin: 0;    
+        }
+        
+        > .field__item {
+            margin: 22px;
+            min-width: 170px;
+            max-width: 230px;
+            width: 28%;
+            display: flex;
+            justify-content: space-between;
+
+            @include breakpoint(IPad-Pro) {
+                width: 100%;
+                max-width: unset;
+                margin: 0;
+            }
+
+            &:not(:last-child) {
+                @include breakpoint(IPad-Pro) {
+                    margin: 0 0 5px;
+                }
+            }
+        }
+    }
+
+    &.paragraph--view-mode--media {
+
+        &-right { // la terapia geshtald
+
+            > .layout--twocol-section {
+                > .layout__region {
+                    flex: unset;
+
+                    .field--type-link.btn-primary {
+                        margin: 0;
+                    }
+
+                    &--first {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            .block-field-blockparagraphimage-title-text-multiple-linksfield-image {
+                margin: 0 0 0 60px;
+                width: 513px;
+                height: 270px;
+
+                @include breakpoint(IPad-Pro) {
+                    margin: 0 0 0 15px;
+                }
+
+                @include breakpoint(tablet-md) {
+                    margin: 0 0 24px;
+                }
+
+                @include breakpoint(mobile-large) {
+                    width: 100%;
+                    margin: 0 auto 24px;
+                    height: auto;
+                }
+
+                img {
+                    height: 270px;
+                    width: auto;
+                    object-fit: contain;
+                    position: relative;
+                    left: 50%;
+                    transform: translateX(-50%);
+
+                    @include breakpoint(tablet-md) {
+                        position: static;
+                        left: unset;
+                        transform: none;
+                    }
+
+                    @include breakpoint(mobile-large) {
+                        height: auto;
+                        width: 100%;
+                    }
+                }
+            }
+
+            .without-title {
+                @include breakpoint(tablet-md) {
+                    padding-top: 0;
+                }
+            }
+        }
+    }
+}

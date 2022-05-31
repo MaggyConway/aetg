@@ -1,0 +1,430 @@
+.page-node-type-news {
+   h2 {
+      margin-bottom: 24px;
+      @include h3;
+      
+      @include breakpoint(mobile-small) {
+         margin-bottom: 15px;
+      }
+      
+      &:not(:first-of-type) {
+         margin-top: 56px;
+         
+         @include breakpoint(mobile-small) {
+            margin-top: 30px;
+         }
+      }
+   }
+   
+   ol,
+   ul {
+      li {
+         line-height: 30px;
+      }
+   }
+   
+   .node--type-news.node--view-mode-full {
+      > .node__content > .layout--onecol:not(:last-child) {
+         margin-bottom: 0;
+         padding-bottom: 56px;
+      }
+   }
+   
+   .node--type-news .field--name-field-paragraphs {
+      @include main-container;
+      padding-left: 50px;
+      padding-right: 50px;
+   }
+   
+   .block-field-blocknodeeventfield-media {
+      &:before {
+         display: none;
+      }
+   }
+   
+   .block-field-blocknodeeventtitle {
+      > .field--name-title {
+         font-size: unset;
+         line-height: unset;
+         font-weight: normal;
+      }
+   }
+   
+   .node--type-news.node--view-mode-header {
+      position: relative;
+      padding: 65px 20px;
+      
+      @include breakpoint(mobile-middle) {
+         padding: 40px 20px;
+      }
+      
+      > .node__content {
+         max-width: 834px;
+         margin: 0 auto;
+      }
+      
+      .block-layout-builder:not(.block-field-blocknodenewsfield-media) {
+         position: relative;
+         z-index: 50;
+      }
+      
+      .block-field-blocknodenewsfield-media,
+      .default-image-placeholder {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         z-index: 10;
+         
+         &:before {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 50;
+         }
+         
+         * {
+            height: 100%;
+         }
+      }
+   }
+   
+   .block-field-blocknodenewscreated {
+      @include text-fz-14-lh-20;
+      line-height: 18px;
+      letter-spacing: 0.05em;
+      color: #eee;
+      margin-bottom: 8px;
+   }
+   
+   .block-field-blocknodenewstitle {
+      margin-bottom: 30px;
+      color: #fff;
+   }
+   
+   .news-tag-wrapper > .layout__region {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      
+      > .block > .field {
+         display: flex;
+         justify-content: flex-start;
+         align-items: center;
+         margin-bottom: 0;
+         
+         > .field__item {
+            margin-bottom: 0;
+         }
+      }
+      
+      a {
+         @include text-fz-12-lh-18-fw-300;
+         text-align: center;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         color: $color-76;
+         margin-right: 2px;
+         padding: 3px 8px;
+         background: #d9d9d9;
+         border-radius: 5px;
+         
+         &:hover {
+            color: $color-1;
+         }
+      }
+   }
+}
+
+.node--type-news.node--view-mode-teaser {
+   padding-top: 40px;
+   position: relative;
+   
+   .field--name-body.field--type-text-with-summary {
+      p:last-child:after {
+         content: '...';
+      }
+   }
+   
+   .news-tag-wrapper {
+      > .layout__region--first {
+         position: absolute;
+         top: 0;
+      }
+   }
+   
+   .block-field-blocknodenewsfield-news-category {
+      .field--name-field-news-category {         
+         padding: 0;
+         margin-top: 6px;
+         margin-bottom: 15px;
+         border-radius: 0;
+         background-color: unset;
+         width: 100%;
+         height: 15px;
+         display: block;
+         a {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 18px;
+            letter-spacing: 0.05em;
+            color: #fff;            
+            background-color: $blue;
+            padding: 5px 8px;
+            border: 1px solid $blue;
+            border-radius: 9px 9px 0 9px;
+            // margin: 5px 8px;
+            transition: 0.3s ease 0.1s;
+            
+            &:hover {
+               color: $blue;
+               background-color: #fff;
+            }
+         }
+      }
+   }
+   
+   .default-image-placeholder {
+      height: 215px;
+   }
+   
+   .field--name-field-media-image {
+      a:hover {
+         img {
+            opacity: 0.85;
+         }
+      }
+   }
+   
+   .block-field-blocknodenewsfield-media {
+      margin-bottom: 15px;
+   }
+   
+   .block-field-blocknodenewstitle {
+      margin: 20px 0 8px;
+      .field--name-title {
+         a {
+            font-size: 21px;
+            font-weight: 400;
+            line-height: 32px;
+            
+            @include breakpoint(mobile-small) {
+               font-size: 18px;
+               line-height: 26px;
+            }
+         }
+      }
+   }
+   
+   .block-field-blocknodenewscreated {
+      @include label-fz-12-lh-16-upper;
+      color: $color-A;
+      margin-bottom: 24px;
+      @include breakpoint(tablet-md) {
+         margin-bottom: 15px;
+      }
+   }
+   
+   .block-field-blocknodenewsfield-emisor {
+      .field--name-field-emisor {
+         display: flex;
+         justify-content: flex-start;
+         align-items: center;
+         flex-wrap: wrap;
+         .field__item {
+            margin-bottom: 10px;
+            a {
+               @include text-fz-12-lh-18-fw-300;
+               font-size: 14px;
+               line-height: 18px;
+               white-space: nowrap;
+               display: inline-block;
+               color: $color-76;
+               background-color: $color-F2;
+               border-radius: 5px;
+               padding: 5px 10px;
+               margin-right: 10px;
+            }
+         }
+      }
+   }
+   
+   .block-field-blocknodenewsbody {
+      margin-bottom: 20px;
+      
+      > .field--name-body {
+         font-weight: 400;
+         font-size: 16px;
+         line-height: 30px;
+         color: $color-2;
+         
+         @include breakpoint(mobile-small) {
+            font-size: 14px;
+            line-height: 22px;
+         }
+         
+         p {
+            margin: 0;
+            
+            @include breakpoint(mobile-small) {
+               font-size: 14px;
+               line-height: 22px;
+            }
+         }
+      }
+      
+      a.more-link {
+         font-size: 1em;
+         font-weight: 600;
+         line-height: 24px;
+         text-align: left;
+         margin-top: 20px;
+         @include breakpoint(mobile-small) {
+            margin-top: 7px;
+         }
+      }
+   }
+}
+
+.block-field-blocknodedocumento-secretariafield-relacionados {
+   margin-top: 30px;
+}
+
+.documents-parent {
+   padding: 95px 70px 100px;
+   background-color: $color-F2;
+   margin-top: 56px;
+   
+   &:before {
+      content: 'Descargas';
+      font-size: 24px;
+      line-height: 36px;
+      font-weight: 700;
+      @include main-container;
+      padding: 0 !important;
+      display: block;
+
+      @include breakpoint(tablet-m) {
+         font-size: 20px;
+         line-height: 28px;
+      }
+
+      @include breakpoint(mobile-small) {
+         font-size: 18px;
+         line-height: 24px;
+      }
+   }
+   
+   @include breakpoint(IPad-Pro) {
+      padding: 40px 70px;
+   }
+   
+   @include breakpoint(mobile-large) {
+      margin-top: 30px;
+      padding: 20px 40px 10px;
+   }
+   
+   > .field > .field__items {
+      margin-left: -25px;
+      margin-right: -25px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      
+      > .field__item {
+         margin: 0 25px 18px !important;
+         width: calc(50% - 50px);
+         padding: 0 !important;
+      }
+   }
+   
+   > .layout__region--content {
+      > .block {
+         &:first-child {
+            margin-bottom: 30px;
+         }
+         
+         > .field {
+            @include main-container;
+            padding: 0 !important;
+            
+            .field__items {
+               display: flex;
+               align-items: flex-start;
+               flex-wrap: wrap;
+            }
+            
+            .field__item {
+               min-width: 150px;
+               margin-top: 24px;
+               padding-left: 22px;
+               position: relative;
+               
+               @include breakpoint(mobile-middle) {
+                  margin-top: 15px;
+                  width: 100%;
+                  min-width: unset;
+               }
+               
+               &:not(:last-child) {
+                  margin-right: 70px;
+                  
+                  @include breakpoint(mobile-middle) {
+                     margin-right: 30px;
+                  }
+               }
+               
+               .file {
+                  margin-bottom: 5px;
+                  position: relative;
+                  a {
+                     @include title-fz-18-lh-25-fw-600;
+                     display: inline-block;
+                     color: $color-1;
+                     position: relative;
+                     
+                     &:before {
+                        position: absolute;
+                        content: '';
+                        left: -20px;
+                        top: 5px;
+                        width: 11px;
+                        height: 14px;
+                        background: url('../../assets/images/icon-file.svg') no-repeat center center;
+                     }
+                     
+                     @include breakpoint(mobile-middle) {
+                        font-size: 16px;
+                        line-height: 20px;
+                     }
+                  }
+               }
+               
+               .file-size,
+               .file-extension {
+                  @include label-fz-12-lh-16-upper;
+                  color: $color-76;
+               }
+            }
+            
+            .field__label {
+               @include h3;
+               color: $color-1;
+               margin-bottom: 5px;
+               
+               @include breakpoint(mobile-middle) {
+                  font-size: 20px;
+                  line-height: 24px;
+               }
+            }
+         }
+      }
+   }
+}

@@ -1,0 +1,10 @@
+uuid: b2e1259c-fc35-4612-903c-be4bf2b15456
+langcode: es
+status: true
+dependencies:
+  module:
+    - media
+id: media.tienda
+label: Tienda
+targetEntityType: media
+cache: true

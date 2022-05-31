@@ -1,0 +1,23 @@
+uuid: bb1a2523-bea6-436d-b7fa-e0ba1e57696e
+langcode: und
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - profile
+    - text
+third_party_settings:
+  field_permissions:
+    permission_type: custom
+id: profile.field_descripcion_escuela
+field_name: field_descripcion_escuela
+entity_type: profile
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

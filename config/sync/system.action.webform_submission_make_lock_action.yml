@@ -1,0 +1,13 @@
+uuid: 2da7e1f1-f3a6-4f1c-90f2-b328841a1b29
+langcode: es
+status: true
+dependencies:
+  module:
+    - webform
+_core:
+  default_config_hash: MKmZlPRk3OJKNcYdYxSeZGQUh7LMah6MRShfkzch4bk
+id: webform_submission_make_lock_action
+label: 'Bloquear envío'
+type: webform_submission
+plugin: webform_submission_make_lock_action
+configuration: {  }

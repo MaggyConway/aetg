@@ -1,0 +1,19 @@
+uuid: 1d81e662-34b0-4190-9f9d-6c4c6acb3a01
+langcode: und
+status: true
+dependencies:
+  module:
+    - user
+id: user.field_notas
+field_name: field_notas
+entity_type: user
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

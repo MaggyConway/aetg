@@ -1,0 +1,11 @@
+uuid: dbe5f5ac-15f6-46c6-8e7e-43866425be4b
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.fundamentos
+id: taxonomy_term.fundamentos
+target_entity_type_id: taxonomy_term
+target_bundle: fundamentos
+default_langcode: site_default
+language_alterable: false

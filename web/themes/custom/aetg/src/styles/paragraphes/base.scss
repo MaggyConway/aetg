@@ -1,0 +1,19 @@
+.block-field-blockparagraphschool-slider-with-multiple-linkfield-paragraphs .paragraph--type--multiple-links .field--name-field-links>.field__item,
+.paragraph--type--member-slider-with-multiple-link .paragraph--type--multiple-links .field--name-field-links>.field__item,
+.paragraph--type--member-slider-with-multiple-link .field--name-field-title,
+.paragraph--type--school-slider-with-multiple-link .field--name-field-title {
+    text-align: left;
+
+    &:not(:last-child) {
+        margin-bottom: 20px;
+    }
+}
+
+.block-field-blockparagraphschool-slider-with-multiple-linkfield-paragraphs .without-title,
+.paragraph--type--member-slider-with-multiple-link .without-title {
+    padding-top: 46px;
+
+    @include breakpoint(tablet-m) {
+        padding-top: 0;
+    }
+}

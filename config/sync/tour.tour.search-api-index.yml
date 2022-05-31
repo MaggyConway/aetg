@@ -1,0 +1,109 @@
+uuid: 47319060-4b6c-4e4e-b630-14da5549290c
+langcode: es
+status: true
+dependencies:
+  module:
+    - search_api
+_core:
+  default_config_hash: vrJLX_BEpVcWa6OU7FvRAUfErBOxQBhPtzuKeNo4M2M
+id: search-api-index
+label: 'Información sobre un índice'
+module: search_api
+routes:
+  -
+    route_name: entity.search_api_index.canonical
+tips:
+  search-api-index-introduction:
+    id: search-api-index-introduction
+    plugin: text
+    label: 'Información sobre un índice'
+    body: 'Esta página muestra un resumen de un índice de búsqueda y su estado.'
+    weight: 1
+  search-api-index-index-status:
+    id: search-api-index-index-status
+    plugin: text
+    label: 'Estado del índice'
+    body: 'This gives a summary about how many items are known for this index, and how many have been indexed in their latest version. Items that are not indexed yet cannot be found by searches.'
+    weight: 2
+    attributes:
+      data-class: search-api-index-status
+  search-api-index-status:
+    id: search-api-index-status
+    plugin: text
+    label: Estado
+    body: 'Muestra si el índice está actualmente activado o desactivado.'
+    weight: 3
+    attributes:
+      data-class: search-api-index-summary--status
+  search-api-index-datasources:
+    id: search-api-index-datasources
+    plugin: text
+    label: 'Orígenes de datos'
+    body: 'Enumera todas las fuentes de datos que están habilitadas para este índice.'
+    weight: 4
+    attributes:
+      data-class: search-api-index-summary--datasource
+  search-api-index-tracker:
+    id: search-api-index-tracker
+    plugin: text
+    label: Rastreador
+    body: 'El rastreador utilizado por el índice. Sólo hay uno ("Predeterminado") disponible por defecto.'
+    weight: 5
+    attributes:
+      data-class: search-api-index-summary--tracker
+  search-api-index-server:
+    id: search-api-index-server
+    plugin: text
+    label: Servidor
+    body: 'Si el índice está vinculado a un servidor, este servidor aparece aquí.'
+    weight: 6
+    attributes:
+      data-class: search-api-index-summary--server
+  search-api-index-server-index-status:
+    id: search-api-index-server-index-status
+    plugin: text
+    label: 'Estado del índice del servidor'
+    body: 'For enabled indexes, the number of items that can actually be retrieved from the server is listed here. For reasons why this number might differ from the number under "Index status", <a href="https://www.drupal.org/docs/8/modules/search-api/getting-started/frequently-asked-questions#server-index-status">see the module''s documentation</a>.'
+    weight: 7
+    attributes:
+      data-class: search-api-index-summary--server-index-status
+  search-api-index-cron-batch-size:
+    id: search-api-index-cron-batch-size
+    plugin: text
+    label: 'Tamaño del lote del Cron'
+    body: 'El número de elementos que se indexarán a la vez durante las ejecuciones de cron.'
+    weight: 8
+    attributes:
+      data-class: search-api-index-summary--cron-batch-size
+  search-api-index-index-now:
+    id: search-api-index-remove
+    plugin: text
+    label: 'Comience a indexar ahora'
+    body: 'El formulario "Iniciar la indexación ahora" permite indexar los elementos manualmente de inmediato, con un proceso por lotes. De lo contrario, los elementos sólo se indexan durante las ejecuciones del cron. El formulario puede estar desactivado si la indexación no es posible por alguna razón o no es necesaria.'
+    weight: 9
+    attributes:
+      data-id: edit-index
+  search-api-index-tracking:
+    id: search-api-index-tracking
+    plugin: text
+    label: 'Rastrear elementos para el índice'
+    body: 'In certain situations, the index''s tracker doesn''t have the latest state of the items available for indexing. This will be automatically rectified during cron runs, but can also be manually triggered here, with the "Track now" button.'
+    weight: 10
+    attributes:
+      data-id: edit-tracking
+  search-api-index-reindex:
+    id: search-api-index-reindex
+    plugin: text
+    label: 'Poner en cola todos los elementos para su reindexación'
+    body: 'Esto pondrá en cola todos los elementos de este índice para su reindexación. Los datos previamente indexados permanecerán en el servidor de búsqueda, por lo que las búsquedas en este índice seguirán dando resultados.'
+    weight: 11
+    attributes:
+      data-id: edit-reindex
+  search-api-index-clear:
+    id: search-api-index-clear
+    plugin: text
+    label: 'Borrar todos los datos indexados'
+    body: 'This will remove all indexed content for this index from the search server and queue it for reindexing. Searches on this index will not return any results until items are reindexed.'
+    weight: 12
+    attributes:
+      data-id: edit-clear

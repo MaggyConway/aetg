@@ -1,0 +1,18 @@
+uuid: c0c8d233-1fe1-4181-9578-e5b42ff40d62
+langcode: en
+status: true
+dependencies: {  }
+third_party_settings:
+  commerce_order:
+    customer_profile_type: false
+id: informacion_profesional
+label: 'Información profesional'
+display_label: ''
+multiple: false
+registration: false
+roles:
+  administrator: administrator
+  asociado: asociado
+  personal_aetg: personal_aetg
+allow_revisions: false
+new_revision: false

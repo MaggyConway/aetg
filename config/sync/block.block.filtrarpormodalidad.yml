@@ -1,0 +1,29 @@
+uuid: a09d0537-60c7-4075-bee7-3e9c9b101775
+langcode: es
+status: true
+dependencies:
+  config:
+    - facets.facet.modalidad
+  module:
+    - facets
+    - system
+  theme:
+    - aetg
+id: filtrarpormodalidad
+theme: aetg
+region: content
+weight: -18
+provider: null
+plugin: 'facet_block:modalidad'
+settings:
+  id: 'facet_block:modalidad'
+  label: 'Filtrar por modalidad:'
+  provider: facets
+  label_display: '0'
+  block_id: filtrarpormodalidad
+visibility:
+  request_path:
+    id: request_path
+    pages: /gestalt/recursos
+    negate: false
+    context_mapping: {  }

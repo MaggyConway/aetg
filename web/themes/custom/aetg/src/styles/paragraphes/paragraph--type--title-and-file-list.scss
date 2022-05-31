@@ -1,0 +1,49 @@
+.paragraph--type--title-and-file-list {
+   .field--name-field-title {
+      @include title-fz-16-lh-26-fw-600;
+      color: $color-1;
+      margin-bottom: 20px;
+
+      @include breakpoint(tablet-md) {
+         margin-bottom: 8px;
+      }
+   }
+
+   .field--name-field-files, .field--name-field-media-document {
+      > .field__item {
+         @include link-icon-pdf;
+
+         &:not(:last-child) {
+            margin-bottom: 18px;
+
+            @include breakpoint(tablet-m) {
+               margin-bottom: 8px;
+            }
+         }
+
+         .file--mime-application-pdf {
+            a {
+               font-size: 1em;
+               font-weight: 400;
+               line-height: 27px;
+            }
+         }
+
+         .file-size, .file-extension {
+            font-weight: 300;
+            font-size: 13px;
+            line-height: 18px;
+            color: $color-A;
+         }
+
+         .file-extension {
+            text-transform: uppercase;
+         }
+      }
+   }
+}
+
+.file--application-pdf {
+   background: none !important;
+   // @include link-icon-pdf;
+}

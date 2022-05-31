@@ -1,0 +1,10 @@
+uuid: e494d743-ce84-43f0-8342-4412e41f764f
+langcode: en
+status: true
+dependencies:
+  module:
+    - profile
+id: profile.slider
+label: Slider
+targetEntityType: profile
+cache: true

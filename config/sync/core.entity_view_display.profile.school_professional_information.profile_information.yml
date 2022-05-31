@@ -1,0 +1,76 @@
+uuid: 6e0f55e8-7265-41a1-80aa-db13f49ef081
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.profile.profile_information
+    - field.field.profile.school_professional_information.field_description
+    - field.field.profile.school_professional_information.field_detailed_training_program
+    - field.field.profile.school_professional_information.field_director
+    - field.field.profile.school_professional_information.field_geofield
+    - field.field.profile.school_professional_information.field_imagen_logo
+    - field.field.profile.school_professional_information.field_invoicing_address
+    - field.field.profile.school_professional_information.field_mobile
+    - field.field.profile.school_professional_information.field_paragraphs
+    - field.field.profile.school_professional_information.field_phone
+    - field.field.profile.school_professional_information.field_public_email
+    - field.field.profile.school_professional_information.field_school_name
+    - field.field.profile.school_professional_information.field_timetable
+    - field.field.profile.school_professional_information.field_training_manager
+    - field.field.profile.school_professional_information.field_url
+    - field.field.profile.school_professional_information.field_website
+    - profile.type.school_professional_information
+  module:
+    - layout_builder
+    - text
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: profile.school_professional_information.profile_information
+targetEntityType: profile
+bundle: school_professional_information
+mode: profile_information
+content:
+  field_description:
+    type: text_default
+    weight: 0
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_director:
+    type: string
+    weight: 1
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_training_manager:
+    type: string
+    weight: 2
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  breadcrumbs: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_detailed_training_program: true
+  field_geofield: true
+  field_imagen_logo: true
+  field_invoicing_address: true
+  field_mobile: true
+  field_paragraphs: true
+  field_phone: true
+  field_public_email: true
+  field_school_name: true
+  field_timetable: true
+  field_url: true
+  field_website: true
+  search_api_excerpt: true

@@ -1,0 +1,8 @@
+uuid: e9f9be09-bc8b-4016-8c59-79d246151c2f
+langcode: es
+status: true
+dependencies: {  }
+name: 'Nivel de formación'
+vid: nivel_de_formacion
+description: ''
+weight: 0

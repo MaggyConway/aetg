@@ -1,0 +1,10 @@
+uuid: 112fb3fc-cd81-4a90-9a9c-8389b326a6e5
+langcode: es
+status: true
+dependencies:
+  module:
+    - user
+id: user.admin_account
+label: 'Admin/Personal AETG account'
+targetEntityType: user
+cache: true

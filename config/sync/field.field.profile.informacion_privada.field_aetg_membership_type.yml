@@ -1,0 +1,91 @@
+uuid: 1f7efdd7-4bc5-4a2d-9f97-f1cbee1c35ce
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_aetg_membership_type
+    - paragraphs.paragraphs_type.aetg_membership_type
+    - profile.type.informacion_privada
+  module:
+    - entity_reference_revisions
+id: profile.informacion_privada.field_aetg_membership_type
+field_name: field_aetg_membership_type
+entity_type: profile
+bundle: informacion_privada
+label: 'Tipo de Membrecía AETG'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      aetg_membership_type: aetg_membership_type
+    target_bundles_drag_drop:
+      accordion:
+        weight: 22
+        enabled: false
+      aetg_membership_type:
+        enabled: true
+        weight: 22
+      feap_membership_type:
+        weight: 24
+        enabled: false
+      header_with_slider:
+        weight: 26
+        enabled: false
+      image:
+        weight: 27
+        enabled: false
+      image_slider:
+        weight: 28
+        enabled: false
+      image_slider_item:
+        weight: 29
+        enabled: false
+      image_title_text_and_link:
+        weight: 30
+        enabled: false
+      image_title_text_multiple_links:
+        weight: 31
+        enabled: false
+      mapfre_insurances:
+        weight: 37
+        enabled: false
+      member_slider_with_multiple_link:
+        weight: 40
+        enabled: false
+      multiple_links:
+        weight: 32
+        enabled: false
+      news_slider:
+        weight: 33
+        enabled: false
+      school_slider_with_multiple_link:
+        weight: 36
+        enabled: false
+      slider:
+        weight: 37
+        enabled: false
+      teacher:
+        weight: 47
+        enabled: false
+      text:
+        weight: 38
+        enabled: false
+      title_and_file_list:
+        weight: 39
+        enabled: false
+      title_tag_text_and_link:
+        weight: 40
+        enabled: false
+      video_area:
+        weight: 41
+        enabled: false
+      webform:
+        weight: 42
+        enabled: false
+field_type: entity_reference_revisions

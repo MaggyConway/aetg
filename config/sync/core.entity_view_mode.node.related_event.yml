@@ -1,0 +1,10 @@
+uuid: ee4f030d-9cbe-42a4-9bf9-169a3f13af61
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.related_event
+label: 'Related event'
+targetEntityType: node
+cache: true

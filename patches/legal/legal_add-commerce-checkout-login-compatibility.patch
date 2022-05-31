@@ -1,0 +1,65 @@
+diff --git a/src/Form/LegalLogin.php b/src/Form/LegalLogin.php
+index 9f37ffc..df4014c 100644
+--- a/src/Form/LegalLogin.php
++++ b/src/Form/LegalLogin.php
+@@ -65,6 +65,15 @@ class LegalLogin extends FormBase {
+     $id_hash = $_COOKIE['Drupal_visitor_legal_hash'];
+     $uid     = $_COOKIE['Drupal_visitor_legal_id'];
+     $token   = $_GET['token'];
++
++    // get current cart if login from checkout flow.
++    $previousUrl = \Drupal::request()->server->get('HTTP_REFERER');
++    if (str_contains($previousUrl, 'checkout')) {
++      $user_cart_id = preg_replace('/.*\/checkout\/([0-9]+)\/.*/', '${1}', $previousUrl);
++    } else {
++      $user_cart_id = "";
++    }
++    user_cookie_save(array('user_cart_id'=>$user_cart_id));
+
+     // Get last accepted version for this account.
+     $legal_account = legal_get_accept($uid);
+@@ -152,6 +161,7 @@ class LegalLogin extends FormBase {
+
+     // Prevent this page from being cached.
+     \Drupal::service('page_cache_kill_switch')->trigger();
++
+
+     return $form;
+   }
+@@ -162,7 +172,7 @@ class LegalLogin extends FormBase {
+   public function validateForm(array &$form, FormStateInterface $form_state) {
+
+     $token = $form_state->getValue('token');
+-
++
+     $uid        = $form_state->getValue('uid');
+     $account    = User::load($uid);
+     $this->user = $account;
+@@ -191,12 +201,23 @@ class LegalLogin extends FormBase {
+     $user     = $this->user;
+     $redirect = '/user/' . $values['uid'];
+     $config   = $this->config('legal.settings');
+-
+-    if (!empty($_GET['destination'])) {
+-      $redirect = $_GET['destination'];
++
++    // Redirect rules with support of Drupal Commerce checkout flow.
++    $user_cart_id = $_COOKIE['Drupal_visitor_user_cart_id'];
++    user_cookie_delete('user_cart_id');
++
++    if ($user_cart_id ==""){
++      if (!empty($_GET['destination'])) {
++        $redirect = $_GET['destination'];
++      }
++      $form_state->setRedirectUrl(Url::fromUserInput($redirect));
++    } else {
++      $form_state->setRedirect('commerce_checkout.form', [
++        'commerce_order' =>  $_COOKIE['Drupal_visitor_user_cart_id'],
++        'step' => 'order_information',
++      ]);
+     }
+
+-    $form_state->setRedirectUrl(Url::fromUserInput($redirect));
+
+     // Option to require user to accept T&Cs on every login.
+     if ($config->get('accept_every_login') == '1') {

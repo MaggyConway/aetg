@@ -1,0 +1,21 @@
+uuid: 60996e6c-ce7b-4b65-a642-7223c8dac227
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_timetable
+    - profile.type.school_professional_information
+  module:
+    - text
+id: profile.school_professional_information.field_timetable
+field_name: field_timetable
+entity_type: profile
+bundle: school_professional_information
+label: Cronograma
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,27 @@
+uuid: a0d3eea5-0c7b-49a8-9f45-91fb89db8280
+langcode: es
+status: false
+dependencies:
+  config:
+    - views.view.dashboard_ultimos_webforms_recibidos
+  module:
+    - views
+  theme:
+    - adminimal_theme
+id: views_block__dashboard_ultimos_webforms_recibidos_block_1
+theme: adminimal_theme
+region: header
+weight: null
+provider: null
+plugin: 'views_block:dashboard_ultimos_webforms_recibidos-block_1'
+settings:
+  id: 'views_block:dashboard_ultimos_webforms_recibidos-block_1'
+  label: 'Últimos formularios recibidos'
+  provider: views
+  label_display: visible
+  views_label: 'Últimos formularios recibidos'
+  items_per_page: none
+  override:
+    items_per_page: none
+  views_label_checkbox: 1
+visibility: {  }

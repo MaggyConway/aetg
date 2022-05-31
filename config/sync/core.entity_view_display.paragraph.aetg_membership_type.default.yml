@@ -1,0 +1,77 @@
+uuid: 4e463f2c-129c-4342-9861-8caf0a9c71d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.aetg_membership_type.field_end_date
+    - field.field.paragraph.aetg_membership_type.field_start_date
+    - field.field.paragraph.aetg_membership_type.field_taxonomy_term
+    - field.field.paragraph.aetg_membership_type.field_text
+    - paragraphs.paragraphs_type.aetg_membership_type
+  module:
+    - datetime
+    - empty_fields
+    - field_formatter_class
+    - text
+id: paragraph.aetg_membership_type.default
+targetEntityType: paragraph
+bundle: aetg_membership_type
+mode: default
+content:
+  field_end_date:
+    weight: 2
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings:
+      empty_fields:
+        handler: text
+        settings:
+          empty_text: '-'
+      field_formatter_class:
+        class: ''
+    type: datetime_default
+    region: content
+  field_start_date:
+    weight: 1
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings:
+      empty_fields:
+        handler: text
+        settings:
+          empty_text: '-'
+      field_formatter_class:
+        class: ''
+    type: datetime_default
+    region: content
+  field_taxonomy_term:
+    weight: 0
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_text:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings:
+      empty_fields:
+        handler: text
+        settings:
+          empty_text: '-'
+      field_formatter_class:
+        class: ''
+    type: text_default
+    region: content
+hidden:
+  breadcrumbs: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  search_api_excerpt: true

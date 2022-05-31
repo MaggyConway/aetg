@@ -1,0 +1,28 @@
+uuid: e3b40f93-74f3-4a1a-8361-3ade49162083
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_area_de_formacion
+    - profile.type.informacion_privada
+    - taxonomy.vocabulary.area_de_formacion
+id: profile.informacion_privada.field_area_de_formacion
+field_name: field_area_de_formacion
+entity_type: profile
+bundle: informacion_privada
+label: 'Área de formación'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      area_de_formacion: area_de_formacion
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

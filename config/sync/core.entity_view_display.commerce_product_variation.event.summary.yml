@@ -1,0 +1,99 @@
+uuid: b2a66ce6-2729-4226-8e73-d45fb8445d53
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.event
+    - core.entity_view_mode.commerce_product_variation.summary
+    - field.field.commerce_product_variation.event.field_allowed_user_roles
+    - field.field.commerce_product_variation.event.field_email_text
+    - field.field.commerce_product_variation.event.field_member_price
+    - field.field.commerce_product_variation.event.field_node
+    - field.field.commerce_product_variation.event.field_school_price
+    - field.field.commerce_product_variation.event.field_stock_level
+    - field.field.commerce_product_variation.event.field_tax_rate
+  module:
+    - aetg_price
+    - commerce_stock_field
+    - field_formatter_class
+    - layout_builder
+    - layout_discovery
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          a978d722-f464-475a-ab72-5d4f0570e369:
+            uuid: a978d722-f464-475a-ab72-5d4f0570e369
+            region: content
+            configuration:
+              id: 'field_block:commerce_product_variation:event:product_id'
+              label: Producto
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: entity_reference_label
+                settings:
+                  link: false
+                third_party_settings:
+                  empty_fields:
+                    handler: ''
+                  field_formatter_class:
+                    class: ''
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional:
+              layout_builder_styles_style: ''
+            weight: 0
+        third_party_settings: {  }
+id: commerce_product_variation.event.summary
+targetEntityType: commerce_product_variation
+bundle: event
+mode: summary
+content:
+  field_stock_level:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: commerce_stock_level_simple
+    region: content
+  price:
+    label: above
+    type: commerce_price_calculated
+    weight: 0
+    region: content
+    settings:
+      currency_display: symbol
+      adjustment_types:
+        promotion: promotion
+        fee: '0'
+        tax: '0'
+      strip_trailing_zeroes: false
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+hidden:
+  breadcrumbs: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_allowed_user_roles: true
+  field_email_text: true
+  field_member_price: true
+  field_node: true
+  field_school_price: true
+  field_tax_rate: true
+  langcode: true
+  list_price: true
+  product_id: true
+  search_api_excerpt: true
+  sku: true
+  title: true

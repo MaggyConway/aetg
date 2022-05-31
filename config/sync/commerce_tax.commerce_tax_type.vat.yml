@@ -1,0 +1,38 @@
+uuid: 8f8a9a74-008c-4ab4-bdd3-7df6dbf76ec0
+langcode: es
+status: true
+dependencies: {  }
+id: vat
+label: IVA
+plugin: custom
+configuration:
+  display_label: vat
+  round: true
+  rates:
+    -
+      id: 6bc66b70-f24e-4927-aa95-6002913ffdf3
+      label: free
+      percentage: '0'
+    -
+      id: 32c3b705-c69d-4761-8d2f-6361e787b217
+      label: '10'
+      percentage: '0.1'
+    -
+      id: e52be1c7-f7f5-49df-807e-5976131cfe04
+      label: '21'
+      percentage: '0.21'
+    -
+      id: 27590a7b-9fe2-4462-8261-6ef86229b869
+      label: '4'
+      percentage: '0.04'
+    -
+      id: ebce7f74-383c-4565-9a72-288ef3c71e85
+      label: 0%
+      percentage: '0'
+  territories:
+    -
+      country_code: ES
+      administrative_area: ''
+      locality: null
+      dependent_locality: null
+  display_inclusive: true

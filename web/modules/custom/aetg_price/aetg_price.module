@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * @file
+ * Contains aetg_price.module.
+ */
+
+use Drupal\aetg_price\Plugin\Field\FieldFormatter\AetgPriceCalculatedFormatter;
+use Drupal\Core\Routing\RouteMatchInterface;
+
+
+/**
+ * Implements hook_help().
+ */
+function aetg_price_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.aetg_price':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Provides price functionality.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_field_formatter_info_alter().
+ *
+ * Replaces the commerce_price PriceCalculatedFormatter with
+ * the AetgPriceCalculatedFormatter.
+ */
+function aetg_price_field_formatter_info_alter(array &$info) {
+  $info['commerce_price_calculated']['class'] = AetgPriceCalculatedFormatter::class;
+  $info['commerce_price_calculated']['provider'] = 'aetg_price';
+}

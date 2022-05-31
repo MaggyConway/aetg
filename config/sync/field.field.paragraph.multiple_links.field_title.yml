@@ -1,0 +1,19 @@
+uuid: b14b77f2-e55f-48a1-a784-8752bff6c657
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.multiple_links
+id: paragraph.multiple_links.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: multiple_links
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,11 @@
+uuid: 30944a69-f895-4f17-a1a7-c9fb459eda7e
+langcode: es
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.event
+id: commerce_product.event
+target_entity_type_id: commerce_product
+target_bundle: event
+default_langcode: site_default
+language_alterable: false

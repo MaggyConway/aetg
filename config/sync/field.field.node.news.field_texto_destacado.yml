@@ -1,0 +1,19 @@
+uuid: 250da4c2-1c01-416e-be05-a0617e43d413
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_texto_destacado
+    - node.type.news
+id: node.news.field_texto_destacado
+field_name: field_texto_destacado
+entity_type: node
+bundle: news
+label: 'Texto para destacado'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

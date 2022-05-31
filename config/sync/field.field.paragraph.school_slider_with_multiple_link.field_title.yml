@@ -1,0 +1,19 @@
+uuid: 7ef597bb-508e-4b25-af0d-3ded2c9675dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.school_slider_with_multiple_link
+id: paragraph.school_slider_with_multiple_link.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: school_slider_with_multiple_link
+label: Title
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

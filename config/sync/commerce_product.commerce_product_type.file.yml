@@ -1,0 +1,12 @@
+uuid: 598552ab-ac4b-40e4-9b0c-98b466cf6fc4
+langcode: en
+status: true
+dependencies: {  }
+id: file
+label: Archivo
+description: ''
+variationType: file
+multipleVariations: false
+injectVariationFields: true
+traits: {  }
+locked: false

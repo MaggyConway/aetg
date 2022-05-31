@@ -1,0 +1,163 @@
+uuid: fa745db0-dbd9-4000-b665-a042b76c093b
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_taxonomy_term_fundamentos
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Taxonomy terms (Fundamentos e influencias)'
+source:
+  plugin: d7_taxonomy_term
+  bundle: fundamentos
+process:
+  tid:
+    -
+      plugin: get
+      source: tid
+  vid:
+    -
+      plugin: migration_lookup
+      migration: upgrade_d7_taxonomy_vocabulary
+      source: vid
+  name:
+    -
+      plugin: get
+      source: name
+  description/value:
+    -
+      plugin: get
+      source: description
+  description/format:
+    -
+      plugin: get
+      source: format
+  weight:
+    -
+      plugin: get
+      source: weight
+  parent_id:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: parent
+    -
+      plugin: migration_lookup
+      migration:
+        - upgrade_d7_taxonomy_term_area_de_especializacion
+        - upgrade_d7_taxonomy_term_tipo_de_especializacion
+        - upgrade_d7_taxonomy_term_enviar_email
+        - upgrade_d7_taxonomy_term_categoria_de_noticia
+        - upgrade_d7_taxonomy_term_grupo_de_envio
+        - upgrade_d7_taxonomy_term_tipo_de_actividad
+        - upgrade_d7_taxonomy_term_tipo_documentacion_escuela
+        - upgrade_d7_taxonomy_term_estados_documentacion
+        - upgrade_d7_taxonomy_term_seguro_mapfre
+        - upgrade_d7_taxonomy_term_bajas_aetg
+        - upgrade_d7_taxonomy_term_area_de_formacion
+        - upgrade_d7_taxonomy_term_bajas_mapfre
+        - upgrade_d7_taxonomy_term_tipo_de_enlace
+        - upgrade_d7_taxonomy_term_habilitar_opcion
+        - upgrade_d7_taxonomy_term_tema_de_consulta
+        - upgrade_d7_taxonomy_term_seccion
+        - upgrade_d7_taxonomy_term_tutor_tesina
+        - upgrade_d7_taxonomy_term_emisor_de_noticia
+        - upgrade_d7_taxonomy_term_tipo_de_recurso
+        - upgrade_d7_taxonomy_term_temas
+        - upgrade_d7_taxonomy_term_modalidad
+        - upgrade_d7_taxonomy_term_tecnicas
+        - upgrade_d7_taxonomy_term_autor
+        - upgrade_d7_taxonomy_term_fundamentos
+        - upgrade_d7_taxonomy_term_tipo_doc_administrativo
+        - upgrade_d7_taxonomy_term_ambito_profesional
+        - upgrade_d7_taxonomy_term_tipo_de_miembro
+        - upgrade_d7_taxonomy_term_permisos_de_acceso
+        - upgrade_d7_taxonomy_term_tags
+  parent:
+    -
+      plugin: default_value
+      default_value: 0
+      source: '@parent_id'
+  forum_container:
+    -
+      plugin: get
+      source: is_container
+  changed:
+    -
+      plugin: get
+      source: timestamp
+  langcode:
+    -
+      plugin: get
+      source: language
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: fundamentos
+migration_dependencies:
+  required:
+    - upgrade_d7_taxonomy_vocabulary
+  optional:
+    - upgrade_d7_field_instance
+    - upgrade_d7_taxonomy_vocabulary
+    - upgrade_d7_taxonomy_term_tags
+    - upgrade_d7_taxonomy_term_permisos_de_acceso
+    - upgrade_d7_taxonomy_term_tipo_de_miembro
+    - upgrade_d7_taxonomy_term_ambito_profesional
+    - upgrade_d7_taxonomy_term_tipo_doc_administrativo
+    - upgrade_d7_taxonomy_term_fundamentos
+    - upgrade_d7_taxonomy_term_autor
+    - upgrade_d7_taxonomy_term_tecnicas
+    - upgrade_d7_taxonomy_term_modalidad
+    - upgrade_d7_taxonomy_term_temas
+    - upgrade_d7_taxonomy_term_tipo_de_recurso
+    - upgrade_d7_taxonomy_term_emisor_de_noticia
+    - upgrade_d7_taxonomy_term_tutor_tesina
+    - upgrade_d7_taxonomy_term_seccion
+    - upgrade_d7_taxonomy_term_tema_de_consulta
+    - upgrade_d7_taxonomy_term_habilitar_opcion
+    - upgrade_d7_taxonomy_term_tipo_de_enlace
+    - upgrade_d7_taxonomy_term_bajas_mapfre
+    - upgrade_d7_taxonomy_term_area_de_formacion
+    - upgrade_d7_taxonomy_term_bajas_aetg
+    - upgrade_d7_taxonomy_term_seguro_mapfre
+    - upgrade_d7_taxonomy_term_estados_documentacion
+    - upgrade_d7_taxonomy_term_tipo_documentacion_escuela
+    - upgrade_d7_taxonomy_term_tipo_de_actividad
+    - upgrade_d7_taxonomy_term_grupo_de_envio
+    - upgrade_d7_taxonomy_term_categoria_de_noticia
+    - upgrade_d7_taxonomy_term_enviar_email
+    - upgrade_d7_taxonomy_term_tipo_de_especializacion
+    - upgrade_d7_taxonomy_term_area_de_especializacion
+    - upgrade_d7_taxonomy_term_area_de_especializacion
+    - upgrade_d7_taxonomy_term_tipo_de_especializacion
+    - upgrade_d7_taxonomy_term_enviar_email
+    - upgrade_d7_taxonomy_term_categoria_de_noticia
+    - upgrade_d7_taxonomy_term_grupo_de_envio
+    - upgrade_d7_taxonomy_term_tipo_de_actividad
+    - upgrade_d7_taxonomy_term_tipo_documentacion_escuela
+    - upgrade_d7_taxonomy_term_estados_documentacion
+    - upgrade_d7_taxonomy_term_seguro_mapfre
+    - upgrade_d7_taxonomy_term_bajas_aetg
+    - upgrade_d7_taxonomy_term_area_de_formacion
+    - upgrade_d7_taxonomy_term_bajas_mapfre
+    - upgrade_d7_taxonomy_term_tipo_de_enlace
+    - upgrade_d7_taxonomy_term_habilitar_opcion
+    - upgrade_d7_taxonomy_term_tema_de_consulta
+    - upgrade_d7_taxonomy_term_seccion
+    - upgrade_d7_taxonomy_term_tutor_tesina
+    - upgrade_d7_taxonomy_term_emisor_de_noticia
+    - upgrade_d7_taxonomy_term_tipo_de_recurso
+    - upgrade_d7_taxonomy_term_temas
+    - upgrade_d7_taxonomy_term_modalidad
+    - upgrade_d7_taxonomy_term_tecnicas
+    - upgrade_d7_taxonomy_term_autor
+    - upgrade_d7_taxonomy_term_fundamentos
+    - upgrade_d7_taxonomy_term_tipo_doc_administrativo
+    - upgrade_d7_taxonomy_term_ambito_profesional
+    - upgrade_d7_taxonomy_term_tipo_de_miembro
+    - upgrade_d7_taxonomy_term_permisos_de_acceso
+    - upgrade_d7_taxonomy_term_tags

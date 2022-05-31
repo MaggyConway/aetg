@@ -1,0 +1,180 @@
+// BASE MIXINS
+@mixin font-family-primary {
+   font-family: "Open Sans", sans-serif;
+}
+
+// EXTENTED MIXINS
+
+@mixin text-primary {
+   font-size: 16px;
+   font-weight: 400;
+   color: $color-2;
+   @include breakpoint(mobile-small) {
+      font-size: 15px;
+   }
+}
+
+@mixin h1 {
+   font-weight: 600;
+   font-size: 72px;
+   line-height: 74px;
+   letter-spacing: -0.02em;
+}
+
+@mixin h2 {
+   font-weight: 600;
+   font-size: 46px;
+   line-height: 60px;
+   letter-spacing: 0.05em;
+
+   @include breakpoint(IPad-Pro) {
+      font-size: 36px;
+      line-height: 50px;
+   }
+
+   @include breakpoint(tablet-md) {
+      font-size: 30px;
+      line-height: 38px;
+   }
+
+   @include breakpoint(tablet) {
+      font-size: 24px;
+      line-height: 30px;
+   }
+
+   @include breakpoint(mobile-small) {
+      font-size: 22px;
+      line-height: 27px;
+   }
+}
+
+@mixin h3 {
+   font-weight: 600;
+   font-size: 24px;
+   line-height: 36px;
+   
+   @include breakpoint(tablet-m) {
+      font-size: 20px;
+      line-height: 28px;
+   }
+
+   @include breakpoint(mobile-small) {
+      font-size: 18px;
+      line-height: 24px;
+   }
+}
+
+
+
+
+
+
+@mixin title-fz-18-lh-25-fw-600 {
+   font-weight: 600;
+   font-size: 18px;
+   line-height: 25px;
+}
+
+@mixin title-fz-16-lh-26-fw-600 {
+   font-weight: 600;
+   font-size: 16px;
+   line-height: 26px;
+}
+
+@mixin title-fz-14-lh-18-bold {
+   font-weight: bold;
+   font-size: 14px;
+   line-height: 18px;
+}
+
+@mixin subtitle-fz-14-lh-20-bold-upper {
+   font-weight: bold;
+   font-size: 14px;
+   line-height: 20px;
+   letter-spacing: 0.05em;
+   text-transform: uppercase;
+}
+
+@mixin label-fz-12-lh-16-upper {
+   font-weight: normal;
+   font-size: 12px;
+   line-height: 16px;
+   letter-spacing: 0.05em;
+   text-transform: uppercase;
+}
+
+@mixin text-fz-21-lh-36-fw-300 { // in one place used
+   font-weight: 300;
+   font-size: 21px;
+   line-height: 36px;
+
+   @include breakpoint(IPad-Pro) {
+      font-size: 18px;
+      line-height: 28px;
+   }
+
+   @include breakpoint(mobile-small) {
+      font-size: 15px;
+      line-height: 23px;
+   }
+}
+
+@mixin text-fz-18-lh-32 {
+   font-weight: normal;
+   font-size: 18px;
+   line-height: 32px;
+   
+   @include breakpoint(mobile-middle) {
+     font-size: 16px;
+     line-height: 28px;
+  }
+}
+
+@mixin text-fz-16-lh-26 {
+   font-weight: normal;
+   font-size: 16px;
+   line-height: 26px;
+   
+   @include breakpoint(mobile-large) {
+     font-size: 14px;
+     line-height: 22px;
+   }
+}
+
+@mixin text-fz-14-lh-20 {
+   font-weight: normal;
+   font-size: 14px;
+   line-height: 20px;
+}
+
+@mixin text-fz-12-lh-18-fw-300 {
+   font-weight: 300;
+   font-size: 12px;
+   line-height: 18px;
+}
+
+@mixin link-fz-14-lh-22 {
+   font-weight: normal;
+   font-size: 14px;
+   line-height: 22px;
+}
+
+@mixin link-fz-14-lh-22-purple {
+   @include link-fz-14-lh-22;
+   color: $blue;
+   &:hover {
+      color: $blue-hover;
+   }
+}
+
+@mixin input-text {
+   font-size: 14px;
+   line-height: 20px;
+}
+
+@mixin event-title-spaces {
+   margin-bottom: 24px;
+   @include breakpoint(mobile-large) {
+      margin-bottom: 10px;
+   }
+} 

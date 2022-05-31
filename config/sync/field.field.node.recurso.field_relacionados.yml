@@ -1,0 +1,31 @@
+uuid: b22627ad-b161-43b8-8933-d110111c8af2
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_relacionados
+    - node.type.especializacion
+    - node.type.event
+    - node.type.recurso
+id: node.recurso.field_relacionados
+field_name: field_relacionados
+entity_type: node
+bundle: recurso
+label: 'Véase también'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      especializacion: especializacion
+      event: event
+      recurso: recurso
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: event
+field_type: entity_reference

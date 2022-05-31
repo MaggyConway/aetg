@@ -1,0 +1,11 @@
+uuid: 7959d478-2f5b-4e74-8242-350b81ba20ee
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.area_de_especializacion
+id: taxonomy_term.area_de_especializacion
+target_entity_type_id: taxonomy_term
+target_bundle: area_de_especializacion
+default_langcode: site_default
+language_alterable: false

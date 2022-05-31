@@ -1,0 +1,211 @@
+uuid: 4c9ad342-c261-4dc4-aacb-c0a6f177839c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.profile.professional_card_header
+    - field.field.profile.informacion_profesional.field_ambito_trabajo
+    - field.field.profile.informacion_profesional.field_apellidos_prof
+    - field.field.profile.informacion_profesional.field_bio
+    - field.field.profile.informacion_profesional.field_centro
+    - field.field.profile.informacion_profesional.field_direccion
+    - field.field.profile.informacion_profesional.field_full_name
+    - field.field.profile.informacion_profesional.field_geofield
+    - field.field.profile.informacion_profesional.field_imagen_logo
+    - field.field.profile.informacion_profesional.field_imagen_usuario
+    - field.field.profile.informacion_profesional.field_invoicing_address
+    - field.field.profile.informacion_profesional.field_mobile
+    - field.field.profile.informacion_profesional.field_nombre_proff
+    - field.field.profile.informacion_profesional.field_public_email
+    - field.field.profile.informacion_profesional.field_telefono_prof
+    - field.field.profile.informacion_profesional.field_url
+    - field.field.profile.informacion_profesional.field_website
+    - profile.type.informacion_profesional
+  module:
+    - aetg_common
+    - image
+    - layout_builder
+    - layout_discovery
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: true
+    sections:
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: ''
+          column_widths: 25-75
+          layout_builder_styles_style: ''
+        components:
+          19cf9763-485a-4607-87bb-95209126ab71:
+            uuid: 19cf9763-485a-4607-87bb-95209126ab71
+            region: first
+            configuration:
+              id: 'field_block:profile:informacion_profesional:field_imagen_logo'
+              label: Image
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: image
+                settings:
+                  image_style: user_picture
+                  image_link: ''
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional:
+              layout_builder_styles_style: ''
+            weight: 0
+          5c897388-4e42-4b14-949b-a1b0c9165ded:
+            uuid: 5c897388-4e42-4b14-949b-a1b0c9165ded
+            region: second
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:profile:informacion_profesional:field_full_name'
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            additional: {  }
+            weight: 0
+          892453a6-ddd7-45ed-8129-a8759c787d65:
+            uuid: 892453a6-ddd7-45ed-8129-a8759c787d65
+            region: second
+            configuration:
+              id: 'field_block:profile:informacion_profesional:field_centro'
+              label: Centro
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional:
+              layout_builder_styles_style: ''
+            weight: 1
+          7b29a05c-da3c-471e-a9cc-5020ec34df9f:
+            uuid: 7b29a05c-da3c-471e-a9cc-5020ec34df9f
+            region: first
+            configuration:
+              id: 'field_block:profile:informacion_profesional:field_imagen_logo'
+              label: 'Foto o logo'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: image
+                settings:
+                  image_style: user_picture
+                  image_link: ''
+                third_party_settings:
+                  empty_fields:
+                    handler: ''
+                  field_formatter_class:
+                    class: ''
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional:
+              layout_builder_styles_style: ''
+            weight: 1
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: buttons
+          layout_builder_styles_style: profile_header_buttons
+        components:
+          9777f11b-2485-4bba-bd04-5dd6dc417eae:
+            uuid: 9777f11b-2485-4bba-bd04-5dd6dc417eae
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:profile:informacion_profesional:addtoany'
+            additional: {  }
+            weight: 0
+          389ce0e3-71d1-4528-8d63-3d277d8f385a:
+            uuid: 389ce0e3-71d1-4528-8d63-3d277d8f385a
+            region: content
+            configuration:
+              id: aetg_profile_operations_link
+              label: 'AETG Profile operations links'
+              provider: aetg_common
+              label_display: '0'
+              profile_type: public
+              context_mapping: {  }
+            additional:
+              layout_builder_styles_style: ''
+            weight: 1
+        third_party_settings: {  }
+id: profile.informacion_profesional.professional_card_header
+targetEntityType: profile
+bundle: informacion_profesional
+mode: professional_card_header
+content:
+  addtoany:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_centro:
+    label: inline
+    weight: 2
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  field_full_name:
+    type: string
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_imagen_logo:
+    type: image
+    weight: 0
+    region: content
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+hidden:
+  breadcrumbs: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_ambito_trabajo: true
+  field_apellidos_prof: true
+  field_bio: true
+  field_direccion: true
+  field_geofield: true
+  field_imagen_usuario: true
+  field_invoicing_address: true
+  field_mobile: true
+  field_nombre_proff: true
+  field_public_email: true
+  field_telefono_prof: true
+  field_url: true
+  field_website: true
+  search_api_excerpt: true

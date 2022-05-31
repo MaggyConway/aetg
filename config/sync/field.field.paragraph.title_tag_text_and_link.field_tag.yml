@@ -1,0 +1,39 @@
+uuid: edb121b0-cad8-469e-8a9d-df25ea82cc0d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tag
+    - paragraphs.paragraphs_type.title_tag_text_and_link
+    - taxonomy.vocabulary.categoria_de_noticia
+    - taxonomy.vocabulary.emisor_de_noticia
+    - taxonomy.vocabulary.seccion
+    - taxonomy.vocabulary.tema_de_consulta
+    - taxonomy.vocabulary.tipo_de_actividad
+    - taxonomy.vocabulary.tipo_de_recurso
+id: paragraph.title_tag_text_and_link.field_tag
+field_name: field_tag
+entity_type: paragraph
+bundle: title_tag_text_and_link
+label: Tag
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      categoria_de_noticia: categoria_de_noticia
+      emisor_de_noticia: emisor_de_noticia
+      seccion: seccion
+      tema_de_consulta: tema_de_consulta
+      tipo_de_actividad: tipo_de_actividad
+      tipo_de_recurso: tipo_de_recurso
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: tipo_de_actividad
+field_type: entity_reference

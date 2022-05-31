@@ -1,0 +1,28 @@
+uuid: 3168f34b-4f1b-4e4c-a398-5854ed1db0c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_motivo_baja_mapfre
+    - profile.type.informacion_privada
+    - taxonomy.vocabulary.bajas_mapfre
+id: profile.informacion_privada.field_motivo_baja_mapfre
+field_name: field_motivo_baja_mapfre
+entity_type: profile
+bundle: informacion_privada
+label: 'Motivo de baja Mapfre'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      bajas_mapfre: bajas_mapfre
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,21 @@
+uuid: 40650df5-e63b-4e03-84b9-0be78526221b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.paragraph_view_mode
+    - paragraphs.paragraphs_type.image_title_text_multiple_links
+  module:
+    - paragraph_view_mode
+id: paragraph.image_title_text_multiple_links.paragraph_view_mode
+field_name: paragraph_view_mode
+entity_type: paragraph
+bundle: image_title_text_multiple_links
+label: 'Paragraph view mode'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: paragraph_view_mode

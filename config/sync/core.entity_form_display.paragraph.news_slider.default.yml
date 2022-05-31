@@ -1,0 +1,23 @@
+uuid: 4e673913-436d-4a25-ac85-736785b27a28
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.news_slider.field_views_reference
+    - paragraphs.paragraphs_type.news_slider
+  module:
+    - viewsreference
+id: paragraph.news_slider.default
+targetEntityType: paragraph
+bundle: news_slider
+mode: default
+content:
+  field_views_reference:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: viewsreference_select
+    region: content
+hidden:
+  created: true
+  status: true

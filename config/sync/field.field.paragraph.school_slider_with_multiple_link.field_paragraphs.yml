@@ -1,0 +1,55 @@
+uuid: ad7d39dd-36c8-4457-b03b-ad751b2c7513
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_paragraphs
+    - paragraphs.paragraphs_type.multiple_links
+    - paragraphs.paragraphs_type.school_slider_with_multiple_link
+  module:
+    - entity_reference_revisions
+id: paragraph.school_slider_with_multiple_link.field_paragraphs
+field_name: field_paragraphs
+entity_type: paragraph
+bundle: school_slider_with_multiple_link
+label: 'Multiple links'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      multiple_links: multiple_links
+    target_bundles_drag_drop:
+      header_with_slider:
+        weight: 10
+        enabled: false
+      image_title_text_and_link:
+        weight: 11
+        enabled: false
+      image_title_text_multiple_links:
+        weight: 12
+        enabled: false
+      multiple_links:
+        enabled: true
+        weight: 13
+      school_slider:
+        weight: 14
+        enabled: false
+      school_slider_item:
+        weight: 15
+        enabled: false
+      school_slider_with_multiple_link:
+        weight: 16
+        enabled: false
+      slider:
+        weight: 17
+        enabled: false
+      title_tag_text_and_link:
+        weight: 18
+        enabled: false
+field_type: entity_reference_revisions

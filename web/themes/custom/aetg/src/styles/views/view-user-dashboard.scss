@@ -1,0 +1,347 @@
+.view-user-dashboard {
+
+	> .view-content > .views-row > .profile > .layout {
+		&:not(:last-child) {
+			margin-bottom: 40px;
+
+			@include breakpoint(mobile-large) {
+				margin-bottom: 20px;
+			}
+			
+			@include breakpoint(mobile-small) {
+				margin-bottom: 10px;
+			}
+		}
+	}
+
+	.horizontal-tabs {
+		display: none;
+	}
+
+	.field-content {
+		margin-bottom: 1em;
+	}
+
+	.layout--onecol {
+		h2 {
+			padding-bottom: 18px;
+			margin-bottom: 16px;
+			border-bottom: 1px solid $color-E6;
+		}
+	}
+	
+	.layout--twocol-section {
+		flex-wrap: nowrap;
+		align-items: flex-start;
+
+		> .layout__region {
+			flex: unset;
+			width: 50%;
+			
+			&--first {
+				margin-right: 30px;
+				
+				@include breakpoint(tablet) {
+					margin-right: 20px;
+				}
+				
+				@include breakpoint(mobile-middle) {
+					margin-right: 10px;
+				}
+			}
+
+			@include breakpoint(tablet-md) {
+				width: 100%;
+			}
+		}
+
+		@include breakpoint(tablet-md) {
+			flex-wrap: wrap;
+		}
+
+		&.layout--twocol-section--50-50 {
+			> .layout__region--first {
+				@include breakpoint(tablet-md) {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+
+	h2, h3 {
+		@include title-fz-18-lh-25-fw-600;
+		// margin: 0;	
+		margin: 0 0 16px;	
+	}
+
+	a {
+		@include text-fz-16-lh-26;
+		color: $blue;
+		margin-bottom: 1em;
+
+		&.add-link {
+			@include btn-white;
+		}
+	}
+
+	.btn-primary {
+		> a {
+			color: #fff;
+		}
+	}
+	
+	.profile--view-mode--dashboard {
+		&-header {
+			position: relative;
+			padding-bottom: 27px;
+			
+			@include breakpoint(tablet) {
+				// padding-bottom: 65px;
+				padding: 0;
+			}
+			
+			&:after {
+				position: absolute;
+				content: '';
+				left: 0;
+				width: 100%;
+				height: 1px;
+				bottom: 0;
+				background-color: $color-E6;
+			}
+
+			.layout--twocol-section {				
+				> .layout__region {
+					width: auto;
+				}
+			}
+
+			> .layout--twocol-section {
+				flex-wrap: nowrap;
+			}
+
+			.field--name-user-picture,
+			.field--name-field-imagen-logo {
+				@include mini-slider-image;
+				background-color: $color-F7;
+				border-radius: 5px;
+				border: 1px solid $color-E6;
+				overflow: hidden;
+
+				img {
+					width: 100%;
+					height: 100%;
+				}
+
+				@include breakpoint(mobile-middle) {
+					margin-right: 15px;
+				}
+			}
+
+			.field--name-field-full-name, .field--name-field-nombre,
+			.field--name-field-nombre-de-escuela {
+				@include h3;
+				margin-bottom: 1px;
+				
+				@include breakpoint(mobile-middle) {
+					font-size: 20px;
+					line-height: 28px;
+				}
+			}
+
+			.field--name-field-centro-donde-trabaja {
+				@include text-fz-16-lh-26;
+				color: $color-2;
+			}
+		}
+
+		&-my-profile {
+			.layout--twocol-section {
+				flex-wrap: nowrap;
+				
+				@include breakpoint(tablet) {
+					flex-wrap: wrap;
+				}
+				
+				.layout__region {
+					width: 50%;
+					
+					@include breakpoint(tablet) {
+						width: 100%;
+					}
+				}
+			}
+
+			.block-layout-builder {
+				margin-bottom: 16px;
+			}
+
+			.field__label {
+				@include text-fz-14-lh-20;
+				color: $color-A;
+				margin-bottom: 5px;
+			}
+
+			.field__item {
+				@include text-fz-16-lh-26;
+				color: $color-1;
+
+				p {
+					@include text-fz-16-lh-26;
+					color: $color-1;
+				}
+
+				a {
+					@include text-fz-16-lh-26;
+					color: $blue;
+					// text-decoration: underline;
+					&:hover {
+						// text-decoration: none;
+						color: $blue-hover;
+					}
+				}
+			}
+
+			p.address {
+				position: static;
+				display: block;
+				@include breakpoint(mobile-small) {
+					white-space: normal;
+				}
+			}
+		}
+	}
+
+	.block-views {
+		position: relative;
+		
+		.view-commerce-order-item-table, .view-commerce-user-invoices {
+			.view-header {				
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding-bottom: 11px;
+				margin-bottom: 16px;
+				position: relative;
+				
+				&:after {
+					position: absolute;
+					content: '';
+					left: 0;
+					width: 100%;
+					height: 1px;
+					bottom: 0;
+					background-color: $color-E6;
+				}
+
+				> h2 {
+					padding: 0;
+					margin: 0;
+					border: none;
+				}
+				
+				a {
+					@include btn-black;
+
+					&.edit-link {
+						@include btn-white;
+					}
+
+					&.delete-link {
+						@include btn-red;
+					}
+
+					@include text-fz-14-lh-20;
+					padding: 11px 25px 9px;
+					
+					@include breakpoint(mobile-small) {
+						width: 100%;
+						padding: 10px;
+						white-space: nowrap;
+						margin-top: 5px;
+					}
+				}
+
+				@include breakpoint(mobile-small) {
+					flex-direction: column;
+					justify-content: flex-start;
+					align-items: flex-start;
+					width: 100%;
+					margin-bottom: 10px;
+				}
+			}
+		}
+	}
+
+	.js-view-dom-id-1 {
+		.block-views {
+			.view-commerce-order-item-table, .view-commerce-user-invoices {
+				.view-header {
+					top: -68px;
+					
+					@include breakpoint(mobile-small) {
+						top: -88px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.dashboard-header-buttons {
+	display: flex;
+	-webkit-justify-content: flex-start;
+	justify-content: flex-start;
+	-webkit-align-items: center;
+	align-items: center;			
+	margin: 20px -8px 0;
+	
+	> .layout__region > .block {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+	}
+
+	.btn-link {
+		margin: 0 8px;
+		@include btn-black;
+		
+		&.become-member-link {
+			@include btn-black;
+		}
+		
+		@include breakpoint(mobile-middle) {
+			width: 100%;
+			margin: 5px 0;
+		}
+	}
+
+	.view-link {
+		@include btn-black;
+		white-space: nowrap;
+	}
+
+	.edit-link {
+		@include btn-white;
+		white-space: nowrap;
+	}
+
+	.delete-link {
+		@include btn-red;
+	}
+
+	@include breakpoint(tablet) {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: 10px;
+		margin: 0;
+	}
+
+	@include breakpoint(mobile-middle) {
+		left: 0;
+		transform: none;
+		width: 100%;
+		flex-direction: column;
+	}
+}

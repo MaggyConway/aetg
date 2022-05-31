@@ -1,0 +1,35 @@
+uuid: f07ecd0b-5a28-4e94-9dd7-b1109430a641
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.profile.tax_number
+    - profile.type.customer
+  enforced:
+    module:
+      - commerce_tax
+  module:
+    - commerce_tax
+_core:
+  default_config_hash: CGcN7vNeKKjcD0PjtvSXOchhJll9sHwastAFsjBsfqI
+id: profile.customer.tax_number
+field_name: tax_number
+entity_type: profile
+bundle: customer
+label: DNI/NIE/CIF
+description: 'Ejemplos: ESX12345678, ES12345678X, ESX1234567X'
+required: true
+translatable: false
+default_value:
+  -
+    type: null
+    value: null
+    verification_state: null
+    verification_timestamp: null
+    verification_result: {  }
+default_value_callback: ''
+settings:
+  countries: {  }
+  verify: false
+  allow_unverified: true
+field_type: commerce_tax_number

@@ -1,0 +1,23 @@
+uuid: b7680407-597b-4cbc-8cb0-d6f048c6ccfb
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - aetg
+id: aetg_sitebranding
+theme: aetg
+region: second_footer
+weight: -22
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility: {  }

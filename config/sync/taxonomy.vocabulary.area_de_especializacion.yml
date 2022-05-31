@@ -1,0 +1,8 @@
+uuid: 675b385b-4449-4802-8da5-2ce98e27a096
+langcode: es
+status: true
+dependencies: {  }
+name: 'Áreas de especialización'
+vid: area_de_especializacion
+description: ''
+weight: 0

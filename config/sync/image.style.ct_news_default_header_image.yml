@@ -1,0 +1,15 @@
+uuid: 32c52b24-d131-4b00-9fa1-b93eee2d0559
+langcode: en
+status: true
+dependencies: {  }
+name: ct_news_default_header_image
+label: 'CT News: Default - Header Image'
+effects:
+  baada167-c770-4ff4-ad62-a3e7df0ed5f7:
+    uuid: baada167-c770-4ff4-ad62-a3e7df0ed5f7
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1980
+      height: 600
+      anchor: center-center

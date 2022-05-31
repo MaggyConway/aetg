@@ -1,0 +1,21 @@
+uuid: 154ec3dc-3282-43e4-80b7-af8bbdd479ba
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_street
+    - node.type.documentacion_de_escuela
+id: node.documentacion_de_escuela.field_street
+field_name: field_street
+entity_type: node
+bundle: documentacion_de_escuela
+label: 'Domicilio al que se dirigirán las comunicaciones de la AETG'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: '[current-user:escuela:field_direccion:address_line1]'
+default_value_callback: field_default_token_default_value_callback
+settings: {  }
+field_type: string

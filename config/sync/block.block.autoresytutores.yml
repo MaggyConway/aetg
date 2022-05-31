@@ -1,0 +1,28 @@
+uuid: dac55f4a-afb7-4920-867d-213f09b0a910
+langcode: es
+status: true
+dependencies:
+  config:
+    - simple_block.simple_block.autores_y_tutores
+  module:
+    - simple_block
+    - system
+  theme:
+    - aetg
+id: autoresytutores
+theme: aetg
+region: content
+weight: -22
+provider: null
+plugin: 'simple_block:autores_y_tutores'
+settings:
+  id: 'simple_block:autores_y_tutores'
+  label: 'Autores y tutores:'
+  provider: simple_block
+  label_display: visible
+visibility:
+  request_path:
+    id: request_path
+    pages: /gestalt/recursos/tesinas
+    negate: false
+    context_mapping: {  }

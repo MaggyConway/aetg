@@ -1,0 +1,31 @@
+uuid: 4bfe7e92-56ad-4a05-827e-8059e2c9051d
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - menu_block
+  theme:
+    - aetg
+id: footer_4
+theme: aetg
+region: footer
+weight: -18
+provider: null
+plugin: 'menu_block:footer'
+settings:
+  id: 'menu_block:footer'
+  label: 'Plataformas de la AETG'
+  provider: menu_block
+  label_display: '0'
+  follow: false
+  follow_parent: child
+  level: 1
+  depth: 0
+  expand_all_items: false
+  parent: 'footer:menu_link_content:130074fa-adaa-4dcb-a3ff-83b6190f608d'
+  suggestion: footer
+  label_type: fixed
+  label_link: true
+visibility: {  }

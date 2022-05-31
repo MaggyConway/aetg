@@ -1,0 +1,184 @@
+uuid: 5b00d8f5-8920-4f91-b980-04e143e73b28
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.documentacion_de_escuela.field_administrative_area
+    - field.field.node.documentacion_de_escuela.field_alumnos
+    - field.field.node.documentacion_de_escuela.field_ano_formativo
+    - field.field.node.documentacion_de_escuela.field_correo_electronico
+    - field.field.node.documentacion_de_escuela.field_country
+    - field.field.node.documentacion_de_escuela.field_director
+    - field.field.node.documentacion_de_escuela.field_documentos_de_escuela
+    - field.field.node.documentacion_de_escuela.field_locality
+    - field.field.node.documentacion_de_escuela.field_mobile
+    - field.field.node.documentacion_de_escuela.field_phone
+    - field.field.node.documentacion_de_escuela.field_postal_code
+    - field.field.node.documentacion_de_escuela.field_school_name
+    - field.field.node.documentacion_de_escuela.field_street
+    - field.field.node.documentacion_de_escuela.field_tipo_de_envio
+    - field.field.node.documentacion_de_escuela.field_training_manager
+    - node.type.documentacion_de_escuela
+  module:
+    - datetime
+    - field_group
+    - file
+    - user
+third_party_settings:
+  field_group:
+    group_d:
+      children:
+        - field_country
+        - field_street
+        - field_locality
+        - field_postal_code
+        - field_administrative_area
+      parent_name: ''
+      weight: 6
+      format_type: fieldset
+      region: content
+      format_settings:
+        show_empty_fields: false
+        id: ''
+        classes: ''
+        description: ''
+      label: Dirección
+id: node.documentacion_de_escuela.default
+targetEntityType: node
+bundle: documentacion_de_escuela
+mode: default
+content:
+  field_administrative_area:
+    weight: 18
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_alumnos:
+    label: above
+    weight: 11
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  field_ano_formativo:
+    label: inline
+    weight: 10
+    type: datetime_default
+    settings:
+      format_type: long
+      timezone_override: ''
+    third_party_settings: {  }
+    region: content
+  field_correo_electronico:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_country:
+    weight: 14
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_director:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_documentos_de_escuela:
+    label: above
+    weight: 12
+    type: file_table
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    region: content
+  field_locality:
+    weight: 16
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_mobile:
+    weight: 5
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_phone:
+    weight: 4
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_postal_code:
+    weight: 17
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_school_name:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_street:
+    weight: 15
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tipo_de_envio:
+    label: above
+    weight: 9
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_training_manager:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  links:
+    weight: 13
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  breadcrumbs: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  langcode: true
+  private_message_link: true
+  search_api_excerpt: true

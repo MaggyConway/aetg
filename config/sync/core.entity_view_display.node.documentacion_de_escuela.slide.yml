@@ -1,0 +1,99 @@
+uuid: 497943e1-2986-44cc-8924-bafd8a07955a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.slide
+    - field.field.node.documentacion_de_escuela.field_administrative_area
+    - field.field.node.documentacion_de_escuela.field_alumnos
+    - field.field.node.documentacion_de_escuela.field_ano_formativo
+    - field.field.node.documentacion_de_escuela.field_correo_electronico
+    - field.field.node.documentacion_de_escuela.field_country
+    - field.field.node.documentacion_de_escuela.field_director
+    - field.field.node.documentacion_de_escuela.field_documentos_de_escuela
+    - field.field.node.documentacion_de_escuela.field_locality
+    - field.field.node.documentacion_de_escuela.field_mobile
+    - field.field.node.documentacion_de_escuela.field_phone
+    - field.field.node.documentacion_de_escuela.field_postal_code
+    - field.field.node.documentacion_de_escuela.field_school_name
+    - field.field.node.documentacion_de_escuela.field_street
+    - field.field.node.documentacion_de_escuela.field_tipo_de_envio
+    - field.field.node.documentacion_de_escuela.field_training_manager
+    - node.type.documentacion_de_escuela
+  module:
+    - layout_builder
+    - layout_discovery
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: true
+    sections:
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: 'two column'
+          column_widths: 33-67
+        components:
+          972ff839-1adb-4be9-b521-dea8c8bdabb6:
+            uuid: 972ff839-1adb-4be9-b521-dea8c8bdabb6
+            region: second
+            configuration:
+              id: 'field_block:node:documentacion_de_escuela:title'
+              label: Title
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components: {  }
+        third_party_settings: {  }
+id: node.documentacion_de_escuela.slide
+targetEntityType: node
+bundle: documentacion_de_escuela
+mode: slide
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  addtoany: true
+  breadcrumbs: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_administrative_area: true
+  field_alumnos: true
+  field_ano_formativo: true
+  field_correo_electronico: true
+  field_country: true
+  field_director: true
+  field_documentos_de_escuela: true
+  field_locality: true
+  field_mobile: true
+  field_phone: true
+  field_postal_code: true
+  field_school_name: true
+  field_street: true
+  field_tipo_de_envio: true
+  field_training_manager: true
+  langcode: true
+  private_message_link: true
+  search_api_excerpt: true

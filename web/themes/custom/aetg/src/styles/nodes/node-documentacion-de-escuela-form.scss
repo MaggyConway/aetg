@@ -1,0 +1,91 @@
+.node-documentacion-de-escuela-form, 
+.node-documentacion-de-escuela-edit-form {
+    @include main-container;
+    margin: 30px auto 0;
+    
+    > .form-wrapper {
+        width: 100%;
+    }
+    
+    > .form-wrapper.field--name-field, .fieldset-wrapper > .field--name-field {
+        
+        &-school-name, &-director, &-training-manager,
+        &-correo-electronico, &-phone, &-mobile,
+        &-country, &-street, &-locality,
+        &-postal-code, &-administrative-area {
+            width: calc(49% - 32px);
+            display: inline-block;
+            margin: 0 0 16px;
+            
+            > .form-item {
+                margin: 0 16px;
+            }
+        }
+    }
+    
+    fieldset.form-wrapper {
+        width: 100%;
+    }
+    
+    .description {
+        font-size: 13px !important;
+        font-weight: 300 !important;
+        color: $color-A !important;
+        margin: 8px 0;
+        padding-left: 19px;
+        max-width: 70%;
+    }
+
+    .details-description {
+        font-size: 16px;
+        font-weight: 300;
+        color: $color-1;
+        strong {
+            font-weight: 600;
+        }
+    }
+    
+    #edit-preview {
+        @include btn-white;
+    }
+    
+    h4 {
+        margin-bottom: 16px;
+        font-weight: bold;
+        font-size: 14px;
+        color: $color-1;
+        width: 100%;
+        display: block;
+    }
+
+    details, h4 {
+        margin-top: 36px;
+    }
+
+    table {
+        td {
+            .form-type-textfield {
+                > input {
+                    width: calc(100% - 16px);
+                }
+            }
+        }
+
+        td.field-multiple-drag {
+            height: 100%;
+            margin: 0;
+            padding: 0 !important;
+    
+            > a.tabledrag-handle {
+                display: block;
+                height: 42px;
+                margin: 16px !important;
+    
+                > .handle {
+                    margin: 0;
+                    height: 42px !important;
+                }
+            }
+        }
+    }
+}

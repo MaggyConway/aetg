@@ -1,0 +1,18 @@
+uuid: ba1d4b09-020d-4fb3-86a2-6b54e6bd90b8
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraph_view_mode
+    - paragraphs_browser
+third_party_settings:
+  paragraphs_browser:
+    image_path: 'public://News_slider.png'
+  paragraph_view_mode:
+    enabled: false
+id: news_slider
+label: 'News Slider'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

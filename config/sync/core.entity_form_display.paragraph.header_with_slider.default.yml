@@ -1,0 +1,29 @@
+uuid: f68e644d-bc09-415f-a8b4-b0f57c97f795
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.header_with_slider.field_slider
+    - paragraphs.paragraphs_type.header_with_slider
+  module:
+    - paragraphs
+id: paragraph.header_with_slider.default
+targetEntityType: paragraph
+bundle: header_with_slider
+mode: default
+content:
+  field_slider:
+    type: entity_reference_paragraphs
+    weight: 0
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true

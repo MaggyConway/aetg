@@ -1,0 +1,15 @@
+.field--name-field-acceda-a-formularios {
+    > .field__item {
+        > a {
+            font-weight: 700;
+            &:before {
+                content: "»";
+                padding-right: 5px;
+            }
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 8px;
+        }
+    }
+}

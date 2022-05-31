@@ -1,0 +1,13 @@
+uuid: 3ba65c9c-af57-42ef-89e0-081140604c6c
+langcode: es
+status: true
+dependencies:
+  module:
+    - webform
+_core:
+  default_config_hash: n4gTFiUsdp7gw6yWUlDbKFEasZLCgXWWCmm7eJejay0
+id: webform_submission_make_unsticky_action
+label: 'Desmarcar envío'
+type: webform_submission
+plugin: webform_submission_make_unsticky_action
+configuration: {  }

@@ -1,0 +1,353 @@
+uuid: 3c397e3b-6e7d-4ad2-8d79-97c63725aaf8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.news.body
+    - field.field.node.news.field_acceda_a_formularios
+    - field.field.node.news.field_adjunto
+    - field.field.node.news.field_album
+    - field.field.node.news.field_documento_adjunto_publico
+    - field.field.node.news.field_emisor
+    - field.field.node.news.field_eventos
+    - field.field.node.news.field_image
+    - field.field.node.news.field_imagen_destacada
+    - field.field.node.news.field_media
+    - field.field.node.news.field_mostrar_como_destacado_en_
+    - field.field.node.news.field_news_category
+    - field.field.node.news.field_paragraphs
+    - field.field.node.news.field_permisos_de_acceso
+    - field.field.node.news.field_relacionados
+    - field.field.node.news.field_texto_destacado
+    - node.type.news
+  module:
+    - aetg_common
+    - ctools
+    - entity_reference_revisions
+    - file
+    - image
+    - layout_builder
+    - layout_discovery
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: Header
+          layout_builder_styles_style: ''
+        components:
+          658ee00f-baca-48b9-a395-8e6913fc4201:
+            uuid: 658ee00f-baca-48b9-a395-8e6913fc4201
+            region: content
+            configuration:
+              id: 'entity_view:node'
+              label: 'Entity view (Content)'
+              provider: ctools
+              label_display: '0'
+              view_mode: header
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          fb0e1795-6de5-45e7-8a0b-317665ff8b74:
+            uuid: fb0e1795-6de5-45e7-8a0b-317665ff8b74
+            region: content
+            configuration:
+              id: 'field_block:node:news:field_paragraphs'
+              label: Paragraphs
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: visually_hidden
+                type: entity_reference_revisions_entity_view
+                settings:
+                  view_mode: default
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 1
+          947d772b-9d8b-4ee0-98a3-26ba26b24019:
+            uuid: 947d772b-9d8b-4ee0-98a3-26ba26b24019
+            region: content
+            configuration:
+              id: aetg_restriction_message_block
+              label: 'AETG Restricted Document Access Message Block'
+              provider: aetg_common
+              label_display: '0'
+              context_mapping: {  }
+            additional:
+              layout_builder_styles_style: ''
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: Documents
+          layout_builder_styles_style: document_s_parent
+        components:
+          fc2206b4-4e4e-4fa6-a848-298e6568dd52:
+            uuid: fc2206b4-4e4e-4fa6-a848-298e6568dd52
+            region: content
+            configuration:
+              id: 'field_block:node:news:field_documento_adjunto_publico'
+              label: 'Documentos públicos'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: commerce_file_download_link
+                settings:
+                  use_description_as_link_text: true
+                third_party_settings:
+                  empty_fields:
+                    handler: ''
+                  field_formatter_class:
+                    class: ''
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional:
+              layout_builder_styles_style: ''
+            weight: 1
+          259dca7d-e84f-4f40-b37c-fc213da79919:
+            uuid: 259dca7d-e84f-4f40-b37c-fc213da79919
+            region: content
+            configuration:
+              id: 'field_block:node:news:field_adjunto'
+              label: 'Documentos privados'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: commerce_file_download_link
+                settings:
+                  use_description_as_link_text: true
+                third_party_settings:
+                  empty_fields:
+                    handler: ''
+                  field_formatter_class:
+                    class: ''
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional:
+              layout_builder_styles_style: ''
+            weight: 2
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: 'Véase también'
+          layout_builder_styles_style: ''
+        components:
+          d7205792-5c00-4c69-b3ad-776d262eaa5f:
+            uuid: d7205792-5c00-4c69-b3ad-776d262eaa5f
+            region: content
+            configuration:
+              id: 'field_block:node:news:field_relacionados'
+              label: 'Véase también'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: entity_reference_label
+                settings:
+                  link: true
+                third_party_settings:
+                  empty_fields:
+                    handler: ''
+                  field_formatter_class:
+                    class: ''
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional:
+              layout_builder_styles_style: ''
+            weight: 1
+          ca8977e1-3666-4d10-bd54-862608b8074b:
+            uuid: ca8977e1-3666-4d10-bd54-862608b8074b
+            region: content
+            configuration:
+              id: 'field_block:node:news:field_eventos'
+              label: 'Eventos relacionados'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: related_event
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+id: node.news.default
+targetEntityType: node
+bundle: news
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_acceda_a_formularios:
+    weight: 114
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_adjunto:
+    weight: 110
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  field_album:
+    weight: 119
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_documento_adjunto_publico:
+    weight: 109
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  field_emisor:
+    weight: 112
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_eventos:
+    weight: 111
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_image:
+    weight: 120
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_imagen_destacada:
+    weight: 113
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_media:
+    weight: 103
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_mostrar_como_destacado_en_:
+    weight: 115
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_news_category:
+    weight: 107
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_paragraphs:
+    weight: 106
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
+  field_permisos_de_acceso:
+    weight: 116
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_relacionados:
+    weight: 118
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_texto_destacado:
+    weight: 117
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  addtoany: true
+  breadcrumbs: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  langcode: true
+  private_message_link: true
+  search_api_excerpt: true

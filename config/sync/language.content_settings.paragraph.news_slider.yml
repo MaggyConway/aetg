@@ -1,0 +1,11 @@
+uuid: f3814399-3026-48c3-ba06-2f39076e1a66
+langcode: es
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.news_slider
+id: paragraph.news_slider
+target_entity_type_id: paragraph
+target_bundle: news_slider
+default_langcode: site_default
+language_alterable: false

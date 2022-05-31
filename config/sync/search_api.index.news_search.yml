@@ -1,0 +1,219 @@
+uuid: babc23a5-9355-4a4d-b257-f3e62b5102ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - field.storage.node.field_emisor
+    - field.storage.node.field_news_category
+    - field.storage.node.field_paragraphs
+    - field.storage.paragraph.field_text
+    - search_api.server.database
+  module:
+    - node
+    - paragraphs
+    - search_api
+id: news_search
+name: 'News Search'
+description: ''
+read_only: false
+field_settings:
+  body:
+    label: Body
+    datasource_id: 'entity:node'
+    property_path: body
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.body
+  created:
+    label: 'Authored on'
+    datasource_id: 'entity:node'
+    property_path: created
+    type: date
+    dependencies:
+      module:
+        - node
+  field_emisor:
+    label: 'Emisor de noticia'
+    datasource_id: 'entity:node'
+    property_path: field_emisor
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_emisor
+  field_news_category:
+    label: 'News Category'
+    datasource_id: 'entity:node'
+    property_path: field_news_category
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_news_category
+  field_text:
+    label: 'Paragraphs » Paragraph » Comment'
+    datasource_id: 'entity:node'
+    property_path: 'field_paragraphs:entity:field_text'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_paragraphs
+        - field.storage.paragraph.field_text
+      module:
+        - paragraphs
+  node_grants:
+    label: 'Node access information'
+    property_path: search_api_node_grants
+    type: string
+    indexed_locked: true
+    type_locked: true
+    hidden: true
+  status:
+    label: status
+    datasource_id: 'entity:node'
+    property_path: status
+    type: boolean
+    indexed_locked: true
+    type_locked: true
+    dependencies:
+      module:
+        - node
+  summary:
+    label: 'Body » Summary'
+    datasource_id: 'entity:node'
+    property_path: 'body:summary'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.body
+  title:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: title
+    type: text
+    boost: !!float 3
+    dependencies:
+      module:
+        - node
+  uid:
+    label: uid
+    datasource_id: 'entity:node'
+    property_path: uid
+    type: integer
+    indexed_locked: true
+    type_locked: true
+    dependencies:
+      module:
+        - node
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: false
+      selected:
+        - news
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  content_access:
+    weights:
+      preprocess_query: -30
+  entity_status: {  }
+  ignorecase:
+    all_fields: false
+    fields:
+      - body
+      - field_text
+      - summary
+      - title
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+  language_with_fallback: {  }
+  rendered_item: {  }
+  stopwords:
+    all_fields: false
+    fields:
+      - body
+      - field_text
+      - summary
+      - title
+    stopwords:
+      - a
+      - an
+      - and
+      - are
+      - as
+      - at
+      - be
+      - but
+      - by
+      - for
+      - if
+      - in
+      - into
+      - is
+      - it
+      - 'no'
+      - not
+      - of
+      - 'on'
+      - or
+      - s
+      - such
+      - t
+      - that
+      - the
+      - their
+      - then
+      - there
+      - these
+      - they
+      - this
+      - to
+      - was
+      - will
+      - with
+    weights:
+      preprocess_index: -5
+      preprocess_query: -2
+  tokenizer:
+    all_fields: false
+    fields:
+      - body
+      - field_text
+      - summary
+      - title
+    ignored: ._-
+    spaces: ''
+    overlap_cjk: 1
+    minimum_word_size: '3'
+    weights:
+      preprocess_index: -6
+      preprocess_query: -6
+  transliteration:
+    all_fields: false
+    fields:
+      - body
+      - field_text
+      - summary
+      - title
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+  type_boost:
+    boosts:
+      'entity:node':
+        datasource_boost: !!float 1
+    weights:
+      preprocess_index: 0
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  index_directly: true
+  cron_limit: 50
+  track_changes_in_references: true
+server: database

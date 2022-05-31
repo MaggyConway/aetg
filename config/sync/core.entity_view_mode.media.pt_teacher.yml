@@ -1,0 +1,10 @@
+uuid: ba5789a2-266d-4831-972f-e2d2739f95ba
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.pt_teacher
+label: 'PT Teacher'
+targetEntityType: media
+cache: true

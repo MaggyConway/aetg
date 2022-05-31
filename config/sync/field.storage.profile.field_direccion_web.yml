@@ -1,0 +1,23 @@
+uuid: eef7a110-2136-4d97-b772-5fe85b532fb9
+langcode: und
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - link
+    - profile
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: profile.field_direccion_web
+field_name: field_direccion_web
+entity_type: profile
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

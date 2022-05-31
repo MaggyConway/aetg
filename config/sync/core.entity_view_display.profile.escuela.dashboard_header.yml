@@ -1,0 +1,219 @@
+uuid: f4e830dd-21c7-48a1-8554-ab2d8217f01d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.profile.dashboard_header
+    - field.field.profile.escuela.field_bic
+    - field.field.profile.escuela.field_cronograma
+    - field.field.profile.escuela.field_descripcion_escuela
+    - field.field.profile.escuela.field_direccion
+    - field.field.profile.escuela.field_direccion_web
+    - field.field.profile.escuela.field_director_escuela
+    - field.field.profile.escuela.field_dni_cif
+    - field.field.profile.escuela.field_docentes_aetg
+    - field.field.profile.escuela.field_domiciliacion_banco
+    - field.field.profile.escuela.field_email
+    - field.field.profile.escuela.field_envio_de_email
+    - field.field.profile.escuela.field_fax
+    - field.field.profile.escuela.field_fecha_de_firma_de_la_domic
+    - field.field.profile.escuela.field_geofield
+    - field.field.profile.escuela.field_iban_
+    - field.field.profile.escuela.field_imagen_logo
+    - field.field.profile.escuela.field_justificante_bancario
+    - field.field.profile.escuela.field_moroso
+    - field.field.profile.escuela.field_motivo_baja_aetg
+    - field.field.profile.escuela.field_nombre_de_escuela
+    - field.field.profile.escuela.field_profesorado
+    - field.field.profile.escuela.field_programa_detallado
+    - field.field.profile.escuela.field_responsable_formacion_esc
+    - field.field.profile.escuela.field_telefono
+    - field.field.profile.escuela.field_telefono_2
+    - field.field.profile.escuela.field_tipo_de_miembro
+    - profile.type.escuela
+  module:
+    - field_group
+    - image
+    - layout_builder
+third_party_settings:
+  field_group:
+    group_info_tabs:
+      children: {  }
+      parent_name: ''
+      weight: 17
+      label: Info
+      format_settings:
+        classes: ' group-info-tabs field-group-accordion'
+        description: ''
+        effect: bounceslide
+      format_type: accordion
+      region: hidden
+    group_tabs_escuela:
+      children:
+        - group_descripcion_tab
+        - group_profesorado_tab
+        - group_programa_tab
+        - group_cronograma_tab
+      parent_name: ''
+      weight: 16
+      label: 'Tabs escuela'
+      format_settings:
+        formatter: collapsible
+        classes: ' group-tabs-escuela field-group-htabs'
+        description: ''
+        direction: horizontal
+      format_type: tabs
+      region: hidden
+    group_descripcion_tab:
+      children:
+        - field_descripcion_escuela
+      parent_name: group_tabs_escuela
+      weight: 22
+      label: Descripción
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: ' group-descripcion-tab field-group-htab'
+      format_type: tab
+      region: hidden
+    group_profesorado_tab:
+      children:
+        - field_docentes_aetg
+        - field_profesorado
+      parent_name: group_tabs_escuela
+      weight: 23
+      label: Profesorado
+      format_settings:
+        formatter: collapsible
+        description: ''
+        classes: ' group-profesorado-tab field-group-fieldset'
+        id: ''
+      format_type: tab
+      region: hidden
+    group_programa_tab:
+      children:
+        - field_programa_detallado
+      parent_name: group_tabs_escuela
+      weight: 24
+      label: Programa
+      format_settings:
+        formatter: collapsible
+        description: ''
+        classes: ' group-programa-tab field-group-fieldset'
+        id: ''
+      format_type: tab
+      region: hidden
+    group_cronograma_tab:
+      children:
+        - field_cronograma
+      parent_name: group_tabs_escuela
+      weight: 25
+      label: Cronograma
+      format_settings:
+        formatter: collapsible
+        description: ''
+        classes: ' group-cronograma-tab field-group-fieldset'
+        id: ''
+      format_type: tab
+      region: hidden
+  layout_builder:
+    allow_custom: false
+    enabled: true
+    sections:
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: ''
+          column_widths: 25-75
+          layout_builder_styles_style: ''
+        components:
+          7f72633d-86bf-408d-9c5d-626d9115f728:
+            uuid: 7f72633d-86bf-408d-9c5d-626d9115f728
+            region: first
+            configuration:
+              id: 'field_block:profile:escuela:field_imagen_logo'
+              label: 'Foto de logo'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: image
+                settings:
+                  image_style: user_picture
+                  image_link: ''
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+          dc8e4d69-43cb-4fbf-a1c1-bd1fb63c5083:
+            uuid: dc8e4d69-43cb-4fbf-a1c1-bd1fb63c5083
+            region: second
+            configuration:
+              id: 'field_block:profile:escuela:field_nombre_de_escuela'
+              label: 'Nombre de escuela'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+id: profile.escuela.dashboard_header
+targetEntityType: profile
+bundle: escuela
+mode: dashboard_header
+content:
+  field_imagen_logo:
+    type: image
+    weight: 0
+    region: content
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  breadcrumbs: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_bic: true
+  field_cronograma: true
+  field_descripcion_escuela: true
+  field_direccion: true
+  field_direccion_web: true
+  field_director_escuela: true
+  field_dni_cif: true
+  field_docentes_aetg: true
+  field_domiciliacion_banco: true
+  field_email: true
+  field_envio_de_email: true
+  field_fax: true
+  field_fecha_de_firma_de_la_domic: true
+  field_geofield: true
+  field_iban_: true
+  field_justificante_bancario: true
+  field_moroso: true
+  field_motivo_baja_aetg: true
+  field_nombre_de_escuela: true
+  field_profesorado: true
+  field_programa_detallado: true
+  field_responsable_formacion_esc: true
+  field_telefono: true
+  field_telefono_2: true
+  field_tipo_de_miembro: true
+  search_api_excerpt: true

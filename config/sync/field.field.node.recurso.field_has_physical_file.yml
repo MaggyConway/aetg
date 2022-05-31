@@ -1,0 +1,23 @@
+uuid: 8aa6314d-1f0c-4199-9577-6c3738f066dc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_has_physical_file
+    - node.type.recurso
+id: node.recurso.field_has_physical_file
+field_name: field_has_physical_file
+entity_type: node
+bundle: recurso
+label: 'Formulario para productos físicos'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

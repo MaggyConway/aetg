@@ -1,0 +1,5 @@
+password_generate: false
+password_length: 10
+_core:
+  default_config_hash: Akz_9b9qnri5z70O86-vomcrmFP2dYKMMcxJ8IgSwrQ
+langcode: es

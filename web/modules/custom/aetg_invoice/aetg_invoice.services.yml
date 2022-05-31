@@ -1,0 +1,8 @@
+services:
+  aetg_invoice.invoice_filename_subscriber:
+    class: Drupal\aetg_invoice\EventSubscriber\InvoiceFilenameSubscriber
+    tags:
+      - { name: event_subscriber }
+  aetg_invoice.invoice_service:
+    class: Drupal\aetg_invoice\InvoiceService
+    arguments: ['@commerce_order.adjustment_transformer']

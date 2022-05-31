@@ -1,0 +1,11 @@
+uuid: bf1b8c4a-e256-4274-b72d-d50d8d4694e8
+langcode: en
+status: true
+dependencies: {  }
+id: profile_table
+label: table-container
+classes: table-container
+type: component
+weight: 0
+block_restrictions: {  }
+layout_restrictions: {  }

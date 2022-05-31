@@ -1,0 +1,29 @@
+uuid: 1e73b7c2-a25d-44ec-9b39-f2c77c8980f7
+langcode: es
+status: true
+dependencies:
+  config:
+    - facets.facet.videos_filtrar_por_temas
+  module:
+    - facets
+    - system
+  theme:
+    - aetg
+id: videosfiltrarportemas
+theme: aetg
+region: content
+weight: -4
+provider: null
+plugin: 'facet_block:videos_filtrar_por_temas'
+settings:
+  id: 'facet_block:videos_filtrar_por_temas'
+  label: 'Videos: Filtrar por temas'
+  provider: facets
+  label_display: '0'
+  block_id: videosfiltrarportemas
+visibility:
+  request_path:
+    id: request_path
+    pages: /gestalt/recursos/videos
+    negate: false
+    context_mapping: {  }

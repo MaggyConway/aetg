@@ -1,0 +1,13 @@
+uuid: dadae435-6877-4436-87b5-5685c6666f4b
+langcode: es
+status: true
+dependencies:
+  enforced:
+    module:
+      - devel
+_core:
+  default_config_hash: 3V-l1uuTcyirYOGLPZV5HWaDfr02uEbWZJIwc8Byz-c
+id: devel
+label: Desarrollo
+description: 'Enlaces relacionados con el módulo Devel.'
+locked: true

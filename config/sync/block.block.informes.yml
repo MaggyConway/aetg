@@ -1,0 +1,22 @@
+uuid: 1be66221-a2cc-4311-98c4-d744f54e6790
+langcode: es
+status: false
+dependencies:
+  config:
+    - simple_block.simple_block.informes
+  module:
+    - simple_block
+  theme:
+    - adminimal_theme
+id: informes
+theme: adminimal_theme
+region: header
+weight: null
+provider: null
+plugin: 'simple_block:informes'
+settings:
+  id: 'simple_block:informes'
+  label: Informes
+  provider: simple_block
+  label_display: visible
+visibility: {  }

@@ -1,0 +1,28 @@
+uuid: e55bff90-5a1f-4c9e-970b-969dbeff5154
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_imagen
+    - media.type.image
+    - node.type.recurso
+id: node.recurso.field_imagen
+field_name: field_imagen
+entity_type: node
+bundle: recurso
+label: Imagen
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

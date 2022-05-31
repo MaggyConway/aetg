@@ -1,0 +1,24 @@
+uuid: 641a6591-ee66-4d0a-98d1-16a7213b6bde
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_order.commerce_order_item_type.event
+    - core.entity_form_mode.commerce_order_item.add_to_cart
+  module:
+    - commerce_product
+id: commerce_order_item.event.add_to_cart
+targetEntityType: commerce_order_item
+bundle: event
+mode: add_to_cart
+content:
+  purchased_entity:
+    type: commerce_product_variation_attributes
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  quantity: true
+  unit_price: true

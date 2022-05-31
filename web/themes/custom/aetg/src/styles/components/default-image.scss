@@ -1,0 +1,58 @@
+.default-image-placeholder {
+  background: url('../../assets/images/no-image-aetg.png') no-repeat center;
+  background-size: cover;
+  width: auto;
+  height: 175px;
+  margin-bottom: 15px;
+}
+
+.node--type-recurso .default-image-placeholder {
+  background-image: url('../../assets/images/no-image-aetg-ct-recurso.png');
+  background-size: 50px;
+  background-color: $color-F7;
+}
+
+/*
+  Tesinas = 50
+  Revistas = 53
+  Libros = 290
+  Webs = 1116
+  Newsletters = 458
+  Artículos = 51
+  Vídeos = 52
+*/
+.node--type-recurso {
+  &[data-resource-type-term-id="50"] .default-image-placeholder {
+    background-image: url('../../assets/images/icon-library-theses.svg');
+    background-size: 40px;
+  }
+
+  &[data-resource-type-term-id="51"] .default-image-placeholder {
+    background-image: url('../../assets/images/icon-library-articles.svg');
+  }
+
+  &[data-resource-type-term-id="52"] .default-image-placeholder {
+    background-image: url('../../assets/images/icon-library-videos.svg');
+  }
+
+  &[data-resource-type-term-id="53"] .default-image-placeholder {
+    background-image: url('../../assets/images/icon-library-journals.svg');
+  }
+
+  &[data-resource-type-term-id="290"] .default-image-placeholder {
+    background-image: url('../../assets/images/icon-library-books.svg');
+  }
+
+  &[data-resource-type-term-id="458"] .default-image-placeholder {
+    background-image: url('../../assets/images/icon-library-blogs.svg');
+  }
+
+  &[data-resource-type-term-id="1116"] .default-image-placeholder {
+    background-image: url('../../assets/images/icon-library-web.svg');
+  }
+}
+
+.node--view-mode-teaser .default-image-placeholder {
+  // height: 175px;
+  height: 215px;
+}

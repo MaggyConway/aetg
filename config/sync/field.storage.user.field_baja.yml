@@ -1,0 +1,18 @@
+uuid: 348f3922-9471-4d59-9dfc-9b9491e7b3fb
+langcode: und
+status: true
+dependencies:
+  module:
+    - user
+id: user.field_baja
+field_name: field_baja
+entity_type: user
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

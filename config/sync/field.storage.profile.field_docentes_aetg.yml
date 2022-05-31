@@ -1,0 +1,24 @@
+uuid: 7e574176-719c-4dfb-9df5-e65808f76251
+langcode: und
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - profile
+    - user
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: profile.field_docentes_aetg
+field_name: field_docentes_aetg
+entity_type: profile
+type: entity_reference
+settings:
+  target_type: user
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

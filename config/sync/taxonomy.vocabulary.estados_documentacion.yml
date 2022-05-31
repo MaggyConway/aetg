@@ -1,0 +1,8 @@
+uuid: 79b83b62-9339-4098-b5a6-78d50991c4e1
+langcode: es
+status: true
+dependencies: {  }
+name: 'Estados de documentación'
+vid: estados_documentacion
+description: ''
+weight: 0

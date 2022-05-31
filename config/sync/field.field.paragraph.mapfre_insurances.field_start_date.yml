@@ -1,0 +1,21 @@
+uuid: c6815819-20e9-42e0-89ab-91c51d9ddfb3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_start_date
+    - paragraphs.paragraphs_type.mapfre_insurances
+  module:
+    - datetime
+id: paragraph.mapfre_insurances.field_start_date
+field_name: field_start_date
+entity_type: paragraph
+bundle: mapfre_insurances
+label: 'Fecha de Alta'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

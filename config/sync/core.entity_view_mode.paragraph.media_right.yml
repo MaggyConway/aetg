@@ -1,0 +1,10 @@
+uuid: 25d69715-401e-4642-938b-8d412cfd5e90
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.media_right
+label: 'Media Right'
+targetEntityType: paragraph
+cache: true

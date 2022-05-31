@@ -1,0 +1,11 @@
+uuid: 8f66cb18-1d11-484f-aa2f-598d90cb46b3
+langcode: es
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.member_slider_with_multiple_link
+id: paragraph.member_slider_with_multiple_link
+target_entity_type_id: paragraph
+target_bundle: member_slider_with_multiple_link
+default_langcode: site_default
+language_alterable: false

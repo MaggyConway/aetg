@@ -1,0 +1,16 @@
+uuid: 913ba1a3-74a1-4a55-b41a-4b40a32da264
+langcode: en
+status: true
+dependencies: {  }
+third_party_settings:
+  commerce_order:
+    customer_profile_type: false
+id: school_professional_information
+label: 'School professional information'
+display_label: ''
+multiple: false
+registration: false
+roles:
+  escuela: escuela
+allow_revisions: false
+new_revision: false

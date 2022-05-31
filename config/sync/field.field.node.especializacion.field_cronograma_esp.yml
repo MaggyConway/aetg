@@ -1,0 +1,21 @@
+uuid: e67fc140-ae25-4553-a71a-f478afc0ff3a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cronograma_esp
+    - node.type.especializacion
+  module:
+    - text
+id: node.especializacion.field_cronograma_esp
+field_name: field_cronograma_esp
+entity_type: node
+bundle: especializacion
+label: Cronograma
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

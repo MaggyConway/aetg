@@ -1,0 +1,29 @@
+uuid: 7b3edd39-1a0d-4f90-8096-e385e6e58db3
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_envio_de_email
+    - profile.type.informacion_privada
+    - taxonomy.vocabulary.enviar_email
+id: profile.informacion_privada.field_envio_de_email
+field_name: field_envio_de_email
+entity_type: profile
+bundle: informacion_privada
+label: 'Envio de email'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      enviar_email: enviar_email
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

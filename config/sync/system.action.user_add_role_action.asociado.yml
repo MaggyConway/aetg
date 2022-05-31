@@ -1,0 +1,14 @@
+uuid: 27865358-8f7e-4798-8ed3-c0ec940b6916
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.asociado
+  module:
+    - user
+id: user_add_role_action.asociado
+label: 'Add the asociado role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: asociado

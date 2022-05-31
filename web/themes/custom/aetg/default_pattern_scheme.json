@@ -1,0 +1,24 @@
+{
+	"folders": [
+		{
+			"name": "src",
+			"files": [
+				{
+					"name": "index.js",
+					"content": ""
+				},
+				{
+					"name": "style.scss",
+					"content": "@import '~normalize.css/normalize.css';\n@import '~variables';\n@import '~mixins';\n"
+				}
+			]
+		}
+	],
+
+	"files": [
+		{
+			"name": "entry.js",
+			"content": "import './src/index';\nimport './src/style.scss';\n"
+		}
+	]
+}

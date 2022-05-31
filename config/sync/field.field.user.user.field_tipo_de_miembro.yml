@@ -1,0 +1,31 @@
+uuid: a8c83f24-726b-4e9a-b156-63a6306231a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_tipo_de_miembro
+    - taxonomy.vocabulary.tipo_de_miembro
+    - taxonomy.vocabulary.tipo_de_miembro_feap
+  module:
+    - user
+id: user.user.field_tipo_de_miembro
+field_name: field_tipo_de_miembro
+entity_type: user
+bundle: user
+label: 'Tipo de miembro'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tipo_de_miembro: tipo_de_miembro
+      tipo_de_miembro_feap: tipo_de_miembro_feap
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: tipo_de_miembro
+field_type: entity_reference

@@ -1,0 +1,24 @@
+uuid: e8202a33-b509-4d2f-9934-9e05be08377e
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_envios_comerciales
+  module:
+    - user
+id: user.user.field_envios_comerciales
+field_name: field_envios_comerciales
+entity_type: user
+bundle: user
+label: 'Envíos comerciales'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Acepto recibir información comercial incluso por email.'
+  off_label: 'No acepto recibir información comercial incluso por email.'
+field_type: boolean

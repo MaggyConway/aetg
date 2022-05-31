@@ -1,0 +1,18 @@
+uuid: 6ff3fc19-31c5-413b-9c6d-94d28067f1d7
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraph_view_mode
+    - paragraphs_browser
+third_party_settings:
+  paragraphs_browser:
+    image_path: 'public://text.png'
+  paragraph_view_mode:
+    enabled: false
+id: text
+label: Text
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,29 @@
+uuid: e450d231-3eb5-488a-b336-f29ec1b65deb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_taxonomy_term
+    - paragraphs.paragraphs_type.feap_membership_type
+    - taxonomy.vocabulary.tipo_de_miembro_feap
+id: paragraph.feap_membership_type.field_taxonomy_term
+field_name: field_taxonomy_term
+entity_type: paragraph
+bundle: feap_membership_type
+label: 'Tipo de Membrecía'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tipo_de_miembro_feap: tipo_de_miembro_feap
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: tipo_de_miembro
+field_type: entity_reference

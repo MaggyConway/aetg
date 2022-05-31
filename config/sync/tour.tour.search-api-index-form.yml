@@ -1,0 +1,71 @@
+uuid: ac055d08-9897-4855-8e20-6defb54438f1
+langcode: es
+status: true
+dependencies:
+  module:
+    - search_api
+_core:
+  default_config_hash: TK3PjpP4I6WFh5JDY_L_c5XCiTyAZBBA9z0M9pcGjzo
+id: search-api-index-form
+label: 'Agregar o editar un índice de Search API'
+module: search_api
+routes:
+  -
+    route_name: entity.search_api_index.add_form
+  -
+    route_name: entity.search_api_index.edit_form
+tips:
+  search-api-index-form-introduction:
+    id: search-api-index-form-introduction
+    plugin: text
+    label: 'Añadir o editar un índice'
+    body: 'Este formulario se puede utilizar para editar un índice existente o añadir un nuevo índice a su sitio. Los índices definen un conjunto de datos que serán indexados y en los que se podrá buscar.'
+    weight: 1
+  search-api-index-form-name:
+    id: search-api-index-form-name
+    plugin: text
+    label: 'Nombre del índice'
+    body: 'Introduzca un nombre para identificar este índice. Por ejemplo, "Índice de contenido". Esto solo se mostrará en la interfaz de usuario de administración.'
+    weight: 2
+    attributes:
+      data-id: edit-name
+  search-api-index-form-datasources:
+    id: search-api-index-form-datasources
+    plugin: text
+    label: 'Orígenes de datos'
+    body: 'Los orígenes de datos definen los tipos de elementos que se indexarán en este índice. Por defecto, todas las entidades de contenido (como el contenido, los comentarios y los términos de taxonomía) estarán disponibles aquí, pero los módulos también pueden añadir las suyas propias.'
+    weight: 3
+    attributes:
+      data-id: edit-datasources
+  search-api-index-form-tracker:
+    id: search-api-index-form-tracker
+    plugin: text
+    label: Rastreador
+    body: 'An index''s tracker is the system that keeps track of which items there are available for the index, and which of them still need to be indexed. Changing the tracker of an existing index will lead to reindexing of all items.'
+    weight: 4
+    attributes:
+      data-id: edit-tracker
+  search-api-index-form-server:
+    id: search-api-index-form-server
+    plugin: text
+    label: Servidor
+    body: 'The search server that the index should use for indexing and searching. If no server is selected here, the index cannot be enabled. An index can only have one server, but a server can have any number of indexes.'
+    weight: 5
+    attributes:
+      data-id: edit-server
+  search-api-index-form-description:
+    id: search-api-index-form-description
+    plugin: text
+    label: 'Descripción del índice'
+    body: 'Optionally, enter a description to explain the function of the index in more detail. This will only be displayed in the admin user interface.'
+    weight: 6
+    attributes:
+      data-id: edit-description
+  search-api-index-form-options:
+    id: search-api-index-form-options
+    plugin: text
+    label: 'Opciones avanzadas'
+    body: 'These options allow more detailed configuration of index behavior, but can usually safely be ignored by inexperienced users.'
+    weight: 7
+    attributes:
+      data-id: edit-options

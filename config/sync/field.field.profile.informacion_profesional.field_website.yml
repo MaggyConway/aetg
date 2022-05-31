@@ -1,0 +1,23 @@
+uuid: 0e209558-f65d-4d8b-af47-007a6e1e40b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_website
+    - profile.type.informacion_profesional
+  module:
+    - link
+id: profile.informacion_profesional.field_website
+field_name: field_website
+entity_type: profile
+bundle: informacion_profesional
+label: 'Sitio web'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 0
+field_type: link

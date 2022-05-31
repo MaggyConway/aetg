@@ -1,0 +1,15 @@
+uuid: d8f81f5d-5878-41a8-838e-114251e8475c
+langcode: en
+status: true
+dependencies: {  }
+name: pt_image_title_text_and_link_default
+label: 'PT Image, title, text and link: Default'
+effects:
+  1c922870-15ae-48b7-a872-a808cb4c6d21:
+    uuid: 1c922870-15ae-48b7-a872-a808cb4c6d21
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 600
+      height: 400
+      anchor: center-center

@@ -1,0 +1,14 @@
+uuid: 17986f33-ddd7-430d-b828-00ef41bfdc6e
+langcode: es
+status: true
+dependencies:
+  enforced:
+    module:
+      - webform
+_core:
+  default_config_hash: zsfFP124dAM-sJkuEfnwaA7DN6o3-IsaXLgdNmObbYg
+id: country_names
+label: 'Nombres de países'
+category: Geográfico
+likert: false
+options: ''

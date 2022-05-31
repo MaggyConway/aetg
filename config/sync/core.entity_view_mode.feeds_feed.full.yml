@@ -1,0 +1,12 @@
+uuid: 14eb4977-8cba-4985-afd0-5218ee7824d9
+langcode: es
+status: false
+dependencies:
+  module:
+    - feeds
+_core:
+  default_config_hash: 8I9Vm3L0dLCdctKfCjpw5vLwMetyaJzxbWNMzb2V7-I
+id: feeds_feed.full
+label: 'Feed completo'
+targetEntityType: feeds_feed
+cache: true

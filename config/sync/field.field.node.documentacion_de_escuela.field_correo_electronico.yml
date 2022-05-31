@@ -1,0 +1,21 @@
+uuid: 2d85fe1a-00e0-42a2-9df8-bc5d8af47028
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_correo_electronico
+    - node.type.documentacion_de_escuela
+id: node.documentacion_de_escuela.field_correo_electronico
+field_name: field_correo_electronico
+entity_type: node
+bundle: documentacion_de_escuela
+label: 'Correo electrónico'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: '[current-user:escuela:field_email]'
+default_value_callback: field_default_token_default_value_callback
+settings: {  }
+field_type: email

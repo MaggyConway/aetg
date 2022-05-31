@@ -1,0 +1,19 @@
+uuid: a2679dc0-4a59-4e3a-b907-7d14185f3563
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_full_name
+    - profile.type.informacion_profesional
+id: profile.informacion_profesional.field_full_name
+field_name: field_full_name
+entity_type: profile
+bundle: informacion_profesional
+label: 'Nombre Completo'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

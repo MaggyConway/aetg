@@ -1,0 +1,10 @@
+uuid: 7385c916-7bc5-48bd-8593-54f9f8a6b89e
+langcode: en
+status: true
+dependencies: {  }
+id: header_with_slider
+label: 'Header with slider'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

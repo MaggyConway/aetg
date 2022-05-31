@@ -1,0 +1,36 @@
+uuid: e95e822b-c34e-4433-b37b-7397e1617c21
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+  theme:
+    - aetg
+id: pagetitle
+theme: aetg
+region: content
+weight: 2
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      book: book
+      destacado: destacado
+      dir_listing: dir_listing
+      documentacion_de_escuela: documentacion_de_escuela
+      documento_secretaria: documento_secretaria
+      especializacion: especializacion
+      homepage: homepage
+      pagina_de_menu: pagina_de_menu
+      webform: webform
+      webform_report: webform_report
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

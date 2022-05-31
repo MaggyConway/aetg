@@ -1,0 +1,29 @@
+.paragraph--type--multiple-links {
+  .field--name-field-title {
+    @include title-fz-16-lh-26-fw-600;
+    color: $color-1;
+    margin-bottom: 20px;
+
+    @include breakpoint(tablet-md) {
+      margin-bottom: 8px;
+    }
+  }
+
+  .field--name-field-links {
+    .field__item {
+      &:not(:last-child) {
+        margin-bottom: 18px;
+
+        @include breakpoint(tablet-md) {
+          margin-bottom: 8px;
+        }
+      }
+
+      a {
+        font-weight: 400;
+        font-size: 1em;
+        line-height: 27px;
+      }
+    }
+  }
+}

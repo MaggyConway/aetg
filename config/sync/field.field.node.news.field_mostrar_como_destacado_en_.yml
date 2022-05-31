@@ -1,0 +1,29 @@
+uuid: 91d962fb-f9f6-4cc2-a804-017331fc9236
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_mostrar_como_destacado_en_
+    - node.type.news
+    - taxonomy.vocabulary.habilitar_opcion
+id: node.news.field_mostrar_como_destacado_en_
+field_name: field_mostrar_como_destacado_en_
+entity_type: node
+bundle: news
+label: 'Mostrar como destacado en la página principal'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      habilitar_opcion: habilitar_opcion
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,18 @@
+uuid: 929ee5f6-5da6-4990-8c9a-63eb36c276b2
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraph_view_mode
+    - paragraphs_browser
+third_party_settings:
+  paragraphs_browser:
+    image_path: 'public://school_slider_with_multiple_links.png'
+  paragraph_view_mode:
+    enabled: false
+id: school_slider_with_multiple_link
+label: 'School Slider with multiple links'
+icon_uuid: null
+icon_default: null
+description: Formación
+behavior_plugins: {  }

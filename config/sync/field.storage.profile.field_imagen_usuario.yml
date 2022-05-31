@@ -1,0 +1,30 @@
+uuid: 15520ea6-43a4-4c90-8b44-2c131bba102c
+langcode: und
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - file
+    - image
+    - profile
+third_party_settings:
+  field_permissions:
+    permission_type: custom
+id: profile.field_imagen_usuario
+field_name: field_imagen_usuario
+entity_type: profile
+type: image
+settings:
+  uri_scheme: private
+  default_image:
+    uuid: ''
+  target_type: file
+  display_field: false
+  display_default: false
+module: image
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

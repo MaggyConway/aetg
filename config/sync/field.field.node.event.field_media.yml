@@ -1,0 +1,28 @@
+uuid: 9dc70685-3ad3-4f8b-beef-b490bb3a00e7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_media
+    - media.type.image
+    - node.type.event
+id: node.event.field_media
+field_name: field_media
+entity_type: node
+bundle: event
+label: 'Imagen de encabezado'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

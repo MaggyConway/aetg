@@ -1,0 +1,96 @@
+@mixin btn-primary {
+  @include text-fz-14-lh-20;
+  display: inline-block;
+  padding: 11px 33px 9px;
+  // border-radius: 5px;
+  border-radius: 9px 9px 0 9px;
+  transition: all .2s ease-in-out;
+  text-align: center;
+  border: 0.5px solid;
+  cursor: pointer;
+  overflow: hidden;
+  height: 42px;
+  
+  @include breakpoint(tablet) {
+    padding: 9px 15px 11px;
+    min-width: 110px;
+  }
+}
+
+@mixin btn-black {
+  @include btn-primary;
+  background-color: $color-2;
+  border-color: $color-2;
+  color: #fff;
+  
+  &:hover {
+    background-color: $blue-hover;
+    border-color: $blue-hover;
+  }
+  
+  &:active {
+    background-color: $color-76;
+    border-color: $color-76;
+  }
+  
+  &.is-disabled {
+    background-color: $color-C;
+    color: $color-E6;
+    border: none;
+  }
+}
+
+@mixin btn-white {
+  @include btn-primary;
+  background-color: #fff;
+  border-color: $color-C;
+  color: $color-1;
+  
+  &:hover {
+    border-color: $color-2;
+    background-color: #fff;
+  }
+  
+  &:active {
+    background-color: $color-76;
+    border-color: $color-76;
+    color: #fff;
+  }
+  
+  &.is-disabled {
+    background-color: #fff;
+    border-color: $color-C;
+    color: $color-E6;
+  }
+}
+
+@mixin btn-red {
+  @include btn-primary;
+  background-color: $red;
+  border-color: $red;
+  color: #fff;
+  
+  &:hover {
+    border-color: #CB4737;
+    background-color: #CB4737;
+    color: #fff;
+  }
+  
+  &:active {
+    background-color: #9C4237;
+    border-color: #9C4237;
+    color: #fff;
+  }
+  
+  &.is-disabled {
+    background-color: #CEBEBC;
+    color: $color-E6;
+    border: none;
+  }
+}
+
+.is-disabled {
+  &:hover {
+    cursor: not-allowed;
+  }
+}

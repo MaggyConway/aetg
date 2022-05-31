@@ -1,0 +1,23 @@
+uuid: 95c1ae82-28a2-49b6-8cf4-2cb7fd0ea588
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_link
+    - paragraphs.paragraphs_type.school_slider_with_multiple_link
+  module:
+    - link
+id: paragraph.school_slider_with_multiple_link.field_link
+field_name: field_link
+entity_type: paragraph
+bundle: school_slider_with_multiple_link
+label: Link
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

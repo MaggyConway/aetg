@@ -1,0 +1,19 @@
+uuid: 8ec99f7c-53cd-48a9-8109-77c64710a2aa
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'file:file:5192eedb-1992-48d3-9222-f6bbbc71ed5e'
+_core:
+  default_config_hash: ccmJnYDefjjUJ1_S8QUpDMgN41yZcLULtiTOdR1sJmo
+label: Factura
+id: default
+numberPattern: invoice_default
+logo: 5192eedb-1992-48d3-9222-f6bbbc71ed5e
+dueDays: null
+paymentTerms: ''
+footerText: ''
+traits: {  }
+workflow: invoice_default
+sendConfirmation: true
+confirmationBcc: example@mail.com

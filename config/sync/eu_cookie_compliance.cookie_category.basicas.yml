@@ -1,0 +1,9 @@
+uuid: 75ef4250-dddd-4cde-a064-39ee23a289c4
+langcode: es
+status: true
+dependencies: {  }
+id: basicas
+label: Esenciales
+description: 'Todas aquellas cookies necesarias para el correcto funcionamiento del sitio web.'
+checkbox_default_state: required
+weight: -9

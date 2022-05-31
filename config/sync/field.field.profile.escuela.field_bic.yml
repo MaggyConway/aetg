@@ -1,0 +1,19 @@
+uuid: a4535838-5017-4fad-ad39-eaac5a98f1db
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_bic
+    - profile.type.escuela
+id: profile.escuela.field_bic
+field_name: field_bic
+entity_type: profile
+bundle: escuela
+label: BIC
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

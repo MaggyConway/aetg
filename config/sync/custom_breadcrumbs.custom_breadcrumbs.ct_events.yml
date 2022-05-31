@@ -1,0 +1,15 @@
+uuid: 67c72cbf-4a51-4759-8ca5-44b422e6580a
+langcode: es
+status: true
+dependencies: {  }
+id: ct_events
+label: 'CT Eventos'
+description: ''
+entityType: node
+entityBundle: event
+language: es
+breadcrumbPaths: "/directorios\r\n/directorios/eventos\r\n/directorios/eventos/[node:field_event_type]"
+breadcrumbTitles: "Directorios\r\nEventos\r\n[node:field_event_type]\r\n"
+type: '1'
+pathPattern: ''
+extraCacheContexts: ''

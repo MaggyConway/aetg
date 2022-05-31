@@ -1,0 +1,11 @@
+uuid: bbc0897b-5e2d-4c5d-b5e7-6bf4e3b2c47f
+langcode: en
+status: true
+dependencies: {  }
+id: selected
+label: selected
+classes: selected
+type: component
+weight: 0
+block_restrictions: {  }
+layout_restrictions: {  }

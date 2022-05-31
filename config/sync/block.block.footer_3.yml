@@ -1,0 +1,31 @@
+uuid: 24bcd231-7429-45f6-a9fb-c9ffd179ce32
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - menu_block
+  theme:
+    - aetg
+id: footer_3
+theme: aetg
+region: footer
+weight: -19
+provider: null
+plugin: 'menu_block:footer'
+settings:
+  id: 'menu_block:footer'
+  label: Formación
+  provider: menu_block
+  label_display: '0'
+  follow: false
+  follow_parent: child
+  level: 1
+  depth: 0
+  expand_all_items: false
+  parent: 'footer:menu_link_content:016c8285-6f44-4630-916c-456ad7615da9'
+  suggestion: footer
+  label_type: fixed
+  label_link: true
+visibility: {  }

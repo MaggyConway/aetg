@@ -1,0 +1,19 @@
+uuid: 2392d8fb-5d86-4837-9993-fa5bf821905c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_training_manager
+    - profile.type.school_professional_information
+id: profile.school_professional_information.field_training_manager
+field_name: field_training_manager
+entity_type: profile
+bundle: school_professional_information
+label: 'Responsable de formación'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

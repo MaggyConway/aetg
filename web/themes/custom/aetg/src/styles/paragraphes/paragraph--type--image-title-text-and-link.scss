@@ -1,0 +1,124 @@
+.paragraph--type--image-title-text-and-link { // la tienda online
+
+  .layout--twocol-section {
+    flex-wrap: nowrap;
+    .layout__region {
+      &--first {
+        margin: 0 78px 0 0;
+
+        @include breakpoint(tablet-md) {
+          margin: 0 0 24px;
+        }
+      }
+
+      &--second {
+        margin: 0;
+      }
+    }
+
+    @include breakpoint(tablet-md) {
+      flex-direction: column;
+      width: 100%;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+  } 
+
+  
+  .field--name-field-title {
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  .field--type-image {
+    margin-bottom: 16px;
+    > .field__item {
+      text-align: center;
+    }
+  }
+
+  .field--name-field-text {
+    p {
+      @include text-fz-18-lh-32;
+      margin: 0;
+      
+      strong {
+        font-weight: 600;
+        font-size: inherit;
+        line-height: inherit;
+      }
+
+      a {        
+        img {
+          transition: all .2s ease;
+        }
+
+        &:hover {
+          img {
+            opacity: .6;
+          }
+        }
+
+        svg {
+          display: none;
+        }
+      }
+
+      &:first-of-type {
+        margin-bottom: 30px;
+        
+        @include breakpoint(mobile-large) {
+          margin-bottom: 20px;
+        }
+        
+        @include breakpoint(mobile-middle) {
+          margin-bottom: 10px;
+        }
+      }
+
+      &:nth-child(2) {
+        @include breakpoint(mobile-large) {
+          margin-bottom: 5px;
+        }
+      }
+
+      @include breakpoint(mobile-large) {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+  }
+
+  .field--name-field-link.btn-primary {
+    margin: 20px 0 0;
+  }
+
+  &.paragraph--view-mode--media-right {
+    > .layout--twocol-section {
+      flex-wrap: nowrap;
+      @include breakpoint(tablet-m) {
+        flex-direction: column-reverse;
+      }
+
+      .layout__region--second {
+        @include breakpoint(tablet-m) {
+          width: 100%;
+        }
+
+        @include breakpoint(mobile-middle) {
+          margin-bottom: 10px;
+        }
+      }
+
+      > .layout__region--first {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &.paragraph--view-mode--media-left {
+    .field--name-field-text p:first-of-type {
+      margin-bottom: 0;
+    }   
+  }
+}

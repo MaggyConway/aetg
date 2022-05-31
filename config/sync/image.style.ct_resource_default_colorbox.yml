@@ -1,0 +1,15 @@
+uuid: 887b9ede-f3d7-43ec-877e-6522a1676386
+langcode: es
+status: true
+dependencies: {  }
+name: ct_resource_default_colorbox
+label: 'CT Resource: Default - Colorbox'
+effects:
+  46160485-6197-45ea-9ec7-78a0a7b6577d:
+    uuid: 46160485-6197-45ea-9ec7-78a0a7b6577d
+    id: image_scale
+    weight: 1
+    data:
+      width: 600
+      height: 450
+      upscale: true

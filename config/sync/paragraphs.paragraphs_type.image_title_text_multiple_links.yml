@@ -1,0 +1,18 @@
+uuid: 9127ac66-79f1-4883-97fc-1dd4aa01bda4
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraph_view_mode
+    - paragraphs_browser
+third_party_settings:
+  paragraph_view_mode:
+    enabled: true
+  paragraphs_browser:
+    image_path: 'public://image_title_text_multiple_links.png'
+id: image_title_text_multiple_links
+label: 'Image, title, text and multiple links'
+icon_uuid: null
+icon_default: null
+description: 'La Asociación, La Terapia Gestalt'
+behavior_plugins: {  }

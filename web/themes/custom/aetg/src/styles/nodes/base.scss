@@ -1,0 +1,345 @@
+.node--view-mode-full:not(.node--type-landing-page) {
+	background-color: transparent;
+	
+	> .node__content {
+		> .layout--onecol {
+			&:not(:first-child) {
+				margin-top: 56px;
+				
+				@include breakpoint(mobile-large) {
+					margin-top: 35px;
+				}
+			}
+		}
+	}
+	
+	.field--name-title {
+		// @include h2;
+		font-size: 21px;
+		font-weight: 400;
+		line-height: 32px;
+	}
+	
+	img:not(.align-left):not(.align-right):not(.align-center) {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	
+	.field--name-field-paragraphs,
+	.field--name-field-paragraphs2,
+	.field--name-field-accordion,
+	.field--name-field-relacionados {
+		@include main-container;
+		margin: 50px auto;
+	}
+	
+	.block-field-blocknodeeventfield-paragraphs,
+	.block-field-blocknodenewsfield-paragraphs {
+		.field--name-field-paragraphs {
+			.field__item:first-child {
+				.paragraph:first-child.paragraph--type--image {
+					margin-top: 0;
+				}
+			}
+			
+			> .field__items > .field__item {
+				&:not(:last-child) {
+					margin-bottom: 56px;
+				}
+			}
+		}
+	}
+}
+
+.node--view-mode-full:not(.node--type-landing-page):not(.node--type-recurso) {
+	.field--name-field-paragraphs,
+	.field--name-field-paragraphs2,
+	.field--name-field-accordion,
+	.field--name-field-relacionados {
+		background-color: #fff;
+		padding: 40px 70px;
+		border-radius: 36px 36px 0 36px;
+	}
+}
+
+.node--view-mode-full {
+	img {
+		&.align-right {
+			margin: 20px 0 20px 20px;
+		}
+		
+		&.align-left {
+			margin: 20px 20px 20px 0;
+		}
+	}
+}
+
+.page-node-type-page {
+	.paragraph--type--slider {
+		.slick__slide {
+			position: relative;
+			z-index: 500;
+			img {
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+		}
+	}
+	
+	.paragraph--type--image-slider {
+		padding-left: 40px;
+		padding-right: 40px;
+		width: 100%;
+		margin: 56px auto;
+	}
+	
+	
+	.field--name-field-paragraphs {
+		margin-top: 56px !important;
+		
+		.field--name-field-text {
+			h2 {
+				@include h3;
+				margin-bottom: 16px;
+				
+				&:not(:first-of-type) {
+					margin-top: 56px;
+				}
+			}
+		}
+	}
+	
+	.field--name-field-paragraphs2 {
+		.paragraph--type--multiple-links {
+			margin-top: 0;
+		}
+	}
+	
+	.paragraph--type--video-area {
+		.field--name-field-title {
+			@include h3;
+		}
+		
+		> .field__items {
+			.field__item {
+				&:not(:first-child) {
+					margin-top: 30px;
+				}
+			}
+		}
+	}
+	
+	.paragraph--type--header-with-slider {
+		.text-wrapper {
+			@include main-container;
+			position: relative;
+			z-index: 50;
+			left: 0;
+			
+			@include breakpoint(IPad-Pro) {
+				padding-left: 40px;
+				padding-right: 40px;
+			}
+			
+			@include breakpoint(mobile-middle) {
+				padding-left: 20px;
+				padding-right: 20px;
+			}
+		}
+		
+		.field--name-field-text, .field--name-field-title {
+			max-width: 100%;
+		}
+		
+		.field--name-field-title {
+			margin-bottom: 10px;
+		}
+		
+		nav.slick__arrow {
+			.slick-prev {
+				@include breakpoint(IPad-Pro) {
+					left: 20px;
+				}
+				
+				@include breakpoint(tablet-m) {
+					left: 5px;
+				}
+				
+				@include breakpoint(mobile-middle) {
+					left: 10px;
+					width: 20px;
+					height: 20px !important;
+				}
+			}
+			
+			.slick-next {
+				@include breakpoint(IPad-Pro) {
+					right: 20px;
+				}
+				
+				@include breakpoint(tablet-m) {
+					right: 5px;
+				}
+				
+				@include breakpoint(mobile-middle) {
+					right: 10px;
+					width: 20px;
+					height: 20px !important;
+				}
+			}
+		}
+		
+		.field--name-field-image {
+			z-index: 1;
+		}
+	}
+	
+	.paragraph--type--multiple-links {
+		margin-top: 60px;
+		
+		.field--name-field-title {
+			@include h3;
+			@include event-title-spaces;
+			@include breakpoint(mobile-large) {
+				font-size: 20px;
+				line-height: 28px;
+			}
+		}
+		
+		.field--name-field-links {
+			margin-left: -25px;
+			margin-right: -25px;
+			width: 100%;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: stretch;
+			flex-wrap: wrap;
+			
+			.field__item {
+				margin-left: 25px;
+				margin-right: 25px;
+				width: 50%;
+			}
+			
+			@include breakpoint(mobile-large) {
+				column-count: unset;
+			}
+		}
+	}
+
+	.field--type-entity-reference-revisions.field__items {
+		> .field__item {
+			&:not(:last-child) {
+				margin-bottom: 16px;
+			}
+		}
+	}
+}
+
+
+.node--type-destacado, .node--type-documento-secretaria,
+.node--type-documentacion-de-escuela {
+	> .node__content {
+		@include main-container;
+		padding-top: 30px;
+		padding-bottom: 30px;
+		
+		> div {
+			margin-bottom: 56px;
+		}
+	}
+	
+	h2 {
+		@include h3;
+		margin-bottom: 16px;
+		
+		&:not(:first-of-type) {
+			margin-top: 56px;
+		}
+	}
+}
+
+.node--view-mode-teaser {
+	.field--type-entity-reference:not(.field--name-field-autor) {
+		> .field__item {
+			> a {
+				font-weight: 300;
+				font-size: 14px;
+				line-height: 18px;
+				white-space: nowrap;
+				display: inline-block;
+				color: $color-76;
+				background-color: $color-F2;
+				border-radius: 9px 9px 0 9px;
+				padding: 5px 10px;
+				margin-right: 10px;
+				margin-bottom: 10px;
+			}
+		}
+	}
+	
+	.field--type-datetime {
+		font-weight: 400;
+		font-size: 13px;
+		line-height: 16px;
+		letter-spacing: .05em;
+		text-transform: uppercase;
+		color: $color-A;
+		margin-bottom: 24px;
+	}
+}
+
+.page-node-type-documento-secretaria:not(.adminimal) {
+	.layout-content {
+		@include gray-paggings-wrapper;
+	}
+	.region-content {
+		@include main-container;
+		padding: 0 !important;
+		background-color: #fff;
+		border-radius: 36px 36px 0px 36px;
+		width: 100%;
+		padding-top: 32px;
+		overflow: hidden;
+
+	
+		.page-title {
+			padding: 0 70px;
+		}
+	
+		#block-pagetitle {
+			margin-bottom: 25px;
+		}
+	}
+}
+
+.field--name-field-relacionados {
+	.field__items {
+		> .field__item {
+			a {
+				&:after {  // blue stripe
+					background: none repeat scroll 0 0 transparent;
+					content: "";
+					display: block;
+					height: 2px;
+					left: 0;
+					position: relative;
+					background-color: #5fbcd5;
+					-webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+					transition: width 0.3s ease 0s, left 0.3s ease 0s;
+					width: 0;
+					margin-top: 3px;
+				}
+
+				&:hover {
+					&:after {
+						width: 45px;
+					}
+				}
+			}
+		}
+	}
+}

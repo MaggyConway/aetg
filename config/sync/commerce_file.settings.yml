@@ -1,0 +1,5 @@
+enable_download_limit: false
+download_limit: 100
+_core:
+  default_config_hash: RmTndzFXiTHagVw88OzWiiX0jt2qcQ-Oz0qLiV3vk9U
+langcode: es

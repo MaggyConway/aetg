@@ -1,0 +1,80 @@
+uuid: ce9b2867-c5aa-48e5-9c0c-b8147f0d94af
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.image_title_text_multiple_links.field_image
+    - field.field.paragraph.image_title_text_multiple_links.field_link
+    - field.field.paragraph.image_title_text_multiple_links.field_paragraphs
+    - field.field.paragraph.image_title_text_multiple_links.field_text
+    - field.field.paragraph.image_title_text_multiple_links.field_title
+    - field.field.paragraph.image_title_text_multiple_links.paragraph_view_mode
+    - paragraphs.paragraphs_type.image_title_text_multiple_links
+  module:
+    - link
+    - media_library
+    - paragraph_view_mode
+    - paragraphs
+    - text
+id: paragraph.image_title_text_multiple_links.default
+targetEntityType: paragraph
+bundle: image_title_text_multiple_links
+mode: default
+content:
+  field_image:
+    weight: 2
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    type: media_library_widget
+    region: content
+  field_link:
+    weight: 4
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_paragraphs:
+    type: entity_reference_paragraphs
+    weight: 5
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_text:
+    weight: 3
+    settings:
+      rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  paragraph_view_mode:
+    type: paragraph_view_mode
+    weight: 0
+    settings:
+      view_modes:
+        default: Default
+        media_left: 'Media Left'
+        media_right: 'Media Right'
+      default_view_mode: default
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true

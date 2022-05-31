@@ -1,0 +1,28 @@
+uuid: 7aab6ec2-aaca-4c41-81c0-2874313e691c
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.event
+    - field.storage.commerce_product_variation.field_node
+    - node.type.event
+id: commerce_product_variation.event.field_node
+field_name: field_node
+entity_type: commerce_product_variation
+bundle: event
+label: Node
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      event: event
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

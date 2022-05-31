@@ -1,0 +1,22 @@
+uuid: 669a654d-c21c-496d-8ce0-6d6cbf6f942d
+langcode: en
+status: true
+dependencies:
+  config:
+    - simple_block.simple_block.contacts
+  module:
+    - simple_block
+  theme:
+    - aetg
+id: contacts
+theme: aetg
+region: second_footer
+weight: -21
+provider: null
+plugin: 'simple_block:contacts'
+settings:
+  id: 'simple_block:contacts'
+  label: Contacts
+  provider: simple_block
+  label_display: '0'
+visibility: {  }

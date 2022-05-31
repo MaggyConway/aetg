@@ -1,0 +1,11 @@
+uuid: caf8afd0-899d-4a00-a150-3288455a6a75
+langcode: es
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+id: reclamo
+title: reclamo
+content:
+  value: "<h3>¿Aún no te has asociado a la AETG?</h3>\r\n\r\n<p>Descubre todas las <a href=\"/asociacion/ventajas-servicios-para-socios\">ventajas de asociarte</a> a la AETG.</p>\r\n\r\n<div class=\"btn-primary\"><a href=\"/secretaria/hazte-socio-aetg\">Hazte socio</a></div>\r\n"
+  format: full_html

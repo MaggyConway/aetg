@@ -1,0 +1,86 @@
+.webform-submission-contact-form, 
+.webform-submission-darse-de-baja-form {
+	h2 {
+		@include h3;
+		margin-bottom: 8px;
+		text-align: center;
+	}
+	
+	#edit-header {
+		margin-bottom: 24px;
+		p {
+			text-align: center;
+		}
+	}
+	
+	.description {
+		@include text-fz-12-lh-18-fw-300;
+		margin-bottom: 10px;
+	}
+	
+	input, select {
+		width: 100%;
+	}
+	
+	.form-type-managed-file {
+		> label {
+			@include title-fz-14-lh-18-bold;
+			text-align: center;
+			color: $color-1;
+			margin-bottom: 16px;
+			width: 100%;
+			position: static;
+		}
+	}
+	
+	.captcha {
+		img {
+			margin-bottom: 38px;
+		}
+	}
+	
+	.form-item-captcha-response {
+		label {
+			@include title-fz-14-lh-18-bold;
+			color: $color-1;
+		}
+		
+		.description {
+			margin-bottom: -20px;
+		}
+	}
+	
+	.reload-captcha-wrapper {
+		margin-bottom: 40px;
+		a {
+			@include text-fz-12-lh-18-fw-300;
+			color: $blue;
+			&:hover {
+				color: $blue-hover;
+			}
+		}
+	}
+	
+	.form-actions {
+		margin-bottom: 65px;
+	}
+	
+	.form-type-processed-text {
+		p {
+			color: $color-1;			
+			font-weight: 400;
+			font-size: 13px;
+			line-height: 20px;
+			
+			&:not(:last-of-type) {
+				margin-bottom: 16px;
+			}
+			
+			strong {
+				margin-bottom: 6px;
+				@include title-fz-14-lh-18-bold;
+				color: $color-1;
+			}
+		}
+	}
+}

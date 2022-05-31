@@ -1,0 +1,48 @@
+.slick {
+  .slick__slide {
+    margin-right: 40px;
+  }
+  
+  nav.slick__arrow {
+    button.slick-arrow {
+      width: 17px;
+      height: 29px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      background-color: #fff;
+      padding: 0;
+      border: none;
+      border-radius: 5px 5px 0px 5px;
+      background-color: transparent;
+      
+      &::before {
+        display: none;
+      }
+      
+      &.slick-prev {
+        background-image: url(../../assets/images/arrow-76-prev.svg);
+      }
+      
+      &.slick-next {
+        background-image: url(../../assets/images/arrow-76-next.svg);
+      }
+    }
+  }
+  
+  &, &.slick--view--news-slider {
+    nav.slick__arrow {
+      > button, button.slick-arrow {
+        background-color: transparent;
+      }
+    }
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.field--name-field-header .slick nav.slick__arrow button.slick-arrow {
+  display: none !important;
+}

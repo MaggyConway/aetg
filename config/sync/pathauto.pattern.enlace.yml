@@ -1,0 +1,22 @@
+uuid: c9efab26-5ff3-42d6-9b54-1de538471d90
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: enlace
+label: Enlace
+type: 'canonical_entities:node'
+pattern: 'recursos/enlaces/[node:title]'
+selection_criteria:
+  df3d2c75-4320-475d-9b92-cb73e8c0fe9e:
+    id: 'entity_bundle:node'
+    bundles:
+      enlace: enlace
+    negate: false
+    context_mapping:
+      node: node
+    uuid: df3d2c75-4320-475d-9b92-cb73e8c0fe9e
+selection_logic: and
+weight: -5
+relationships: {  }

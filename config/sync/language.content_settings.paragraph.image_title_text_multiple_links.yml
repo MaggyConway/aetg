@@ -1,0 +1,11 @@
+uuid: ea3b16cf-7579-4c82-b4b6-f9c6cb812767
+langcode: es
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.image_title_text_multiple_links
+id: paragraph.image_title_text_multiple_links
+target_entity_type_id: paragraph
+target_bundle: image_title_text_multiple_links
+default_langcode: site_default
+language_alterable: false

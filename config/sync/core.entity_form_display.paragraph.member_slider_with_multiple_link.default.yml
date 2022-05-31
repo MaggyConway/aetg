@@ -1,0 +1,80 @@
+uuid: a30a06fe-73b0-44f2-97fa-050fb418873d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.member_slider_with_multiple_link.field_link
+    - field.field.paragraph.member_slider_with_multiple_link.field_paragraphs
+    - field.field.paragraph.member_slider_with_multiple_link.field_text
+    - field.field.paragraph.member_slider_with_multiple_link.field_title
+    - field.field.paragraph.member_slider_with_multiple_link.field_views_slider
+    - paragraphs.paragraphs_type.member_slider_with_multiple_link
+  module:
+    - link
+    - paragraphs_browser
+    - text
+    - viewsreference
+id: paragraph.member_slider_with_multiple_link.default
+targetEntityType: paragraph
+bundle: member_slider_with_multiple_link
+mode: default
+content:
+  field_link:
+    weight: 2
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_paragraphs:
+    weight: 3
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: '0'
+      add_mode: paragraphs_browser
+      form_display_mode: default
+      default_paragraph_type: multiple_links
+      features:
+        duplicate: duplicate
+        collapse_edit_all: collapse_edit_all
+        add_above: 0
+      paragraphs_browser: content
+      modal_width: 80%
+      modal_height: auto
+    third_party_settings: {  }
+    type: paragraphs_browser
+    region: content
+  field_text:
+    weight: 1
+    settings:
+      rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_views_slider:
+    weight: 4
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: viewsreference_autocomplete
+    region: content
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,2992 @@
+uuid: eaa6ddd9-5558-4c46-a548-7d37293e5d6d
+langcode: es
+status: false
+dependencies:
+  config:
+    - field.storage.node.field_autor
+    - field.storage.node.field_fecha_de_publicacion
+    - field.storage.node.field_fundamentos
+    - field.storage.node.field_modalidad
+    - field.storage.node.field_tecnicas
+    - field.storage.node.field_temas
+    - field.storage.node.field_tipo_de_recurso
+    - field.storage.node.field_tutor_tesina
+    - search_api.index.online_library_search
+    - taxonomy.vocabulary.tipo_de_recurso
+    - user.role.administrator
+  content:
+    - 'taxonomy_term:tipo_de_recurso:0f2f4d2e-a9a4-4ed1-999b-917390b682d6'
+    - 'taxonomy_term:tipo_de_recurso:6146fa1a-de08-47f1-bc48-e7e332cd636b'
+    - 'taxonomy_term:tipo_de_recurso:84668021-76b1-4d46-9023-2f099929b9c2'
+    - 'taxonomy_term:tipo_de_recurso:87958531-5142-4183-bb8f-d3d6e36df392'
+    - 'taxonomy_term:tipo_de_recurso:895c088f-37cd-45bd-bd8a-841126d5189d'
+    - 'taxonomy_term:tipo_de_recurso:b908e7e9-4739-4682-89e7-afe62680b3c1'
+  module:
+    - csv_serialization
+    - datetime
+    - search_api
+    - serialization
+    - taxonomy
+    - user
+    - views_data_export
+id: recursos
+label: Recursos
+module: views
+description: ''
+tag: ''
+base_table: search_api_index_online_library_search
+base_field: search_api_id
+display:
+  default:
+    display_plugin: default
+    id: default
+    display_title: Master
+    position: 0
+    display_options:
+      access:
+        type: none
+        options: {  }
+      cache:
+        type: tag
+        options: {  }
+      query:
+        type: views_query
+        options:
+          bypass_access: false
+          skip_access: false
+          preserve_facet_query_args: false
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Apply
+          reset_button: false
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      pager:
+        type: full
+        options:
+          items_per_page: 10
+          offset: 0
+          id: 0
+          total_pages: null
+          tags:
+            previous: ‹‹
+            next: ››
+            first: '« First'
+            last: 'Last »'
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          quantity: 9
+      style:
+        type: default
+      row:
+        type: fields
+      fields:
+        field_tipo_de_recurso:
+          id: field_tipo_de_recurso
+          table: search_api_datasource_online_library_search_entity_node
+          field: field_tipo_de_recurso
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: false
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api_entity
+          fallback_options:
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+            display_methods:
+              ambito_profesional:
+                display_method: label
+              area_de_especializacion:
+                display_method: label
+              area_de_formacion:
+                display_method: label
+              areas_of_work:
+                display_method: label
+              autor:
+                display_method: label
+              bajas_aetg:
+                display_method: label
+              bajas_mapfre:
+                display_method: label
+              categoria_de_noticia:
+                display_method: label
+              emisor_de_noticia:
+                display_method: label
+              enviar_email:
+                display_method: label
+              estados_documentacion:
+                display_method: label
+              file_product_type:
+                display_method: label
+              fundamentos:
+                display_method: label
+              grupo_de_envio:
+                display_method: label
+              habilitar_opcion:
+                display_method: label
+              modalidad:
+                display_method: label
+              permisos_de_acceso:
+                display_method: label
+              seccion:
+                display_method: label
+              seguro_mapfre:
+                display_method: label
+                view_mode: default
+              tags:
+                display_method: label
+              tecnicas:
+                display_method: label
+              tema_de_consulta:
+                display_method: label
+              temas:
+                display_method: label
+              tipo_de_actividad:
+                display_method: label
+              tipo_de_enlace:
+                display_method: label
+              tipo_de_especializacion:
+                display_method: label
+              tipo_de_miembro:
+                display_method: label
+                view_mode: default
+              tipo_de_miembro_feap:
+                display_method: label
+              tipo_de_recurso:
+                display_method: label
+              tipo_doc_administrativo:
+                display_method: label
+              tipo_documentacion_escuela:
+                display_method: label
+              tutor_tesina:
+                display_method: label
+          entity_type: node
+          plugin_id: search_api_field
+        title:
+          id: title
+          table: search_api_index_online_library_search
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: true
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api
+          fallback_options:
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+          plugin_id: search_api_field
+        field_autor:
+          id: field_autor
+          table: search_api_datasource_online_library_search_entity_node
+          field: field_autor
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Autor
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: true
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api_entity
+          fallback_options:
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+            display_methods:
+              ambito_profesional:
+                display_method: label
+              area_de_especializacion:
+                display_method: label
+              area_de_formacion:
+                display_method: label
+              areas_of_work:
+                display_method: label
+              autor:
+                display_method: label
+              bajas_aetg:
+                display_method: label
+              bajas_mapfre:
+                display_method: label
+              categoria_de_noticia:
+                display_method: label
+              emisor_de_noticia:
+                display_method: label
+              enviar_email:
+                display_method: label
+              estados_documentacion:
+                display_method: label
+              file_product_type:
+                display_method: label
+              fundamentos:
+                display_method: label
+              grupo_de_envio:
+                display_method: label
+              habilitar_opcion:
+                display_method: label
+              modalidad:
+                display_method: label
+              permisos_de_acceso:
+                display_method: label
+              seccion:
+                display_method: label
+              seguro_mapfre:
+                display_method: label
+                view_mode: default
+              tags:
+                display_method: label
+              tecnicas:
+                display_method: label
+              tema_de_consulta:
+                display_method: label
+              temas:
+                display_method: label
+              tipo_de_actividad:
+                display_method: label
+              tipo_de_enlace:
+                display_method: label
+              tipo_de_especializacion:
+                display_method: label
+              tipo_de_miembro:
+                display_method: label
+                view_mode: default
+              tipo_de_miembro_feap:
+                display_method: label
+              tipo_de_recurso:
+                display_method: label
+              tipo_doc_administrativo:
+                display_method: label
+              tipo_documentacion_escuela:
+                display_method: label
+              tutor_tesina:
+                display_method: label
+          entity_type: node
+          plugin_id: search_api_field
+        field_fecha_de_publicacion:
+          id: field_fecha_de_publicacion
+          table: search_api_datasource_online_library_search_entity_node
+          field: field_fecha_de_publicacion
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Fecha de publicación'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: datetime_custom
+          settings:
+            timezone_override: ''
+            date_format: 'F, Y'
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api
+          fallback_options:
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+          entity_type: node
+          plugin_id: search_api_field
+        field_fundamentos:
+          id: field_fundamentos
+          table: search_api_datasource_online_library_search_entity_node
+          field: field_fundamentos
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Fundamentos e influencias'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: true
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api_entity
+          fallback_options:
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+            display_methods:
+              ambito_profesional:
+                display_method: label
+              area_de_especializacion:
+                display_method: label
+              area_de_formacion:
+                display_method: label
+              areas_of_work:
+                display_method: label
+              autor:
+                display_method: label
+              bajas_aetg:
+                display_method: label
+              bajas_mapfre:
+                display_method: label
+              categoria_de_noticia:
+                display_method: label
+              emisor_de_noticia:
+                display_method: label
+              enviar_email:
+                display_method: label
+              estados_documentacion:
+                display_method: label
+              file_product_type:
+                display_method: label
+              fundamentos:
+                display_method: label
+              grupo_de_envio:
+                display_method: label
+              habilitar_opcion:
+                display_method: label
+              modalidad:
+                display_method: label
+              permisos_de_acceso:
+                display_method: label
+              seccion:
+                display_method: label
+              seguro_mapfre:
+                display_method: label
+                view_mode: default
+              tags:
+                display_method: label
+              tecnicas:
+                display_method: label
+              tema_de_consulta:
+                display_method: label
+              temas:
+                display_method: label
+              tipo_de_actividad:
+                display_method: label
+              tipo_de_enlace:
+                display_method: label
+              tipo_de_especializacion:
+                display_method: label
+              tipo_de_miembro:
+                display_method: label
+                view_mode: default
+              tipo_de_miembro_feap:
+                display_method: label
+              tipo_de_recurso:
+                display_method: label
+              tipo_doc_administrativo:
+                display_method: label
+              tipo_documentacion_escuela:
+                display_method: label
+              tutor_tesina:
+                display_method: label
+          entity_type: node
+          plugin_id: search_api_field
+        field_modalidad:
+          id: field_modalidad
+          table: search_api_datasource_online_library_search_entity_node
+          field: field_modalidad
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Modalidad
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: true
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: true
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api_entity
+          fallback_options:
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+            display_methods:
+              ambito_profesional:
+                display_method: label
+              area_de_especializacion:
+                display_method: label
+              area_de_formacion:
+                display_method: label
+              areas_of_work:
+                display_method: label
+              autor:
+                display_method: label
+              bajas_aetg:
+                display_method: label
+              bajas_mapfre:
+                display_method: label
+              categoria_de_noticia:
+                display_method: label
+              emisor_de_noticia:
+                display_method: label
+              enviar_email:
+                display_method: label
+              estados_documentacion:
+                display_method: label
+              file_product_type:
+                display_method: label
+              fundamentos:
+                display_method: label
+              grupo_de_envio:
+                display_method: label
+              habilitar_opcion:
+                display_method: label
+              modalidad:
+                display_method: label
+              permisos_de_acceso:
+                display_method: label
+              seccion:
+                display_method: label
+              seguro_mapfre:
+                display_method: label
+                view_mode: default
+              tags:
+                display_method: label
+              tecnicas:
+                display_method: label
+              tema_de_consulta:
+                display_method: label
+              temas:
+                display_method: label
+              tipo_de_actividad:
+                display_method: label
+              tipo_de_enlace:
+                display_method: label
+              tipo_de_especializacion:
+                display_method: label
+              tipo_de_miembro:
+                display_method: label
+                view_mode: default
+              tipo_de_miembro_feap:
+                display_method: label
+              tipo_de_recurso:
+                display_method: label
+              tipo_doc_administrativo:
+                display_method: label
+              tipo_documentacion_escuela:
+                display_method: label
+              tutor_tesina:
+                display_method: label
+          entity_type: node
+          plugin_id: search_api_field
+        field_tecnicas:
+          id: field_tecnicas
+          table: search_api_datasource_online_library_search_entity_node
+          field: field_tecnicas
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Técnicas
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: true
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: true
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api_entity
+          fallback_options:
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+            display_methods:
+              ambito_profesional:
+                display_method: label
+              area_de_especializacion:
+                display_method: label
+              area_de_formacion:
+                display_method: label
+              areas_of_work:
+                display_method: label
+              autor:
+                display_method: label
+              bajas_aetg:
+                display_method: label
+              bajas_mapfre:
+                display_method: label
+              categoria_de_noticia:
+                display_method: label
+              emisor_de_noticia:
+                display_method: label
+              enviar_email:
+                display_method: label
+              estados_documentacion:
+                display_method: label
+              file_product_type:
+                display_method: label
+              fundamentos:
+                display_method: label
+              grupo_de_envio:
+                display_method: label
+              habilitar_opcion:
+                display_method: label
+              modalidad:
+                display_method: label
+              permisos_de_acceso:
+                display_method: label
+              seccion:
+                display_method: label
+              seguro_mapfre:
+                display_method: label
+                view_mode: default
+              tags:
+                display_method: label
+              tecnicas:
+                display_method: label
+              tema_de_consulta:
+                display_method: label
+              temas:
+                display_method: label
+              tipo_de_actividad:
+                display_method: label
+              tipo_de_enlace:
+                display_method: label
+              tipo_de_especializacion:
+                display_method: label
+              tipo_de_miembro:
+                display_method: label
+                view_mode: default
+              tipo_de_miembro_feap:
+                display_method: label
+              tipo_de_recurso:
+                display_method: label
+              tipo_doc_administrativo:
+                display_method: label
+              tipo_documentacion_escuela:
+                display_method: label
+              tutor_tesina:
+                display_method: label
+          entity_type: node
+          plugin_id: search_api_field
+        field_temas:
+          id: field_temas
+          table: search_api_datasource_online_library_search_entity_node
+          field: field_temas
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Temas
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: true
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: true
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api_entity
+          fallback_options:
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+            display_methods:
+              ambito_profesional:
+                display_method: label
+              area_de_especializacion:
+                display_method: label
+              area_de_formacion:
+                display_method: label
+              areas_of_work:
+                display_method: label
+              autor:
+                display_method: label
+              bajas_aetg:
+                display_method: label
+              bajas_mapfre:
+                display_method: label
+              categoria_de_noticia:
+                display_method: label
+              emisor_de_noticia:
+                display_method: label
+              enviar_email:
+                display_method: label
+              estados_documentacion:
+                display_method: label
+              file_product_type:
+                display_method: label
+              fundamentos:
+                display_method: label
+              grupo_de_envio:
+                display_method: label
+              habilitar_opcion:
+                display_method: label
+              modalidad:
+                display_method: label
+              permisos_de_acceso:
+                display_method: label
+              seccion:
+                display_method: label
+              seguro_mapfre:
+                display_method: label
+                view_mode: default
+              tags:
+                display_method: label
+              tecnicas:
+                display_method: label
+              tema_de_consulta:
+                display_method: label
+              temas:
+                display_method: label
+              tipo_de_actividad:
+                display_method: label
+              tipo_de_enlace:
+                display_method: label
+              tipo_de_especializacion:
+                display_method: label
+              tipo_de_miembro:
+                display_method: label
+                view_mode: default
+              tipo_de_miembro_feap:
+                display_method: label
+              tipo_de_recurso:
+                display_method: label
+              tipo_doc_administrativo:
+                display_method: label
+              tipo_documentacion_escuela:
+                display_method: label
+              tutor_tesina:
+                display_method: label
+          entity_type: node
+          plugin_id: search_api_field
+      filters:
+        search_api_fulltext:
+          id: search_api_fulltext
+          table: search_api_index_online_library_search
+          field: search_api_fulltext
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: and
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: search_api_fulltext_op
+            label: 'Buscar en título y descripción'
+            description: ''
+            use_operator: false
+            operator: search_api_fulltext_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: search_api_fulltext
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              asociado: '0'
+              escuela: '0'
+              personal_aetg: '0'
+              testeo: '0'
+            placeholder: ''
+            expose_fields: false
+            searched_fields_id: search_api_fulltext_searched_fields
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          parse_mode: terms
+          min_length: null
+          fields: {  }
+          plugin_id: search_api_fulltext
+      sorts: {  }
+      title: Recursos
+      header:
+        result:
+          id: result
+          table: views
+          field: result
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          content: 'Se han encontrado @total resultados.'
+          plugin_id: result
+      footer: {  }
+      empty: {  }
+      relationships:
+        field_autor:
+          id: field_autor
+          table: search_api_datasource_online_library_search_entity_node
+          field: field_autor
+          relationship: none
+          group_type: group
+          admin_label: 'Autor: Taxonomy term'
+          required: false
+          skip_access: false
+          entity_type: node
+          plugin_id: search_api
+      arguments: {  }
+      display_extenders: {  }
+      css_class: listados
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - 'user.node_grants:view'
+      tags:
+        - 'config:field.storage.node.field_autor'
+        - 'config:field.storage.node.field_fecha_de_publicacion'
+        - 'config:field.storage.node.field_fundamentos'
+        - 'config:field.storage.node.field_modalidad'
+        - 'config:field.storage.node.field_tecnicas'
+        - 'config:field.storage.node.field_temas'
+        - 'config:field.storage.node.field_tipo_de_recurso'
+        - 'config:search_api.index.online_library_search'
+  data_export_1:
+    display_plugin: data_export
+    id: data_export_1
+    display_title: 'Data export'
+    position: 7
+    display_options:
+      display_extenders: {  }
+      path: tabla/tesinas/csv
+      access:
+        type: role
+        options:
+          role:
+            administrator: administrator
+      defaults:
+        access: false
+        style: false
+        row: false
+        fields: false
+        filters: false
+        filter_groups: false
+        pager: false
+      display_description: ''
+      style:
+        type: data_export
+        options:
+          formats:
+            csv: csv
+          csv_settings:
+            delimiter: ;
+            enclosure: '"'
+            escape_char: \
+            strip_tags: true
+            trim: true
+            encoding: utf8
+            utf8_bom: '0'
+            use_serializer_encode_only: false
+      row:
+        type: fields
+        options: {  }
+      fields:
+        title:
+          id: title
+          table: search_api_index_online_library_search
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Título
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: true
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api
+          fallback_options:
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+          plugin_id: search_api_field
+        field_autor:
+          id: field_autor
+          table: search_api_datasource_online_library_search_entity_node
+          field: field_autor
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Autor
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: false
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api_entity
+          fallback_options:
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+            display_methods:
+              ambito_profesional:
+                display_method: label
+              area_de_especializacion:
+                display_method: label
+              area_de_formacion:
+                display_method: label
+              areas_of_work:
+                display_method: label
+              autor:
+                display_method: label
+              bajas_aetg:
+                display_method: label
+              bajas_mapfre:
+                display_method: label
+              categoria_de_noticia:
+                display_method: label
+              emisor_de_noticia:
+                display_method: label
+              enviar_email:
+                display_method: label
+              estados_documentacion:
+                display_method: label
+              file_product_type:
+                display_method: label
+              fundamentos:
+                display_method: label
+              grupo_de_envio:
+                display_method: label
+              habilitar_opcion:
+                display_method: label
+              modalidad:
+                display_method: label
+              permisos_de_acceso:
+                display_method: label
+              seccion:
+                display_method: label
+              seguro_mapfre:
+                display_method: label
+                view_mode: default
+              tags:
+                display_method: label
+              tecnicas:
+                display_method: label
+              tema_de_consulta:
+                display_method: label
+              temas:
+                display_method: label
+              tipo_de_actividad:
+                display_method: label
+              tipo_de_enlace:
+                display_method: label
+              tipo_de_especializacion:
+                display_method: label
+              tipo_de_miembro:
+                display_method: label
+                view_mode: default
+              tipo_de_miembro_feap:
+                display_method: label
+              tipo_de_recurso:
+                display_method: label
+              tipo_doc_administrativo:
+                display_method: label
+              tipo_documentacion_escuela:
+                display_method: label
+              tutor_tesina:
+                display_method: label
+          entity_type: node
+          plugin_id: search_api_field
+        field_tutor_tesina:
+          id: field_tutor_tesina
+          table: search_api_datasource_online_library_search_entity_node
+          field: field_tutor_tesina
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Director/a
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: false
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api_entity
+          fallback_options:
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+            display_methods:
+              ambito_profesional:
+                display_method: label
+              area_de_especializacion:
+                display_method: label
+              area_de_formacion:
+                display_method: label
+              areas_of_work:
+                display_method: label
+              autor:
+                display_method: label
+              bajas_aetg:
+                display_method: label
+              bajas_mapfre:
+                display_method: label
+              categoria_de_noticia:
+                display_method: label
+              emisor_de_noticia:
+                display_method: label
+              enviar_email:
+                display_method: label
+              estados_documentacion:
+                display_method: label
+              file_product_type:
+                display_method: label
+              fundamentos:
+                display_method: label
+              grupo_de_envio:
+                display_method: label
+              habilitar_opcion:
+                display_method: label
+              modalidad:
+                display_method: label
+              permisos_de_acceso:
+                display_method: label
+              seccion:
+                display_method: label
+              seguro_mapfre:
+                display_method: label
+                view_mode: default
+              tags:
+                display_method: label
+              tecnicas:
+                display_method: label
+              tema_de_consulta:
+                display_method: label
+              temas:
+                display_method: label
+              tipo_de_actividad:
+                display_method: label
+              tipo_de_enlace:
+                display_method: label
+              tipo_de_especializacion:
+                display_method: label
+              tipo_de_miembro:
+                display_method: label
+                view_mode: default
+              tipo_de_miembro_feap:
+                display_method: label
+              tipo_de_recurso:
+                display_method: label
+              tipo_doc_administrativo:
+                display_method: label
+              tipo_documentacion_escuela:
+                display_method: label
+              tutor_tesina:
+                display_method: label
+          entity_type: node
+          plugin_id: search_api_field
+        field_fecha_de_publicacion:
+          id: field_fecha_de_publicacion
+          table: search_api_datasource_online_library_search_entity_node
+          field: field_fecha_de_publicacion
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Fecha de publicación'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: datetime_custom
+          settings:
+            timezone_override: ''
+            date_format: 'Y'
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api
+          fallback_options:
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+          entity_type: node
+          plugin_id: search_api_field
+      filters:
+        search_api_fulltext:
+          id: search_api_fulltext
+          table: search_api_index_online_library_search
+          field: search_api_fulltext
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: and
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: search_api_fulltext_op
+            label: 'Buscar en título y descripción'
+            description: ''
+            use_operator: false
+            operator: search_api_fulltext_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: search_api_fulltext
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              asociado: '0'
+              escuela: '0'
+              personal_aetg: '0'
+              testeo: '0'
+            placeholder: ''
+            expose_fields: false
+            searched_fields_id: search_api_fulltext_searched_fields
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          parse_mode: terms
+          min_length: null
+          fields: {  }
+          plugin_id: search_api_fulltext
+        field_tipo_de_recurso:
+          id: field_tipo_de_recurso
+          table: search_api_index_online_library_search
+          field: field_tipo_de_recurso
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            50: 50
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: tipo_de_recurso
+          hierarchy: false
+          error_message: true
+          plugin_id: search_api_term
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      pager:
+        type: none
+        options:
+          offset: 0
+      filename: listado-de-tesinas.csv
+      automatic_download: false
+      store_in_public_file_directory: false
+      redirect_to_display: none
+      custom_redirect_path: false
+      include_query_params: false
+      displays:
+        page_7: page_7
+        default: '0'
+        page_1: '0'
+        page_2: '0'
+        page_3: '0'
+        page_4: '0'
+        page_5: '0'
+        page_6: '0'
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - request_format
+        - url
+        - user
+        - 'user.node_grants:view'
+        - user.roles
+      tags:
+        - 'config:field.storage.node.field_autor'
+        - 'config:field.storage.node.field_fecha_de_publicacion'
+        - 'config:field.storage.node.field_tutor_tesina'
+        - 'config:search_api.index.online_library_search'
+  page_1:
+    display_plugin: page
+    id: page_1
+    display_title: Base
+    position: 1
+    display_options:
+      display_extenders: {  }
+      path: gestalt/recursos
+      display_description: ''
+      cache:
+        type: none
+      defaults:
+        cache: false
+      menu:
+        type: 'default tab'
+        title: 'Todos los recursos'
+        description: ''
+        expanded: false
+        parent: ''
+        weight: 0
+        context: '0'
+        menu_name: main
+      tab_options:
+        type: none
+        title: ''
+        description: ''
+        weight: 0
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - 'user.node_grants:view'
+      tags:
+        - 'config:field.storage.node.field_autor'
+        - 'config:field.storage.node.field_fecha_de_publicacion'
+        - 'config:field.storage.node.field_fundamentos'
+        - 'config:field.storage.node.field_modalidad'
+        - 'config:field.storage.node.field_tecnicas'
+        - 'config:field.storage.node.field_temas'
+        - 'config:field.storage.node.field_tipo_de_recurso'
+        - 'config:search_api.index.online_library_search'
+  page_2:
+    display_plugin: page
+    id: page_2
+    display_title: Tesinas
+    position: 2
+    display_options:
+      display_extenders: {  }
+      display_description: ''
+      path: gestalt/recursos/tesinas
+      menu:
+        type: tab
+        title: Tesinas
+        description: ''
+        expanded: false
+        parent: ''
+        weight: 0
+        context: '0'
+        menu_name: main
+      filters:
+        search_api_fulltext:
+          id: search_api_fulltext
+          table: search_api_index_online_library_search
+          field: search_api_fulltext
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: and
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: search_api_fulltext_op
+            label: 'Buscar en título y descripción'
+            description: ''
+            use_operator: false
+            operator: search_api_fulltext_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: search_api_fulltext
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              asociado: '0'
+              escuela: '0'
+              personal_aetg: '0'
+              testeo: '0'
+            placeholder: ''
+            expose_fields: false
+            searched_fields_id: search_api_fulltext_searched_fields
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          parse_mode: terms
+          min_length: null
+          fields: {  }
+          plugin_id: search_api_fulltext
+        field_tipo_de_recurso:
+          id: field_tipo_de_recurso
+          table: search_api_index_online_library_search
+          field: field_tipo_de_recurso
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            50: 50
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: tipo_de_recurso
+          hierarchy: false
+          error_message: true
+          plugin_id: search_api_term
+      defaults:
+        filters: false
+        filter_groups: false
+        cache: false
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      cache:
+        type: none
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user
+        - 'user.node_grants:view'
+      tags:
+        - 'config:field.storage.node.field_autor'
+        - 'config:field.storage.node.field_fecha_de_publicacion'
+        - 'config:field.storage.node.field_fundamentos'
+        - 'config:field.storage.node.field_modalidad'
+        - 'config:field.storage.node.field_tecnicas'
+        - 'config:field.storage.node.field_temas'
+        - 'config:field.storage.node.field_tipo_de_recurso'
+        - 'config:search_api.index.online_library_search'
+  page_3:
+    display_plugin: page
+    id: page_3
+    display_title: 'Revistas y boletines'
+    position: 3
+    display_options:
+      display_extenders: {  }
+      display_description: ''
+      filters:
+        search_api_fulltext:
+          id: search_api_fulltext
+          table: search_api_index_online_library_search
+          field: search_api_fulltext
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: and
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: search_api_fulltext_op
+            label: 'Buscar en título y descripción'
+            description: ''
+            use_operator: false
+            operator: search_api_fulltext_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: search_api_fulltext
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              asociado: '0'
+              escuela: '0'
+              personal_aetg: '0'
+              testeo: '0'
+            placeholder: ''
+            expose_fields: false
+            searched_fields_id: search_api_fulltext_searched_fields
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          parse_mode: terms
+          min_length: null
+          fields: {  }
+          plugin_id: search_api_fulltext
+        field_tipo_de_recurso:
+          id: field_tipo_de_recurso
+          table: search_api_index_online_library_search
+          field: field_tipo_de_recurso
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            458: 458
+            53: 53
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: true
+          type: select
+          limit: true
+          vid: tipo_de_recurso
+          hierarchy: false
+          error_message: true
+          plugin_id: search_api_term
+      defaults:
+        filters: false
+        filter_groups: false
+        cache: false
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      path: gestalt/recursos/revista
+      menu:
+        type: tab
+        title: 'Revistas y boletines'
+        description: ''
+        expanded: false
+        parent: ''
+        weight: 1
+        context: '0'
+        menu_name: main
+      cache:
+        type: none
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user
+        - 'user.node_grants:view'
+      tags:
+        - 'config:field.storage.node.field_autor'
+        - 'config:field.storage.node.field_fecha_de_publicacion'
+        - 'config:field.storage.node.field_fundamentos'
+        - 'config:field.storage.node.field_modalidad'
+        - 'config:field.storage.node.field_tecnicas'
+        - 'config:field.storage.node.field_temas'
+        - 'config:field.storage.node.field_tipo_de_recurso'
+        - 'config:search_api.index.online_library_search'
+  page_4:
+    display_plugin: page
+    id: page_4
+    display_title: 'Artículos y libros'
+    position: 4
+    display_options:
+      display_extenders: {  }
+      display_description: ''
+      filters:
+        search_api_fulltext:
+          id: search_api_fulltext
+          table: search_api_index_online_library_search
+          field: search_api_fulltext
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: and
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: search_api_fulltext_op
+            label: 'Buscar en título y descripción'
+            description: ''
+            use_operator: false
+            operator: search_api_fulltext_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: search_api_fulltext
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              asociado: '0'
+              escuela: '0'
+              personal_aetg: '0'
+              testeo: '0'
+            placeholder: ''
+            expose_fields: false
+            searched_fields_id: search_api_fulltext_searched_fields
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          parse_mode: terms
+          min_length: null
+          fields: {  }
+          plugin_id: search_api_fulltext
+        field_tipo_de_recurso:
+          id: field_tipo_de_recurso
+          table: search_api_index_online_library_search
+          field: field_tipo_de_recurso
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            51: 51
+            290: 290
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: true
+          type: select
+          limit: true
+          vid: tipo_de_recurso
+          hierarchy: false
+          error_message: true
+          plugin_id: search_api_term
+      defaults:
+        filters: false
+        filter_groups: false
+        cache: false
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      path: gestalt/recursos/articulos
+      menu:
+        type: tab
+        title: 'Artículos y libros'
+        description: ''
+        expanded: false
+        parent: ''
+        weight: 2
+        context: '0'
+        menu_name: main
+      cache:
+        type: none
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user
+        - 'user.node_grants:view'
+      tags:
+        - 'config:field.storage.node.field_autor'
+        - 'config:field.storage.node.field_fecha_de_publicacion'
+        - 'config:field.storage.node.field_fundamentos'
+        - 'config:field.storage.node.field_modalidad'
+        - 'config:field.storage.node.field_tecnicas'
+        - 'config:field.storage.node.field_temas'
+        - 'config:field.storage.node.field_tipo_de_recurso'
+        - 'config:search_api.index.online_library_search'
+  page_5:
+    display_plugin: page
+    id: page_5
+    display_title: Videos
+    position: 5
+    display_options:
+      display_extenders: {  }
+      display_description: ''
+      filters:
+        search_api_fulltext:
+          id: search_api_fulltext
+          table: search_api_index_online_library_search
+          field: search_api_fulltext
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: and
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: search_api_fulltext_op
+            label: ''
+            description: ''
+            use_operator: false
+            operator: search_api_fulltext_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: texto
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              asociado: '0'
+              escuela: '0'
+              personal_aetg: '0'
+              testeo: '0'
+            placeholder: 'Buscar en título y descripción'
+            expose_fields: false
+            searched_fields_id: search_api_fulltext_searched_fields
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          parse_mode: terms
+          min_length: null
+          fields: {  }
+          plugin_id: search_api_fulltext
+        field_tipo_de_recurso:
+          id: field_tipo_de_recurso
+          table: search_api_index_online_library_search
+          field: field_tipo_de_recurso
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            52: 52
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: tipo_de_recurso
+          hierarchy: false
+          error_message: true
+          plugin_id: search_api_term
+      defaults:
+        filters: false
+        filter_groups: false
+        cache: false
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      path: gestalt/recursos/videos
+      menu:
+        type: tab
+        title: Videos
+        description: ''
+        expanded: false
+        parent: ''
+        weight: 3
+        context: '0'
+        menu_name: main
+      cache:
+        type: none
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user
+        - 'user.node_grants:view'
+      tags:
+        - 'config:field.storage.node.field_autor'
+        - 'config:field.storage.node.field_fecha_de_publicacion'
+        - 'config:field.storage.node.field_fundamentos'
+        - 'config:field.storage.node.field_modalidad'
+        - 'config:field.storage.node.field_tecnicas'
+        - 'config:field.storage.node.field_temas'
+        - 'config:field.storage.node.field_tipo_de_recurso'
+        - 'config:search_api.index.online_library_search'
+  page_6:
+    display_plugin: page
+    id: page_6
+    display_title: Todo
+    position: 6
+    display_options:
+      display_extenders: {  }
+      display_description: ''
+      path: gestalt/recursos/todos
+      menu:
+        type: 'default tab'
+        title: 'Todos los recursos'
+        description: ''
+        expanded: false
+        parent: ''
+        weight: 4
+        context: '0'
+        menu_name: main
+      tab_options:
+        type: none
+        title: ''
+        description: ''
+        weight: 0
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - 'user.node_grants:view'
+      tags:
+        - 'config:field.storage.node.field_autor'
+        - 'config:field.storage.node.field_fecha_de_publicacion'
+        - 'config:field.storage.node.field_fundamentos'
+        - 'config:field.storage.node.field_modalidad'
+        - 'config:field.storage.node.field_tecnicas'
+        - 'config:field.storage.node.field_temas'
+        - 'config:field.storage.node.field_tipo_de_recurso'
+        - 'config:search_api.index.online_library_search'
+  page_7:
+    display_plugin: page
+    id: page_7
+    display_title: Tesinas
+    position: 7
+    display_options:
+      display_extenders: {  }
+      path: tabla/tesinas
+      access:
+        type: role
+        options:
+          role:
+            administrator: administrator
+      defaults:
+        access: false
+        style: false
+        row: false
+        fields: false
+        filters: false
+        filter_groups: false
+        pager: false
+      display_description: ''
+      style:
+        type: table
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+          uses_fields: false
+          columns: {  }
+          default: ''
+          info: {  }
+          override: true
+          sticky: false
+          order: asc
+          caption: ''
+          summary: ''
+          description: ''
+          empty_table: false
+      row:
+        type: fields
+        options: {  }
+      fields:
+        title:
+          id: title
+          table: search_api_index_online_library_search
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Título
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: string
+          settings:
+            link_to_entity: true
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api
+          fallback_options:
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+          plugin_id: search_api_field
+        field_autor:
+          id: field_autor
+          table: search_api_datasource_online_library_search_entity_node
+          field: field_autor
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Autor
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: false
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api_entity
+          fallback_options:
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+            display_methods:
+              ambito_profesional:
+                display_method: label
+              area_de_especializacion:
+                display_method: label
+              area_de_formacion:
+                display_method: label
+              areas_of_work:
+                display_method: label
+              autor:
+                display_method: label
+              bajas_aetg:
+                display_method: label
+              bajas_mapfre:
+                display_method: label
+              categoria_de_noticia:
+                display_method: label
+              emisor_de_noticia:
+                display_method: label
+              enviar_email:
+                display_method: label
+              estados_documentacion:
+                display_method: label
+              file_product_type:
+                display_method: label
+              fundamentos:
+                display_method: label
+              grupo_de_envio:
+                display_method: label
+              habilitar_opcion:
+                display_method: label
+              modalidad:
+                display_method: label
+              permisos_de_acceso:
+                display_method: label
+              seccion:
+                display_method: label
+              seguro_mapfre:
+                display_method: label
+                view_mode: default
+              tags:
+                display_method: label
+              tecnicas:
+                display_method: label
+              tema_de_consulta:
+                display_method: label
+              temas:
+                display_method: label
+              tipo_de_actividad:
+                display_method: label
+              tipo_de_enlace:
+                display_method: label
+              tipo_de_especializacion:
+                display_method: label
+              tipo_de_miembro:
+                display_method: label
+                view_mode: default
+              tipo_de_miembro_feap:
+                display_method: label
+              tipo_de_recurso:
+                display_method: label
+              tipo_doc_administrativo:
+                display_method: label
+              tipo_documentacion_escuela:
+                display_method: label
+              tutor_tesina:
+                display_method: label
+          entity_type: node
+          plugin_id: search_api_field
+        field_tutor_tesina:
+          id: field_tutor_tesina
+          table: search_api_datasource_online_library_search_entity_node
+          field: field_tutor_tesina
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Director/a
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: false
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api_entity
+          fallback_options:
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+            display_methods:
+              ambito_profesional:
+                display_method: label
+              area_de_especializacion:
+                display_method: label
+              area_de_formacion:
+                display_method: label
+              areas_of_work:
+                display_method: label
+              autor:
+                display_method: label
+              bajas_aetg:
+                display_method: label
+              bajas_mapfre:
+                display_method: label
+              categoria_de_noticia:
+                display_method: label
+              emisor_de_noticia:
+                display_method: label
+              enviar_email:
+                display_method: label
+              estados_documentacion:
+                display_method: label
+              file_product_type:
+                display_method: label
+              fundamentos:
+                display_method: label
+              grupo_de_envio:
+                display_method: label
+              habilitar_opcion:
+                display_method: label
+              modalidad:
+                display_method: label
+              permisos_de_acceso:
+                display_method: label
+              seccion:
+                display_method: label
+              seguro_mapfre:
+                display_method: label
+                view_mode: default
+              tags:
+                display_method: label
+              tecnicas:
+                display_method: label
+              tema_de_consulta:
+                display_method: label
+              temas:
+                display_method: label
+              tipo_de_actividad:
+                display_method: label
+              tipo_de_enlace:
+                display_method: label
+              tipo_de_especializacion:
+                display_method: label
+              tipo_de_miembro:
+                display_method: label
+                view_mode: default
+              tipo_de_miembro_feap:
+                display_method: label
+              tipo_de_recurso:
+                display_method: label
+              tipo_doc_administrativo:
+                display_method: label
+              tipo_documentacion_escuela:
+                display_method: label
+              tutor_tesina:
+                display_method: label
+          entity_type: node
+          plugin_id: search_api_field
+        field_fecha_de_publicacion:
+          id: field_fecha_de_publicacion
+          table: search_api_datasource_online_library_search_entity_node
+          field: field_fecha_de_publicacion
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Fecha de publicación'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: datetime_custom
+          settings:
+            timezone_override: ''
+            date_format: 'Y'
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api
+          fallback_options:
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
+          entity_type: node
+          plugin_id: search_api_field
+      filters:
+        search_api_fulltext:
+          id: search_api_fulltext
+          table: search_api_index_online_library_search
+          field: search_api_fulltext
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: and
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: search_api_fulltext_op
+            label: ''
+            description: ''
+            use_operator: false
+            operator: search_api_fulltext_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: texto
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              asociado: '0'
+              escuela: '0'
+              personal_aetg: '0'
+              testeo: '0'
+            placeholder: 'Buscar en título y descripción'
+            expose_fields: false
+            searched_fields_id: search_api_fulltext_searched_fields
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          parse_mode: terms
+          min_length: null
+          fields: {  }
+          plugin_id: search_api_fulltext
+        field_tipo_de_recurso:
+          id: field_tipo_de_recurso
+          table: search_api_index_online_library_search
+          field: field_tipo_de_recurso
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            50: 50
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: tipo_de_recurso
+          hierarchy: false
+          error_message: true
+          plugin_id: search_api_term
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      pager:
+        type: none
+        options:
+          offset: 0
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - user
+        - 'user.node_grants:view'
+        - user.roles
+      tags:
+        - 'config:field.storage.node.field_autor'
+        - 'config:field.storage.node.field_fecha_de_publicacion'
+        - 'config:field.storage.node.field_tutor_tesina'
+        - 'config:search_api.index.online_library_search'

@@ -1,0 +1,46 @@
+uuid: 32501765-e4b2-4abb-a957-76a4c11a8946
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_paragraphs
+    - paragraphs.paragraphs_type.slider
+    - paragraphs.paragraphs_type.title_tag_text_and_link
+  module:
+    - entity_reference_revisions
+id: paragraph.slider.field_paragraphs
+field_name: field_paragraphs
+entity_type: paragraph
+bundle: slider
+label: Content
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      title_tag_text_and_link: title_tag_text_and_link
+    target_bundles_drag_drop:
+      header_with_slider:
+        weight: 7
+        enabled: false
+      image_title_text_and_link:
+        weight: 8
+        enabled: false
+      image_title_text_multiple_links:
+        weight: 9
+        enabled: false
+      multiple_links:
+        weight: 10
+        enabled: false
+      slider:
+        weight: 11
+        enabled: false
+      title_tag_text_and_link:
+        enabled: true
+        weight: 12
+field_type: entity_reference_revisions

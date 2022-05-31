@@ -1,0 +1,8 @@
+uuid: 839bab93-7bd5-4ad8-86e3-a68fe0868a04
+langcode: es
+status: true
+dependencies: {  }
+name: 'Habilitar esta opción'
+vid: habilitar_opcion
+description: ''
+weight: 0

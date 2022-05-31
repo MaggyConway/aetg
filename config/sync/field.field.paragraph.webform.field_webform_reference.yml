@@ -1,0 +1,32 @@
+uuid: 3743e9dc-a595-4405-992a-6e66e54e4897
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_webform_reference
+    - paragraphs.paragraphs_type.webform
+    - webform.webform.online_library
+  module:
+    - webform
+id: paragraph.webform.field_webform_reference
+field_name: field_webform_reference
+entity_type: paragraph
+bundle: webform
+label: 'Webform Reference'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    default_data: ''
+    status: open
+    open: ''
+    close: ''
+    target_uuid: 551ba21f-40d1-42e3-933b-5d6d8bf08a99
+default_value_callback: ''
+settings:
+  handler: 'default:webform'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: webform

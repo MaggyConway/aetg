@@ -1,0 +1,11 @@
+uuid: c55206dc-4cc0-4648-90a2-692f93858d3e
+langcode: en
+status: true
+dependencies: {  }
+id: news_tags
+label: 'News Tags'
+classes: news-tag-wrapper
+type: section
+weight: 0
+block_restrictions: {  }
+layout_restrictions: {  }

@@ -1,0 +1,42 @@
+user.icon:
+  title: 'User'
+  weight: 10
+  route_name: <nolink>
+  menu_name: account
+  requirements:
+    _user_is_logged_in: 'TRUE'
+user.login:
+  weight: 10
+  menu_name: account
+  class: Drupal\aetg_common\Plugin\Menu\AetgLoginMenuLink
+  requirements:
+    _user_is_logged_in: 'FALSE'
+user.profile:
+  title: 'Mi perfil'
+  weight: -49
+  route_name: aetg_common.user.profile
+  menu_name: account
+  requirements:
+    _user_is_logged_in: 'TRUE'
+user.invoices:
+  title: 'Mi facturas'
+  weight: -47
+  route_name: aetg_common.user.invoices
+  menu_name: account
+  requirements:
+    _user_is_logged_in: 'TRUE'
+user.orders:
+  title: 'Mis Compras'
+  weight: -46
+  route_name: aetg_common.user.orders
+  menu_name: account
+  requirements:
+    _user_is_logged_in: 'TRUE'
+aetg.admin.dashboard:
+  title: 'Admin Dashboard'
+  weight: -10
+  route_name: 'aetg_common.dashboard'
+  parent: 'system.admin'
+  description: 'Admin Dashboard.'
+  requirements:
+    _role: 'administrator+personal_aetg'

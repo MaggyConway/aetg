@@ -1,0 +1,10 @@
+uuid: db21ab0e-aea3-454b-9350-9e3f17c959c7
+langcode: en
+status: true
+dependencies:
+  module:
+    - profile
+id: profile.professional_card_header
+label: 'Professional card: Header'
+targetEntityType: profile
+cache: true

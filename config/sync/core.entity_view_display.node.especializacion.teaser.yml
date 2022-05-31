@@ -1,0 +1,86 @@
+uuid: 602f88fe-c334-43da-9138-c3d1c178daaf
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.especializacion.field_area_de_especializacion
+    - field.field.node.especializacion.field_cronograma_esp
+    - field.field.node.especializacion.field_descripcion_esp
+    - field.field.node.especializacion.field_direccion_esp
+    - field.field.node.especializacion.field_docentes_aetg_esp
+    - field.field.node.especializacion.field_email_esp
+    - field.field.node.especializacion.field_fecha_esp
+    - field.field.node.especializacion.field_imagen_esp
+    - field.field.node.especializacion.field_profesorado_esp
+    - field.field.node.especializacion.field_programa_esp
+    - field.field.node.especializacion.field_responsable_formacion_esp
+    - field.field.node.especializacion.field_sitio_web_esp
+    - field.field.node.especializacion.field_telefono_esp
+    - field.field.node.especializacion.field_tipo_de_especializacion
+    - image.style.thumbnail
+    - node.type.especializacion
+  module:
+    - image
+    - user
+id: node.especializacion.teaser
+targetEntityType: node
+bundle: especializacion
+mode: teaser
+content:
+  field_area_de_especializacion:
+    label: hidden
+    weight: 2
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_imagen_esp:
+    label: hidden
+    weight: 0
+    type: image
+    settings:
+      image_style: thumbnail
+      image_link: content
+    third_party_settings: {  }
+    region: content
+  field_responsable_formacion_esp:
+    type: string
+    weight: 3
+    region: content
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_tipo_de_especializacion:
+    label: hidden
+    weight: 1
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  breadcrumbs: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_cronograma_esp: true
+  field_descripcion_esp: true
+  field_direccion_esp: true
+  field_docentes_aetg_esp: true
+  field_email_esp: true
+  field_fecha_esp: true
+  field_profesorado_esp: true
+  field_programa_esp: true
+  field_sitio_web_esp: true
+  field_telefono_esp: true
+  langcode: true
+  search_api_excerpt: true

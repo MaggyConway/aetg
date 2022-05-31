@@ -1,0 +1,21 @@
+uuid: 3e0a0f24-d8eb-4e46-a8cf-0e094150b8ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_descripcion_escuela
+    - profile.type.escuela
+  module:
+    - text
+id: profile.escuela.field_descripcion_escuela
+field_name: field_descripcion_escuela
+entity_type: profile
+bundle: escuela
+label: Descripción
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

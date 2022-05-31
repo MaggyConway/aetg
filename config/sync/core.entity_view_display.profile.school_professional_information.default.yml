@@ -1,0 +1,420 @@
+uuid: 1b006677-ade8-4ee8-8819-6d33a4240a83
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.profile.school_professional_information.field_description
+    - field.field.profile.school_professional_information.field_detailed_training_program
+    - field.field.profile.school_professional_information.field_director
+    - field.field.profile.school_professional_information.field_geofield
+    - field.field.profile.school_professional_information.field_imagen_logo
+    - field.field.profile.school_professional_information.field_invoicing_address
+    - field.field.profile.school_professional_information.field_mobile
+    - field.field.profile.school_professional_information.field_paragraphs
+    - field.field.profile.school_professional_information.field_phone
+    - field.field.profile.school_professional_information.field_public_email
+    - field.field.profile.school_professional_information.field_school_name
+    - field.field.profile.school_professional_information.field_timetable
+    - field.field.profile.school_professional_information.field_training_manager
+    - field.field.profile.school_professional_information.field_url
+    - field.field.profile.school_professional_information.field_website
+    - profile.type.school_professional_information
+  module:
+    - address
+    - ctools
+    - geofield
+    - layout_builder
+    - layout_discovery
+    - link
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: Header
+          layout_builder_styles_style: ''
+        components:
+          620f43fd-8819-4867-bc7e-0c97ae43bba5:
+            uuid: 620f43fd-8819-4867-bc7e-0c97ae43bba5
+            region: content
+            configuration:
+              id: 'entity_view:profile'
+              label: 'Entity view (Profile)'
+              provider: ctools
+              label_display: '0'
+              view_mode: professional_card_header
+              context_mapping:
+                entity: layout_builder.entity
+            additional:
+              layout_builder_styles_style: ''
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: ''
+          column_widths: 67-33
+          layout_builder_styles_style: layout_parent_tabs
+        components:
+          ffcfe6cf-9fb7-4cb8-a80f-3b3bb4eace3b:
+            uuid: ffcfe6cf-9fb7-4cb8-a80f-3b3bb4eace3b
+            region: second
+            configuration:
+              id: 'entity_view:profile'
+              label: Contacto
+              provider: ctools
+              label_display: visible
+              view_mode: contacts
+              context_mapping:
+                entity: layout_builder.entity
+            additional:
+              layout_builder_styles_style: ''
+            weight: 0
+          4b7c9b80-03f3-4fc7-b8d4-4af8919f59ea:
+            uuid: 4b7c9b80-03f3-4fc7-b8d4-4af8919f59ea
+            region: first
+            configuration:
+              id: 'entity_view:profile'
+              label: Información
+              provider: ctools
+              label_display: visible
+              view_mode: profile_information
+              context_mapping:
+                entity: layout_builder.entity
+            additional:
+              layout_builder_styles_style: selected
+            weight: 0
+          36e2e0b4-9df9-4091-868d-bcd619d6c65e:
+            uuid: 36e2e0b4-9df9-4091-868d-bcd619d6c65e
+            region: first
+            configuration:
+              id: 'entity_view:profile'
+              label: Profesorado
+              provider: ctools
+              label_display: visible
+              view_mode: tab_faculty
+              context_mapping:
+                entity: layout_builder.entity
+            additional:
+              layout_builder_styles_style: ''
+            weight: 1
+          6f0287ea-2d7c-4224-991e-98bab352c57b:
+            uuid: 6f0287ea-2d7c-4224-991e-98bab352c57b
+            region: first
+            configuration:
+              id: 'entity_view:profile'
+              label: 'Programa formativo'
+              provider: ctools
+              label_display: visible
+              view_mode: tab_training_program
+              context_mapping:
+                entity: layout_builder.entity
+            additional:
+              layout_builder_styles_style: ''
+            weight: 2
+          7da74313-7430-4d9c-9353-cd068ee780df:
+            uuid: 7da74313-7430-4d9c-9353-cd068ee780df
+            region: first
+            configuration:
+              id: 'entity_view:profile'
+              label: Cronograma
+              provider: ctools
+              label_display: visible
+              view_mode: tab_timetable
+              context_mapping:
+                entity: layout_builder.entity
+            additional:
+              layout_builder_styles_style: ''
+            weight: 3
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: ''
+          column_widths: 67-33
+          layout_builder_styles_style: map
+        components:
+          69eaaba6-d0c4-43b9-ad0c-c877361a244d:
+            uuid: 69eaaba6-d0c4-43b9-ad0c-c877361a244d
+            region: second
+            configuration:
+              id: 'field_block:profile:school_professional_information:field_invoicing_address'
+              label: Dirección
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: address_display_formatter
+                settings:
+                  address_display:
+                    organization:
+                      glue: ''
+                      weight: '-10'
+                      display: 0
+                    address_line1:
+                      display: '1'
+                      glue: '<br>'
+                      weight: '-9'
+                    address_line2:
+                      glue: ' '
+                      weight: '-8'
+                      display: 0
+                    postal_code:
+                      display: '1'
+                      glue: ''
+                      weight: '-7'
+                    locality:
+                      display: '1'
+                      glue: '<br>( '
+                      weight: '-6'
+                    administrative_area:
+                      display: '1'
+                      glue: ' )'
+                      weight: '-5'
+                    country_code:
+                      display: '1'
+                      glue: .
+                      weight: '-4'
+                    langcode:
+                      glue: ','
+                      weight: '-3'
+                      display: 0
+                    dependent_locality:
+                      glue: ','
+                      weight: '-2'
+                      display: 0
+                    sorting_code:
+                      glue: ','
+                      weight: '-1'
+                      display: 0
+                    given_name:
+                      glue: ''
+                      weight: '0'
+                      display: 0
+                    family_name:
+                      glue: ','
+                      weight: '1'
+                      display: 0
+                third_party_settings:
+                  empty_fields:
+                    handler: ''
+                  field_formatter_class:
+                    class: ''
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional:
+              layout_builder_styles_style: ''
+            weight: 0
+          981a126e-3551-41db-94e1-82235b010bc7:
+            uuid: 981a126e-3551-41db-94e1-82235b010bc7
+            region: first
+            configuration:
+              id: 'field_block:profile:school_professional_information:field_geofield'
+              label: Geofield
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: leaflet_formatter_default
+                settings:
+                  multiple_map: false
+                  popup: false
+                  popup_content: ''
+                  leaflet_map: 'OSM Mapnik'
+                  height: 215
+                  height_unit: px
+                  hide_empty_map: false
+                  disable_wheel: false
+                  fullscreen_control: false
+                  gesture_handling: false
+                  reset_map:
+                    control: false
+                    position: topright
+                  map_position:
+                    force: false
+                    center:
+                      lat: !!float 0
+                      lon: !!float 0
+                    zoom: 12
+                    minZoom: 1
+                    maxZoom: 18
+                    zoomFiner: 0
+                  weight: ''
+                  icon:
+                    iconType: marker
+                    iconUrl: ''
+                    shadowUrl: ''
+                    className: ''
+                    html: '<div></div>'
+                    html_class: leaflet-map-divicon
+                    circle_marker_options: '{"radius":100,"color":"red","fillColor":"#f03","fillOpacity":0.5}'
+                    iconSize:
+                      x: ''
+                      'y': ''
+                    iconAnchor:
+                      x: ''
+                      'y': ''
+                    shadowSize:
+                      x: ''
+                      'y': ''
+                    shadowAnchor:
+                      x: ''
+                      'y': ''
+                    popupAnchor:
+                      x: ''
+                      'y': ''
+                  leaflet_markercluster:
+                    control: false
+                    options: '{"spiderfyOnMaxZoom":true,"showCoverageOnHover":true,"removeOutsideVisibleBounds":false}'
+                    include_path: false
+                  path: '{"color":"#3388ff","opacity":"1.0","stroke":true,"weight":3,"fill":"depends","fillColor":"*","fillOpacity":"0.2","radius":"6"}'
+                  geocoder:
+                    control: false
+                    settings:
+                      position: topright
+                      input_size: 25
+                      providers:
+                        arcgisonline:
+                          weight: 0
+                          checked: false
+                      min_terms: 4
+                      delay: 800
+                      zoom: 16
+                      popup: false
+                      options: ''
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional:
+              layout_builder_styles_style: ''
+            weight: 0
+        third_party_settings: {  }
+id: profile.school_professional_information.default
+targetEntityType: profile
+bundle: school_professional_information
+mode: default
+content:
+  field_description:
+    weight: 15
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_detailed_training_program:
+    weight: 12
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_director:
+    weight: 6
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_geofield:
+    weight: 17
+    label: above
+    settings:
+      output_format: wkt
+      output_escape: true
+    third_party_settings: {  }
+    type: geofield_default
+    region: content
+  field_invoicing_address:
+    weight: 7
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
+    region: content
+  field_mobile:
+    weight: 10
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_phone:
+    weight: 13
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_public_email:
+    weight: 8
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_school_name:
+    weight: 11
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_timetable:
+    weight: 14
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_training_manager:
+    weight: 16
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_url:
+    weight: 5
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_website:
+    weight: 9
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden:
+  addtoany: true
+  breadcrumbs: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_imagen_logo: true
+  field_paragraphs: true
+  search_api_excerpt: true

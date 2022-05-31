@@ -1,0 +1,21 @@
+uuid: 2c446857-06b7-44bc-9a56-bf32177a2ba1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text
+    - paragraphs.paragraphs_type.mapfre_insurances
+  module:
+    - text
+id: paragraph.mapfre_insurances.field_text
+field_name: field_text
+entity_type: paragraph
+bundle: mapfre_insurances
+label: Comentarios
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

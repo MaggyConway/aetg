@@ -1,0 +1,100 @@
+uuid: 313b2d4c-00c5-4ebd-bad0-6d629d621649
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.profile.contacts
+    - field.field.profile.informacion_profesional.field_ambito_trabajo
+    - field.field.profile.informacion_profesional.field_apellidos_prof
+    - field.field.profile.informacion_profesional.field_bio
+    - field.field.profile.informacion_profesional.field_centro
+    - field.field.profile.informacion_profesional.field_direccion
+    - field.field.profile.informacion_profesional.field_full_name
+    - field.field.profile.informacion_profesional.field_geofield
+    - field.field.profile.informacion_profesional.field_imagen_logo
+    - field.field.profile.informacion_profesional.field_imagen_usuario
+    - field.field.profile.informacion_profesional.field_invoicing_address
+    - field.field.profile.informacion_profesional.field_mobile
+    - field.field.profile.informacion_profesional.field_nombre_proff
+    - field.field.profile.informacion_profesional.field_public_email
+    - field.field.profile.informacion_profesional.field_telefono_prof
+    - field.field.profile.informacion_profesional.field_url
+    - field.field.profile.informacion_profesional.field_website
+    - profile.type.informacion_profesional
+  module:
+    - layout_builder
+    - link
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: profile.informacion_profesional.contacts
+targetEntityType: profile
+bundle: informacion_profesional
+mode: contacts
+content:
+  field_mobile:
+    type: string
+    weight: 1
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_public_email:
+    type: email_mailto
+    weight: 2
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_telefono_prof:
+    label: above
+    weight: 0
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  field_url:
+    label: above
+    weight: 4
+    type: link
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    region: content
+  field_website:
+    type: link
+    weight: 3
+    region: content
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  breadcrumbs: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_ambito_trabajo: true
+  field_apellidos_prof: true
+  field_bio: true
+  field_centro: true
+  field_direccion: true
+  field_full_name: true
+  field_geofield: true
+  field_imagen_logo: true
+  field_imagen_usuario: true
+  field_invoicing_address: true
+  field_nombre_proff: true
+  search_api_excerpt: true

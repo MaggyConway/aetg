@@ -1,0 +1,314 @@
+uuid: a53a70f3-1624-41b5-9533-bd5d35e7b032
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_profile2_informacion_privada
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Configuration
+migration_group: migrate_drupal_7
+label: 'Profile2 ()'
+source:
+  key: legacy
+  plugin: d7_associate_profile2
+  constants:
+    status: 1
+    is_default: 1
+  bundle: informacion_privada
+process:
+  profile_id:
+    -
+      plugin: get
+      source: pid
+  type:
+    -
+      plugin: get
+      source: type
+  uid:
+    -
+      plugin: get
+      source: uid
+  status:
+    -
+      plugin: get
+      source: constants/status
+  is_default:
+    -
+      plugin: get
+      source: constants/is_default
+  created:
+    -
+      plugin: get
+      source: created
+  changed:
+    -
+      plugin: get
+      source: changed
+  field_dni:
+    -
+      plugin: get
+      source: field_dni
+  field_formacion:
+    -
+      plugin: get
+      source: field_formacion
+  field_apellidos:
+    -
+      plugin: get
+      source: field_apellidos
+  field_nombre:
+    -
+      plugin: get
+      source: field_nombre
+  field_domicilio_particular:
+    -
+      plugin: addressfield
+      source: field_domicilio_particular
+  field_telefono:
+    -
+      plugin: get
+      source: field_telefono
+  field_telefono_2:
+    -
+      plugin: get
+      source: field_telefono_2
+  field_fecha_nacimiento:
+    -
+      plugin: sub_process
+      source: field_fecha_nacimiento
+      process:
+        value:
+          plugin: format_date
+          from_format: 'Y-m-d H:i:s'
+          to_format: Y-m-d
+          source: value
+  field_lugar_nacimiento:
+    -
+      plugin: get
+      source: field_lugar_nacimiento
+  field_centro_donde_trabaja:
+    -
+      plugin: get
+      source: field_centro_donde_trabaja
+  field_formacion_universitaria:
+    -
+      plugin: get
+      source: field_formacion_universitaria
+  field_imagen_usuario:
+    -
+      plugin: sub_process
+      source: field_imagen_usuario
+      process:
+        target_id: fid
+        alt: alt
+        title: title
+        width: width
+        height: height
+  field_justificante_bancario:
+    -
+      plugin: sub_process
+      source: field_justificante_bancario
+      process:
+        target_id: fid
+        display: display
+        description: description
+  field_domiciliacion_banco:
+    -
+      plugin: sub_process
+      source: field_domiciliacion_banco
+      process:
+        target_id: fid
+        display: display
+        description: description
+  field_alta_mapfre:
+    -
+      plugin: sub_process
+      source: field_alta_mapfre
+      process:
+        value:
+          plugin: format_date
+          from_format: 'Y-m-d H:i:s'
+          to_format: Y-m-d
+          source: value
+  field_motivo_baja_mapfre:
+    -
+      plugin: sub_process
+      source: field_motivo_baja_mapfre
+      process:
+        target_id: tid
+  field_moroso_mapfre:
+    -
+      plugin: get
+      source: field_moroso_mapfre
+  field_baja_mapfre:
+    -
+      plugin: sub_process
+      source: field_baja_mapfre
+      process:
+        value:
+          plugin: format_date
+          from_format: 'Y-m-d H:i:s'
+          to_format: Y-m-d
+          source: value
+  field_impagos_mapfre:
+    -
+      plugin: get
+      source: field_impagos_mapfre
+  field_bic:
+    -
+      plugin: get
+      source: field_bic
+  field_area_de_formacion:
+    -
+      plugin: sub_process
+      source: field_area_de_formacion
+      process:
+        target_id: tid
+  field_num_socio_string:
+    -
+      plugin: get
+      source: field_num_socio_string
+  field_fecha_de_firma_de_la_domic:
+    -
+      plugin: get
+      source: field_fecha_de_firma_de_la_domic
+  field_iban_:
+    -
+      plugin: get
+      source: field_iban_
+  field_seguro_mapfre:
+    -
+      plugin: sub_process
+      source: field_seguro_mapfre
+      process:
+        target_id: tid
+  field_archivos_del_usuario:
+    -
+      plugin: sub_process
+      source: field_archivos_del_usuario
+      process:
+        target_id: fid
+        display: display
+        description: description
+  field_tipo_de_miembro:
+    -
+      plugin: sub_process
+      source: field_tipo_de_miembro
+      process:
+        target_id: tid
+  field_pendiente:
+    -
+      plugin: get
+      source: field_pendiente
+  field_baja:
+    -
+      plugin: get
+      source: field_baja
+  field_baja_aetg:
+    -
+      plugin: sub_process
+      source: field_baja_aetg
+      process:
+        value:
+          plugin: format_date
+          from_format: 'Y-m-d H:i:s'
+          to_format: Y-m-d
+          source: value
+  field_alta_aetg:
+    -
+      plugin: sub_process
+      source: field_alta_aetg
+      process:
+        value:
+          plugin: format_date
+          from_format: 'Y-m-d H:i:s'
+          to_format: Y-m-d
+          source: value
+  field_motivo_baja_aetg:
+    -
+      plugin: sub_process
+      source: field_motivo_baja_aetg
+      process:
+        target_id: tid
+  field_alta_feap:
+    -
+      plugin: sub_process
+      source: field_alta_feap
+      process:
+        value:
+          plugin: format_date
+          from_format: 'Y-m-d H:i:s'
+          to_format: Y-m-d
+          source: value
+  field_baja_feap:
+    -
+      plugin: sub_process
+      source: field_baja_feap
+      process:
+        value:
+          plugin: format_date
+          from_format: 'Y-m-d H:i:s'
+          to_format: Y-m-d
+          source: value
+  field_notas:
+    -
+      plugin: get
+      source: field_notas
+  field_moroso:
+    -
+      plugin: get
+      source: field_moroso
+  field_envio_de_email:
+    -
+      plugin: sub_process
+      source: field_envio_de_email
+      process:
+        target_id: tid
+  para_feap_membership_type:
+    plugin: migration_lookup
+    migration: upgrade_d7_profile2_informacion_privada_alta_feap
+    no_stub: true
+    source: pid
+  field_feap_membership_type:
+    plugin: sub_process
+    source:
+      - '@para_feap_membership_type'
+    process:
+      target_id: '0'
+      target_revision_id: '1'
+  para_aetg_membership_type:
+    plugin: migration_lookup
+    migration: upgrade_d7_profile2_informacion_privada_alta_aetg
+    no_stub: true
+    source: pid
+  field_aetg_membership_type:
+    plugin: sub_process
+    source:
+      - '@para_aetg_membership_type'
+    process:
+      target_id: '0'
+      target_revision_id: '1'
+  para_insurances:
+    plugin: migration_lookup
+    migration: upgrade_d7_profile2_informacion_privada_insurance
+    no_stub: true
+    source: pid
+  field_insurances:
+    plugin: sub_process
+    source:
+      - '@para_insurances'
+    process:
+      target_id: '0'
+      target_revision_id: '1'
+destination:
+  plugin: 'entity:profile'
+  default_bundle: informacion_privada
+migration_dependencies:
+  required:
+    - upgrade_d7_profile2_informacion_privada_alta_feap
+    - upgrade_d7_profile2_informacion_privada_alta_aetg
+  optional:
+    - upgrade_d7_field_instance

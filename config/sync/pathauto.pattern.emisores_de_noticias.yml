@@ -1,0 +1,23 @@
+uuid: 9fb60b9b-84ec-4c8d-aa69-e716af148461
+langcode: es
+status: true
+dependencies:
+  module:
+    - ctools
+    - taxonomy
+id: emisores_de_noticias
+label: 'Emisores de noticias'
+type: 'canonical_entities:taxonomy_term'
+pattern: '/noticias/emisores/[term:name]'
+selection_criteria:
+  0cac627f-7738-4d68-a6ce-436058b56399:
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      emisor_de_noticia: emisor_de_noticia
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    uuid: 0cac627f-7738-4d68-a6ce-436058b56399
+selection_logic: and
+weight: -5
+relationships: {  }

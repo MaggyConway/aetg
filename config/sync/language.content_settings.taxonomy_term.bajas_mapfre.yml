@@ -1,0 +1,11 @@
+uuid: 2d993f48-4558-4ab3-be2e-eac400588464
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.bajas_mapfre
+id: taxonomy_term.bajas_mapfre
+target_entity_type_id: taxonomy_term
+target_bundle: bajas_mapfre
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,35 @@
+uuid: 0525534d-0bcd-4626-9a5f-e59923c8572b
+langcode: es
+status: true
+dependencies:
+  module:
+    - commerce_sermepa
+id: sermepa
+label: sermepa
+weight: -10
+plugin: commerce_sermepa
+configuration:
+  merchant_name: AETG
+  merchant_code: '349170043'
+  merchant_group: ''
+  merchant_password: sq7HjrUOBfKmC576ILgskD5srU870gJ7
+  merchant_terminal: '001'
+  merchant_paymethods:
+    C: C
+    D: D
+    R: R
+    T: T
+    'N': 'N'
+  merchant_consumer_language: '001'
+  currency: 978
+  transaction_type: '0'
+  instructions:
+    value: ''
+    format: plain_text
+  display_label: 'Pago con tarjeta de crédito o débito'
+  mode: test
+  payment_method_types:
+    - 'Tarjeta de crédito'
+  collect_billing_information: true
+conditions: {  }
+conditionOperator: AND

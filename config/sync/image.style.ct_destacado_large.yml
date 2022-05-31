@@ -1,0 +1,15 @@
+uuid: 9d149c88-86f9-4ca8-ae49-5841230a9ca2
+langcode: es
+status: true
+dependencies: {  }
+name: ct_destacado_large
+label: 'CT Destacado: Large'
+effects:
+  09c6eb30-4896-4b81-bb1c-33b41e6100ab:
+    uuid: 09c6eb30-4896-4b81-bb1c-33b41e6100ab
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1980
+      height: 600
+      anchor: center-center

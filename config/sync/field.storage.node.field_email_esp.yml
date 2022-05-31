@@ -1,0 +1,18 @@
+uuid: 43223aa8-a725-4195-95c4-ea28452c28d3
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_email_esp
+field_name: field_email_esp
+entity_type: node
+type: email
+settings: {  }
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

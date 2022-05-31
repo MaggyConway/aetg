@@ -1,0 +1,19 @@
+<div{{ attributes}}>
+  <div class="cart-block--summary">
+    <a class="cart-block--link__expand" href="{{ url }}">
+      <span class="cart-block--summary__icon">{{ icon }}</span>
+      <span class="cart-block--summary__count">{{ count_text }}</span>
+    </a>
+  </div>
+  {% if links %}
+  <div class="cart-block--contents">
+    <div class="cart-block--contents__inner">
+      <div class="cart-block--contents__links">
+        {% for link in links %}
+          <div class="cart-block--contents__link--item">{{ link }}</div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  {% endif %}
+</div>

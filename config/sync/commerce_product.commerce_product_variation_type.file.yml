@@ -1,0 +1,19 @@
+uuid: 5be10e92-cb96-472f-9d96-8d1ae73bffbc
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_license
+third_party_settings:
+  commerce_license:
+    license_types:
+      commerce_file: commerce_file
+    activate_on_place: true
+id: file
+label: Archivo
+orderItemType: file
+generateTitle: false
+traits:
+  - commerce_file
+  - commerce_license
+locked: false

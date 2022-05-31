@@ -1,0 +1,23 @@
+uuid: b2b40a2f-8af6-467f-a4fe-f9434ae52142
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - field_permissions
+    - text
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: commerce_product_variation.field_description
+field_name: field_description
+entity_type: commerce_product_variation
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,11 @@
+uuid: c7d95eee-86c5-4911-a2bb-8bd401d6d767
+langcode: es
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.mapfre_insurances
+id: paragraph.mapfre_insurances
+target_entity_type_id: paragraph
+target_bundle: mapfre_insurances
+default_langcode: site_default
+language_alterable: false

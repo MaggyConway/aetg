@@ -1,0 +1,512 @@
+.view-edit-profile {
+	.layout-content {
+		> .region {
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
+			flex-wrap: wrap;
+		}
+	}
+
+	.form-type-checkbox .option {
+		position: relative !important;
+	}
+
+	.profile-header {
+		width: 100%;
+
+		@include breakpoint(IPad-Pro) {
+			// width: calc(100% - 220px);
+			width: 100%;
+		}
+
+		// @include breakpoint(mobile-large) {
+		// 	width: 100%;
+		// }
+
+		.view-user-blocks-with-profile-fields {
+			.view-content > .views-row {
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+				margin-bottom: 30px;
+
+				> .views-field {
+					.field-content {
+						display: flex;
+						justify-content: center;
+            		flex-direction: column;
+
+						img {
+							@include mini-slider-image;
+							overflow: hidden;
+							border-radius: 5px;
+							border: 1px solid $color-E6;
+							background-color: $color-F7;
+							margin-right: 30px;
+							width: 100px;
+							min-width: 100px;
+							height: auto;
+							max-height: 100px;
+
+							@include breakpoint(mobile-large) {
+								margin-right: 16px;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.field-full-name {
+			@include h3;
+			@include breakpoint(mobile-middle) {
+				font-size: 20px;
+				line-height: 28px;
+			}
+		}
+
+		.field-num-socio-string, .field-director-escuela {
+			@include text-fz-16-lh-26;
+			color: $color-2;
+		}
+
+		.field-moroso {
+			@include text-fz-12-lh-18-fw-300;
+			color: #fff;
+			background-color: $red;
+			text-align: center;
+			padding: 0 11px 2px;
+			margin-bottom: 0;
+			display: inline-flex;
+			overflow: hidden;
+			border-radius: 5px;
+			user-select: none;
+			margin-top: 10px;
+		}
+	}
+
+	.block-aetg-edit-user-links {
+		width: 300px;
+		min-width: 300px;
+		margin-right: 30px;
+
+		@include breakpoint(IPad-Pro) {
+			// width: 200px;
+			min-width: 200px;
+			// margin-right: 20px;
+			margin-right: 0;
+			margin-bottom: 20px;
+			width: 100%;
+		}
+
+		// @include breakpoint(mobile-large) {
+		// 	width: 100%;
+		// 	min-width: unset;
+		// 	margin-right: 0;
+		// 	margin-bottom: 20px;
+		// }
+
+		> .edit-user-profile-tabs {
+			margin: 0;
+
+			// @include breakpoint(IPad-Pro) {
+			// 	text-align: right;
+			// }
+
+			// @include breakpoint(mobile-large) {
+			// 	text-align: left;
+			// }
+
+			.edit-link {
+				@include title-fz-18-lh-25-fw-600;
+				color: $color-A;
+				display: block;
+				margin-bottom: 20px;
+				padding: 0;
+
+				&.active {
+					color: $color-1;
+				}
+
+				&:hover, &:focus, &:active {
+					background: transparent;
+				}
+
+				@include breakpoint(IPad-Pro) {
+					margin-bottom: 8px;
+				}
+
+				@include breakpoint(tablet-m) {
+					font-size: 16px;
+					line-height: 20px;
+				}
+			}
+		}
+	}
+
+	label, .fieldset-legend.form-required {
+		@include title-fz-14-lh-18-bold;
+		color: $color-1;
+		margin-bottom: 8px;
+		display: block;
+	}
+
+	.block-system-main-block {
+		width: calc(100% - 330px);
+
+		@include breakpoint(IPad-Pro) {
+			// width: calc(100% - 220px);
+			width: 100%;
+		}
+
+		// @include breakpoint(IPad-Pro) {
+		// 	width: 100%
+		// }
+
+		.profile-form {
+			input {
+				width: 100%;
+			}
+
+			.button {
+				width: auto;
+			}
+
+			.form-item {
+				margin: 0 0 24px 0;
+			}
+
+			.field--name-field-imagen-logo {
+				.form-managed-file {
+					display: flex;
+					justify-content: flex-start;
+					-webkit-align-items: flex-start;
+					align-items: flex-start;
+				}
+
+				.image-preview {
+					width: 100px;
+					min-width: 100px;
+					height: 100px;
+					margin-right: 30px;
+					border-radius: 5px;
+					border: 1px solid #e6e6e6;
+					background-color: #f7f7f7;
+					overflow: hidden;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+
+					@include breakpoint(mobile-middle) {
+						margin-right: 16px;
+					}
+
+					img {
+						@include mini-slider-image;
+					}
+				}
+
+				.image-widget-data {
+					label {
+						margin: 0 0 8px 0;
+					}
+					.form-item {
+						margin: 0 0 8px 0;
+					}
+
+					a {
+						@include link-fz-14-lh-22-purple;
+						// text-decoration: none;
+					}
+
+					.file--image {
+						margin-bottom: 8px;
+					}
+
+					.file-size {
+						margin-right: 16px;
+					}
+
+					.button {
+						margin: 0;
+					}
+				}
+			}
+		}
+	}
+
+	.description {
+		@include text-fz-12-lh-18-fw-300;
+		font-size: 13px !important;
+		color: $color-A;
+		margin: 8px 0;
+		padding-left: 19px;
+
+		&.password-suggestions {
+			margin-top: 0;
+		}
+	}
+
+	.tabledrag-handle {
+		padding: 0;
+		margin: 0;
+		float: none;
+		display: flex;
+		justify-content: flex-end;
+
+		> .handle {
+			background-size: contain;
+			background-position: center;
+			min-width: 14px;
+			padding: 0;
+			margin: 0;
+		}
+	}
+
+	tr.draggable {
+		width: 100%;
+		position: relative;
+		td:nth-child(2) {
+			display: flex;
+			justify-content: flex-start;
+			align-items: flex-start;
+			flex-direction: row-reverse;
+			> .form-item:last-child {
+				margin-right: 30px;
+			}
+
+			> div {
+				width: 100%;
+			}
+		}
+	}
+
+	.field--type-text-long {
+		.form-type-textarea {
+			margin: 0 !important;
+		}
+	}
+
+	.field-multiple-table {
+		th {
+			background-color: #fff;
+			border-bottom: 1px solid $color-C;
+			margin-bottom: 16px;
+			padding: 8px 0;
+			color: $color-1;
+			@include title-fz-14-lh-18-bold;
+
+			&.field-label {
+				text-align: left;
+			}
+
+			&.tabledrag-hide {
+				text-align: right;
+			}
+		}
+	}
+
+	input.form-autocomplete {
+		background-position: calc(100% - 18px) center !important;
+	}
+
+	.field-multiple-drag, .delta-order {
+		vertical-align: top;
+		padding-top: 38px;
+	}
+
+	.delta-order {
+		padding: 38px 0 0;
+		> .form-type-select {
+			position: absolute;
+			right: 0;
+			top: 42px;
+		}
+	}
+
+	.address-container-inline {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin: 0 -16px;
+
+		@include breakpoint(tablet) {
+			margin: 0;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: flex-start;
+			width: 100%;
+		}
+
+		.form-item {
+			margin: 0 16px 24px !important;
+
+			@include breakpoint(tablet) {
+				margin: 0 0 16px !important;
+				width: 100%;
+			}
+		}
+	}
+
+	.paragraphs-dropdown {
+		.paragraphs-dropdown-actions {
+			input {
+				color: $color-1;
+				width: 100% !important;
+				&:hover {
+					color: #fff;
+					background-color: $color-76;
+				}
+			}
+		}
+	}
+
+	.table-container {
+		padding-bottom: 30px;
+	}
+
+	.cke_reset {
+		width: 100% !important;
+	}
+
+	.filter-help a {
+		@include link-fz-14-lh-22;
+		color: $blue;
+		&:hover {
+			color: $blue-hover;
+		}
+	}
+
+	.password-strength__meter {
+		margin: 0;
+	}
+
+	.password-strength {
+		margin: 16px 0 0;
+	}
+
+	.form-item-pass {
+		.form-item {
+			&:not(:last-child) {
+				margin: 0 0 16px;
+			}
+		}
+	}
+
+	.password-strength__title, .password-confirm {
+		font-size: 13px;
+		margin-top: 8px;
+	}
+
+	.password-strength__meter {
+		margin-bottom: 8px;
+	}
+
+	#edit-pass--description {
+		margin-top: -10px;
+		padding-left: 0;
+	}
+
+	#edit-status {
+		.form-item {
+			margin: 0 !important;
+		}
+	}
+}
+
+.link.tabledrag-toggle-weight {
+	@include text-fz-14-lh-20;
+	color: $blue;
+	margin-bottom: 7px;
+	// &:hover {
+	// 	// text-decoration: underline;
+	// }
+}
+
+// [---------- Accordeon Styles ----------]
+.ui-widget {
+	@include font-family-primary;
+}
+
+.ui-widget-content a {
+    color: $blue/*{fcContent};; */;
+}
+
+.ui-accordion {
+	margin-top: -12px;
+
+	.ui-accordion-header {
+		// clear legacy
+		background: none;
+		border: none;
+		padding: 0;
+		margin: 0;
+		font-size: unset;
+		border-radius: unset;
+		font-weight: unset;
+		color: unset;
+		line-height: unset;
+		padding: 19px 0;
+		margin: 12px 0;
+		border-bottom: 1px solid $color-E6;
+
+		.ui-icon {
+			display: none;
+		}
+
+		a {
+			color: $color-1;
+			font-weight: 600;
+			font-size: 24px;
+			line-height: 32px;
+			position: relative;
+			padding-left: 30px;
+			user-select: none;
+			display: block;
+
+			&:after {
+				display: none;
+			}
+
+			&:before {
+				position: absolute;
+				content: "";
+				left: 0;
+				top: 9px;
+				background: url("../../assets/images/select-chevron.svg") no-repeat center center;
+				width: 10px;
+				height: 6px;
+				transition: all .3s ease-in-out;
+			}
+		}
+
+		&.ui-state-active {
+
+			a {
+				&:before {
+					transform: rotate(-180deg);
+				}
+			}
+		}
+	}
+
+	.ui-accordion-content {
+		// clear legacy
+		background: none;
+		border: none;
+		padding: 0;
+		margin: 0;
+		font-size: unset;
+		border-radius: unset;
+		font-weight: unset;
+		color: unset;
+		line-height: unset;
+	}
+
+	input, select, textarea {
+		@include input-text;
+		@include font-family-primary;
+	}
+}

@@ -1,0 +1,10 @@
+name: "AETG Price"
+type: module
+description: "Provides price functionality."
+core: 8.x
+package: "Custom"
+dependencies:
+  - commerce:commerce
+  - commerce:commerce_price
+  - commerce:commerce_product
+  - commerce:commerce_order

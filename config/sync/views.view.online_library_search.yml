@@ -1,0 +1,2263 @@
+uuid: 649b27b5-8ca2-4d64-b049-0bda90f30c35
+langcode: es
+status: true
+dependencies:
+  config:
+    - search_api.index.online_library_search
+    - taxonomy.vocabulary.tipo_de_recurso
+  content:
+    - 'taxonomy_term:tipo_de_recurso:053a9fda-832f-4dc9-8bee-aaf324491c69'
+    - 'taxonomy_term:tipo_de_recurso:0f2f4d2e-a9a4-4ed1-999b-917390b682d6'
+    - 'taxonomy_term:tipo_de_recurso:6146fa1a-de08-47f1-bc48-e7e332cd636b'
+    - 'taxonomy_term:tipo_de_recurso:84668021-76b1-4d46-9023-2f099929b9c2'
+    - 'taxonomy_term:tipo_de_recurso:87958531-5142-4183-bb8f-d3d6e36df392'
+    - 'taxonomy_term:tipo_de_recurso:895c088f-37cd-45bd-bd8a-841126d5189d'
+    - 'taxonomy_term:tipo_de_recurso:b908e7e9-4739-4682-89e7-afe62680b3c1'
+  module:
+    - better_exposed_filters
+    - search_api
+    - views_block_area
+id: online_library_search
+label: 'Biblioteca Online'
+module: views
+description: ''
+tag: ''
+base_table: search_api_index_online_library_search
+base_field: search_api_id
+display:
+  default:
+    display_plugin: default
+    id: default
+    display_title: Master
+    position: 0
+    display_options:
+      access:
+        type: none
+        options: {  }
+      cache:
+        type: search_api_tag
+        options: {  }
+      query:
+        type: views_query
+        options:
+          bypass_access: false
+          skip_access: false
+          preserve_facet_query_args: false
+      exposed_form:
+        type: bef
+        options:
+          submit_button: Aplicar
+          reset_button: false
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+          text_input_required: 'Select any filter and click on Apply to see results'
+          text_input_required_format: basic_html
+          bef:
+            general:
+              autosubmit: false
+              autosubmit_exclude_textfield: true
+              autosubmit_textfield_delay: 500
+              autosubmit_hide: false
+              input_required: false
+              allow_secondary: false
+              secondary_label: 'Advanced options'
+              secondary_open: false
+            filter:
+              search_api_fulltext:
+                plugin_id: default
+                advanced:
+                  placeholder_text: ''
+                  rewrite:
+                    filter_rewrite_values: ''
+                  collapsible: false
+                  is_secondary: false
+              field_fecha_de_publicacion:
+                plugin_id: bef_datepicker
+                advanced:
+                  placeholder_text: ''
+                  collapsible: false
+                  is_secondary: false
+      pager:
+        type: full
+        options:
+          items_per_page: 30
+          offset: 0
+          id: 0
+          total_pages: null
+          tags:
+            previous: ‹
+            next: ›
+            first: «
+            last: »
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          quantity: 5
+      style:
+        type: default
+      row:
+        type: search_api
+        options:
+          view_modes:
+            'entity:node':
+              recurso: teaser
+      fields:
+        search_api_id:
+          table: search_api_index_online_library_search
+          field: search_api_id
+          id: search_api_id
+          entity_type: null
+          entity_field: null
+          plugin_id: standard
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+      filters:
+        search_api_fulltext:
+          id: search_api_fulltext
+          table: search_api_index_online_library_search
+          field: search_api_fulltext
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: and
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: search_api_fulltext_op
+            label: ''
+            description: ''
+            use_operator: false
+            operator: search_api_fulltext_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: search_text
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              asociado: '0'
+              escuela: '0'
+            placeholder: 'Buscar en título y descripción'
+            expose_fields: false
+            searched_fields_id: search_api_fulltext_searched_fields
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          parse_mode: terms
+          min_length: null
+          fields: {  }
+          plugin_id: search_api_fulltext
+        field_tipo_de_recurso:
+          id: field_tipo_de_recurso
+          table: search_api_index_online_library_search
+          field: field_tipo_de_recurso
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: false
+          expose:
+            operator_id: field_tipo_de_recurso_op
+            label: ''
+            description: ''
+            use_operator: false
+            operator: field_tipo_de_recurso_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: resource_type
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              asociado: '0'
+              escuela: '0'
+            reduce: false
+          is_grouped: true
+          group_info:
+            label: ''
+            description: ''
+            identifier: field_tipo_de_recurso
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items:
+              1:
+                title: 'Revistas y boletines'
+                operator: or
+                value:
+                  458: '458'
+                  53: '53'
+              2:
+                title: Tesinas
+                operator: or
+                value:
+                  50: '50'
+              3:
+                title: Libros
+                operator: or
+                value:
+                  290: '290'
+              4:
+                title: Artículos
+                operator: or
+                value:
+                  51: '51'
+              5:
+                title: Vídeos
+                operator: or
+                value:
+                  52: '52'
+              6:
+                title: Blogs
+                operator: or
+                value:
+                  1116: '1116'
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: tipo_de_recurso
+          hierarchy: true
+          error_message: true
+          plugin_id: search_api_term
+        status:
+          id: status
+          table: search_api_index_online_library_search
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: search_api_boolean
+      sorts:
+        search_api_relevance:
+          id: search_api_relevance
+          table: search_api_index_online_library_search
+          field: search_api_relevance
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: DESC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: search_api
+        created:
+          id: created
+          table: search_api_index_online_library_search
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: DESC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: search_api
+      title: 'Biblioteca online'
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content:
+            value: '<h1 class="page-title center">[view:title]</h1>'
+            format: full_html
+          plugin_id: text
+        views_block_area:
+          id: views_block_area
+          table: views
+          field: views_block_area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          block_id: local_tasks_block
+          plugin_id: views_block_area
+      footer: {  }
+      empty: {  }
+      relationships: {  }
+      arguments: {  }
+      display_extenders: {  }
+      use_ajax: false
+      css_class: view-list-cards
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user
+        - 'user.node_grants:view'
+      tags:
+        - 'config:search_api.index.online_library_search'
+  page_1:
+    display_plugin: page
+    id: page_1
+    display_title: 'Online Library Search Page'
+    position: 1
+    display_options:
+      display_extenders: {  }
+      path: biblioteca
+      display_description: ''
+      menu:
+        type: 'default tab'
+        title: Todos
+        description: ''
+        expanded: false
+        parent: ''
+        weight: 0
+        context: '0'
+        menu_name: main
+      tab_options:
+        type: none
+        title: ''
+        description: ''
+        weight: 0
+      defaults:
+        filters: false
+        filter_groups: false
+        sorts: true
+      filters:
+        search_api_fulltext:
+          id: search_api_fulltext
+          table: search_api_index_online_library_search
+          field: search_api_fulltext
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: search_api_fulltext_op
+            label: ''
+            description: ''
+            use_operator: false
+            operator: search_api_fulltext_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: texto
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              asociado: '0'
+              escuela: '0'
+              personal_aetg: '0'
+              testeo: '0'
+            placeholder: 'Indica tus términos de búsqueda'
+            expose_fields: false
+            searched_fields_id: search_api_fulltext_searched_fields
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          parse_mode: terms
+          min_length: null
+          fields: {  }
+          plugin_id: search_api_fulltext
+        status:
+          id: status
+          table: search_api_index_online_library_search
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: search_api_boolean
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - 'user.node_grants:view'
+      tags:
+        - 'config:search_api.index.online_library_search'
+  page_2:
+    display_plugin: page
+    id: page_2
+    display_title: Revistas
+    position: 1
+    display_options:
+      display_extenders: {  }
+      path: biblioteca/revistas
+      display_description: ''
+      menu:
+        type: tab
+        title: Revistas
+        description: ''
+        expanded: false
+        parent: ''
+        weight: 0
+        context: '0'
+        menu_name: main
+      filters:
+        search_api_fulltext:
+          id: search_api_fulltext
+          table: search_api_index_online_library_search
+          field: search_api_fulltext
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: search_api_fulltext_op
+            label: ''
+            description: ''
+            use_operator: false
+            operator: search_api_fulltext_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: texto
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              asociado: '0'
+              escuela: '0'
+              personal_aetg: '0'
+              testeo: '0'
+            placeholder: 'Indica tus términos de búsqueda'
+            expose_fields: false
+            searched_fields_id: search_api_fulltext_searched_fields
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          parse_mode: terms
+          min_length: null
+          fields: {  }
+          plugin_id: search_api_fulltext
+        field_tipo_de_recurso:
+          id: field_tipo_de_recurso
+          table: search_api_index_online_library_search
+          field: field_tipo_de_recurso
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            53: 53
+          group: 1
+          exposed: false
+          expose:
+            operator_id: field_tipo_de_recurso_op
+            label: ''
+            description: ''
+            use_operator: false
+            operator: field_tipo_de_recurso_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: resource_type
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              asociado: '0'
+              escuela: '0'
+            reduce: false
+          is_grouped: true
+          group_info:
+            label: ''
+            description: ''
+            identifier: field_tipo_de_recurso
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items:
+              1:
+                title: 'Revistas y boletines'
+                operator: or
+                value:
+                  458: '458'
+                  53: '53'
+              2:
+                title: Tesinas
+                operator: or
+                value:
+                  50: '50'
+              3:
+                title: Libros
+                operator: or
+                value:
+                  290: '290'
+              4:
+                title: Artículos
+                operator: or
+                value:
+                  51: '51'
+              5:
+                title: Vídeos
+                operator: or
+                value:
+                  52: '52'
+              6:
+                title: Blogs
+                operator: or
+                value:
+                  1116: '1116'
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: tipo_de_recurso
+          hierarchy: true
+          error_message: true
+          plugin_id: search_api_term
+        status:
+          id: status
+          table: search_api_index_online_library_search
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: search_api_boolean
+      defaults:
+        filters: false
+        filter_groups: false
+        title: false
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      title: 'Biblioteca online / Revistas'
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user
+        - 'user.node_grants:view'
+      tags:
+        - 'config:search_api.index.online_library_search'
+  page_3:
+    display_plugin: page
+    id: page_3
+    display_title: Tesinas
+    position: 1
+    display_options:
+      display_extenders: {  }
+      path: biblioteca/tesinas
+      display_description: ''
+      menu:
+        type: tab
+        title: Tesinas
+        description: ''
+        expanded: false
+        parent: ''
+        weight: 0
+        context: '0'
+        menu_name: main
+      filters:
+        search_api_fulltext:
+          id: search_api_fulltext
+          table: search_api_index_online_library_search
+          field: search_api_fulltext
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: search_api_fulltext_op
+            label: ''
+            description: ''
+            use_operator: false
+            operator: search_api_fulltext_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: texto
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              asociado: '0'
+              escuela: '0'
+              personal_aetg: '0'
+              testeo: '0'
+            placeholder: 'Indica tus términos de búsqueda'
+            expose_fields: false
+            searched_fields_id: search_api_fulltext_searched_fields
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          parse_mode: terms
+          min_length: null
+          fields: {  }
+          plugin_id: search_api_fulltext
+        field_tipo_de_recurso:
+          id: field_tipo_de_recurso
+          table: search_api_index_online_library_search
+          field: field_tipo_de_recurso
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            50: 50
+          group: 1
+          exposed: false
+          expose:
+            operator_id: field_tipo_de_recurso_op
+            label: ''
+            description: ''
+            use_operator: false
+            operator: field_tipo_de_recurso_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: resource_type
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              asociado: '0'
+              escuela: '0'
+            reduce: false
+          is_grouped: true
+          group_info:
+            label: ''
+            description: ''
+            identifier: field_tipo_de_recurso
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items:
+              1:
+                title: 'Revistas y boletines'
+                operator: or
+                value:
+                  458: '458'
+                  53: '53'
+              2:
+                title: Tesinas
+                operator: or
+                value:
+                  50: '50'
+              3:
+                title: Libros
+                operator: or
+                value:
+                  290: '290'
+              4:
+                title: Artículos
+                operator: or
+                value:
+                  51: '51'
+              5:
+                title: Vídeos
+                operator: or
+                value:
+                  52: '52'
+              6:
+                title: Blogs
+                operator: or
+                value:
+                  1116: '1116'
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: tipo_de_recurso
+          hierarchy: true
+          error_message: true
+          plugin_id: search_api_term
+        field_fecha_de_publicacion:
+          id: field_fecha_de_publicacion
+          table: search_api_index_online_library_search
+          field: field_fecha_de_publicacion
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '>='
+          value:
+            min: ''
+            max: ''
+            value: ''
+            type: offset
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_fecha_de_publicacion_op
+            label: ''
+            description: ''
+            use_operator: false
+            operator: field_fecha_de_publicacion_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: publicacion
+            required: false
+            remember: true
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              asociado: '0'
+              escuela: '0'
+              personal_aetg: '0'
+              testeo: '0'
+            placeholder: 'Fecha de publicación'
+            min_placeholder: DD-MM-AAAA
+            max_placeholder: DD-MM-AAAA
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: search_api_date
+        status:
+          id: status
+          table: search_api_index_online_library_search
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: search_api_boolean
+      defaults:
+        filters: false
+        filter_groups: false
+        title: false
+        sorts: false
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      title: 'Biblioteca online / Tesinas'
+      sorts:
+        search_api_relevance:
+          id: search_api_relevance
+          table: search_api_index_online_library_search
+          field: search_api_relevance
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: DESC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: search_api
+        field_fecha_de_publicacion:
+          id: field_fecha_de_publicacion
+          table: search_api_index_online_library_search
+          field: field_fecha_de_publicacion
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: search_api
+        created:
+          id: created
+          table: search_api_index_online_library_search
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: DESC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: search_api
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user
+        - 'user.node_grants:view'
+      tags:
+        - 'config:search_api.index.online_library_search'
+  page_4:
+    display_plugin: page
+    id: page_4
+    display_title: Libros
+    position: 4
+    display_options:
+      display_extenders: {  }
+      display_description: ''
+      path: biblioteca/libros
+      filters:
+        search_api_fulltext:
+          id: search_api_fulltext
+          table: search_api_index_online_library_search
+          field: search_api_fulltext
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: search_api_fulltext_op
+            label: ''
+            description: ''
+            use_operator: false
+            operator: search_api_fulltext_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: texto
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              asociado: '0'
+              escuela: '0'
+              personal_aetg: '0'
+              testeo: '0'
+            placeholder: 'Indica tus términos de búsqueda'
+            expose_fields: false
+            searched_fields_id: search_api_fulltext_searched_fields
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          parse_mode: terms
+          min_length: null
+          fields: {  }
+          plugin_id: search_api_fulltext
+        field_tipo_de_recurso:
+          id: field_tipo_de_recurso
+          table: search_api_index_online_library_search
+          field: field_tipo_de_recurso
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            290: 290
+          group: 1
+          exposed: false
+          expose:
+            operator_id: field_tipo_de_recurso_op
+            label: ''
+            description: ''
+            use_operator: false
+            operator: field_tipo_de_recurso_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: resource_type
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              asociado: '0'
+              escuela: '0'
+            reduce: false
+          is_grouped: true
+          group_info:
+            label: ''
+            description: ''
+            identifier: field_tipo_de_recurso
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items:
+              1:
+                title: 'Revistas y boletines'
+                operator: or
+                value:
+                  458: '458'
+                  53: '53'
+              2:
+                title: Tesinas
+                operator: or
+                value:
+                  50: '50'
+              3:
+                title: Libros
+                operator: or
+                value:
+                  290: '290'
+              4:
+                title: Artículos
+                operator: or
+                value:
+                  51: '51'
+              5:
+                title: Vídeos
+                operator: or
+                value:
+                  52: '52'
+              6:
+                title: Blogs
+                operator: or
+                value:
+                  1116: '1116'
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: tipo_de_recurso
+          hierarchy: true
+          error_message: true
+          plugin_id: search_api_term
+        status:
+          id: status
+          table: search_api_index_online_library_search
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: search_api_boolean
+      defaults:
+        filters: false
+        filter_groups: false
+        title: false
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      menu:
+        type: tab
+        title: Libros
+        description: ''
+        expanded: false
+        parent: ''
+        weight: 0
+        context: '0'
+        menu_name: main
+      title: 'Biblioteca online / Libros'
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user
+        - 'user.node_grants:view'
+      tags:
+        - 'config:search_api.index.online_library_search'
+  page_5:
+    display_plugin: page
+    id: page_5
+    display_title: Artículos
+    position: 4
+    display_options:
+      display_extenders: {  }
+      display_description: ''
+      path: biblioteca/articulos
+      filters:
+        search_api_fulltext:
+          id: search_api_fulltext
+          table: search_api_index_online_library_search
+          field: search_api_fulltext
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: search_api_fulltext_op
+            label: ''
+            description: ''
+            use_operator: false
+            operator: search_api_fulltext_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: texto
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              asociado: '0'
+              escuela: '0'
+              personal_aetg: '0'
+              testeo: '0'
+            placeholder: 'Indica tus términos de búsqueda'
+            expose_fields: false
+            searched_fields_id: search_api_fulltext_searched_fields
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          parse_mode: terms
+          min_length: null
+          fields: {  }
+          plugin_id: search_api_fulltext
+        field_tipo_de_recurso:
+          id: field_tipo_de_recurso
+          table: search_api_index_online_library_search
+          field: field_tipo_de_recurso
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            51: 51
+          group: 1
+          exposed: false
+          expose:
+            operator_id: field_tipo_de_recurso_op
+            label: ''
+            description: ''
+            use_operator: false
+            operator: field_tipo_de_recurso_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: resource_type
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              asociado: '0'
+              escuela: '0'
+            reduce: false
+          is_grouped: true
+          group_info:
+            label: ''
+            description: ''
+            identifier: field_tipo_de_recurso
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items:
+              1:
+                title: 'Revistas y boletines'
+                operator: or
+                value:
+                  458: '458'
+                  53: '53'
+              2:
+                title: Tesinas
+                operator: or
+                value:
+                  50: '50'
+              3:
+                title: Libros
+                operator: or
+                value:
+                  290: '290'
+              4:
+                title: Artículos
+                operator: or
+                value:
+                  51: '51'
+              5:
+                title: Vídeos
+                operator: or
+                value:
+                  52: '52'
+              6:
+                title: Blogs
+                operator: or
+                value:
+                  1116: '1116'
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: tipo_de_recurso
+          hierarchy: true
+          error_message: true
+          plugin_id: search_api_term
+        status:
+          id: status
+          table: search_api_index_online_library_search
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: search_api_boolean
+      defaults:
+        filters: false
+        filter_groups: false
+        title: false
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      menu:
+        type: tab
+        title: Artículos
+        description: ''
+        expanded: false
+        parent: ''
+        weight: 0
+        context: '0'
+        menu_name: main
+      title: 'Biblioteca online / Artículos'
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user
+        - 'user.node_grants:view'
+      tags:
+        - 'config:search_api.index.online_library_search'
+  page_6:
+    display_plugin: page
+    id: page_6
+    display_title: Vídeos
+    position: 4
+    display_options:
+      display_extenders: {  }
+      display_description: ''
+      path: biblioteca/videos
+      filters:
+        search_api_fulltext:
+          id: search_api_fulltext
+          table: search_api_index_online_library_search
+          field: search_api_fulltext
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: search_api_fulltext_op
+            label: ''
+            description: ''
+            use_operator: false
+            operator: search_api_fulltext_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: texto
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              asociado: '0'
+              escuela: '0'
+              personal_aetg: '0'
+              testeo: '0'
+            placeholder: 'Indica tus términos de búsqueda'
+            expose_fields: false
+            searched_fields_id: search_api_fulltext_searched_fields
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          parse_mode: terms
+          min_length: null
+          fields: {  }
+          plugin_id: search_api_fulltext
+        field_tipo_de_recurso:
+          id: field_tipo_de_recurso
+          table: search_api_index_online_library_search
+          field: field_tipo_de_recurso
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            52: 52
+          group: 1
+          exposed: false
+          expose:
+            operator_id: field_tipo_de_recurso_op
+            label: ''
+            description: ''
+            use_operator: false
+            operator: field_tipo_de_recurso_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: resource_type
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              asociado: '0'
+              escuela: '0'
+            reduce: false
+          is_grouped: true
+          group_info:
+            label: ''
+            description: ''
+            identifier: field_tipo_de_recurso
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items:
+              1:
+                title: 'Revistas y boletines'
+                operator: or
+                value:
+                  458: '458'
+                  53: '53'
+              2:
+                title: Tesinas
+                operator: or
+                value:
+                  50: '50'
+              3:
+                title: Libros
+                operator: or
+                value:
+                  290: '290'
+              4:
+                title: Artículos
+                operator: or
+                value:
+                  51: '51'
+              5:
+                title: Vídeos
+                operator: or
+                value:
+                  52: '52'
+              6:
+                title: Blogs
+                operator: or
+                value:
+                  1116: '1116'
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: tipo_de_recurso
+          hierarchy: true
+          error_message: true
+          plugin_id: search_api_term
+        status:
+          id: status
+          table: search_api_index_online_library_search
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: search_api_boolean
+      defaults:
+        filters: false
+        filter_groups: false
+        title: false
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      menu:
+        type: tab
+        title: Vídeos
+        description: ''
+        expanded: false
+        parent: ''
+        weight: 0
+        context: '0'
+        menu_name: main
+      title: 'Biblioteca online / Vídeos'
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user
+        - 'user.node_grants:view'
+      tags:
+        - 'config:search_api.index.online_library_search'
+  page_7:
+    display_plugin: page
+    id: page_7
+    display_title: Webs
+    position: 4
+    display_options:
+      display_extenders: {  }
+      display_description: ''
+      path: biblioteca/webs
+      filters:
+        search_api_fulltext:
+          id: search_api_fulltext
+          table: search_api_index_online_library_search
+          field: search_api_fulltext
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: search_api_fulltext_op
+            label: ''
+            description: ''
+            use_operator: false
+            operator: search_api_fulltext_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: texto
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              asociado: '0'
+              escuela: '0'
+              personal_aetg: '0'
+              testeo: '0'
+            placeholder: 'Indica tus términos de búsqueda'
+            expose_fields: false
+            searched_fields_id: search_api_fulltext_searched_fields
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          parse_mode: terms
+          min_length: null
+          fields: {  }
+          plugin_id: search_api_fulltext
+        field_tipo_de_recurso:
+          id: field_tipo_de_recurso
+          table: search_api_index_online_library_search
+          field: field_tipo_de_recurso
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            1116: 1116
+          group: 1
+          exposed: false
+          expose:
+            operator_id: field_tipo_de_recurso_op
+            label: ''
+            description: ''
+            use_operator: false
+            operator: field_tipo_de_recurso_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: resource_type
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              asociado: '0'
+              escuela: '0'
+            reduce: false
+          is_grouped: true
+          group_info:
+            label: ''
+            description: ''
+            identifier: field_tipo_de_recurso
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items:
+              1:
+                title: 'Revistas y boletines'
+                operator: or
+                value:
+                  458: '458'
+                  53: '53'
+              2:
+                title: Tesinas
+                operator: or
+                value:
+                  50: '50'
+              3:
+                title: Libros
+                operator: or
+                value:
+                  290: '290'
+              4:
+                title: Artículos
+                operator: or
+                value:
+                  51: '51'
+              5:
+                title: Vídeos
+                operator: or
+                value:
+                  52: '52'
+              6:
+                title: Blogs
+                operator: or
+                value:
+                  1116: '1116'
+          reduce_duplicates: true
+          type: select
+          limit: true
+          vid: tipo_de_recurso
+          hierarchy: true
+          error_message: true
+          plugin_id: search_api_term
+        status:
+          id: status
+          table: search_api_index_online_library_search
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: search_api_boolean
+      defaults:
+        filters: false
+        filter_groups: false
+        title: false
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      menu:
+        type: tab
+        title: Webs
+        description: ''
+        expanded: false
+        parent: ''
+        weight: 0
+        context: '0'
+        menu_name: main
+      title: 'Biblioteca online / Webs'
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user
+        - 'user.node_grants:view'
+      tags:
+        - 'config:search_api.index.online_library_search'
+  page_8:
+    display_plugin: page
+    id: page_8
+    display_title: Newsletters
+    position: 4
+    display_options:
+      display_extenders: {  }
+      display_description: ''
+      path: biblioteca/newsletters
+      filters:
+        search_api_fulltext:
+          id: search_api_fulltext
+          table: search_api_index_online_library_search
+          field: search_api_fulltext
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: search_api_fulltext_op
+            label: ''
+            description: ''
+            use_operator: false
+            operator: search_api_fulltext_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: texto
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              asociado: '0'
+              escuela: '0'
+              personal_aetg: '0'
+              testeo: '0'
+            placeholder: 'Indica tus términos de búsqueda'
+            expose_fields: false
+            searched_fields_id: search_api_fulltext_searched_fields
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          parse_mode: terms
+          min_length: null
+          fields: {  }
+          plugin_id: search_api_fulltext
+        field_tipo_de_recurso:
+          id: field_tipo_de_recurso
+          table: search_api_index_online_library_search
+          field: field_tipo_de_recurso
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            458: 458
+          group: 1
+          exposed: false
+          expose:
+            operator_id: field_tipo_de_recurso_op
+            label: ''
+            description: ''
+            use_operator: false
+            operator: field_tipo_de_recurso_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: resource_type
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              asociado: '0'
+              escuela: '0'
+            reduce: false
+          is_grouped: true
+          group_info:
+            label: ''
+            description: ''
+            identifier: field_tipo_de_recurso
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items:
+              1:
+                title: 'Revistas y boletines'
+                operator: or
+                value:
+                  458: '458'
+                  53: '53'
+              2:
+                title: Tesinas
+                operator: or
+                value:
+                  50: '50'
+              3:
+                title: Libros
+                operator: or
+                value:
+                  290: '290'
+              4:
+                title: Artículos
+                operator: or
+                value:
+                  51: '51'
+              5:
+                title: Vídeos
+                operator: or
+                value:
+                  52: '52'
+              6:
+                title: Blogs
+                operator: or
+                value:
+                  1116: '1116'
+          reduce_duplicates: true
+          type: select
+          limit: true
+          vid: tipo_de_recurso
+          hierarchy: true
+          error_message: true
+          plugin_id: search_api_term
+        status:
+          id: status
+          table: search_api_index_online_library_search
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: search_api_boolean
+      defaults:
+        filters: false
+        filter_groups: false
+        title: false
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      menu:
+        type: tab
+        title: Newsletters
+        description: ''
+        expanded: false
+        parent: ''
+        weight: 0
+        context: '0'
+        menu_name: main
+      title: 'Biblioteca online / Newsletters'
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user
+        - 'user.node_grants:view'
+      tags:
+        - 'config:search_api.index.online_library_search'
+  page_9:
+    display_plugin: page
+    id: page_9
+    display_title: 'Online Shop'
+    position: 1
+    display_options:
+      display_extenders: {  }
+      path: tienda
+      display_description: ''
+      menu:
+        type: none
+        title: Todos
+        description: ''
+        expanded: false
+        parent: ''
+        weight: 0
+        context: '0'
+        menu_name: main
+      tab_options:
+        type: none
+        title: ''
+        description: ''
+        weight: 0
+      defaults:
+        filters: false
+        filter_groups: false
+        sorts: true
+        title: false
+        style: false
+        row: false
+        pager: false
+      filters:
+        search_api_fulltext:
+          id: search_api_fulltext
+          table: search_api_index_online_library_search
+          field: search_api_fulltext
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: search_api_fulltext_op
+            label: ''
+            description: ''
+            use_operator: false
+            operator: search_api_fulltext_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: texto
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              asociado: '0'
+              escuela: '0'
+              personal_aetg: '0'
+              testeo: '0'
+            placeholder: 'Indica tus términos de búsqueda'
+            expose_fields: false
+            searched_fields_id: search_api_fulltext_searched_fields
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          parse_mode: terms
+          min_length: null
+          fields: {  }
+          plugin_id: search_api_fulltext
+        status:
+          id: status
+          table: search_api_index_online_library_search
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: search_api_boolean
+        field_product_reference:
+          id: field_product_reference
+          table: search_api_index_online_library_search
+          field: field_product_reference
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: search_api_boolean
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      title: 'Tienda online'
+      style:
+        type: default
+        options: {  }
+      row:
+        type: search_api
+        options:
+          view_modes:
+            'entity:node':
+              recurso: tienda
+      pager:
+        type: mini
+        options:
+          items_per_page: 30
+          offset: 0
+          id: 0
+          total_pages: null
+          tags:
+            previous: ‹
+            next: ›
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - 'user.node_grants:view'
+      tags:
+        - 'config:search_api.index.online_library_search'

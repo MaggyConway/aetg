@@ -1,0 +1,14 @@
+uuid: 3e2ea9aa-672d-44a8-8ad6-58ce78aef662
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.escuela
+  module:
+    - user
+id: user_add_role_action.escuela
+label: 'Add the escuela role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: escuela

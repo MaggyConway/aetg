@@ -1,0 +1,19 @@
+uuid: 3ce0f613-d9c0-4f51-8589-cdf121d3a9aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_director
+    - profile.type.school_professional_information
+id: profile.school_professional_information.field_director
+field_name: field_director
+entity_type: profile
+bundle: school_professional_information
+label: Director/as
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

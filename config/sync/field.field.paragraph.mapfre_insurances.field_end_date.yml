@@ -1,0 +1,21 @@
+uuid: 09a5f1e4-3da5-42eb-b0f5-d48e15337622
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_end_date
+    - paragraphs.paragraphs_type.mapfre_insurances
+  module:
+    - datetime
+id: paragraph.mapfre_insurances.field_end_date
+field_name: field_end_date
+entity_type: paragraph
+bundle: mapfre_insurances
+label: 'Fecha de baja'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

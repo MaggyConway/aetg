@@ -1,0 +1,19 @@
+uuid: 29ee1544-9fa1-4649-a386-77c5e8e65e4a
+langcode: en
+status: true
+dependencies: {  }
+third_party_settings:
+  commerce_order:
+    customer_profile_type: false
+id: informacion_privada
+label: 'Información privada'
+display_label: ''
+multiple: false
+registration: false
+roles:
+  authenticated: authenticated
+  administrator: administrator
+  asociado: asociado
+  personal_aetg: personal_aetg
+allow_revisions: false
+new_revision: false

@@ -1,0 +1,31 @@
+uuid: eccb76cd-3d96-40f8-af28-b94318847641
+langcode: es
+status: false
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - menu_block
+  theme:
+    - aetg
+id: footer_6
+theme: aetg
+region: footer
+weight: -17
+provider: null
+plugin: 'menu_block:footer'
+settings:
+  id: 'menu_block:footer'
+  label: Descargas
+  provider: menu_block
+  label_display: visible
+  follow: false
+  follow_parent: child
+  level: 1
+  depth: 0
+  expand_all_items: false
+  parent: 'footer:menu_link_content:e5d1d32e-0d44-4924-a6f8-1438b4605104'
+  suggestion: footer
+  label_type: fixed
+  label_link: true
+visibility: {  }

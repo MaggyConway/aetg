@@ -1,0 +1,31 @@
+uuid: b4b7b3fa-ed3a-4745-ad02-920021cd6e24
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - menu_block
+  theme:
+    - aetg
+id: footer_2
+theme: aetg
+region: footer
+weight: -20
+provider: null
+plugin: 'menu_block:footer'
+settings:
+  id: 'menu_block:footer'
+  label: 'La Terapia Gestalt'
+  provider: menu_block
+  label_display: '0'
+  follow: false
+  follow_parent: child
+  level: 1
+  depth: 0
+  expand_all_items: false
+  parent: 'footer:menu_link_content:7fe275aa-ee8c-4ffa-9c3b-c6333cb1c55a'
+  suggestion: footer
+  label_type: fixed
+  label_link: true
+visibility: {  }

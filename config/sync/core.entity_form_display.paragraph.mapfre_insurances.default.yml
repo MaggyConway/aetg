@@ -1,0 +1,55 @@
+uuid: c37f840e-3982-449d-ac70-ec432e98d293
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.mapfre_insurances.field_end_date
+    - field.field.paragraph.mapfre_insurances.field_is_debtor
+    - field.field.paragraph.mapfre_insurances.field_start_date
+    - field.field.paragraph.mapfre_insurances.field_taxonomy_term
+    - field.field.paragraph.mapfre_insurances.field_text
+    - paragraphs.paragraphs_type.mapfre_insurances
+  module:
+    - datetime
+    - text
+id: paragraph.mapfre_insurances.default
+targetEntityType: paragraph
+bundle: mapfre_insurances
+mode: default
+content:
+  field_end_date:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_is_debtor:
+    weight: 3
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_start_date:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_taxonomy_term:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_text:
+    weight: 4
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+hidden:
+  created: true
+  status: true

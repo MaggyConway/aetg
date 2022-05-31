@@ -1,0 +1,11 @@
+uuid: eea7bad4-93f1-47e9-a854-2f0ea4634a16
+langcode: es
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+id: header_info
+title: 'Header info'
+content:
+  value: "<div class=\"str\"><a alt=\"Teléfono fijo de contacto de la Asociación Española de Terapia Gestalt\" href=\"tel:915 430 625\" title=\"Teléfono de la AETG\"><img alt=\"telephon icon\" data-entity-type=\"\" data-entity-uuid=\"\" src=\"/themes/custom/aetg/src/assets/images/form-fields/tel.svg\" />&nbsp;915 430 625</a>&nbsp;&nbsp;&nbsp;<a alt=\"Correo electrónico de contacto de la Asociación Española de Terapia Gestalt\" href=\"mailto:info@aetg.es\" title=\"Email de la AETG\"><img alt=\"email icon\" data-entity-type=\"\" data-entity-uuid=\"\" src=\"/themes/custom/aetg/dist/images/email.svg\" />&nbsp;info@aetg.es</a>\r\n<p>De Lunes a Viernes de 10:00 a 14:00 horas</p>\r\n</div>\r\n"
+  format: full_html

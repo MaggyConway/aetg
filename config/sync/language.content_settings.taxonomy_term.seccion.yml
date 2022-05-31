@@ -1,0 +1,11 @@
+uuid: c23cd076-4f76-4fa3-8ce6-34bff690c06c
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.seccion
+id: taxonomy_term.seccion
+target_entity_type_id: taxonomy_term
+target_bundle: seccion
+default_langcode: site_default
+language_alterable: false

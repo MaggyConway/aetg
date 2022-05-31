@@ -1,0 +1,19 @@
+uuid: f3c9d6e5-964e-4842-a4e4-b50ed93e8e59
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_telefono_prof
+    - profile.type.informacion_profesional
+id: profile.informacion_profesional.field_telefono_prof
+field_name: field_telefono_prof
+entity_type: profile
+bundle: informacion_profesional
+label: 'Teléfono Fijo'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

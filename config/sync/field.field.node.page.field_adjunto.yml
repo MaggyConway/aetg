@@ -1,0 +1,27 @@
+uuid: 2ea66e40-5dbf-4663-b441-27970239baea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_adjunto
+    - node.type.page
+  module:
+    - file
+id: node.page.field_adjunto
+field_name: field_adjunto
+entity_type: node
+bundle: page
+label: Adjunto
+description: 'Puede subir aquí documentos adjuntos al contenido. Recuerde que serán documentos accesibles para todo el público.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: ''
+  file_extensions: 'txt pdf odt docx doc'
+  max_filesize: ''
+  description_field: true
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

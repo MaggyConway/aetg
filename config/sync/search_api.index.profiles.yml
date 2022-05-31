@@ -1,0 +1,228 @@
+uuid: 22483cc6-34af-41cf-a3e0-3985f0763f98
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_invoicing_address
+    - field.storage.profile.field_full_name
+    - field.storage.profile.field_school_name
+    - search_api.server.database
+  module:
+    - profile
+    - search_api
+    - address
+id: profiles
+name: Profiles
+description: ''
+read_only: false
+field_settings:
+  address_line1:
+    label: 'Dirección » La primera línea del bloque de direcciones'
+    datasource_id: 'entity:profile'
+    property_path: 'field_invoicing_address:address_line1'
+    type: text
+    dependencies:
+      config:
+        - field.storage.profile.field_invoicing_address
+  address_line2:
+    label: 'Dirección » La segunda línea del bloque de direcciones'
+    datasource_id: 'entity:profile'
+    property_path: 'field_invoicing_address:address_line2'
+    type: text
+    dependencies:
+      config:
+        - field.storage.profile.field_invoicing_address
+  administrative_area:
+    label: 'Dirección » The top-level administrative subdivision of the country'
+    datasource_id: 'entity:profile'
+    property_path: 'field_invoicing_address:administrative_area'
+    type: text
+    dependencies:
+      config:
+        - field.storage.profile.field_invoicing_address
+  country_code:
+    label: 'Dirección » The two-letter country code'
+    datasource_id: 'entity:profile'
+    property_path: 'field_invoicing_address:country_code'
+    type: text
+    dependencies:
+      config:
+        - field.storage.profile.field_invoicing_address
+  field_full_name:
+    label: 'Nombre Completo'
+    datasource_id: 'entity:profile'
+    property_path: field_full_name
+    type: text
+    dependencies:
+      config:
+        - field.storage.profile.field_full_name
+  field_school_name:
+    label: 'Nombre de escuela'
+    datasource_id: 'entity:profile'
+    property_path: field_school_name
+    type: text
+    dependencies:
+      config:
+        - field.storage.profile.field_school_name
+  locality:
+    label: 'Dirección » La localidad (por ejemplo, la ciudad)'
+    datasource_id: 'entity:profile'
+    property_path: 'field_invoicing_address:locality'
+    type: text
+    dependencies:
+      config:
+        - field.storage.profile.field_invoicing_address
+  status:
+    label: Activo
+    datasource_id: 'entity:profile'
+    property_path: status
+    type: boolean
+    dependencies:
+      module:
+        - profile
+  type:
+    label: 'Tipo de perfil'
+    datasource_id: 'entity:profile'
+    property_path: type
+    type: string
+    dependencies:
+      module:
+        - profile
+  uid:
+    label: Propietario
+    datasource_id: 'entity:profile'
+    property_path: uid
+    type: integer
+    dependencies:
+      module:
+        - profile
+datasource_settings:
+  'entity:profile':
+    bundles:
+      default: false
+      selected:
+        - informacion_profesional
+        - school_professional_information
+processor_settings:
+  add_url: {  }
+  address_abbreviations_to_full_form:
+    administrative_area:
+      enable: 1
+      concat: 0
+    country_code:
+      enable: 1
+      concat: 0
+    locality:
+      enable: 1
+      concat: 0
+    fields: {  }
+    all_fields: false
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+  aggregated_field: {  }
+  entity_status: {  }
+  ignorecase:
+    all_fields: false
+    fields:
+      - address_line1
+      - address_line2
+      - administrative_area
+      - country_code
+      - field_full_name
+      - field_school_name
+      - locality
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+  language_with_fallback: {  }
+  rendered_item: {  }
+  stopwords:
+    all_fields: false
+    fields:
+      - address_line1
+      - address_line2
+      - administrative_area
+      - country_code
+      - locality
+    stopwords:
+      - a
+      - an
+      - and
+      - are
+      - as
+      - at
+      - be
+      - but
+      - by
+      - for
+      - if
+      - in
+      - into
+      - is
+      - it
+      - 'no'
+      - not
+      - of
+      - 'on'
+      - or
+      - s
+      - such
+      - t
+      - that
+      - the
+      - their
+      - then
+      - there
+      - these
+      - they
+      - this
+      - to
+      - was
+      - will
+      - with
+    weights:
+      preprocess_index: -5
+      preprocess_query: -2
+  tokenizer:
+    all_fields: false
+    fields:
+      - address_line1
+      - address_line2
+      - administrative_area
+      - country_code
+      - locality
+    ignored: ._-
+    spaces: ''
+    overlap_cjk: 1
+    minimum_word_size: '3'
+    weights:
+      preprocess_index: -6
+      preprocess_query: -6
+  transliteration:
+    all_fields: false
+    fields:
+      - address_line1
+      - address_line2
+      - administrative_area
+      - country_code
+      - field_full_name
+      - field_school_name
+      - locality
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+  type_boost:
+    boosts:
+      'entity:profile':
+        datasource_boost: !!float 1
+    weights:
+      preprocess_index: 0
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  index_directly: true
+  cron_limit: 50
+  track_changes_in_references: true
+server: database

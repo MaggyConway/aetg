@@ -1,0 +1,142 @@
+uuid: 4a040a8c-9232-47ba-8174-7f3f949e8b58
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.profile.dashboard_header
+    - field.field.profile.customer.address
+    - field.field.profile.customer.tax_number
+    - field.field.user.user.user_picture
+    - profile.type.customer
+  enforced:
+    module:
+      - commerce_order
+  module:
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: true
+    sections:
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: ''
+          column_widths: 25-75
+          layout_builder_styles_style: ''
+        components:
+          44ae1489-3f99-4ca7-8e68-7f304a2a5c19:
+            uuid: 44ae1489-3f99-4ca7-8e68-7f304a2a5c19
+            region: first
+            configuration:
+              id: 'field_block:user:user:user_picture'
+              label: Imagen
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: image
+                settings:
+                  image_style: user_picture
+                  image_link: ''
+                third_party_settings:
+                  empty_fields:
+                    handler: ''
+                  field_formatter_class:
+                    class: ''
+              context_mapping:
+                entity: '@user.current_user_context:current_user'
+                view_mode: view_mode
+            additional:
+              layout_builder_styles_style: ''
+            weight: 0
+          ff31e27c-3c57-44c3-9f27-29d2b738383c:
+            uuid: ff31e27c-3c57-44c3-9f27-29d2b738383c
+            region: second
+            configuration:
+              id: 'field_block:profile:customer:address'
+              label: Dirección
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: address_display_formatter
+                settings:
+                  address_display:
+                    organization:
+                      display: '1'
+                      glue: ''
+                      weight: '-10'
+                    address_line1:
+                      glue: ''
+                      weight: '-9'
+                      display: 0
+                    address_line2:
+                      glue: ','
+                      weight: '-8'
+                      display: 0
+                    locality:
+                      display: '1'
+                      glue: ', '
+                      weight: '-7'
+                    postal_code:
+                      glue: ''
+                      weight: '-6'
+                      display: 0
+                    dependent_locality:
+                      glue: ''
+                      weight: '-5'
+                      display: 0
+                    country_code:
+                      display: '1'
+                      glue: ''
+                      weight: '-4'
+                    langcode:
+                      glue: ','
+                      weight: '-3'
+                      display: 0
+                    administrative_area:
+                      glue: ','
+                      weight: '-2'
+                      display: 0
+                    sorting_code:
+                      glue: ','
+                      weight: '-1'
+                      display: 0
+                    given_name:
+                      glue: ''
+                      weight: '0'
+                      display: 0
+                    family_name:
+                      glue: ','
+                      weight: '1'
+                      display: 0
+                third_party_settings:
+                  empty_fields:
+                    handler: ''
+                  field_formatter_class:
+                    class: ''
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional:
+              layout_builder_styles_style: ''
+            weight: 0
+        third_party_settings: {  }
+_core:
+  default_config_hash: zA0MBGUGdWqnBBoC762uDcH92qRZHC8KllbkpOjNUcs
+id: profile.customer.dashboard_header
+targetEntityType: profile
+bundle: customer
+mode: dashboard_header
+content: {  }
+hidden:
+  address: true
+  addtoany: true
+  breadcrumbs: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  private_message_link: true
+  search_api_excerpt: true
+  tax_number: true

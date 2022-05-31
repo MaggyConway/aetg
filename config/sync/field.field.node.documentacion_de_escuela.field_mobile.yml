@@ -1,0 +1,21 @@
+uuid: 0fbe9ccb-e5f9-45a2-81c6-f14eb5e80e9f
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_mobile
+    - node.type.documentacion_de_escuela
+id: node.documentacion_de_escuela.field_mobile
+field_name: field_mobile
+entity_type: node
+bundle: documentacion_de_escuela
+label: Móvil
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: '[current-user:escuela:field_telefono_2]'
+default_value_callback: field_default_token_default_value_callback
+settings: {  }
+field_type: string

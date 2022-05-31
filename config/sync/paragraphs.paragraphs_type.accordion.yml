@@ -1,0 +1,15 @@
+uuid: 3824f8e6-23bc-4d72-97c8-aad599da2a06
+langcode: es
+status: true
+dependencies:
+  module:
+    - paragraph_view_mode
+third_party_settings:
+  paragraph_view_mode:
+    enabled: false
+id: accordion
+label: Pestaña
+icon_uuid: null
+icon_default: null
+description: 'Pestaña de acordeón'
+behavior_plugins: {  }

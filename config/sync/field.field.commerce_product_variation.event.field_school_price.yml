@@ -1,0 +1,23 @@
+uuid: ab7edf7d-cd9e-4d3e-9d43-ce0d52599e8a
+langcode: es
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.event
+    - field.storage.commerce_product_variation.field_school_price
+id: commerce_product_variation.event.field_school_price
+field_name: field_school_price
+entity_type: commerce_product_variation
+bundle: event
+label: 'Precio para usuarios escuelas'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: €
+  suffix: ''
+field_type: float

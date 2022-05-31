@@ -1,0 +1,37 @@
+uuid: 25c11e57-de24-4bc8-9625-f41fbf836a67
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.tipo_de_miembro.field_cuota
+    - taxonomy.vocabulary.tipo_de_miembro
+  module:
+    - text
+id: taxonomy_term.tipo_de_miembro.default
+targetEntityType: taxonomy_term
+bundle: tipo_de_miembro
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_cuota:
+    label: above
+    weight: 0
+    type: number_integer
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    region: content
+hidden:
+  breadcrumbs: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  langcode: true
+  search_api_excerpt: true

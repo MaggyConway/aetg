@@ -1,0 +1,28 @@
+uuid: f3fcc1bb-eafb-4dfd-9012-7636ebde131b
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.file
+    - field.storage.commerce_product_variation.field_node
+    - node.type.recurso
+id: commerce_product_variation.file.field_node
+field_name: field_node
+entity_type: commerce_product_variation
+bundle: file
+label: Node
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      recurso: recurso
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

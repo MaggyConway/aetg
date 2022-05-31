@@ -1,0 +1,15 @@
+uuid: 5b9dca3d-83b7-4428-b2c9-bc33af0078d7
+langcode: en
+status: true
+dependencies: {  }
+name: pt_image_slider_item_default
+label: 'PT Image Slider Item: Default'
+effects:
+  76563f5c-38b0-4b8a-a0bc-297cf15bea2b:
+    uuid: 76563f5c-38b0-4b8a-a0bc-297cf15bea2b
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 940
+      height: 625
+      anchor: center-center

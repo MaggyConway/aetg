@@ -1,0 +1,21 @@
+uuid: c4e937ee-4d35-45b6-8e8a-5c0442622f4a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_cronograma
+    - profile.type.escuela
+  module:
+    - text
+id: profile.escuela.field_cronograma
+field_name: field_cronograma
+entity_type: profile
+bundle: escuela
+label: Cronograma
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

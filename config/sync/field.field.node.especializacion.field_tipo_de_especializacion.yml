@@ -1,0 +1,28 @@
+uuid: b7efb622-6488-42f9-96c1-d3c5debd6317
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tipo_de_especializacion
+    - node.type.especializacion
+    - taxonomy.vocabulary.tipo_de_especializacion
+id: node.especializacion.field_tipo_de_especializacion
+field_name: field_tipo_de_especializacion
+entity_type: node
+bundle: especializacion
+label: Tipo
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tipo_de_especializacion: tipo_de_especializacion
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

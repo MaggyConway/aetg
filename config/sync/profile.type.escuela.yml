@@ -1,0 +1,16 @@
+uuid: aaaf8428-90ba-4de7-a1c9-b53e40edeb75
+langcode: en
+status: true
+dependencies: {  }
+id: escuela
+label: 'Información escuela'
+display_label: null
+multiple: false
+registration: false
+roles:
+  - authenticated
+  - administrator
+  - escuela
+  - personal_aetg
+allow_revisions: false
+new_revision: false

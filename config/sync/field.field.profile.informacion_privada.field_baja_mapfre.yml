@@ -1,0 +1,21 @@
+uuid: c42effe0-1246-49c3-84cb-406fe635a9b6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_baja_mapfre
+    - profile.type.informacion_privada
+  module:
+    - datetime
+id: profile.informacion_privada.field_baja_mapfre
+field_name: field_baja_mapfre
+entity_type: profile
+bundle: informacion_privada
+label: 'Baja Mapfre'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

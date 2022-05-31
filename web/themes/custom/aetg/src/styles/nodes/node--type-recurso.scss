@@ -1,0 +1,425 @@
+.node--type-recurso {
+	&.node--view-mode-full {
+		> .node__content > .layout:first-child > .layout__region {
+			position: relative;
+			padding: 65px 40px;
+			margin-bottom: 55px;
+
+			@include breakpoint(mobile-middle) {
+				margin-bottom: 30px;
+			}
+
+			@include breakpoint(mobile-small) {
+				padding: 30px 20px;
+			}
+
+			.block:not(.block-field-blocknoderecursofield-media) {
+				position: relative;
+				z-index: 30;
+				color: #fff;
+				// @include main-container;
+				max-width: 834px;
+				margin: 0 auto 15px;
+
+				.field--name-field-autor,
+				.field--name-field-fecha-de-publicacion,
+				.field--name-field-editorial,
+				.field--name-field-modalidad {
+					display: flex;
+					justify-content: flex-start;
+					align-items: center;
+					padding-bottom: 9px;
+					border-bottom: 1px solid $color-76;
+				}
+
+				.field__label {
+					color: #fff;
+					min-width: 165px;
+					padding: 0;
+					font-size: 14px;
+					line-height: 18px;
+					opacity: .7;
+
+					@include breakpoint(mobile-small) {
+						min-width: 90px;
+						width: 90px;
+						margin-right: 15px;
+						white-space: normal;
+					}
+				}
+
+				.field__item {
+					color: #fff;
+					font-weight: 500;
+					line-height: 27px;
+
+					strong {
+						font-weight: 600;
+					}
+				}
+			}
+		}
+
+		.block-field-blocknoderecursofield-media,
+		.default-image-placeholder {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			left: 0;
+			top: 0;
+			z-index: -1;
+			overflow: hidden;
+
+			&:before {
+				background-color: rgba(0, 0, 0, 0.7);
+				position: absolute;
+				content: "";
+				width: 100%;
+				height: 100%;
+				left: 0;
+				top: 0;
+				z-index: 1;
+				overflow: hidden;
+			}
+
+			* {
+				height: 100%;
+			}
+		}
+
+		.field--name-field-tipo-de-recurso {
+			margin-top: 33px;
+		}
+
+		> .node__content {
+			.layout:not(:first-child) {
+				@include main-container;
+
+				@include breakpoint(tablet-md) {
+					padding-left: 20px;
+					padding-right: 20px;
+				}
+
+				.field--label-inline {
+					align-items: flex-start;
+					&.field--name-price {
+						align-items: center;
+					}
+				}
+
+				.field__label, h3 {
+					@include h3;
+					@include event-title-spaces;
+					color: $color-1;
+					margin-bottom: 0;
+				}
+
+				.field__label + .field__items {
+					display: flex;
+					justify-content: flex-start;
+					align-items: center;
+					flex-wrap: wrap;
+					margin-top: 7px;
+					> .field__item {
+						position: relative;
+						white-space: nowrap;
+						&:not(:last-child) {
+							margin-right: 5px;
+							&:after {
+							  content: ',';
+							 	color: inherit;
+							 	font-size: inherit;
+              }
+						}
+					}
+				}
+
+				.block-field-blocknoderecursobody,
+				.block-aetg-citation-block {
+					padding-bottom: 55px;
+
+					@include breakpoint(mobile-large) {
+						padding-bottom: 30px;
+					}
+
+					@include breakpoint(mobile-small) {
+						padding-bottom: 20px;
+					}
+				}
+			}
+
+			> .layout--twocol-section--33-67 {
+				flex-wrap: nowrap;
+				justify-content: space-between;
+				align-items: flex-start;
+				padding-top: 70px;
+
+				@include breakpoint(tablet-m) {
+					flex-direction: column-reverse;
+					justify-content: flex-start;
+					align-items: center;
+				}
+
+				> .layout__region {
+					flex: unset;
+					width: 100%;
+
+					&--first {
+						margin-right: 30px;
+						margin-bottom: 20px;
+
+						@include breakpoint(tablet-m) {
+							margin-right: 0;
+							width: 33%;
+						}
+
+						@media screen and (min-width: 801px) {
+							width: 33%;
+						}
+
+						.block-field-blocknoderecursofield-image {
+							width: 380px;
+							margin-bottom: 10px;
+
+							@include breakpoint(tablet-m) {
+								width: 100%;
+							}
+
+							@include breakpoint(mobile-middle) {
+								width: 100%;
+								max-width: 100%;
+							}
+
+							.field--name-field-image {
+								@include breakpoint(tablet-m) {
+									display: flex;
+									justify-content: center;
+									align-items: flex-start;
+								}
+							}
+
+							img {
+								@include breakpoint(mobile-large) {
+									width: 100%;
+									max-width: 100%;
+								}
+							}
+						}
+
+						.field--name-field-imagen-grande {
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							flex-wrap: wrap;
+							width: 380px;
+
+							@include breakpoint(tablet-m) {
+								width: 100%;
+							}
+
+							> .field__item {
+								width: 120px;
+								min-width: 120px;
+								height: 150px;
+								margin-bottom: 10px;
+
+								&:not(:last-child) {
+									margin-right: 10px;
+								}
+							}
+						}
+					}
+
+					&--second {
+						@include breakpoint(tablet-m) {
+							width: 67%;
+						}
+
+						@media screen and (min-width: 801px) {
+							width: 67%;
+						}
+					}
+				}
+			}
+
+			.layout:last-child {
+				margin-bottom: 50px;
+			}
+		}
+
+	}
+
+	&.node--view-mode-teaser {
+		overflow: hidden;
+
+		.block-field {
+			&-blocknoderecursofield-image {
+				margin-bottom: 10px;
+				width: 100%;
+				height: auto;
+
+				> .field--name-field-image {
+					width: 100%;
+					height: 100%;
+					min-height: 177px;
+					background-color: $color-F7;
+
+					img {
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+						text-indent: -9999px;
+					}
+				}
+			}
+
+			&-blocknoderecursotitle {
+				margin: 10px 0 8px;
+				.field--name-title a {
+					font-size: 22px;
+					font-weight: 500;
+					line-height: 32px;
+					color: $blue;
+				}
+			}
+
+			&-blocknoderecursofield-fecha-de-publicacion,
+			&-blocknoderecursofield-fundamentos,
+			&-blocknoderecursofield-modalidad,
+			&-blocknoderecursofield-temas,
+			&-blocknoderecursofield-autor {
+				margin-bottom: 8px;
+				> .field {
+					display: flex;
+					justify-content: flex-start;
+					flex-wrap: wrap;
+
+					.field__label {
+						@include text-fz-18-lh-32;
+						color: $color-2;
+					}
+
+					.field__items {
+						display: flex;
+						justify-content: flex-start;
+						align-items: center;
+						flex-wrap: wrap;
+
+						.field__item {
+							&:not(:last-child) {
+								position: relative;
+								padding-right: .5em;
+								&:after {
+									content: ', ';
+									color: $blue;
+								}
+							}
+
+							a {
+								@include text-fz-18-lh-32;
+								color: $blue;
+
+								&:hover {
+									color: $blue-hover;
+								}
+							}
+						}
+
+					}
+				}
+			}
+
+			&-blocknoderecursofield-fecha-de-publicacion {
+				> .field {
+					> .field__label + .field__item {
+						@include text-fz-18-lh-32;
+						color: $color-2;
+					}
+				}
+			}
+
+			&-blocknoderecursofield-autor {
+				> .field {
+					> .field__item {
+						margin-bottom: 10px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.page-node-type-recurso {
+	.webform-submission-form {
+		padding: 112px 20px 115px;
+		background: #fff;
+		@include main-container;
+		border-radius: 36px 36px 0 36px;
+		margin: 50px auto 50px;
+
+		@include breakpoint(mobile-middle) {
+			padding: 50px 20px;
+		}
+
+		h2 {
+			@include h3;
+			text-align: center;
+			margin-bottom: 30px;
+		}
+
+		> .form-item, > .form-actions, > .captcha {
+			width: 407px;
+			margin: 0 auto;
+
+			@include breakpoint(mobile-middle) {
+				width: 100%;
+				margin: 0;
+			}
+		}
+
+		> .captcha {
+			img {
+				border: 1px solid #eee;
+    			border-radius: 5px;
+			}
+		}
+
+		> .form-type-checkbox {
+			margin: 0 auto !important;
+		}
+
+		> .form-item, > .captcha {
+			margin-bottom: 16px;
+
+			&:last-child {
+				margin-bottom: 40px;
+			}
+		}
+
+		> .form-actions {
+			margin-top: 8px;
+			.button {
+				width: 100%;
+			}
+		}
+
+		.option {
+			@include text-fz-12-lh-18-fw-300;
+		}
+	}
+
+	.node__content {
+		> div:not(:first-child) {
+			background-color: #fff;
+			padding: 25px 70px;
+		}
+
+		> div:nth-child(2) {
+			border-radius: 36px 36px 0 0;
+		}
+
+		> div:last-child {
+			border-bottom-left-radius: 36px;
+		}
+	}
+}

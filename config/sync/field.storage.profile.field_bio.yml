@@ -1,0 +1,23 @@
+uuid: e97da106-f57e-4f87-8c43-cb25daf8edfa
+langcode: und
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - profile
+    - text
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: profile.field_bio
+field_name: field_bio
+entity_type: profile
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,11 @@
+uuid: 09ba18a5-f288-4364-a3e5-10ecb7a6a291
+langcode: es
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: FGYrs0ZrjxSzRQMODyYqquV1UW5MN7S5wUG0Dp_OxWU
+id: online
+label: Conectado
+description: ''
+traits: {  }
+locked: false

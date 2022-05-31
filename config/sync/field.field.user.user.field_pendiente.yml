@@ -1,0 +1,24 @@
+uuid: c4273530-d4c9-4295-be36-f0d4f5c2b14f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_pendiente
+  module:
+    - user
+id: user.user.field_pendiente
+field_name: field_pendiente
+entity_type: user
+bundle: user
+label: Pendiente
+description: 'Indica si una cuenta de usuario está pendiente de revisión.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Sí
+  off_label: 'No'
+field_type: boolean

@@ -1,0 +1,21 @@
+uuid: 68c79f6b-f3cb-4eb4-8c7a-16804decd9ab
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_end_date
+    - paragraphs.paragraphs_type.feap_membership_type
+  module:
+    - datetime
+id: paragraph.feap_membership_type.field_end_date
+field_name: field_end_date
+entity_type: paragraph
+bundle: feap_membership_type
+label: 'Fecha de Baja'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

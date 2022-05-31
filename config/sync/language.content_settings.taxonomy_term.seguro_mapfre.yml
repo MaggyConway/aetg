@@ -1,0 +1,11 @@
+uuid: 74ee4aeb-acb8-4c8b-aeaa-411572d248a6
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.seguro_mapfre
+id: taxonomy_term.seguro_mapfre
+target_entity_type_id: taxonomy_term
+target_bundle: seguro_mapfre
+default_langcode: site_default
+language_alterable: false

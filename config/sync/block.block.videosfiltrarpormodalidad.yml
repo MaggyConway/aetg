@@ -1,0 +1,29 @@
+uuid: 2f9db4ce-1657-4c45-87be-e84c265d4975
+langcode: es
+status: true
+dependencies:
+  config:
+    - facets.facet.videos_filtrar_por_modalidad
+  module:
+    - facets
+    - system
+  theme:
+    - aetg
+id: videosfiltrarpormodalidad
+theme: aetg
+region: content
+weight: -2
+provider: null
+plugin: 'facet_block:videos_filtrar_por_modalidad'
+settings:
+  id: 'facet_block:videos_filtrar_por_modalidad'
+  label: 'Videos: Filtrar por modalidad'
+  provider: facets
+  label_display: '0'
+  block_id: videosfiltrarpormodalidad
+visibility:
+  request_path:
+    id: request_path
+    pages: /gestalt/recursos/videos
+    negate: false
+    context_mapping: {  }

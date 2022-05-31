@@ -1,0 +1,176 @@
+uuid: e1e9a623-1848-4440-895f-30b3d6f485ec
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_node_complete_recurso
+class: Drupal\node\Plugin\migrate\D7NodeTranslation
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Node complete (Recurso)'
+source:
+  plugin: d7_node_complete
+  node_type: recurso
+process:
+  nid:
+    -
+      plugin: get
+      source: tnid
+  vid:
+    -
+      plugin: get
+      source: vid
+  langcode:
+    -
+      plugin: default_value
+      source: language
+      default_value: und
+  title:
+    -
+      plugin: get
+      source: title
+  uid:
+    -
+      plugin: get
+      source: node_uid
+  status:
+    -
+      plugin: get
+      source: status
+  created:
+    -
+      plugin: get
+      source: created
+  changed:
+    -
+      plugin: get
+      source: timestamp
+  promote:
+    -
+      plugin: get
+      source: promote
+  sticky:
+    -
+      plugin: get
+      source: sticky
+  revision_uid:
+    -
+      plugin: get
+      source: revision_uid
+  revision_log:
+    -
+      plugin: get
+      source: log
+  revision_timestamp:
+    -
+      plugin: get
+      source: timestamp
+  content_translation_source:
+    -
+      plugin: get
+      source: source_langcode
+  comment_node_recurso/0/status:
+    -
+      plugin: get
+      source: comment
+  body:
+    -
+      plugin: get
+      source: body
+  field_editorial:
+    -
+      plugin: get
+      source: field_editorial
+  field_fecha_de_publicacion:
+    -
+      plugin: sub_process
+      source: field_fecha_de_publicacion
+      process:
+        value:
+          plugin: format_date
+          from_format: 'Y-m-d H:i:s'
+          to_format: Y-m-d
+          source: value
+  field_adjunto:
+    -
+      plugin: sub_process
+      source: field_adjunto
+      process:
+        target_id: fid
+        display: display
+        description: description
+  field_autor:
+    -
+      plugin: sub_process
+      source: field_autor
+      process:
+        target_id: tid
+  field_image:
+    -
+      plugin: sub_process
+      source: field_image
+      process:
+        target_id: fid
+        alt: alt
+        title: title
+        width: width
+        height: height
+  field_fundamentos:
+    -
+      plugin: sub_process
+      source: field_fundamentos
+      process:
+        target_id: tid
+  field_modalidad:
+    -
+      plugin: sub_process
+      source: field_modalidad
+      process:
+        target_id: tid
+  field_tecnicas:
+    -
+      plugin: sub_process
+      source: field_tecnicas
+      process:
+        target_id: tid
+  field_temas:
+    -
+      plugin: sub_process
+      source: field_temas
+      process:
+        target_id: tid
+  field_tipo_de_recurso:
+    -
+      plugin: sub_process
+      source: field_tipo_de_recurso
+      process:
+        target_id: tid
+  field_tutor_tesina:
+    -
+      plugin: sub_process
+      source: field_tutor_tesina
+      process:
+        target_id: tid
+  field_imagen_grande:
+    -
+      plugin: sub_process
+      source: field_imagen_grande
+      process:
+        target_id: fid
+        alt: alt
+        title: title
+        width: width
+        height: height
+destination:
+  plugin: 'entity_complete:node'
+  translations: true
+  default_bundle: recurso
+migration_dependencies:
+  required:
+    - upgrade_d7_user
+  optional:
+    - upgrade_d7_field_instance
+    - upgrade_d7_comment_field_instance

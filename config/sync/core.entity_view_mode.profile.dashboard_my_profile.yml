@@ -1,0 +1,10 @@
+uuid: dd73d91c-ef2e-4a6c-b871-d5b8e8d6d2fa
+langcode: en
+status: true
+dependencies:
+  module:
+    - profile
+id: profile.dashboard_my_profile
+label: 'Dashboard: My profile'
+targetEntityType: profile
+cache: true

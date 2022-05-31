@@ -1,0 +1,8 @@
+uuid: 19680b91-e4c1-4248-bb7b-28ad38b03bb5
+langcode: es
+status: true
+dependencies: {  }
+name: 'Bajas Mapfre'
+vid: bajas_mapfre
+description: ''
+weight: 0

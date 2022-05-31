@@ -1,0 +1,137 @@
+uuid: a47a2321-d9ff-4384-a81d-59f4377f7eb0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.profile.informacion_profesional.field_ambito_trabajo
+    - field.field.profile.informacion_profesional.field_apellidos_prof
+    - field.field.profile.informacion_profesional.field_bio
+    - field.field.profile.informacion_profesional.field_centro
+    - field.field.profile.informacion_profesional.field_direccion
+    - field.field.profile.informacion_profesional.field_full_name
+    - field.field.profile.informacion_profesional.field_geofield
+    - field.field.profile.informacion_profesional.field_imagen_logo
+    - field.field.profile.informacion_profesional.field_imagen_usuario
+    - field.field.profile.informacion_profesional.field_invoicing_address
+    - field.field.profile.informacion_profesional.field_mobile
+    - field.field.profile.informacion_profesional.field_nombre_proff
+    - field.field.profile.informacion_profesional.field_public_email
+    - field.field.profile.informacion_profesional.field_telefono_prof
+    - field.field.profile.informacion_profesional.field_url
+    - field.field.profile.informacion_profesional.field_website
+    - image.style.thumbnail
+    - profile.type.informacion_profesional
+  module:
+    - address
+    - geofield
+    - image
+    - link
+    - text
+id: profile.informacion_profesional.default
+targetEntityType: profile
+bundle: informacion_profesional
+mode: default
+content:
+  field_ambito_trabajo:
+    weight: 4
+    type: options_buttons
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_bio:
+    weight: 5
+    type: text_textarea
+    settings:
+      rows: 2
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_centro:
+    weight: 6
+    type: string_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_full_name:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_geofield:
+    weight: 12
+    settings:
+      html5_geolocation: false
+    third_party_settings: {  }
+    type: geofield_latlon
+    region: content
+  field_imagen_logo:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_invoicing_address:
+    weight: 11
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
+    region: content
+  field_mobile:
+    weight: 8
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_public_email:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_telefono_prof:
+    weight: 7
+    type: string_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_url:
+    weight: 9
+    type: link_default
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    region: content
+  field_website:
+    weight: 10
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  is_default:
+    type: boolean_checkbox
+    weight: 0
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden:
+  field_apellidos_prof: true
+  field_direccion: true
+  field_imagen_usuario: true
+  field_nombre_proff: true

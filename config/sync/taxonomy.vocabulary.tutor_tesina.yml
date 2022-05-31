@@ -1,0 +1,8 @@
+uuid: f278174c-ce02-4768-b203-adad66dc03ff
+langcode: es
+status: true
+dependencies: {  }
+name: 'Directoras/es de tesina'
+vid: tutor_tesina
+description: 'Se indican aquí los tutores y supervisores de las tesinas'
+weight: 0

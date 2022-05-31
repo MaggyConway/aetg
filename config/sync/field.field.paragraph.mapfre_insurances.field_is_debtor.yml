@@ -1,0 +1,23 @@
+uuid: e56580b9-e7c1-44c8-86b9-3e2b9a82495c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_is_debtor
+    - paragraphs.paragraphs_type.mapfre_insurances
+id: paragraph.mapfre_insurances.field_is_debtor
+field_name: field_is_debtor
+entity_type: paragraph
+bundle: mapfre_insurances
+label: Deudor
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,11 @@
+uuid: 35a1b88a-b2eb-476b-825f-ee33d2fa1dd7
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.emisor_de_noticia
+id: taxonomy_term.emisor_de_noticia
+target_entity_type_id: taxonomy_term
+target_bundle: emisor_de_noticia
+default_langcode: site_default
+language_alterable: false

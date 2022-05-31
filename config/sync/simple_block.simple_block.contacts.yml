@@ -1,0 +1,11 @@
+uuid: b67de5d1-8fc6-48d3-b921-d10d4df4ec50
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+id: contacts
+title: Contacts
+content:
+  value: "<p>C/ Mayor 58,&nbsp;5º F<br />\r\n28013 Madrid</p>\r\n\r\n<p>De Lunes a Viernes de 10:00 a 14:00 horas.<br />\r\n<a alt=\"Teléfono fijo de contacto de la Asociación Española de Terapia Gestalt\" href=\"tel:915 430 625\" title=\"Teléfono de la AETG\"><img alt=\"telephon icon\" data-entity-type=\"\" data-entity-uuid=\"\" src=\"/themes/custom/aetg/src/assets/images/form-fields/tel.svg\" />&nbsp; 915 430 625</a><br />\r\n<a alt=\"Correo electrónico de contacto de la Asociación Española de Terapia Gestalt\" href=\"mailto:info@aetg.es\" title=\"Email de la AETG\"><img alt=\"email icon\" data-entity-type=\"\" data-entity-uuid=\"\" src=\"/themes/custom/aetg/dist/images/email.svg\" />&nbsp; info@aetg.es</a></p>\r\n\r\n<p class=\"rrss\"><a href=\"https://www.facebook.com/\"><img alt=\"facebook icon\" data-entity-type=\"\" data-entity-uuid=\"\" src=\"/themes/custom/aetg/src/assets/images/social_icons/fb.svg\" /></a>&nbsp;&nbsp;<a href=\"https://twitter.com/\"><img alt=\"twitter icon\" data-entity-type=\"\" data-entity-uuid=\"\" src=\"/themes/custom/aetg/src/assets/images/social_icons/tw.svg\" /></a>&nbsp;&nbsp;<a href=\"https://youtube.com\"><img alt=\"youtube icon\" data-entity-type=\"\" data-entity-uuid=\"\" src=\"/themes/custom/aetg/src/assets/images/social_icons/youtube.svg\" /></a></p>\r\n"
+  format: full_html

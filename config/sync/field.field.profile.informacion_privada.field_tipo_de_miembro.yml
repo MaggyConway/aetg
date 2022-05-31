@@ -1,0 +1,29 @@
+uuid: 2fe359cd-082d-4e9c-96c8-e09cd27fd7ab
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_tipo_de_miembro
+    - profile.type.informacion_privada
+    - taxonomy.vocabulary.tipo_de_miembro
+id: profile.informacion_privada.field_tipo_de_miembro
+field_name: field_tipo_de_miembro
+entity_type: profile
+bundle: informacion_privada
+label: 'Tipo de miembro'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tipo_de_miembro: tipo_de_miembro
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

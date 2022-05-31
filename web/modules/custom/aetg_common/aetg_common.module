@@ -1,0 +1,851 @@
+<?php
+
+/**
+ * @file
+ * Contains aetg_common.module.
+ */
+
+use Drupal\commerce_order\Entity\OrderInterface;
+use Drupal\commerce_product\Entity\ProductVariation;
+use Drupal\Core\Entity\Display\EntityFormDisplayInterface;
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Field\EntityReferenceFieldItemListInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Url;
+use Drupal\node\NodeInterface;
+use Drupal\profile\Entity\ProfileInterface;
+use Drupal\user\UserInterface;
+use Drupal\webform\Entity\Webform;
+use Drupal\Core\Template\Attribute;
+
+/**
+ * Implements hook_form_alter().
+ */
+function aetg_common_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if (strpos($form_id, 'node_') === 0) {
+    $form['#attached']['library'][] = 'aetg_common/node_form';
+  }
+
+  $id_forms = ['user_informacion_privada_form', 'user_escuela_form'];
+
+  if (in_array($form_id, $id_forms)) {
+
+    $settings = \Drupal::config('rpt.settings');
+    // Hide password field and generate password for user.
+    $generate_password = $settings->get('password_generate');
+    if ($generate_password) {
+      $form['account']['pass']['#type'] = 'value';
+
+      $password_length = $settings->get('password_length');
+      $form['account']['pass']['#value'] = user_password($password_length);
+    }
+  }
+
+  /*
+  $social_auth_render_array = [
+    '#type' => 'container',
+    '#attributes' => [
+      'class' => ['social-auth'],
+    ],
+    '#weight' => -40,
+    'google' => [
+      '#type' => 'link',
+      '#title' => t('Continuar con Google'),
+      '#url' => Url::fromRoute('social_auth_google.redirect_to_google'),
+      '#attributes' => [
+        'class' => ['social-auth--google'],
+      ],
+    ],
+  ];
+  */
+
+  if ($form_id == 'user_login_form') {
+
+    $form['header'] = [
+      '#type' => 'container',
+      '#attributes' => [
+        'class' => ['user-login-form--header'],
+      ],
+      '#weight' => -50,
+      'title' => [
+        '#type' => 'html_tag',
+        '#tag' => 'h3',
+        '#value' => t('Introduzca su contraseña'),
+        '#attributes' => [
+          'class' => ['user-login-form--header-title'],
+        ],
+      ],
+    ];
+
+    // $form['social_auth'] = $social_auth_render_array;
+
+    if (isset($form['name'])) {
+      $form['name']['#placeholder'] = t('Correo electrónico *');
+      unset($form['name']['#title']);
+
+      if (isset($form['name']['#description'])) {
+        unset($form['name']['#description']);
+      }
+    }
+
+    $form['pass']['#placeholder'] = t('Password *');
+    unset($form['pass']['#title']);
+    $form['pass']['#description'] = t('<a href="@url" class="user-login-form--link">¿Ha olvidado su contraseña?</a>', ['@url' => Url::fromRoute('user.pass')->toString()]);
+
+    $form['#submit'][] = '_aetg_common_user_login_submit';
+
+    $form['actions']['submit']['#value'] = t('Registrarse');
+
+    $form['bottom'] = [
+      '#type' => 'container',
+      '#attributes' => [
+        'class' => ['user-login-form--actions'],
+      ],
+    ];
+
+    $form['bottom']['actions'] = $form['actions'];
+    unset($form['actions']);
+
+    $form['bottom']['register'] = [
+      '#type' => 'container',
+      '#attributes' => [
+        'class' => ['user-login-form--actions'],
+      ],
+      '#weight' => 100,
+    ];
+
+    $form['bottom']['register']['description'] = [
+      '#type' => 'html_tag',
+      '#tag' => 'p',
+      '#value' => t('¿No tiene una cuenta AETG?'),
+      '#attributes' => [
+        'class' => ['user-login-form--actions-description'],
+      ],
+    ];
+
+    $form['bottom']['register']['link'] = [
+      '#title' => t('Inscríbete'),
+      '#type' => 'link',
+      '#url' => Url::fromRoute('user.register'),
+      '#attributes' => [
+        'class' => ['user-login-form--actions-link'],
+      ],
+    ];
+  }
+
+  if ($form_id == 'user_pass') {
+
+    $form['header'] = [
+      '#type' => 'container',
+      '#attributes' => [
+        'class' => ['user-pass--header'],
+      ],
+      '#weight' => -50,
+      'title' => [
+        '#type' => 'html_tag',
+        '#tag' => 'h3',
+        '#value' => t('Olvidó su contraseña'),
+        '#attributes' => [
+          'class' => ['user-pass--header-title'],
+        ],
+      ],
+      'description' => [
+        '#type' => 'html_tag',
+        '#tag' => 'p',
+        '#value' => t('Indique la dirección de correo electrónico a la que desea que se le envíe la información sobre el restablecimiento  de la contraseña'),
+        '#attributes' => [
+          'class' => ['user-pass--header-description'],
+        ],
+      ],
+    ];
+
+    if (isset($form['name'])) {
+      $form['name']['#placeholder'] = t('Correo electrónico *');
+      unset($form['name']['#title']);
+    }
+
+    if (isset($form['mail'])) {
+      unset($form['mail']);
+    }
+
+    $form['actions']['submit']['#value'] = t('Solicitar enlace de restablecimiento');
+  }
+
+  if ($form_id === 'user_register_form') {
+    $form['header'] = [
+      '#type' => 'container',
+      '#attributes' => [
+        'class' => ['user-register-form--header'],
+      ],
+      '#weight' => -50,
+      'title' => [
+        '#type' => 'html_tag',
+        '#tag' => 'h3',
+        '#value' => t('Obtener una cuenta gratuita'),
+        '#attributes' => [
+          'class' => ['user-register-form--header-title'],
+        ],
+      ],
+    ];
+
+    // $form['social_auth'] = $social_auth_render_array;
+
+    if (!empty($form['account']['mail'])) {
+      $form['account']['mail']['#placeholder'] = t('Correo electrónico *');
+      if (isset($form['account']['mail']['#title'])) {
+        unset($form['account']['mail']['#title']);
+      }
+    }
+
+    if (!empty($form['field_dni_cif'])) {
+      $form['field_dni_cif']['widget'][0]['value']['#placeholder'] = t('DNI/CIF *');
+
+      if (isset($form['field_dni_cif']['widget'][0]['value']['#title'])) {
+        unset($form['field_dni_cif']['widget'][0]['value']['#title']);
+      }
+    }
+
+    if (!empty($form['field_full_name'])) {
+      $form['field_full_name']['widget'][0]['value']['#placeholder'] = t('Nombre Completo *');
+
+      if ($form['field_full_name']['widget'][0]['value']['#title']) {
+        unset($form['field_full_name']['widget'][0]['value']['#title']);
+      }
+    }
+
+    $form['actions']['submit']['#submit'][] = '_aetg_common_user_login_submit';
+  }
+
+  // Autocomplete public profile fields.
+  $public_profile_id_forms = ['profile_school_professional_information_add_form', 'profile_informacion_profesional_add_form'];
+
+  if (in_array($form_id, $public_profile_id_forms)) {
+
+    $public_profile_type = str_replace(['profile_', '_add_form'], '', $form_id);
+    $match_profile_types = [ 'school_professional_information'=> 'escuela', 'informacion_profesional' => 'informacion_privada'];
+
+    $user = \Drupal::routeMatch()->getParameter('user');
+    $private_profile = \Drupal::entityTypeManager()->getStorage('profile')->loadByUser($user, $match_profile_types[$public_profile_type]);
+
+    if ($user instanceof UserInterface && $private_profile instanceof ProfileInterface) {
+      $field_names = [
+        'school_professional_information' => [
+          'field_nombre_de_escuela' => 'field_school_name',
+          'field_email' => 'field_public_email',
+          'field_direccion' => 'field_invoicing_address',
+          'field_director_escuela' => 'field_director',
+          'field_responsable_formacion_esc' => 'field_training_manager',
+          'field_telefono' => 'field_phone',
+          'field_telefono_2' => 'field_mobile',
+          'field_direccion_web' => 'field_website',
+          'field_descripcion_escuela' => 'field_description',
+          'field_programa_detallado' => 'field_detailed_training_program',
+          'field_cronograma' => 'field_timetable',
+        ],
+        'informacion_profesional' => [
+          'field_domicilio_particular' => 'field_invoicing_address',
+          'field_nombre' => 'field_full_name',
+          'field_email' => 'field_public_email',
+          'field_telefono' => 'field_telefono_prof',
+          'field_telefono_2' => 'field_mobile',
+          'field_apellidos' => 'field_apellidos_prof',
+        ],
+      ];
+
+      foreach ($field_names[$public_profile_type] as $private_field_name => $public_field_name) {
+
+        if ($private_profile->hasField($private_field_name) && !$private_profile->get($private_field_name)->isEmpty()) {
+
+          $field_type = $private_profile->get($private_field_name)->getFieldDefinition()->getType();
+          $field_values = $private_profile->get($private_field_name)->getValue();
+
+          foreach ($field_values as $key => $field_value) {
+            switch ($field_type) {
+              case 'address':
+                $form[$public_field_name]['widget'][$key]['address']['#default_value'] = $field_value;
+                break;
+              case 'text_with_summary':
+                if (!empty($field_value['summary'])) {
+                  $form[$public_field_name]['widget'][$key]['#summary'] = $field_value['summary'];
+                }
+              case 'text_long':
+                $form[$public_field_name]['widget'][$key]['#default_value'] = $field_value['value'];
+                $form[$public_field_name]['widget'][$key]['#format'] = $field_value['format'];
+                break;
+              case 'link':
+                $form[$public_field_name]['widget'][$key]['uri']['#default_value'] = $field_value['uri'];
+                $form[$public_field_name]['widget'][$key]['title']['#default_value'] = $field_value['title'];
+                break;
+              default:
+                $form[$public_field_name]['widget'][$key]['value']['#default_value'] = $field_value['value'];
+            }
+          }
+        }
+      }
+
+      if (!empty($form['field_imagen_logo'])
+        && $user->hasField('field_full_name')
+        && !$user->get('field_full_name')->isEmpty()
+      ) {
+
+        $form['field_imagen_logo']['widget'][0]['#default_value']['alt'] = $user->get('field_full_name')->getValue()[0]['value'];
+      }
+    }
+  }
+
+  // Create User as Associated - Check asociado role checkbox.
+  if ($form_id === 'user_associate_form' && !empty($form['account']['roles'])) {
+    $form['account']['roles']['asociado'] = [
+      '#default_value' => TRUE,
+      '#disabled' => TRUE,
+    ];
+  }
+
+  // Create User as School - Check escuela role checkbox.
+  if ($form_id === 'user_school_form' && !empty($form['account']['roles'])) {
+    $form['account']['roles']['escuela'] = [
+      '#default_value' => TRUE,
+      '#disabled' => TRUE,
+    ];
+  }
+
+  // Create User as Personal AETG - Check personal aetg role checkbox.
+  if ($form_id === 'user_admin_account_form' && !empty($form['account']['roles'])) {
+    $form['account']['roles']['personal_aetg'] = [
+      '#default_value' => TRUE,
+    ];
+  }
+}
+
+/**
+ * Custom submit handler for login, register form.
+ */
+function  _aetg_common_user_login_submit($form, FormStateInterface $form_state) {
+  $form_state->setRedirect('view.user_dashboard.page_1');
+}
+
+/**
+ * Change field_invoicing_address in user registration form.
+ *
+ * Implements template_preprocess_field_multiple_value_form().
+ */
+function aetg_common_preprocess_field_multiple_value_form(&$variables) {
+  if (\Drupal::routeMatch()->getRouteName() === 'user.register'
+    && $variables['element']['#field_name'] === 'field_invoicing_address'
+  ) {
+    if (!empty($variables['elements'][0]['address']['address_line1'])) {
+      $variables['elements'][0]['address']['address_line1']['#placeholder'] = t('Dirección *');
+      unset($variables['elements'][0]['address']['address_line1']['#title']);
+    }
+
+    if (!empty($variables['elements'][0]['address']['postal_code'])) {
+      $variables['elements'][0]['address']['postal_code']['#placeholder'] = t('Código postal (ZIP) *, por ejemplo NW3 1AA.');
+      unset($variables['elements'][0]['address']['postal_code']['#title']);
+    }
+
+    if (!empty($variables['elements'][0]['address']['locality'])) {
+      $variables['elements'][0]['address']['locality']['#placeholder'] = t('Ciudad *');
+      unset($variables['elements'][0]['address']['locality']['#title']);
+    }
+
+    if (!empty($variables['elements'][0]['address']['administrative_area'])) {
+      $variables['elements'][0]['address']['administrative_area']['#empty_option'] = t('Provincia *');
+      $variables['elements'][0]['address']['administrative_area']['#options'][''] = t('Provincia *');
+      unset($variables['elements'][0]['address']['administrative_area']['#title']);
+    }
+  }
+}
+
+/**
+ * Implements hook_menu_links_discovered_alter().
+ */
+function aetg_common_menu_links_discovered_alter(&$links) {
+  $links['user.logout']['class'] = 'Drupal\aetg_common\Plugin\Menu\AetgLoginLogoutMenuLink';
+}
+
+/**
+ * Implements hook_entity_form_display_alter().
+ */
+function aetg_common_entity_form_display_alter(EntityFormDisplayInterface $form_display, array $context) {
+
+  /** @var UserInterface $user */
+  $user = Drupal::entityTypeManager()->getStorage('user')->load(\Drupal::currentUser()->id());
+  if ($user instanceof UserInterface && $user->hasRole('administrator')) {
+    return ;
+  }
+}
+
+/**
+ * Implements hook_email_registration_name().
+ */
+function aetg_common_email_registration_name(UserInterface $account) {
+  $email = $account->getEmail();
+  // Check if user with this name already exist.
+  $existing_user = \Drupal::entityTypeManager()->getStorage('user')->loadByProperties(['name' => $email]);
+
+  if (!empty($existing_user)) {
+    return $email . '_' . $account->id();
+  }
+  return $email;
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_presave().
+ */
+function aetg_common_node_presave(EntityInterface $entity) {
+  /** @var NodeInterface $entity */
+  if (in_array($entity->bundle(), ['event', 'recurso'])) {
+    if (!$entity->isNew()) {
+
+      // Delete a node reference from the old product.
+      if ($entity->original instanceof EntityInterface) {
+
+        $old_entity = $entity->original;
+        $field_name = 'field_product_reference';
+
+        if (
+          $old_entity->hasField($field_name) &&
+          !$old_entity->get($field_name)->isEmpty() &&
+          $entity->hasField($field_name)
+        ) {
+          $new_value = NULL;
+
+          if (!$entity->get($field_name)->isEmpty()) {
+            $new_value = $entity->get($field_name)->getValue();
+          }
+
+          $old_value = $old_entity->get($field_name)->getValue();
+          if ($new_value !== $old_value) {
+            /** @var \Drupal\commerce_product\Entity\Product $product */
+            $product = $old_entity->get($field_name)->referencedEntities();
+            if (empty($product)) {
+              return;
+            }
+            $product = current($product);
+
+            $product_variation = $product->getVariations();
+            $product_variation = current($product_variation);
+
+            if ($product_variation instanceof ProductVariation
+              && $product_variation->hasField('field_node')) {
+              $product_variation->set('field_node', NULL);
+              $product_variation->save();
+            }
+          }
+        }
+      }
+      _aetg_common_save_node_reference_in_product_variation($entity);
+    }
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_insert().
+ */
+function aetg_common_node_insert(EntityInterface $entity) {
+  /** @var NodeInterface $entity */
+  if (in_array($entity->bundle(), ['event', 'recurso'])) {
+    _aetg_common_save_node_reference_in_product_variation($entity);
+  }
+}
+
+function _aetg_common_save_node_reference_in_product_variation(EntityInterface $entity) {
+  if ($entity->hasField('field_product_reference') && !$entity->get('field_product_reference')->isEmpty()) {
+    /** @var \Drupal\commerce_product\Entity\Product $product */
+    $product = $entity->get('field_product_reference')->referencedEntities();
+    $product = current($product);
+
+    $product_variation = $product->getVariations();
+    $product_variation = current($product_variation);
+
+    if ($product_variation instanceof ProductVariation
+      && $product_variation->hasField('field_node')) {
+      $product_variation->set('field_node', $entity);
+      $product_variation->save();
+    }
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_delete().
+ */
+function aetg_common_node_delete(EntityInterface $entity) {
+  if ($entity->hasField('field_product_reference') && !$entity->get('field_product_reference')->isEmpty()) {
+    /** @var \Drupal\commerce_product\Entity\Product $product */
+    $product = $entity->get('field_product_reference')->referencedEntities();
+    $product = current($product);
+
+    if ($product instanceof \Drupal\commerce_product\Entity\ProductInterface) {
+      $product->delete();
+    }
+  }
+}
+
+/**
+ * Implements hook_views_query_alter().
+ */
+function aetg_common_views_query_alter($view, $query) {
+  if ($view->id() == 'select_product') {
+
+    foreach ($query->where as &$condition_group) {
+      foreach ($condition_group['conditions'] as &$condition) {
+
+        if ($condition['operator'] === '=' && $condition['field'] == 'commerce_product_variation_field_data_commerce_product__variations__commerce_product_variation__field_node.field_node_target_id') {
+
+          $referer = $GLOBALS['request']->headers->get('referer');
+          $path = str_replace(\Drupal::request()->getSchemeAndHttpHost(), '', $referer);
+          $request = Symfony\Component\HttpFoundation\Request::create($path);
+          \Drupal::service('router')->matchRequest($request);
+          $route_match = Drupal\Core\Routing\RouteMatch::createFromRequest($request);
+
+          if (($node = $route_match->getParameter('node')) && $node instanceof NodeInterface) {
+            $condition['value'] = $node->id();
+          }
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Implements template_preprocess_paragraph().
+ */
+function aetg_common_preprocess_paragraph(&$variables) {
+  /** @var \Drupal\paragraphs\ParagraphInterface $paragraph */
+  $paragraph = $variables['elements']['#paragraph'];
+  if (in_array($paragraph->bundle(), ['multiple_links', 'title_and_file_list'])) {
+    if ($paragraph->hasField('field_title') && $paragraph->get('field_title')->isEmpty()) {
+      $variables['attributes']['class'][] = 'without-title';
+    }
+  }
+
+  if ($paragraph->bundle() == 'webform') {
+    if ($paragraph->hasField('field_webform_reference') && !$paragraph->get('field_webform_reference')->isEmpty()) {
+      $variables['attributes']['class'][] = str_replace('_', '-', $paragraph->get('field_webform_reference')->getValue()[0]['target_id']);
+    }
+  }
+}
+
+/**
+ * Change User Account menu links.
+ */
+function aetg_common_preprocess_menu__account(&$variables) {
+
+  // Hide some links if it is a basic user.
+  $is_basic_user = FALSE;
+  if (Drupal::currentUser()->isAuthenticated()) {
+
+    $roles = Drupal::currentUser()->getRoles();
+
+    if (empty(array_intersect($roles, ['asociado', 'escuela']))) {
+      $is_basic_user = TRUE;
+    }
+  }
+  elseif (!empty($variables['items']['user.icon'])) {
+    unset($variables['items']['user.icon']);
+  }
+
+  if (!empty($variables['items']['user.icon']['below']['user.edit_account'])) {
+    if ($is_basic_user) {
+      unset($variables['items']['user.icon']['below']['user.edit_account']);
+    } else {
+      $variables['items']['user.icon']['below']['user.edit_account']['url']->setOption('attributes', array('class' => array('user-account')));
+    }
+  }
+
+  if (!empty($variables['items']['user.icon']['below']['user.profile'])) {
+    if ($is_basic_user) {
+      unset($variables['items']['user.icon']['below']['user.profile']);
+    } else {
+      $variables['items']['user.icon']['below']['user.profile']['url']->setOption('attributes', array('class' => array('user-profile')));
+    }
+  }
+
+  if (isset($variables['items']['user.icon'])) {
+    $variables['items']['user.icon']['attributes']->addClass('user-icon');
+  }
+  if (!empty($variables['items']['user.icon']['below']['user.orders'])) {
+    $variables['items']['user.icon']['below']['user.orders']['url']->setOption('attributes', array('class' => array('user-orders')));
+  }
+  if (isset($variables['items']['user.login'])) {
+    $variables['items']['user.login']['attributes']->addClass('user-login-link');
+  }
+}
+
+/**
+ * Implements template_preprocess_page().
+ */
+function aetg_common_preprocess_page(&$variables) {
+  $route_name = \Drupal::routeMatch()->getRouteName();
+
+  if ($route_name === 'entity.node.canonical'
+    && ($node = $variables['node']) instanceof NodeInterface) {
+
+    /** @var NodeInterface $node */
+    if ($node->bundle() !== 'recurso') {
+      return ;
+    }
+
+    if ($node->hasField('field_has_physical_file')
+      && !$node->get('field_has_physical_file')->isEmpty()
+      && $node->get('field_has_physical_file')->getValue()[0]['value'] != '0'
+    ) {
+
+      $webform_id = 'physical_file';
+      if ($entity = Webform::load($webform_id)) {
+        $variables['page']['content']['webform'] = \Drupal::entityTypeManager()->getViewBuilder('webform')->view($entity);
+      }
+    }
+  }
+
+  // Add the edit user link to User page.
+  if ($route_name == 'entity.user.canonical') {
+    $user = \Drupal::routeMatch()->getParameter('user');
+    if ($user instanceof UserInterface) {
+      $basic_user = TRUE;
+      if ($user->hasRole('asociado') || $user->hasRole('escuela')) {
+        $basic_user = FALSE;
+      }
+
+      $current_user = Drupal::currentUser();
+
+      if (isset($variables['page']['content']) && $basic_user &&
+        ($user->id() == $current_user->id() || $current_user->hasPermission('administer users'))) {
+
+        $variables['page']['content']['edit_user_link'] = [
+          '#type' => 'container',
+          '#attributes' => ['class' => 'btn-primary'],
+          'link' => [
+            '#type' => 'link',
+            '#title' => t('Edit User'),
+            '#url' => $user->toUrl('edit-form'),
+            '#attributes' => ['class' => ['link']],
+          ],
+        ];
+      }
+    }
+  }
+
+  if (in_array($route_name, ['entity.user.edit_form', 'profile.user_page.single'])) {
+    if (is_array($variables['attributes'])) {
+      $variables['attributes'] = new Attribute(['class' => ['view-edit-profile']]);
+    }
+    elseif ($variables['attributes'] instanceof Attribute) {
+      $variables['attributes'].addClass(['view-edit-profile']);
+    }
+  }
+}
+
+/**
+ * Implements template_preprocess_table().
+ *
+ * Change links in /admin/people/profiles.
+ */
+function aetg_common_preprocess_table(&$variables) {
+  if (\Drupal::routeMatch()->getRouteName() === 'entity.profile.collection') {
+
+    $rows = $variables['rows'];
+    $profile_types = [
+      'private' => ['escuela', 'informacion_privada'],
+      'public' => ['school_professional_information', 'informacion_profesional'],
+    ];
+
+    foreach ($rows as $id => $row) {
+
+      if (in_array($row['cells']['type']['content'], array_merge($profile_types['private'], $profile_types['public']))) {
+
+        /** @var UserInterface $owner */
+        $owner = $row['cells']['owner']['content']['#account'];
+
+        if (in_array($row['cells']['type']['content'], $profile_types['private'])) {
+          $url = Url::fromUserInput('/user/' . $owner->id() . '/profile');
+        }
+        else {
+          $url = $owner->toUrl();
+        }
+
+        $row['cells']['label']['content']->setUrl($url);
+      }
+    }
+  }
+}
+
+
+/**
+ * Implements template_preprocess_profile().
+ *
+ * Add link to the user.
+ */
+function aetg_common_preprocess_profile__slider(&$variables) {
+  /** @var ProfileInterface $profile */
+  $profile = $variables['profile'];
+  $variables['owner_url'] = $profile->getOwner()->toUrl()->toString();
+}
+
+/**
+ * Implements template_preprocess_block().
+ *
+ * Add link to the user.
+ * block--field-block--profile--school-professional-information--field-school-name.html.twig
+ */
+function aetg_common_preprocess_block__field_block__profile__school_professional_information__field_school_name(&$variables) {
+  /** @var ProfileInterface $profile */
+  $profile = $variables['content']['#object'];
+  $variables['owner_url'] = $profile->getOwner()->toUrl()->toString();
+}
+
+/**
+ * Implements template_preprocess_block().
+ *
+ * Add link to the user.
+ * block--field-block--profile--informacion-profesional--field-full-name.html.twig
+ */
+function aetg_common_preprocess_block__field_block__profile__informacion_profesional__field_full_name(&$variables) {
+  /** @var ProfileInterface $profile */
+  $profile = $variables['content']['#object'];
+  $variables['owner_url'] = $profile->getOwner()->toUrl()->toString();
+}
+
+/**
+ * Implements template_preprocess_commerce_order_receipt().
+ *
+ * Add an email_text from each product.
+ */
+function aetg_common_preprocess_commerce_order_receipt(&$variables) {
+  /** @var OrderInterface $order */
+  $order = $variables['order_entity'];
+  $getItems = $order->getItems();
+  $email_text = '';
+
+  foreach ($getItems as $orderItem) {
+    $purchased_entity = $orderItem->getPurchasedEntity();
+    $field_name = 'field_email_text';
+
+    if ($purchased_entity
+      && $purchased_entity->hasField($field_name)
+      && !$purchased_entity->get($field_name)->isEmpty()) {
+      $email_text .= $purchased_entity->get($field_name)->getValue()[0]['value'];
+    }
+  }
+
+  if (!empty($email_text)) {
+    $variables['email_text'] = $email_text;
+  }
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_view_alter().
+ */
+function aetg_common_node_view_alter(array &$build, EntityInterface $node, EntityViewDisplayInterface $display) {
+  // Hide empty accordions.
+  if ($build['#view_mode'] == 'full' && !empty($build['field_accordion'])) {
+    if (($items = $build['field_accordion']['#items']) && $items instanceof EntityReferenceFieldItemListInterface) {
+
+      if ($items->count() === 0) {
+        unset($build['field_accordion']);
+      }
+    }
+  }
+  elseif (in_array($build['#view_mode'], ['teaser', 'full']) && $node->bundle() == 'recurso') {
+    // CT Resource - add term id from field_tipo_de_recurso for default image.
+    $field_name = 'field_tipo_de_recurso';
+    if ($node->hasField($field_name) && !$node->get($field_name)->isEmpty()) {
+      $build['#attributes']['data-resource-type-term-id'] = $node->get($field_name)->getValue()[0]['target_id'];
+    }
+  }
+}
+
+/**
+ * Create/change customer profile when create/change user.
+ *
+ * Implements hook_ENTITY_TYPE_update().
+ */
+function aetg_common_user_update(EntityInterface $entity) {
+  /** @var \Drupal\profile\ProfileStorageInterface $profile_storage */
+  $profile_storage = Drupal::entityTypeManager()->getStorage('profile');
+  $customer_profile = $profile_storage->loadByUser($entity, 'customer');
+  $field_name = 'field_invoicing_address';
+  $old_entity = $entity->original;
+
+  if (empty($customer_profile)) {
+    _aetg_common_create_customer_profile($entity);
+  }
+  elseif ($customer_profile instanceof ProfileInterface &&
+    $entity->hasField($field_name) &&
+    !$entity->get($field_name)->isEmpty() &&
+    $old_entity->hasField($field_name)) {
+
+    $old_value = NULL;
+
+    if (!$old_entity->get($field_name)->isEmpty()) {
+      $old_value = $old_entity->get($field_name)->getValue()[0];
+    }
+
+    $new_value = $entity->get($field_name)->getValue()[0];
+    $full_name = _aetg_common_get_full_name($entity);
+    $new_value = array_replace($new_value, $full_name);
+
+    if ($new_value !== $old_value) {
+      $customer_profile->set('address' , $new_value)->save();
+    }
+  }
+}
+
+function _aetg_common_create_customer_profile(UserInterface $user) {
+  $field_name = 'field_invoicing_address';
+  if ($user->hasField($field_name) && !$user->get($field_name)->isEmpty()) {
+    $field = $user->get($field_name)->getValue()[0];
+
+    $full_name = _aetg_common_get_full_name($user);
+    $field = array_replace($field, $full_name);
+
+    Drupal::entityTypeManager()->getStorage('profile')->create([
+      'uid' => $user->id(),
+      'type' => 'customer',
+      'address' => $field,
+    ])->save();
+  }
+}
+
+/**
+ * Get given_name and family_name for the user.
+ *
+ * @param UserInterface $user
+ * @return array
+ * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
+ * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
+ */
+function _aetg_common_get_full_name(UserInterface $user) {
+  $given_name = NULL;
+  $family_name = NULL;
+
+  if ($user->hasRole('asociado')) {
+    /** @var \Drupal\profile\ProfileStorageInterface $profile_storage */
+    $profile_storage = Drupal::entityTypeManager()->getStorage('profile');
+    $private_profile = $profile_storage->loadByUser($user, 'informacion_privada');
+
+    if ($private_profile instanceof ProfileInterface) {
+      if ($private_profile->hasField('field_nombre') && !$private_profile->get('field_nombre')->isEmpty()) {
+        $given_name = $private_profile->get('field_nombre')->getValue()[0]['value'];
+      }
+      if ($private_profile->hasField('field_apellidos') && !$private_profile->get('field_apellidos')->isEmpty()) {
+        $family_name = $private_profile->get('field_apellidos')->getValue()[0]['value'];
+      }
+    }
+  }
+  elseif ($user->hasField('field_full_name') && !$user->get('field_full_name')->isEmpty()) {
+    $full_name = explode(' ', $user->get('field_full_name')->getValue()[0]['value'], 2);
+    $given_name = $full_name[0];
+    $family_name = $full_name[1] ?? NULL;
+  }
+
+  return ['given_name' => $given_name, 'family_name' => $family_name];
+}
+
+function aetg_common_pathauto_alias_alter(&$alias, array &$context) {
+  if ($context['bundle'] == 'user' && in_array($context['op'], ['insert', 'update', 'bulkupdate'])) {
+    // Force all aliases to be saved as language neutral.
+    $context['language'] = Drupal\Core\Language\Language::LANGCODE_NOT_SPECIFIED;
+  }
+}

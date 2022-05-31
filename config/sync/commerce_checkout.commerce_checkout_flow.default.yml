@@ -1,0 +1,65 @@
+uuid: e21f39b1-3968-43ff-abff-569cb92c2ef8
+langcode: es
+status: true
+dependencies:
+  module:
+    - commerce_file
+    - commerce_payment
+    - commerce_promotion
+    - email_registration
+_core:
+  default_config_hash: 5BYvSDemm8xYwB9rMGFuEuGK6FxVheqtXEUxnpKO2N4
+id: default
+label: 'Por defecto'
+plugin: multistep_default
+configuration:
+  display_checkout_progress: true
+  display_checkout_progress_breadcrumb_links: false
+  panes:
+    login:
+      allow_guest_checkout: false
+      allow_registration: true
+      step: login
+      weight: 0
+    contact_information:
+      double_entry: true
+      step: order_information
+      weight: 1
+    review:
+      step: review
+      weight: 3
+    completion_message:
+      message:
+        value: "<p>Ya puedes descargar tu factura, comprobar los eventos a los que estás inscrito, o ver tus compras desde <a href=\"/user-dashboard\">tu panel de usuario</a>.</p>\r\n\r\n<p>El número de pedido de tu compra es el [commerce_order:order_number].</p>\r\n\r\n<p>&nbsp;</p>\r\n"
+        format: full_html
+      step: complete
+      weight: 4
+    order_summary:
+      view: commerce_checkout_order_summary
+      step: _sidebar
+      weight: 5
+    completion_register:
+      step: complete
+      weight: 10
+    commerce_file_download:
+      step: complete
+      weight: 10
+    payment_process:
+      capture: true
+      step: payment
+      weight: 10
+    payment_information:
+      step: order_information
+      weight: 10
+    coupon_redemption:
+      allow_multiple: false
+      step: _sidebar
+      weight: 10
+    email_registration_completion_registration:
+      step: _disabled
+      weight: 10
+    email_registration_login:
+      allow_guest_checkout: true
+      allow_registration: false
+      step: _disabled
+      weight: 10

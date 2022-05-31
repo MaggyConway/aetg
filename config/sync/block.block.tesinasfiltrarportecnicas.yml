@@ -1,0 +1,29 @@
+uuid: da2f0fa5-e162-4656-a516-c6fd58f8779d
+langcode: es
+status: true
+dependencies:
+  config:
+    - facets.facet.tesinas_filtrar_por_tecnicas
+  module:
+    - facets
+    - system
+  theme:
+    - aetg
+id: tesinasfiltrarportecnicas
+theme: aetg
+region: content
+weight: -15
+provider: null
+plugin: 'facet_block:tesinas_filtrar_por_tecnicas'
+settings:
+  id: 'facet_block:tesinas_filtrar_por_tecnicas'
+  label: 'Tesinas: Filtrar por técnicas'
+  provider: facets
+  label_display: '0'
+  block_id: tesinasfiltrarportecnicas
+visibility:
+  request_path:
+    id: request_path
+    pages: /gestalt/recursos/tesinas
+    negate: false
+    context_mapping: {  }

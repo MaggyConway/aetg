@@ -1,0 +1,10 @@
+uuid: 0658bb7a-7a12-4dd4-a8a9-647bd6d290e8
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.nombre_de_socio_con_tipo
+label: nombre_de_socio_con_tipo
+targetEntityType: user
+cache: true

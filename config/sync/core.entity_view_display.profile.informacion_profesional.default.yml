@@ -1,0 +1,437 @@
+uuid: a1693131-0aef-427c-97ac-72316956f935
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.profile.informacion_profesional.field_ambito_trabajo
+    - field.field.profile.informacion_profesional.field_apellidos_prof
+    - field.field.profile.informacion_profesional.field_bio
+    - field.field.profile.informacion_profesional.field_centro
+    - field.field.profile.informacion_profesional.field_direccion
+    - field.field.profile.informacion_profesional.field_full_name
+    - field.field.profile.informacion_profesional.field_geofield
+    - field.field.profile.informacion_profesional.field_imagen_logo
+    - field.field.profile.informacion_profesional.field_imagen_usuario
+    - field.field.profile.informacion_profesional.field_invoicing_address
+    - field.field.profile.informacion_profesional.field_mobile
+    - field.field.profile.informacion_profesional.field_nombre_proff
+    - field.field.profile.informacion_profesional.field_public_email
+    - field.field.profile.informacion_profesional.field_telefono_prof
+    - field.field.profile.informacion_profesional.field_url
+    - field.field.profile.informacion_profesional.field_website
+    - image.style.user_picture
+    - profile.type.informacion_profesional
+  module:
+    - address
+    - ctools
+    - field_formatter_class
+    - geofield
+    - image
+    - layout_builder
+    - layout_discovery
+    - link
+    - text
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: Header
+          layout_builder_styles_style: ''
+        components:
+          668f0ce3-ea2c-48a3-ac98-73134dc6d95b:
+            uuid: 668f0ce3-ea2c-48a3-ac98-73134dc6d95b
+            region: content
+            configuration:
+              id: 'entity_view:profile'
+              label: 'Entity view (Profile)'
+              provider: ctools
+              label_display: '0'
+              view_mode: professional_card_header
+              context_mapping:
+                entity: layout_builder.entity
+            additional:
+              layout_builder_styles_style: ''
+            weight: 0
+        third_party_settings: {  }
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: ''
+          column_widths: 67-33
+          layout_builder_styles_style: ''
+        components:
+          a318d4d4-df78-4041-8cc0-504fbac41a14:
+            uuid: a318d4d4-df78-4041-8cc0-504fbac41a14
+            region: first
+            configuration:
+              id: 'field_block:profile:informacion_profesional:field_bio'
+              label: Descripción
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings:
+                  empty_fields:
+                    handler: ''
+                  field_formatter_class:
+                    class: ''
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional:
+              layout_builder_styles_style: ''
+            weight: 0
+          5ed5ea86-a40c-49bd-abab-3947e3bea162:
+            uuid: 5ed5ea86-a40c-49bd-abab-3947e3bea162
+            region: second
+            configuration:
+              id: 'field_block:profile:informacion_profesional:field_ambito_trabajo'
+              label: 'Ámbito de trabajo'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: entity_reference_label
+                settings:
+                  link: false
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional:
+              layout_builder_styles_style: ''
+            weight: 0
+          9294796e-0fd6-4403-80a1-b1a9f1b74d76:
+            uuid: 9294796e-0fd6-4403-80a1-b1a9f1b74d76
+            region: second
+            configuration:
+              id: 'entity_view:profile'
+              label: 'Datos de contacto'
+              provider: ctools
+              label_display: visible
+              view_mode: contacts
+              context_mapping:
+                entity: layout_builder.entity
+            additional:
+              layout_builder_styles_style: ''
+            weight: 1
+          2bdc3b62-dfc4-4252-9a9e-1977d72a9be1:
+            uuid: 2bdc3b62-dfc4-4252-9a9e-1977d72a9be1
+            region: first
+            configuration:
+              id: 'field_block:profile:informacion_profesional:field_invoicing_address'
+              label: Dirección
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: address_display_formatter
+                settings:
+                  address_display:
+                    organization:
+                      glue: ''
+                      weight: '-10'
+                      display: 0
+                    address_line1:
+                      display: '1'
+                      glue: '<br>'
+                      weight: '-9'
+                    address_line2:
+                      glue: ' '
+                      weight: '-8'
+                      display: 0
+                    postal_code:
+                      display: '1'
+                      glue: ''
+                      weight: '-7'
+                    locality:
+                      display: '1'
+                      glue: ' ( '
+                      weight: '-6'
+                    administrative_area:
+                      display: '1'
+                      glue: ' )<br>'
+                      weight: '-5'
+                    country_code:
+                      display: '1'
+                      glue: ''
+                      weight: '-4'
+                    langcode:
+                      glue: ','
+                      weight: '-3'
+                      display: 0
+                    dependent_locality:
+                      glue: ','
+                      weight: '-2'
+                      display: 0
+                    sorting_code:
+                      glue: ','
+                      weight: '-1'
+                      display: 0
+                    given_name:
+                      glue: ''
+                      weight: '0'
+                      display: 0
+                    family_name:
+                      glue: ','
+                      weight: '1'
+                      display: 0
+                third_party_settings:
+                  empty_fields:
+                    handler: nbsp
+                  field_formatter_class:
+                    class: ''
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional:
+              layout_builder_styles_style: ''
+            weight: 1
+          7d336bfa-7192-4b46-b54a-89d914be137b:
+            uuid: 7d336bfa-7192-4b46-b54a-89d914be137b
+            region: first
+            configuration:
+              id: 'field_block:profile:informacion_profesional:field_geofield'
+              label: Geofield
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: leaflet_formatter_default
+                settings:
+                  multiple_map: false
+                  popup: false
+                  popup_content: ''
+                  leaflet_map: 'OSM Mapnik'
+                  height: 215
+                  height_unit: px
+                  hide_empty_map: false
+                  disable_wheel: false
+                  fullscreen_control: false
+                  gesture_handling: false
+                  reset_map:
+                    control: false
+                    position: topright
+                  map_position:
+                    force: false
+                    center:
+                      lat: !!float 0
+                      lon: !!float 0
+                    zoom: 12
+                    minZoom: 1
+                    maxZoom: 18
+                    zoomFiner: 0
+                  weight: ''
+                  icon:
+                    iconType: marker
+                    iconUrl: ''
+                    shadowUrl: ''
+                    className: ''
+                    html: '<div></div>'
+                    html_class: leaflet-map-divicon
+                    circle_marker_options: '{"radius":100,"color":"red","fillColor":"#f03","fillOpacity":0.5}'
+                    iconSize:
+                      x: ''
+                      'y': ''
+                    iconAnchor:
+                      x: ''
+                      'y': ''
+                    shadowSize:
+                      x: ''
+                      'y': ''
+                    shadowAnchor:
+                      x: ''
+                      'y': ''
+                    popupAnchor:
+                      x: ''
+                      'y': ''
+                  leaflet_markercluster:
+                    control: false
+                    options: '{"spiderfyOnMaxZoom":true,"showCoverageOnHover":true,"removeOutsideVisibleBounds":false}'
+                    include_path: false
+                  path: '{"color":"#3388ff","opacity":"1.0","stroke":true,"weight":3,"fill":"depends","fillColor":"*","fillOpacity":"0.2","radius":"6"}'
+                  geocoder:
+                    control: false
+                    settings:
+                      position: topright
+                      input_size: 25
+                      providers:
+                        arcgisonline:
+                          weight: 0
+                          checked: false
+                      min_terms: 4
+                      delay: 800
+                      zoom: 16
+                      popup: false
+                      options: ''
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional:
+              layout_builder_styles_style: ''
+            weight: 2
+        third_party_settings: {  }
+id: profile.informacion_profesional.default
+targetEntityType: profile
+bundle: informacion_profesional
+mode: default
+content:
+  addtoany:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_ambito_trabajo:
+    type: entity_reference_label
+    weight: 8
+    region: content
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_apellidos_prof:
+    label: hidden
+    weight: 2
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  field_bio:
+    type: text_default
+    weight: 9
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_centro:
+    label: inline
+    weight: 3
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  field_direccion:
+    label: above
+    weight: 7
+    type: address_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_full_name:
+    weight: 15
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: first
+  field_geofield:
+    weight: 18
+    label: above
+    settings:
+      output_format: wkt
+      output_escape: true
+    third_party_settings: {  }
+    type: geofield_default
+    region: content
+  field_imagen_logo:
+    weight: 17
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: first
+  field_imagen_usuario:
+    label: hidden
+    weight: 0
+    type: image
+    settings:
+      image_style: user_picture
+      image_link: ''
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    region: content
+  field_invoicing_address:
+    weight: 16
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
+    region: first
+  field_mobile:
+    weight: 13
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: first
+  field_nombre_proff:
+    label: hidden
+    weight: 1
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  field_public_email:
+    weight: 12
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: first
+  field_telefono_prof:
+    label: inline
+    weight: 5
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  field_url:
+    label: above
+    weight: 4
+    type: link
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    region: content
+  field_website:
+    weight: 11
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: first
+hidden:
+  breadcrumbs: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  search_api_excerpt: true

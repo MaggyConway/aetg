@@ -1,0 +1,8 @@
+uuid: 09a20af4-fb22-46ca-824f-92fe31a53990
+langcode: es
+status: true
+dependencies: {  }
+name: 'Emisores de noticias'
+vid: emisor_de_noticia
+description: 'Quién produce una noticia: secretaría, junta, comisiones, etc.'
+weight: 0

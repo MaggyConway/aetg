@@ -1,0 +1,210 @@
+uuid: 47bcb1ec-0f8f-4593-b4c4-5bbccadc4722
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.profile.teaser
+    - field.field.profile.informacion_profesional.field_ambito_trabajo
+    - field.field.profile.informacion_profesional.field_apellidos_prof
+    - field.field.profile.informacion_profesional.field_bio
+    - field.field.profile.informacion_profesional.field_centro
+    - field.field.profile.informacion_profesional.field_direccion
+    - field.field.profile.informacion_profesional.field_full_name
+    - field.field.profile.informacion_profesional.field_geofield
+    - field.field.profile.informacion_profesional.field_imagen_logo
+    - field.field.profile.informacion_profesional.field_imagen_usuario
+    - field.field.profile.informacion_profesional.field_invoicing_address
+    - field.field.profile.informacion_profesional.field_mobile
+    - field.field.profile.informacion_profesional.field_nombre_proff
+    - field.field.profile.informacion_profesional.field_public_email
+    - field.field.profile.informacion_profesional.field_telefono_prof
+    - field.field.profile.informacion_profesional.field_url
+    - field.field.profile.informacion_profesional.field_website
+    - image.style.user_picture
+    - profile.type.informacion_profesional
+  module:
+    - address
+    - field_formatter_class
+    - image
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: true
+    sections:
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: ''
+          column_widths: 25-75
+          layout_builder_styles_style: ''
+        components:
+          aad53f30-bc31-4420-b2f5-2bcee4cb230a:
+            uuid: aad53f30-bc31-4420-b2f5-2bcee4cb230a
+            region: second
+            configuration:
+              id: 'field_block:profile:informacion_profesional:field_full_name'
+              label: 'Nombre Completo'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional:
+              layout_builder_styles_style: ''
+            weight: 1
+          cb3a062a-f3a2-4d9e-8ee7-adcf5377a985:
+            uuid: cb3a062a-f3a2-4d9e-8ee7-adcf5377a985
+            region: first
+            configuration:
+              id: 'field_block:profile:informacion_profesional:field_imagen_logo'
+              label: Image
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: image
+                settings:
+                  image_style: user_picture
+                  image_link: ''
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional:
+              layout_builder_styles_style: ''
+            weight: 0
+          d98d5ff4-d9fd-4936-997a-ab4b0e3d3757:
+            uuid: d98d5ff4-d9fd-4936-997a-ab4b0e3d3757
+            region: second
+            configuration:
+              id: 'field_block:profile:informacion_profesional:field_invoicing_address'
+              label: Dirección
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: address_display_formatter
+                settings:
+                  address_display:
+                    organization:
+                      glue: ''
+                      weight: '-1'
+                      display: 0
+                    address_line1:
+                      glue: ''
+                      weight: '0'
+                      display: 0
+                    address_line2:
+                      glue: ','
+                      weight: '1'
+                      display: 0
+                    locality:
+                      display: '1'
+                      glue: ','
+                      weight: '2'
+                    postal_code:
+                      glue: ''
+                      weight: '3'
+                      display: 0
+                    country_code:
+                      display: '1'
+                      glue: ''
+                      weight: '4'
+                    langcode:
+                      glue: ','
+                      weight: '100'
+                      display: 0
+                    administrative_area:
+                      glue: ','
+                      weight: '100'
+                      display: 0
+                    dependent_locality:
+                      glue: ','
+                      weight: '100'
+                      display: 0
+                    sorting_code:
+                      glue: ','
+                      weight: '100'
+                      display: 0
+                    given_name:
+                      glue: ''
+                      weight: '100'
+                      display: 0
+                    family_name:
+                      glue: ','
+                      weight: '100'
+                      display: 0
+                third_party_settings:
+                  empty_fields:
+                    handler: ''
+                  field_formatter_class:
+                    class: ''
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional:
+              layout_builder_styles_style: ''
+            weight: 3
+        third_party_settings: {  }
+id: profile.informacion_profesional.teaser
+targetEntityType: profile
+bundle: informacion_profesional
+mode: teaser
+content:
+  field_direccion:
+    label: above
+    weight: 2
+    type: address_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_full_name:
+    type: string
+    weight: 1
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_imagen_usuario:
+    label: hidden
+    weight: 0
+    type: image
+    settings:
+      image_style: user_picture
+      image_link: ''
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    region: content
+hidden:
+  addtoany: true
+  breadcrumbs: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_ambito_trabajo: true
+  field_apellidos_prof: true
+  field_bio: true
+  field_centro: true
+  field_geofield: true
+  field_imagen_logo: true
+  field_invoicing_address: true
+  field_mobile: true
+  field_nombre_proff: true
+  field_public_email: true
+  field_telefono_prof: true
+  field_url: true
+  field_website: true
+  search_api_excerpt: true

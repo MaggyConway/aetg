@@ -1,0 +1,22 @@
+uuid: 097c43c3-deaf-4842-86d1-857c4a6f454e
+langcode: es
+status: true
+dependencies:
+  config:
+    - simple_block.simple_block.hazte_socio
+  module:
+    - simple_block
+  theme:
+    - aetg
+id: haztesocio
+theme: aetg
+region: preheader_right
+weight: -21
+provider: null
+plugin: 'simple_block:hazte_socio'
+settings:
+  id: 'simple_block:hazte_socio'
+  label: 'Hazte socio'
+  provider: simple_block
+  label_display: '0'
+visibility: {  }

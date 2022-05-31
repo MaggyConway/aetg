@@ -1,0 +1,19 @@
+uuid: 88a71f9a-6582-46c6-a54b-7174eb266d84
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_email_esp
+    - node.type.especializacion
+id: node.especializacion.field_email_esp
+field_name: field_email_esp
+entity_type: node
+bundle: especializacion
+label: Email
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

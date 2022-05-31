@@ -1,0 +1,21 @@
+uuid: bcd84f5b-0659-4db9-b452-4328e752e7bd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_start_date
+    - paragraphs.paragraphs_type.aetg_membership_type
+  module:
+    - datetime
+id: paragraph.aetg_membership_type.field_start_date
+field_name: field_start_date
+entity_type: paragraph
+bundle: aetg_membership_type
+label: 'Fecha de Alta'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

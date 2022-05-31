@@ -1,0 +1,13 @@
+uuid: 50615d10-14c7-4391-bef3-523977e9a252
+langcode: es
+status: true
+dependencies:
+  module:
+    - feeds
+_core:
+  default_config_hash: yZW4ELH2L51kf2mGKd7f62uozGH-jFuWz1k9abACq1U
+id: feeds_feed_delete_action
+label: 'Borrar las fuentes seleccionadas'
+type: feeds_feed
+plugin: feeds_feed_delete_action
+configuration: {  }

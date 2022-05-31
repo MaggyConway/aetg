@@ -1,0 +1,81 @@
+uuid: 5249225b-a846-4696-85db-184ce0cd59b3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.image_slider.field_paragraphs
+    - paragraphs.paragraphs_type.image_slider
+  module:
+    - field_formatter_class
+    - slick_paragraphs
+id: paragraph.image_slider.default
+targetEntityType: paragraph
+bundle: image_slider
+mode: default
+content:
+  field_paragraphs:
+    weight: 0
+    label: hidden
+    settings:
+      style: ''
+      vanilla: '1'
+      optionset: pt_image_slider
+      optionset_thumbnail: ''
+      skin: default
+      skin_thumbnail: ''
+      image_style: ''
+      thumbnail_effect: ''
+      thumbnail_position: ''
+      media_switch: ''
+      box_style: ''
+      thumbnail_style: ''
+      box_media_style: ''
+      ratio: ''
+      box_caption: ''
+      view_mode: default
+      box_caption_custom: ''
+      grid: ''
+      grid_medium: ''
+      grid_small: ''
+      visible_items: ''
+      image: ''
+      overlay: ''
+      title: ''
+      link: ''
+      layout: ''
+      class: ''
+      cache: '0'
+      background: 0
+      use_theme_field: 0
+      preserve_keys: 0
+      override: 0
+      overridables:
+        arrows: 0
+        autoplay: 0
+        dots: 0
+        draggable: 0
+        infinite: 0
+        mouseWheel: 0
+        randomize: 0
+        variableWidth: 0
+      thumbnail: ''
+      thumbnail_caption: ''
+      skin_arrows: ''
+      skin_dots: ''
+      caption: {  }
+      responsive_image_style: ''
+      id: ''
+      lazy: ''
+      loading: lazy
+      preload: false
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    type: slick_paragraphs_media
+    region: content
+hidden:
+  breadcrumbs: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  search_api_excerpt: true

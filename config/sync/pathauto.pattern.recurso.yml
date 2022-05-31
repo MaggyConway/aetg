@@ -1,0 +1,22 @@
+uuid: 02531304-cdcc-49c6-af2e-2c59e4e264f2
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: recurso
+label: Recurso
+type: 'canonical_entities:node'
+pattern: 'biblioteca/[node:field_tipo_de_recurso]/[node:title]'
+selection_criteria:
+  3ac2502a-7476-4593-b8fc-b79e9aa22ba0:
+    id: 'entity_bundle:node'
+    bundles:
+      recurso: recurso
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 3ac2502a-7476-4593-b8fc-b79e9aa22ba0
+selection_logic: and
+weight: -8
+relationships: {  }

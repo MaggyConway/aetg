@@ -1,0 +1,26 @@
+uuid: aadfa851-191e-466f-9c2f-3f4aee9fc89f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_permisos_de_acceso
+    - node.type.page
+    - taxonomy.vocabulary.permisos_de_acceso
+id: node.page.field_permisos_de_acceso
+field_name: field_permisos_de_acceso
+entity_type: node
+bundle: page
+label: 'Permisos de acceso'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    sort:
+      field: _none
+    target_bundles:
+      permisos_de_acceso: permisos_de_acceso
+  handler: 'default:taxonomy_term'
+field_type: entity_reference

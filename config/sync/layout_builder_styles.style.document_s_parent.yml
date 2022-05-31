@@ -1,0 +1,11 @@
+uuid: 371afdc5-a62c-49dd-8ba8-1c91f24c60f4
+langcode: en
+status: true
+dependencies: {  }
+id: document_s_parent
+label: 'Document''s Parent'
+classes: documents-parent
+type: section
+weight: 0
+block_restrictions: {  }
+layout_restrictions: {  }

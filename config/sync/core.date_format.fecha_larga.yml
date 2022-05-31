@@ -1,0 +1,8 @@
+uuid: 7e9b0457-a19f-4df4-95fe-eb334c8e3dfe
+langcode: es
+status: true
+dependencies: {  }
+id: fecha_larga
+label: 'Fecha larga'
+locked: false
+pattern: 'j \d\e F \d\e Y'

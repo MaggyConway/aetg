@@ -1,0 +1,29 @@
+uuid: 19bf2a20-d636-4115-89d3-613c8d7d57d3
+langcode: es
+status: true
+dependencies:
+  config:
+    - facets.facet.fundamentos_e_influencias
+  module:
+    - facets
+    - system
+  theme:
+    - aetg
+id: filtrarporfundamentoseinfluencias
+theme: aetg
+region: content
+weight: -17
+provider: null
+plugin: 'facet_block:fundamentos_e_influencias'
+settings:
+  id: 'facet_block:fundamentos_e_influencias'
+  label: 'Filtrar por fundamentos e influencias:'
+  provider: facets
+  label_display: '0'
+  block_id: filtrarporfundamentoseinfluencias
+visibility:
+  request_path:
+    id: request_path
+    pages: /gestalt/recursos
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,12 @@
+uuid: e99df6cd-3b3f-4059-b316-4b47e3a7f47b
+langcode: es
+status: true
+dependencies: {  }
+id: product
+label: product
+code: ".region-header div#block-aetg-branding { margin-right: 25px; }\n.block-field-blocknodeeventfield-product-reference>.field--type-entity-reference>article, .block-field-blocknodeeventfield-relacionados>.field--type-entity-reference>article, .block-field-blocknoderecursofield-product-reference>.field--type-entity-reference>article {\n  flex-wrap: wrap;\n}\n\nform#commerce-checkout-flow-aetg-checkoutflow .view-footer {  display: block; }\n.commerce-checkout-flow>.layout-checkout-form>.layout-region-checkout-secondary .checkout-pane-order-summary .views-field-purchased-entity .layout__region--content { justify-content: flex-start; }\n.node--type-recurso.node--view-mode-tienda .block-field-blocknoderecursotitle .field--name-title a {\n  font-size: 22px;\n  font-weight: 500;\n  line-height: 32px;\n  color: #5fbcd5;\n}\n.node--type-recurso.node--view-mode-tienda .block-field-blocknoderecursofield-imagen { margin-bottom: 10px; }\n.block-field-blocknoderecursofield-product-reference>.field--type-entity-reference>article .field--name-variations form .form-actions>.is-disabled { display: none; }\n.block-field-blocknoderecursofield-product-reference>.field--type-entity-reference>article .field--name-variations form .form-actions { margin-top: 15px; }"
+conditions_require_all: true
+conditions: {  }
+contexts: {  }
+media: all
+preprocess: true

@@ -1,0 +1,47 @@
+uuid: 8f42c44e-3d06-4acb-92e7-93dcb8f2f4e5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.aetg_membership_type.field_end_date
+    - field.field.paragraph.aetg_membership_type.field_start_date
+    - field.field.paragraph.aetg_membership_type.field_taxonomy_term
+    - field.field.paragraph.aetg_membership_type.field_text
+    - paragraphs.paragraphs_type.aetg_membership_type
+  module:
+    - datetime
+    - text
+id: paragraph.aetg_membership_type.default
+targetEntityType: paragraph
+bundle: aetg_membership_type
+mode: default
+content:
+  field_end_date:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_start_date:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_taxonomy_term:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_text:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+hidden:
+  created: true
+  status: true

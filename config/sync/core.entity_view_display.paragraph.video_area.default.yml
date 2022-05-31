@@ -1,0 +1,40 @@
+uuid: 5d717422-9274-44aa-9e7c-4bea000c0a7d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.video_area.field_title
+    - field.field.paragraph.video_area.field_videos
+    - paragraphs.paragraphs_type.video_area
+  module:
+    - field_formatter_class
+id: paragraph.video_area.default
+targetEntityType: paragraph
+bundle: video_area
+mode: default
+content:
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_videos:
+    type: entity_reference_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: pt_video_area_default
+      link: false
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    region: content
+hidden:
+  breadcrumbs: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  search_api_excerpt: true

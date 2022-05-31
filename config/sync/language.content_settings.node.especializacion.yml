@@ -1,0 +1,11 @@
+uuid: 29ca847e-a544-4db2-8dcd-6c1b2c8b0498
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.especializacion
+id: node.especializacion
+target_entity_type_id: node
+target_bundle: especializacion
+default_langcode: site_default
+language_alterable: false

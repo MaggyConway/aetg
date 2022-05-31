@@ -1,0 +1,70 @@
+diff --git a/js/main.js b/js/main.js
+index 5d52e10..e6a353b 100644
+--- a/js/main.js
++++ b/js/main.js
+@@ -5,6 +5,10 @@
+       const applicationServerPublicKey = drupalSettings.advanced_pwa.public_key;
+       const status_all = drupalSettings.advanced_pwa.status_all;
+       const baseUrl = (window.location.protocol + '//' + window.location.host) + (drupalSettings.path.baseUrl);
++      if (!localStorage.getItem('reject_pwa_push')) {
++        localStorage.setItem('reject_pwa_push', JSON.stringify(false));
++      }
++
+
+       if (!(applicationServerPublicKey)) {
+         return;
+@@ -161,6 +165,9 @@
+         });
+       }
+
++      function disablePushSubscription() {
++        localStorage.setItem('reject_pwa_push', JSON.stringify(true));
++      }
+
+       /*
+       function unsubscribeUser() {
+@@ -226,6 +233,7 @@
+               text: Drupal.t('Later'),
+               class: 'button button--cancel',
+               click: function () {
++                disablePushSubscription();
+                 confirmation.modal.close();
+               }
+             }
+@@ -274,7 +282,8 @@
+       navigator.serviceWorker.ready.then(serviceWorkerRegistration => serviceWorkerRegistration.pushManager.getSubscription())
+         .then(subscription => {
+           if (status_all === 1) {
+-            if (!subscription) {
++            let reject = JSON.parse(localStorage.getItem('reject_pwa_push'));
++            if (!subscription && !reject) {
+               // We aren't subscribed to push, so enable subscription.
+               var displayType = drupalSettings.advanced_pwa.display_type || 'modal';
+               switch (displayType) {
+diff --git a/src/Form/AdvancedpwaBroadcastForm.php b/src/Form/AdvancedpwaBroadcastForm.php
+index a3ed616..e081fa0 100644
+--- a/src/Form/AdvancedpwaBroadcastForm.php
++++ b/src/Form/AdvancedpwaBroadcastForm.php
+@@ -72,6 +72,13 @@ class AdvancedpwaBroadcastForm extends FormBase {
+       '#required' => TRUE,
+     ];
+
++    $form['url'] = [
++      '#type' => 'url',
++      '#title' => $this->t('Link to broadcast'),
++      '#default_value' => '',
++      '#required' => TRUE,
++    ];
++
+     $form['submit'] = [
+       '#type' => 'submit',
+       '#value' => $this->t('Send Notification'),
+@@ -99,7 +106,7 @@ class AdvancedpwaBroadcastForm extends FormBase {
+       'title' => $form_state->getValue('title'),
+       'message' => $form_state->getValue('message'),
+       'icon' => $icon_path,
+-      'url' => "",
++      'url' => $form_state->getValue('url'),
+       'content-details' => [
+         'nodeid' => "",
+         'nodetype' => "",

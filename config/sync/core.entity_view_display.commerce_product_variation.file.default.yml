@@ -1,0 +1,69 @@
+uuid: 1ec5cc89-6576-4d83-8e84-c9c21e4dea01
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.file
+    - field.field.commerce_product_variation.file.commerce_file
+    - field.field.commerce_product_variation.file.field_description
+    - field.field.commerce_product_variation.file.field_email_text
+    - field.field.commerce_product_variation.file.field_member_price
+    - field.field.commerce_product_variation.file.field_node
+    - field.field.commerce_product_variation.file.field_school_price
+    - field.field.commerce_product_variation.file.field_tax_rate
+    - field.field.commerce_product_variation.file.license_expiration
+    - field.field.commerce_product_variation.file.license_type
+  module:
+    - aetg_price
+    - empty_fields
+    - field_formatter_class
+    - text
+id: commerce_product_variation.file.default
+targetEntityType: commerce_product_variation
+bundle: file
+mode: default
+content:
+  field_description:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  price:
+    label: inline
+    type: commerce_price_calculated
+    weight: 1
+    region: content
+    settings:
+      strip_trailing_zeroes: true
+      currency_display: symbol
+      adjustment_types:
+        fee: fee
+        promotion: promotion
+        tax: tax
+      default_text: ''
+    third_party_settings:
+      empty_fields:
+        handler: ''
+      field_formatter_class:
+        class: ''
+hidden:
+  breadcrumbs: true
+  commerce_file: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_email_text: true
+  field_member_price: true
+  field_node: true
+  field_school_price: true
+  field_tax_rate: true
+  langcode: true
+  license_expiration: true
+  license_type: true
+  list_price: true
+  product_id: true
+  search_api_excerpt: true
+  sku: true
+  title: true

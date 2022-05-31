@@ -1,0 +1,78 @@
+uuid: d50040e3-1a8d-4b27-bab2-bd9cad63c2aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_paragraphs
+    - paragraphs.paragraphs_type.image_title_text_multiple_links
+    - paragraphs.paragraphs_type.multiple_links
+    - paragraphs.paragraphs_type.title_and_file_list
+  module:
+    - entity_reference_revisions
+id: paragraph.image_title_text_multiple_links.field_paragraphs
+field_name: field_paragraphs
+entity_type: paragraph
+bundle: image_title_text_multiple_links
+label: Paragraphs
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      multiple_links: multiple_links
+      title_and_file_list: title_and_file_list
+    target_bundles_drag_drop:
+      header_with_slider:
+        weight: 17
+        enabled: false
+      image_slider:
+        weight: 19
+        enabled: false
+      image_slider_item:
+        weight: 20
+        enabled: false
+      image_title_text_and_link:
+        weight: 4
+        enabled: false
+      image_title_text_multiple_links:
+        weight: 5
+        enabled: false
+      images_with_description:
+        weight: 18
+        enabled: false
+      multiple_links:
+        enabled: true
+        weight: 6
+      school_slider:
+        weight: 24
+        enabled: false
+      school_slider_item:
+        weight: 25
+        enabled: false
+      school_slider_with_multiple_link:
+        weight: 26
+        enabled: false
+      slider:
+        weight: 27
+        enabled: false
+      title_and_file_list:
+        enabled: true
+        weight: 28
+      title_and_text:
+        weight: 29
+        enabled: false
+      title_tag_text_and_link:
+        weight: 30
+        enabled: false
+      video_area:
+        weight: 31
+        enabled: false
+      webform:
+        weight: 32
+        enabled: false
+field_type: entity_reference_revisions

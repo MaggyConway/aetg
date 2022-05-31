@@ -1,0 +1,17 @@
+{#
+/**
+ * @file
+ * Default invoice total tax template.
+ *
+ * Available variables:
+ * - invoice_entity: The invoice entity.
+ * - total_without_tax: The invoice total price without tax.
+ *
+ * @ingroup themeable
+ */
+#}
+{% if total_without_tax %}
+  <div class="invoice-total-without-tax">
+<span class="invoice-total-without-tax-value">{{ total_without_tax|commerce_price_format }}</span>
+  </div>
+{% endif %}

@@ -1,0 +1,44 @@
+/**
+ * @file
+ * Breakpoints.
+ */
+
+@mixin breakpoint($breakpoint) {
+  @if $breakpoint == '' {
+    @content;
+  }
+
+  @else {
+    // Retrieves the value from the key
+    $value: map-get($breakpoints, $breakpoint);
+
+    // If the key exists in the map
+    @if $value != null {
+      // Prints a media query based on the value
+      @media screen and (max-width: $value) {
+        @content;
+      }
+    }
+
+    // If the key doesn't exist in the map
+    @else {
+      @warn 'Unfortunately, no value could be retrieved from `#{$breakpoint}`. '
+        + 'Please make sure it is defined in `$breakpoints` map.';
+    }
+  }
+}
+
+$breakpoints: (
+  mobile-small: '375px',
+  mobile-middle: '480px',
+  mobile-large: '600px',
+  tablet: '700px',
+  tablet-m: '800px',
+  tablet-md: '900px',
+  IPad-Pro: '1048px',
+  laptop-mini: '1100px',
+  laptop: '1200px',
+  desktop-small: '1300px',
+  desktop: '1366px',
+  desktop-middle: '1500px'
+) !default;

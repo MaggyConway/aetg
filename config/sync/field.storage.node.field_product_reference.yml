@@ -1,0 +1,24 @@
+uuid: df88d668-7ed7-4f0c-bc29-c31fb44f671e
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - field_permissions
+    - node
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_product_reference
+field_name: field_product_reference
+entity_type: node
+type: entity_reference
+settings:
+  target_type: commerce_product
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

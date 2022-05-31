@@ -1,0 +1,14 @@
+uuid: 52f792ff-d8a5-4c23-9f43-914844a1a493
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.personal_aetg
+  module:
+    - user
+id: user_remove_role_action.personal_aetg
+label: 'Remove the personal aetg role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: personal_aetg

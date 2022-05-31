@@ -1,0 +1,10 @@
+uuid: ad223f8a-3493-49a5-b678-cdcc64554c6c
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.ct_school_documentation_slide
+label: 'CT School documentation: Slide'
+targetEntityType: media
+cache: true

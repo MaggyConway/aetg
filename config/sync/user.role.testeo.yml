@@ -1,0 +1,16 @@
+uuid: 6d8e78cf-3f70-465b-82d7-2e082bee7262
+langcode: es
+status: true
+dependencies: {  }
+id: testeo
+label: testeo
+weight: 6
+is_admin: null
+permissions:
+  - 'delete privatemsg'
+  - 'edit own account'
+  - 'read privatemsg'
+  - 'skip CAPTCHA'
+  - 'use link to login one time'
+  - 'view Terms and Conditions'
+  - 'view files'

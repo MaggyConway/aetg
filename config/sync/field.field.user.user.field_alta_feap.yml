@@ -1,0 +1,21 @@
+uuid: a5b00d57-017b-436c-a3d9-7a0aba4b2500
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_alta_feap
+  module:
+    - datetime
+    - user
+id: user.user.field_alta_feap
+field_name: field_alta_feap
+entity_type: user
+bundle: user
+label: 'Alta Feap'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

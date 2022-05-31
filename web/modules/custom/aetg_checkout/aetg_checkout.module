@@ -1,0 +1,30 @@
+<?php
+
+/**
+ * @file
+ * Contains aetg_checkout.module.
+ */
+
+use Drupal\Component\Serialization\Json;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Link;
+use Drupal\Core\Render\Element;
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\commerce_order\Entity\OrderInterface;
+
+/**
+ * Implements hook_help().
+ */
+function aetg_checkout_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the kg_checkout module.
+    case 'help.page.aetg_checkout':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Provides checkout functionality.') . '</p>';
+      return $output;
+
+    default:
+  }
+}

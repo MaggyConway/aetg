@@ -1,0 +1,29 @@
+uuid: 51182eb8-c029-42d3-a031-a29927c87310
+langcode: es
+status: true
+dependencies:
+  config:
+    - facets.facet.articulos_filtrar_por_tecnicas
+  module:
+    - facets
+    - system
+  theme:
+    - aetg
+id: articulosfiltrarportecnicas
+theme: aetg
+region: content
+weight: -7
+provider: null
+plugin: 'facet_block:articulos_filtrar_por_tecnicas'
+settings:
+  id: 'facet_block:articulos_filtrar_por_tecnicas'
+  label: 'Artículos: Filtrar por técnicas'
+  provider: facets
+  label_display: '0'
+  block_id: articulosfiltrarportecnicas
+visibility:
+  request_path:
+    id: request_path
+    pages: /gestalt/recursos/articulos
+    negate: false
+    context_mapping: {  }

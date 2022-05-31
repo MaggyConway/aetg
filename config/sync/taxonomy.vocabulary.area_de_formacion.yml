@@ -1,0 +1,8 @@
+uuid: 70ad8fbb-2e4f-423d-ac49-c6a6e2e96bc3
+langcode: es
+status: true
+dependencies: {  }
+name: 'Áreas de formación'
+vid: area_de_formacion
+description: ''
+weight: 0

@@ -1,0 +1,51 @@
+uuid: 57e024a8-ed5b-4653-b9ab-ec93dadee13a
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_profile2_informacion_privada_alta_aetg
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Configuration
+migration_group: migrate_drupal_7
+label: 'Profile2 (upgrade_d7_profile2_informacion_privada_alta_aetg)'
+source:
+  key: legacy
+  plugin: d7_associate_profile2
+  constants:
+    status: 1
+    is_default: 1
+  bundle: informacion_privada
+process:
+  field_start_date:
+    -
+      plugin: sub_process
+      source: field_alta_aetg
+      process:
+        value:
+          plugin: format_date
+          from_format: 'Y-m-d H:i:s'
+          to_format: Y-m-d
+          source: value
+  field_end_date:
+    -
+      plugin: sub_process
+      source: field_baja_aetg
+      process:
+        value:
+          plugin: format_date
+          from_format: 'Y-m-d H:i:s'
+          to_format: Y-m-d
+          source: value
+  field_taxonomy_term:
+    -
+      plugin: sub_process
+      source: field_tipo_de_miembro
+      process:
+        target_id: tid
+destination:
+  plugin: 'entity_reference_revisions:paragraph'
+  default_bundle: aetg_membership_type
+migration_dependencies: null

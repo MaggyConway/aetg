@@ -1,0 +1,21 @@
+uuid: 086aa739-7251-4d09-a925-7f7981357b31
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_description
+    - profile.type.school_professional_information
+  module:
+    - text
+id: profile.school_professional_information.field_description
+field_name: field_description
+entity_type: profile
+bundle: school_professional_information
+label: Descripción
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

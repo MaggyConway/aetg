@@ -1,0 +1,26 @@
+uuid: 19c356cf-0379-436d-b766-b6c8095609a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_modalidad
+    - node.type.recurso
+    - taxonomy.vocabulary.modalidad
+id: node.recurso.field_modalidad
+field_name: field_modalidad
+entity_type: node
+bundle: recurso
+label: Modalidad
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    sort:
+      field: _none
+    target_bundles:
+      modalidad: modalidad
+  handler: 'default:taxonomy_term'
+field_type: entity_reference

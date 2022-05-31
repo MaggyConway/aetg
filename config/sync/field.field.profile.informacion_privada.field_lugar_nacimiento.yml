@@ -1,0 +1,19 @@
+uuid: df4d5ffb-f973-401d-ae32-e9547676d216
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_lugar_nacimiento
+    - profile.type.informacion_privada
+id: profile.informacion_privada.field_lugar_nacimiento
+field_name: field_lugar_nacimiento
+entity_type: profile
+bundle: informacion_privada
+label: 'Lugar de nacimiento'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

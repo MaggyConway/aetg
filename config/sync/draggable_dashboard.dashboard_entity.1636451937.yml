@@ -1,0 +1,9 @@
+uuid: 2d75bb7b-d0e7-43f7-9e47-14efd78966d2
+langcode: es
+status: true
+dependencies: {  }
+id: '1636451937'
+title: 'Dashboard #1'
+description: ''
+columns: '2'
+blocks: '[{"bid":"views_block__dashboard_ultimos_webforms_recibidos_block_1","cln":1,"position":0},{"bid":"views_block__dashboard_noticias_block_1","cln":"1","position":1},{"bid":"views_block__dashboard_recursos_block_1","cln":"1","position":2},{"bid":"informes","cln":"1","position":3},{"bid":"views_block__dashboard_noticias_block_2","cln":"1","position":4},{"bid":"views_block__dashboard_peticiones_nuevos_webform_submis_block_1","cln":2,"position":0},{"bid":"views_block__dashboard_peticiones_de_nuevos_usuarios_block_1","cln":2,"position":1},{"bid":"views_block__dashboard_escuelas_registradas_sin_activar_block_1","cln":"2","position":2},{"bid":"paneldeusuarios","cln":"2","position":3},{"bid":"views_block__dashboard_documentos_de_escuelas_block_1","cln":"2","position":4},{"bid":"views_block__dashboard_documentos_de_secretaria_block_1","cln":"2","position":5},{"bid":"views_block__dashboard_textos_generales_block_1","cln":"2","position":6},{"bid":"anadirnuevoasociadooescuela","cln":"2","position":7},{"bid":"editaraspectoslegales","cln":"2","position":8}]'

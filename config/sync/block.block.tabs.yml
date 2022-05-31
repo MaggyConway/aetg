@@ -1,0 +1,27 @@
+uuid: 85530459-d3ed-4205-8be2-f28ea3239c81
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - aetg
+id: tabs
+theme: aetg
+region: top
+weight: -20
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility:
+  request_path:
+    id: request_path
+    pages: "/user/*\r\n/biblioteca\r\n/biblioteca/revistas\r\n/biblioteca/tesinas\r\n/biblioteca/libros\r\n/biblioteca/articulos\r\n/biblioteca/videos\r\n/biblioteca/blogs\r\n/biblioteca/webs\r\n/biblioteca/newsletters\r\n/directorios/eventos\r\n/directorios/eventos/congresos\r\n/directorios/eventos/formacion\r\n/directorios/eventos/jornadas\r\n/directorios/eventos/talleres\r\n/form/*"
+    negate: true
+    context_mapping: {  }

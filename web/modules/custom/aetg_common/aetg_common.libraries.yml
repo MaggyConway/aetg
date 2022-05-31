@@ -1,0 +1,6 @@
+node_form:
+  js:
+    js/node_form.js: {}
+  css:
+    theme:
+      css/node_form.css: {}

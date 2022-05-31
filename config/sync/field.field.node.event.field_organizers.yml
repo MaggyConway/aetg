@@ -1,0 +1,21 @@
+uuid: f33c5e9f-46d3-4bf7-bd95-a59f1b998689
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_organizers
+    - node.type.event
+id: node.event.field_organizers
+field_name: field_organizers
+entity_type: node
+bundle: event
+label: 'Organizado por'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: AETG
+default_value_callback: ''
+settings: {  }
+field_type: string

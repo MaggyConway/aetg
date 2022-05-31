@@ -1,0 +1,21 @@
+uuid: 3186b8a7-5063-4417-a8ff-4ad752f737d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text
+    - paragraphs.paragraphs_type.aetg_membership_type
+  module:
+    - text
+id: paragraph.aetg_membership_type.field_text
+field_name: field_text
+entity_type: paragraph
+bundle: aetg_membership_type
+label: Comentarios
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,8 @@
+uuid: 44e8f711-13ab-4287-b61a-0d3505426cf1
+langcode: es
+status: true
+dependencies: {  }
+name: 'Tipos de miembro AETG'
+vid: tipo_de_miembro
+description: 'Tipos de asociado existentes: adherente, titular, etc.'
+weight: 0

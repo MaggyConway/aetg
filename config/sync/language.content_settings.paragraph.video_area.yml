@@ -1,0 +1,11 @@
+uuid: b5e5ee6e-24f1-43b9-9df0-bb2802993452
+langcode: es
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.video_area
+id: paragraph.video_area
+target_entity_type_id: paragraph
+target_bundle: video_area
+default_langcode: site_default
+language_alterable: false

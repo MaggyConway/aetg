@@ -1,0 +1,19 @@
+uuid: 7d1e9c82-1e8b-4121-90a1-f3b1057823e7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.member_slider_with_multiple_link
+id: paragraph.member_slider_with_multiple_link.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: member_slider_with_multiple_link
+label: Title
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

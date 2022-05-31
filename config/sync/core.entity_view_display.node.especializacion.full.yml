@@ -1,0 +1,334 @@
+uuid: 95ed1997-c4ff-4de7-8767-5f277f6ab0af
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.especializacion.field_area_de_especializacion
+    - field.field.node.especializacion.field_cronograma_esp
+    - field.field.node.especializacion.field_descripcion_esp
+    - field.field.node.especializacion.field_direccion_esp
+    - field.field.node.especializacion.field_docentes_aetg_esp
+    - field.field.node.especializacion.field_email_esp
+    - field.field.node.especializacion.field_fecha_esp
+    - field.field.node.especializacion.field_imagen_esp
+    - field.field.node.especializacion.field_profesorado_esp
+    - field.field.node.especializacion.field_programa_esp
+    - field.field.node.especializacion.field_responsable_formacion_esp
+    - field.field.node.especializacion.field_sitio_web_esp
+    - field.field.node.especializacion.field_telefono_esp
+    - field.field.node.especializacion.field_tipo_de_especializacion
+    - image.style.ct_especializacion_full
+    - node.type.especializacion
+  module:
+    - address_display
+    - colorbox
+    - datetime
+    - empty_fields
+    - field_formatter_class
+    - field_group
+    - link
+    - text
+    - user
+third_party_settings:
+  field_group:
+    group_tabs_especializacion:
+      children:
+        - group_datos
+        - group_descripcion_esp
+        - group_profesorado_esp
+        - group_programa_esp
+        - group_cronograma_esp
+      parent_name: ''
+      weight: 1
+      label: 'Tabs especialización'
+      format_settings:
+        formatter: ''
+        classes: 'group-tabs-especializacion field-group-htabs'
+        id: ''
+        direction: horizontal
+      format_type: tabs
+      region: content
+    group_descripcion_esp:
+      children:
+        - field_descripcion_esp
+      parent_name: group_tabs_especializacion
+      weight: 3
+      label: Descripción
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: 'group-descripcion-esp field-group-htab'
+        id: ''
+      format_type: tab
+      region: content
+    group_programa_esp:
+      children:
+        - field_programa_esp
+      parent_name: group_tabs_especializacion
+      weight: 5
+      label: Programa
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: 'group-programa-esp field-group-htab'
+        id: ''
+      format_type: tab
+      region: content
+    group_cronograma_esp:
+      children:
+        - field_cronograma_esp
+      parent_name: group_tabs_especializacion
+      weight: 6
+      label: Cronograma
+      format_settings:
+        formatter: collapsible
+        description: ''
+        classes: 'group-cronograma-esp field-group-fieldset'
+        id: ''
+      format_type: tab
+      region: content
+    group_profesorado_esp:
+      children:
+        - field_profesorado_esp
+        - field_docentes_aetg_esp
+      parent_name: group_tabs_especializacion
+      weight: 4
+      label: Profesorado
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: 'group-profesorado-esp field-group-htab'
+        id: ''
+      format_type: tab
+      region: content
+    group_datos:
+      children:
+        - field_responsable_formacion_esp
+        - field_imagen_esp
+        - field_sitio_web_esp
+        - field_fecha_esp
+        - field_telefono_esp
+        - field_tipo_de_especializacion
+        - field_email_esp
+        - field_area_de_especializacion
+        - field_direccion_esp
+      parent_name: group_tabs_especializacion
+      weight: 1
+      label: Datos
+      format_settings:
+        formatter: closed
+        description: ''
+        classes: 'group-datos field-group-htab'
+        id: ''
+      format_type: tab
+      region: content
+id: node.especializacion.full
+targetEntityType: node
+bundle: especializacion
+mode: full
+content:
+  field_area_de_especializacion:
+    type: entity_reference_label
+    weight: 9
+    region: content
+    label: above
+    settings:
+      link: false
+    third_party_settings:
+      empty_fields:
+        handler: ''
+      field_formatter_class:
+        class: ''
+  field_cronograma_esp:
+    type: text_default
+    weight: 0
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_descripcion_esp:
+    type: text_default
+    weight: 0
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_direccion_esp:
+    type: address_display_formatter
+    weight: 10
+    region: content
+    label: above
+    settings:
+      address_display:
+        organization:
+          glue: ''
+          weight: '-10'
+          display: 0
+        address_line1:
+          display: '1'
+          glue: '<br>'
+          weight: '-9'
+        address_line2:
+          glue: ''
+          weight: '-8'
+          display: 0
+        postal_code:
+          display: '1'
+          glue: ''
+          weight: '-7'
+        locality:
+          display: '1'
+          glue: '<br>('
+          weight: '-6'
+        administrative_area:
+          display: '1'
+          glue: )
+          weight: '-5'
+        country_code:
+          display: '1'
+          glue: .
+          weight: '-4'
+        langcode:
+          glue: ''
+          weight: '-3'
+          display: 0
+        dependent_locality:
+          glue: ''
+          weight: '-2'
+          display: 0
+        sorting_code:
+          glue: ''
+          weight: '-1'
+          display: 0
+        given_name:
+          glue: ''
+          weight: '0'
+          display: 0
+        family_name:
+          glue: ''
+          weight: '1'
+          display: 0
+    third_party_settings:
+      empty_fields:
+        handler: ''
+      field_formatter_class:
+        class: ''
+  field_docentes_aetg_esp:
+    type: entity_reference_label
+    weight: 1
+    region: content
+    label: above
+    settings:
+      link: true
+    third_party_settings:
+      empty_fields:
+        handler: ''
+      field_formatter_class:
+        class: ''
+  field_email_esp:
+    type: email_mailto
+    weight: 8
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_fecha_esp:
+    type: datetime_default
+    weight: 5
+    region: content
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: fecha_larga
+    third_party_settings:
+      empty_fields:
+        handler: ''
+      field_formatter_class:
+        class: ''
+  field_imagen_esp:
+    type: colorbox
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      colorbox_node_style: ct_especializacion_full
+      colorbox_node_style_first: ''
+      colorbox_image_style: ''
+      colorbox_gallery: post
+      colorbox_gallery_custom: ''
+      colorbox_caption: auto
+      colorbox_caption_custom: ''
+    third_party_settings:
+      empty_fields:
+        handler: ''
+      field_formatter_class:
+        class: ''
+  field_profesorado_esp:
+    type: string
+    weight: 0
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_programa_esp:
+    type: text_default
+    weight: 1
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_responsable_formacion_esp:
+    type: string
+    weight: 0
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_sitio_web_esp:
+    type: link
+    weight: 4
+    region: content
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+  field_telefono_esp:
+    type: string
+    weight: 6
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_tipo_de_especializacion:
+    type: entity_reference_label
+    weight: 7
+    region: content
+    label: above
+    settings:
+      link: false
+    third_party_settings:
+      empty_fields:
+        handler: ''
+      field_formatter_class:
+        class: ''
+  links:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  breadcrumbs: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  langcode: true
+  search_api_excerpt: true

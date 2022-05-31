@@ -1,0 +1,30 @@
+uuid: 86f6aeee-b1cb-4603-b65c-578fed21ace3
+langcode: es
+status: true
+dependencies:
+  module:
+    - commerce_cart
+    - commerce_checkout
+    - commerce_invoice
+third_party_settings:
+  commerce_cart:
+    cart_form_view: commerce_cart_form
+    cart_block_view: commerce_cart_block
+    cart_expiration: {  }
+  commerce_checkout:
+    checkout_flow: default
+  commerce_invoice:
+    invoice_type: default
+    order_placed_generation: true
+_core:
+  default_config_hash: bROz7kd1J83kDf06qdZztYFSezi6UrfwftyJo53rNt4
+label: 'Por defecto'
+id: default
+workflow: order_default
+numberPattern: order_default
+refresh_mode: customer
+refresh_frequency: 300
+sendReceipt: true
+receiptBcc: example@mail.com
+traits: {  }
+locked: false

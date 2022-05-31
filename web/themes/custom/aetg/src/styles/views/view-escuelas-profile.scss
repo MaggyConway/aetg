@@ -1,0 +1,231 @@
+.view-escuelas-profile, 
+.view-public-profile-search.view-display-id-page_1,
+.view-public-profile-search.view-display-id-page_2 {
+	.view-filters {
+		position: relative;
+		padding: 12px 12px 14px;
+		background-color: $color-F2;
+		border-radius: 5px;
+	}
+
+	.leaflet-container {
+		margin: 23px 0 40px;
+		
+		@include breakpoint(mobile-large) {
+			margin: 20px 0;
+		}
+	}
+	
+	.page-title {
+		margin-bottom: 16px;
+	}
+	
+	.result-summary {
+		@include text-fz-14-lh-20;
+		margin-bottom: 20px;
+	}
+	
+	> .view-content {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		flex-wrap: wrap;
+
+		@include breakpoint(IPad-Pro) {
+			display: block;
+		}
+
+		> .views-row {
+			padding-bottom: 30px;
+			border-bottom: 1px solid $color-E6;
+			margin-bottom: 40px;
+			width: calc(50% - 30px);
+			
+			@include breakpoint(IPad-Pro) {
+				width: 100%;
+			}
+
+			@include breakpoint(mobile-middle) {
+				margin-bottom: 20px;
+				padding-bottom: 20px;
+			}
+		}
+	}
+	
+	form {
+		> .form--inline {
+			display: flex;
+			align-items: flex-end;
+			flex-wrap: nowrap;
+			
+			@include breakpoint(laptop-mini) {
+				flex-wrap: wrap;
+				margin: 0 -8px;
+			}
+			
+			@include breakpoint(tablet-m) {
+				margin: 0;
+			}
+			
+			> .form-item, > .form-actions {
+				margin: 0;
+				float: none;
+			}
+			
+			> .form-item {
+				margin-right: 15px;
+				
+				select, input {
+					min-width: 285px;
+					width: 285px;
+					
+					@include breakpoint(laptop) {
+						min-width: 240px;
+						width: 240px;
+					}
+					
+					@include breakpoint(laptop-mini) {
+						width: 100%;
+						min-width: unset;
+					}
+				}
+				
+				@include breakpoint(laptop-mini) {
+					width: calc(33% - 16px);
+					margin: 0 8px;
+				}
+				
+				@include breakpoint(tablet-m) {
+					width: 100%;
+					margin: 0 0 16px;
+				}
+			}
+			
+			> .form-item-sort-by {
+				order: 4;
+				margin-right: 0;
+				margin-left: auto;
+				
+				select {
+					min-width: 244px;
+					width: 244px;
+					
+					@include breakpoint(laptop) {
+						min-width: 220px;
+						width: 220px;
+					}
+					
+					@include breakpoint(laptop-mini) {
+						width: 100%;
+						min-width: unset;
+					}
+				}
+				
+				@include breakpoint(laptop-mini) {
+					order: unset;
+					width: 40%;
+					margin: 15px 8px 0;
+				}
+				
+				@include breakpoint(tablet-md) {
+					width: 55%;
+				}
+				
+				@include breakpoint(tablet) {
+					width: calc(100% - 118px);
+					margin: 0 8px 0 0;
+				}
+				
+				@include breakpoint(mobile-middle) {
+					width: 100%;
+					margin: 0 0 16px;
+				}
+			}
+			
+			> .form-actions {
+				@include breakpoint(laptop-mini) {
+					margin: 0 8px;
+					width: calc(33% - 16px);
+				}
+
+				@include breakpoint(tablet-m) {
+					width: 100%;
+					margin: 0;
+				}
+				
+				> input {
+					width: 100%;
+				}
+			}
+		}
+	}
+	
+	.layout--twocol-section--25-75 {
+		display: flex;
+		align-items: flex-start;
+		flex-wrap: nowrap;
+
+		@include breakpoint(mobile-middle) {
+			display: block;
+		}
+
+		.layout__region {
+			flex: unset;
+			width: auto;
+			display: block;
+			
+			&--first {
+				margin-right: 20px;
+
+				@include breakpoint(mobile-middle) {
+					width: 100%;
+					margin-right: 0;
+				}
+				
+				.field--type-image {
+					// background: $color-F7;
+					overflow: hidden;
+					width: 100px;
+					min-width: 100px;
+					height: 100px;
+					// border: 1px solid $color-E6;
+					border-radius: 5px;
+					display: flex;
+					justify-content: center;
+					align-items: center;					
+					img {
+						@include mini-slider-image;
+					}
+				}
+			}
+			
+			&--second {
+				width: calc(100% - 78px - 15px);
+
+				@include breakpoint(mobile-middle) {
+					width: 100%;
+				}
+			}
+		}
+	}
+	
+	a {
+		@include text-fz-16-lh-26;
+	}
+	
+	.field--type-address {
+		@include text-fz-14-lh-20;
+		&:not(:last-child) {
+			margin-bottom: 12px;
+		}
+	}
+	
+	p {
+		color: $color-A;
+		@include text-fz-14-lh-20;
+	}
+}
+
+.attachment-before {
+	margin-bottom: 40px;
+}

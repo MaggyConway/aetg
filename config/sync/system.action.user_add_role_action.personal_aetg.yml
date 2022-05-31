@@ -1,0 +1,14 @@
+uuid: 3aa3b989-c5b1-4d37-8d80-07294b26ef04
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.personal_aetg
+  module:
+    - user
+id: user_add_role_action.personal_aetg
+label: 'Add the personal aetg role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: personal_aetg

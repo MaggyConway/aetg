@@ -1,0 +1,19 @@
+uuid: 560f23f3-f9c9-4a5a-9af8-32a1f231490d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_centro_donde_trabaja
+    - profile.type.informacion_privada
+id: profile.informacion_privada.field_centro_donde_trabaja
+field_name: field_centro_donde_trabaja
+entity_type: profile
+bundle: informacion_privada
+label: 'Centro donde trabaja'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

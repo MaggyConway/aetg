@@ -1,0 +1,11 @@
+uuid: bbbf51f9-5fa4-41d7-aff5-33182f0abd88
+langcode: en
+status: true
+dependencies: {  }
+id: layout_parent_tabs
+label: 'Layout parent tabs'
+classes: parent-tabs
+type: section
+weight: 0
+block_restrictions: {  }
+layout_restrictions: {  }

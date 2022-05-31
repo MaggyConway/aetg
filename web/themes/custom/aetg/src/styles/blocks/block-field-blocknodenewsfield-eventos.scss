@@ -1,0 +1,75 @@
+.block-field-blocknodenewsfield-eventos {
+	@include main-container;
+	background-color: #fff;
+	padding: 73px 70px 40px;
+   border-radius: 36px 36px 0 36px;
+
+	.field--name-field-eventos {
+		.layout__region--first {
+			flex: unset;
+			width: 93px;
+			height: 93px;
+			margin-right: 14px;
+			position: relative;
+		}
+
+		.layout--twocol-section {
+			flex-wrap: nowrap;
+		}
+
+		.field--name-title {
+			a {
+				font-size: 16px;
+				line-height: 26px;
+				color: $blue;
+				margin-bottom: 3px;
+				display: block;
+
+				&:after {  // blue stripe
+					background: none repeat scroll 0 0 transparent;
+					content: "";
+					display: block;
+					height: 2px;
+					left: 0;
+					position: relative;
+					background-color: #5fbcd5;
+					-webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+					transition: width 0.3s ease 0s, left 0.3s ease 0s;
+					width: 0;
+					// margin-top: 3px;
+				}
+
+
+				&:hover {
+					color: $blue-hover;
+					&:after {
+						width: 45px;
+					}
+				}
+			}
+		}
+
+		.field--name-field-address {
+			@include text-fz-14-lh-20;
+			color: #ccc;
+			margin-top: 18px;
+
+			.locality {
+				display: block;
+				line-height: 20px;
+			}
+
+			p.address {
+				position: static;
+				@include text-fz-14-lh-20;
+				color: inherit;
+			}
+		}
+
+		> .field__item {
+			&:not(:last-child) {
+				margin-bottom: 16px;
+			}
+		}
+	}
+}

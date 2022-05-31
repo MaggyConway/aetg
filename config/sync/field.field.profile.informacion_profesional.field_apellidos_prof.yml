@@ -1,0 +1,19 @@
+uuid: ba729a07-2250-482f-935e-b2ad77151237
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_apellidos_prof
+    - profile.type.informacion_profesional
+id: profile.informacion_profesional.field_apellidos_prof
+field_name: field_apellidos_prof
+entity_type: profile
+bundle: informacion_profesional
+label: Apellidos
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

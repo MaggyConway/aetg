@@ -1,0 +1,18 @@
+uuid: 7a7d1a31-8cdd-4e45-9f6a-629ed5baa458
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main-menu
+    parent: 'main-menu:0:'
+name: 'Página de menú'
+type: pagina_de_menu
+description: 'Página con HTML básico para generar páginas auxiliares con menú (página principal y sub-secciones)'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

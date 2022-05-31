@@ -1,0 +1,10 @@
+uuid: 184e02a2-c63c-41d1-a0e3-ef48578e0295
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.pt_image_title_text_and_link_default
+label: 'PT Image, title, text and link: Default'
+targetEntityType: media
+cache: true

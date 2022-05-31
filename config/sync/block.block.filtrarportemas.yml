@@ -1,0 +1,29 @@
+uuid: 17f7a491-4f3c-479e-877e-2192a08b9685
+langcode: es
+status: true
+dependencies:
+  config:
+    - facets.facet.temas
+  module:
+    - facets
+    - system
+  theme:
+    - aetg
+id: filtrarportemas
+theme: aetg
+region: content
+weight: -20
+provider: null
+plugin: 'facet_block:temas'
+settings:
+  id: 'facet_block:temas'
+  label: 'Filtrar por temas:'
+  provider: facets
+  label_display: '0'
+  block_id: filtrarportemas
+visibility:
+  request_path:
+    id: request_path
+    pages: "/gestalt/recursos\r\n/gestalt/recursos/videos\r\n/gestalt/recursos/articulos\r\n/gestalt/recursos/revista\r\n/gestalt/recursos/tesinas"
+    negate: false
+    context_mapping: {  }

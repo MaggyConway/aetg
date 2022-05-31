@@ -1,0 +1,99 @@
+uuid: e0d32e18-c0ed-4752-8448-45401e696dca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.title_tag_text_and_link.field_image
+    - field.field.paragraph.title_tag_text_and_link.field_link
+    - field.field.paragraph.title_tag_text_and_link.field_tag
+    - field.field.paragraph.title_tag_text_and_link.field_text
+    - field.field.paragraph.title_tag_text_and_link.field_title
+    - paragraphs.paragraphs_type.title_tag_text_and_link
+  module:
+    - field_formatter_class
+    - field_group
+    - link
+    - text
+third_party_settings:
+  field_group:
+    group_text:
+      children:
+        - field_title
+        - field_tag
+        - field_text
+        - field_link
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      region: content
+      format_settings:
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: text-wrapper
+        show_empty_fields: false
+      label: Text
+id: paragraph.title_tag_text_and_link.default
+targetEntityType: paragraph
+bundle: title_tag_text_and_link
+mode: default
+content:
+  field_image:
+    weight: 5
+    label: hidden
+    settings:
+      view_mode: pt_title_tag_text_link_with_background_default
+      link: false
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    type: entity_reference_entity_view
+    region: content
+  field_link:
+    weight: 4
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      field_formatter_class:
+        class: btn-primary
+    type: link
+    region: content
+  field_tag:
+    weight: 2
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_text:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  breadcrumbs: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  search_api_excerpt: true

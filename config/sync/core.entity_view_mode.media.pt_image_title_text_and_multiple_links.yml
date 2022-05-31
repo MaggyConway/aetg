@@ -1,0 +1,10 @@
+uuid: 6f9f56b2-0d4f-4ad9-b30a-20c6ab78f44f
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.pt_image_title_text_and_multiple_links
+label: 'PT Image, title, text and multiple links'
+targetEntityType: media
+cache: true

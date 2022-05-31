@@ -1,0 +1,21 @@
+uuid: b385e50b-6391-437d-9a1c-7eb064ac8346
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.event
+    - field.storage.commerce_product_variation.field_allowed_user_roles
+  module:
+    - options
+id: commerce_product_variation.event.field_allowed_user_roles
+field_name: field_allowed_user_roles
+entity_type: commerce_product_variation
+bundle: event
+label: 'Allowed user roles'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

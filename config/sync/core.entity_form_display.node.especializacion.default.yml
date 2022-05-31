@@ -1,0 +1,204 @@
+uuid: 0b404e3f-fb7e-4d02-8e46-aec01eb74029
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.especializacion.field_area_de_especializacion
+    - field.field.node.especializacion.field_cronograma_esp
+    - field.field.node.especializacion.field_descripcion_esp
+    - field.field.node.especializacion.field_direccion_esp
+    - field.field.node.especializacion.field_docentes_aetg_esp
+    - field.field.node.especializacion.field_email_esp
+    - field.field.node.especializacion.field_fecha_esp
+    - field.field.node.especializacion.field_imagen_esp
+    - field.field.node.especializacion.field_profesorado_esp
+    - field.field.node.especializacion.field_programa_esp
+    - field.field.node.especializacion.field_responsable_formacion_esp
+    - field.field.node.especializacion.field_sitio_web_esp
+    - field.field.node.especializacion.field_telefono_esp
+    - field.field.node.especializacion.field_tipo_de_especializacion
+    - image.style.thumbnail
+    - node.type.especializacion
+  module:
+    - address
+    - datetime
+    - image
+    - link
+    - path
+    - text
+id: node.especializacion.default
+targetEntityType: node
+bundle: especializacion
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_area_de_especializacion:
+    weight: 3
+    type: entity_reference_autocomplete
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_cronograma_esp:
+    weight: 17
+    type: text_textarea
+    settings:
+      rows: 4
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_descripcion_esp:
+    weight: 6
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
+  field_direccion_esp:
+    weight: 11
+    type: address_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_docentes_aetg_esp:
+    weight: 14
+    type: entity_reference_autocomplete
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_email_esp:
+    weight: 8
+    type: email_default
+    settings:
+      placeholder: ''
+      size: 60
+    third_party_settings: {  }
+    region: content
+  field_fecha_esp:
+    weight: 19
+    type: datetime_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_imagen_esp:
+    weight: 5
+    type: image_image
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    region: content
+  field_profesorado_esp:
+    weight: 13
+    type: string_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_programa_esp:
+    weight: 15
+    type: text_textarea
+    settings:
+      rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_responsable_formacion_esp:
+    weight: 12
+    type: string_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_sitio_web_esp:
+    weight: 9
+    type: link_default
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    region: content
+  field_telefono_esp:
+    weight: 7
+    type: string_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_tipo_de_especializacion:
+    weight: 2
+    type: options_select
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 16
+    region: content
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 21
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 18
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 4
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    region: content
+    third_party_settings: {  }
+hidden: {  }

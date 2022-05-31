@@ -1,0 +1,97 @@
+uuid: e79b9500-8e8e-48cb-ba75-29c2475eecee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_paragraphs
+    - node.type.news
+    - paragraphs.paragraphs_type.image
+    - paragraphs.paragraphs_type.image_slider
+    - paragraphs.paragraphs_type.multiple_links
+    - paragraphs.paragraphs_type.text
+  module:
+    - entity_reference_revisions
+id: node.news.field_paragraphs
+field_name: field_paragraphs
+entity_type: node
+bundle: news
+label: Párrafos
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      image_slider: image_slider
+      image: image
+      multiple_links: multiple_links
+      text: text
+    target_bundles_drag_drop:
+      accordion:
+        weight: 22
+        enabled: false
+      aetg_membership_type:
+        weight: 21
+        enabled: false
+      feap_membership_type:
+        weight: 22
+        enabled: false
+      header_with_slider:
+        weight: 16
+        enabled: false
+      image:
+        enabled: true
+        weight: 19
+      image_slider:
+        enabled: true
+        weight: 17
+      image_slider_item:
+        weight: 18
+        enabled: false
+      image_title_text_and_link:
+        weight: 19
+        enabled: false
+      image_title_text_multiple_links:
+        weight: 20
+        enabled: false
+      mapfre_insurances:
+        weight: 29
+        enabled: false
+      member_slider_with_multiple_link:
+        weight: 30
+        enabled: false
+      multiple_links:
+        enabled: true
+        weight: 22
+      news_slider:
+        weight: 25
+        enabled: false
+      school_slider_with_multiple_link:
+        weight: 25
+        enabled: false
+      slider:
+        weight: 26
+        enabled: false
+      teacher:
+        weight: 35
+        enabled: false
+      text:
+        enabled: true
+        weight: 30
+      title_and_file_list:
+        weight: 31
+        enabled: false
+      title_tag_text_and_link:
+        weight: 28
+        enabled: false
+      video_area:
+        weight: 29
+        enabled: false
+      webform:
+        weight: 30
+        enabled: false
+field_type: entity_reference_revisions

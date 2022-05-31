@@ -1,0 +1,36 @@
+uuid: 1ee6c75e-a637-4b12-b78a-42584b909974
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.title_and_file_list.field_descargas
+    - field.field.paragraph.title_and_file_list.field_title
+    - paragraphs.paragraphs_type.title_and_file_list
+id: paragraph.title_and_file_list.default
+targetEntityType: paragraph
+bundle: title_and_file_list
+mode: default
+content:
+  field_descargas:
+    type: entity_reference_entity_view
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  breadcrumbs: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  search_api_excerpt: true

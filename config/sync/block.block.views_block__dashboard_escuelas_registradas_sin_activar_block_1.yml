@@ -1,0 +1,27 @@
+uuid: c1a30540-663f-4472-adbc-2cea02a805c5
+langcode: es
+status: false
+dependencies:
+  config:
+    - views.view.dashboard_escuelas_registradas_sin_activar
+  module:
+    - views
+  theme:
+    - adminimal_theme
+id: views_block__dashboard_escuelas_registradas_sin_activar_block_1
+theme: adminimal_theme
+region: header
+weight: null
+provider: null
+plugin: 'views_block:dashboard_escuelas_registradas_sin_activar-block_1'
+settings:
+  id: 'views_block:dashboard_escuelas_registradas_sin_activar-block_1'
+  label: 'Escuelas registradas sin activar todavía'
+  provider: views
+  label_display: visible
+  views_label: 'Escuelas registradas sin activar todavía'
+  items_per_page: none
+  override:
+    items_per_page: none
+  views_label_checkbox: 0
+visibility: {  }

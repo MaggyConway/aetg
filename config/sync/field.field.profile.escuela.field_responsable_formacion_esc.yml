@@ -1,0 +1,19 @@
+uuid: 3b63866c-372f-46b5-a90f-ac8e4c70297d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_responsable_formacion_esc
+    - profile.type.escuela
+id: profile.escuela.field_responsable_formacion_esc
+field_name: field_responsable_formacion_esc
+entity_type: profile
+bundle: escuela
+label: 'Responsable de formación'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

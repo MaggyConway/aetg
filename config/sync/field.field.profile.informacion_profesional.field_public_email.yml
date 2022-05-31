@@ -1,0 +1,19 @@
+uuid: 8f41e8c4-2218-4853-a134-86d065ffd3b9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_public_email
+    - profile.type.informacion_profesional
+id: profile.informacion_profesional.field_public_email
+field_name: field_public_email
+entity_type: profile
+bundle: informacion_profesional
+label: 'Correo electrónico público'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

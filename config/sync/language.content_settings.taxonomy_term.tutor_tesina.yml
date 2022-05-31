@@ -1,0 +1,11 @@
+uuid: f5e6884c-633e-4dba-a08e-7668128c8d50
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.tutor_tesina
+id: taxonomy_term.tutor_tesina
+target_entity_type_id: taxonomy_term
+target_bundle: tutor_tesina
+default_langcode: site_default
+language_alterable: false

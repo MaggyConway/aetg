@@ -1,0 +1,28 @@
+uuid: 66cc4e60-3bac-4fd3-9d0d-c017230892ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_seguro_mapfre
+    - profile.type.informacion_privada
+    - taxonomy.vocabulary.seguro_mapfre
+id: profile.informacion_privada.field_seguro_mapfre
+field_name: field_seguro_mapfre
+entity_type: profile
+bundle: informacion_privada
+label: 'Seguro MAPFRE'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      seguro_mapfre: seguro_mapfre
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

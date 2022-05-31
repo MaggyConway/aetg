@@ -1,0 +1,11 @@
+uuid: 92a5f0ba-4b5a-48d3-ad0d-8ad69328f44f
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.tipo_de_enlace
+id: taxonomy_term.tipo_de_enlace
+target_entity_type_id: taxonomy_term
+target_bundle: tipo_de_enlace
+default_langcode: site_default
+language_alterable: false

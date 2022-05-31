@@ -1,0 +1,35 @@
+uuid: 65bef601-9ecc-4b8c-8818-249892d493dc
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.event
+  module:
+    - commerce_product
+    - field_formatter_class
+id: commerce_product.event.default
+targetEntityType: commerce_product
+bundle: event
+mode: default
+content:
+  variations:
+    type: commerce_add_to_cart
+    weight: 10
+    region: content
+    label: hidden
+    settings:
+      combine: false
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+hidden:
+  breadcrumbs: true
+  created: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  langcode: true
+  search_api_excerpt: true
+  stores: true
+  title: true
+  uid: true

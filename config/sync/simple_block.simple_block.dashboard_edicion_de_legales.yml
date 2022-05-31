@@ -1,0 +1,11 @@
+uuid: 97df4c99-a9b8-4754-a574-c51a39e24cf3
+langcode: es
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+id: dashboard_edicion_de_legales
+title: 'Editar aspectos legales'
+content:
+  value: "<ul>\r\n\t<li><a href=\"/node/49/edit\">Editar Aviso Legal</a></li>\r\n\t<li><a href=\"/node/50/edit\">Editar Política de Privacidad</a></li>\r\n</ul>\r\n"
+  format: basic_html

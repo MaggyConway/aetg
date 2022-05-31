@@ -1,0 +1,23 @@
+uuid: 5028768c-daab-479a-92e9-77d0008bba40
+langcode: es
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.event
+    - field.storage.commerce_product_variation.field_tax_rate
+  module:
+    - commerce_product_tax
+id: commerce_product_variation.event.field_tax_rate
+field_name: field_tax_rate
+entity_type: commerce_product_variation
+bundle: event
+label: IVA
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  tax_type: vat
+  allowed_zones: {  }
+field_type: commerce_tax_rate

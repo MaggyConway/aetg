@@ -1,0 +1,10 @@
+uuid: b39d6236-f1c6-4911-aae9-217fe595fc53
+langcode: es
+status: true
+dependencies:
+  module:
+    - media
+id: media.ct_resource_teaser
+label: 'CT Resource: Teaser'
+targetEntityType: media
+cache: true

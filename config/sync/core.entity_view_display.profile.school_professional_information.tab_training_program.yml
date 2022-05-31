@@ -1,0 +1,61 @@
+uuid: 295c7bf4-663d-40af-9790-cccc4a141165
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.profile.tab_training_program
+    - field.field.profile.school_professional_information.field_description
+    - field.field.profile.school_professional_information.field_detailed_training_program
+    - field.field.profile.school_professional_information.field_director
+    - field.field.profile.school_professional_information.field_geofield
+    - field.field.profile.school_professional_information.field_imagen_logo
+    - field.field.profile.school_professional_information.field_invoicing_address
+    - field.field.profile.school_professional_information.field_mobile
+    - field.field.profile.school_professional_information.field_paragraphs
+    - field.field.profile.school_professional_information.field_phone
+    - field.field.profile.school_professional_information.field_public_email
+    - field.field.profile.school_professional_information.field_school_name
+    - field.field.profile.school_professional_information.field_timetable
+    - field.field.profile.school_professional_information.field_training_manager
+    - field.field.profile.school_professional_information.field_url
+    - field.field.profile.school_professional_information.field_website
+    - profile.type.school_professional_information
+  module:
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: profile.school_professional_information.tab_training_program
+targetEntityType: profile
+bundle: school_professional_information
+mode: tab_training_program
+content:
+  field_detailed_training_program:
+    type: basic_string
+    weight: 0
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  breadcrumbs: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_description: true
+  field_director: true
+  field_geofield: true
+  field_imagen_logo: true
+  field_invoicing_address: true
+  field_mobile: true
+  field_paragraphs: true
+  field_phone: true
+  field_public_email: true
+  field_school_name: true
+  field_timetable: true
+  field_training_manager: true
+  field_url: true
+  field_website: true
+  search_api_excerpt: true

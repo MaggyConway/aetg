@@ -1,0 +1,33 @@
+uuid: f5145821-1296-4ef0-9d88-9a554f7217b6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_relacionados
+    - node.type.documento_secretaria
+    - node.type.news
+    - node.type.page
+    - node.type.recurso
+id: node.news.field_relacionados
+field_name: field_relacionados
+entity_type: node
+bundle: news
+label: 'Véase también'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      documento_secretaria: documento_secretaria
+      news: news
+      page: page
+      recurso: recurso
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: recurso
+field_type: entity_reference

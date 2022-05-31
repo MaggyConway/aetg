@@ -1,0 +1,28 @@
+uuid: 8cdccac4-d4fb-4481-a36b-ff1f0e4c86fa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_ambito_trabajo
+    - profile.type.informacion_profesional
+    - taxonomy.vocabulary.ambito_profesional
+id: profile.informacion_profesional.field_ambito_trabajo
+field_name: field_ambito_trabajo
+entity_type: profile
+bundle: informacion_profesional
+label: 'Ámbitos de trabajo'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      ambito_profesional: ambito_profesional
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

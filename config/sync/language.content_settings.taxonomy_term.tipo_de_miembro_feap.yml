@@ -1,0 +1,11 @@
+uuid: 24317523-bd10-49be-88d3-f65a250309ed
+langcode: es
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.tipo_de_miembro_feap
+id: taxonomy_term.tipo_de_miembro_feap
+target_entity_type_id: taxonomy_term
+target_bundle: tipo_de_miembro_feap
+default_langcode: site_default
+language_alterable: false

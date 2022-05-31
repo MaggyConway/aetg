@@ -1,0 +1,29 @@
+uuid: 44cce2cf-76fb-443c-9e58-d6e639316f43
+langcode: es
+status: true
+dependencies:
+  config:
+    - facets.facet.tesinas_filtrar_por_modalidad
+  module:
+    - facets
+    - system
+  theme:
+    - aetg
+id: tesinasfiltrarpormodalidad
+theme: aetg
+region: content
+weight: -14
+provider: null
+plugin: 'facet_block:tesinas_filtrar_por_modalidad'
+settings:
+  id: 'facet_block:tesinas_filtrar_por_modalidad'
+  label: 'Tesinas: Filtrar por modalidad'
+  provider: facets
+  label_display: '0'
+  block_id: tesinasfiltrarpormodalidad
+visibility:
+  request_path:
+    id: request_path
+    pages: /gestalt/recursos/tesinas
+    negate: false
+    context_mapping: {  }

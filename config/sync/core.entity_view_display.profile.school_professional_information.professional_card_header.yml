@@ -1,0 +1,155 @@
+uuid: 751ddf23-b9da-4a11-ab39-46b80d52f68e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.profile.professional_card_header
+    - field.field.profile.school_professional_information.field_description
+    - field.field.profile.school_professional_information.field_detailed_training_program
+    - field.field.profile.school_professional_information.field_director
+    - field.field.profile.school_professional_information.field_geofield
+    - field.field.profile.school_professional_information.field_imagen_logo
+    - field.field.profile.school_professional_information.field_invoicing_address
+    - field.field.profile.school_professional_information.field_mobile
+    - field.field.profile.school_professional_information.field_paragraphs
+    - field.field.profile.school_professional_information.field_phone
+    - field.field.profile.school_professional_information.field_public_email
+    - field.field.profile.school_professional_information.field_school_name
+    - field.field.profile.school_professional_information.field_timetable
+    - field.field.profile.school_professional_information.field_training_manager
+    - field.field.profile.school_professional_information.field_url
+    - field.field.profile.school_professional_information.field_website
+    - image.style.user_picture
+    - profile.type.school_professional_information
+  module:
+    - aetg_common
+    - field_formatter_class
+    - image
+    - layout_builder
+    - layout_discovery
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: true
+    sections:
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: ''
+          column_widths: 25-75
+          layout_builder_styles_style: ''
+        components:
+          b86ff81b-2e5a-4b6b-9a52-3603cfc1caf4:
+            uuid: b86ff81b-2e5a-4b6b-9a52-3603cfc1caf4
+            region: first
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:profile:school_professional_information:field_imagen_logo'
+              formatter:
+                type: image
+                label: hidden
+                settings:
+                  image_style: user_picture
+                  image_link: ''
+                third_party_settings:
+                  field_formatter_class:
+                    class: ''
+            additional: {  }
+            weight: 0
+          30e33e76-04fb-498f-8283-78e3fc095a0b:
+            uuid: 30e33e76-04fb-498f-8283-78e3fc095a0b
+            region: second
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:profile:school_professional_information:field_school_name'
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            additional: {  }
+            weight: 1
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: buttons
+          layout_builder_styles_style: profile_header_buttons
+        components:
+          56fde7a2-44f1-4541-8640-de2eecab49f2:
+            uuid: 56fde7a2-44f1-4541-8640-de2eecab49f2
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:profile:school_professional_information:addtoany'
+            additional: {  }
+            weight: 1
+          1f710fbd-6d0c-499a-b2ab-b64e014c5cc6:
+            uuid: 1f710fbd-6d0c-499a-b2ab-b64e014c5cc6
+            region: content
+            configuration:
+              id: aetg_profile_operations_link
+              label: 'AETG Profile operations links'
+              provider: aetg_common
+              label_display: '0'
+              profile_type: public
+              context_mapping: {  }
+            additional:
+              layout_builder_styles_style: ''
+            weight: 2
+        third_party_settings: {  }
+id: profile.school_professional_information.professional_card_header
+targetEntityType: profile
+bundle: school_professional_information
+mode: professional_card_header
+content:
+  addtoany:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_imagen_logo:
+    type: image
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: user_picture
+      image_link: ''
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+  field_school_name:
+    type: string
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  breadcrumbs: true
+  entity_print_view_epub: true
+  entity_print_view_pdf: true
+  entity_print_view_word_docx: true
+  field_description: true
+  field_detailed_training_program: true
+  field_director: true
+  field_geofield: true
+  field_invoicing_address: true
+  field_mobile: true
+  field_paragraphs: true
+  field_phone: true
+  field_public_email: true
+  field_timetable: true
+  field_training_manager: true
+  field_url: true
+  field_website: true
+  search_api_excerpt: true

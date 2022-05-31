@@ -1,0 +1,15 @@
+transport: smtp
+smtp_host: vigorous-tharp.82-223-161-60.plesk.page
+smtp_port: 465
+smtp_encryption: ssl
+smtp_credential_provider: swiftmailer
+smtp_credentials:
+  swiftmailer:
+    username: test@vigorous-tharp.82-223-161-60.plesk.page
+    password: xn6cQ7~7
+sendmail_path: /usr/sbin/sendmail
+sendmail_mode: bs
+spool_directory: ''
+_core:
+  default_config_hash: RSNbRD3ekSaZoE19f3eHhm93gKOcD2PtmaAVmV3XMes
+langcode: es

@@ -1,0 +1,35 @@
+uuid: cd23dddf-36ae-4053-8b7e-12be518cb23a
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.user_blocks_with_profile_fields
+  module:
+    - block_class
+    - system
+    - views
+  theme:
+    - aetg
+third_party_settings:
+  block_class:
+    classes: profile-header
+id: views_block__user_blocks_with_profile_fields_block_1
+theme: aetg
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:user_blocks_with_profile_fields-block_1'
+settings:
+  id: 'views_block:user_blocks_with_profile_fields-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: "/user/*/edit\r\n/user/*/informacion_privada\r\n/user/*/informacion_profesional\r\n/user/*/school_professional_information\r\n/user/*/escuela"
+    negate: false
+    context_mapping: {  }

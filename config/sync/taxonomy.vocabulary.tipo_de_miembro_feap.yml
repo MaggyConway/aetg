@@ -1,0 +1,8 @@
+uuid: a71f05bb-82fe-4fb1-94db-5d891b4e68be
+langcode: es
+status: true
+dependencies: {  }
+name: 'Tipos de miembro FEAP'
+vid: tipo_de_miembro_feap
+description: ''
+weight: 0

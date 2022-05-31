@@ -1,0 +1,15 @@
+uuid: 8f61da93-e0d3-4f4b-aed5-16080a1eda4d
+langcode: en
+status: true
+dependencies: {  }
+name: ct_resource_default_header_image
+label: 'CT Resource: Default - Header Image'
+effects:
+  3540101c-e438-41ad-bc26-32b96e5d7ac5:
+    uuid: 3540101c-e438-41ad-bc26-32b96e5d7ac5
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1980
+      height: 600
+      anchor: center-center

@@ -1,0 +1,170 @@
+.view-event-search {
+	> .view-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		margin-bottom: 30px;
+	
+		h1 {
+			@include h2;
+			margin: 0 20px 0 0;
+			
+			@include breakpoint(mobile-small) {
+				margin: 0 0 10px 0;
+				text-align: left;
+				width: 100%;
+			}
+		}
+
+		.btn-primary {
+			margin: 0;
+			
+			a {
+				white-space: nowrap;
+				
+				@include breakpoint(tablet-m) {
+					padding: 11px 15px 9px;
+				}
+
+				@include breakpoint(mobile-small) {
+					width: 100%;
+				}
+			}
+
+			@include breakpoint(mobile-small) {
+				width: 100%;
+			}
+		}
+
+		@include breakpoint(tablet-m) {
+			margin-bottom: 15px;
+		}
+
+		@include breakpoint(mobile-small) {
+			flex-direction: column;
+			margin-bottom: 10px;
+			
+		}
+
+		#block-local-tasks-block {
+			margin-top: 25px;
+		}
+	}
+
+	#block-local-tasks-block {
+		width: 100%;
+		nav {
+			width: 100%;
+		}
+
+		ul.tabs {
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			flex-wrap: wrap;
+			margin: 0 -10px;
+			
+			@include breakpoint(mobile-large) {
+				width: 100%;
+		    	flex-direction: column;
+				align-items: center;
+				margin: -5px 0;
+			}
+			
+			> li {
+				float: none;
+				display: flex;
+				align-items: center;
+				position: relative;
+				margin: 5px 10px;
+
+				@include breakpoint(mobile-large) {
+					width: 100%;
+					justify-content: center;
+				}
+
+				> a {
+					@include btn-white;
+					white-space: nowrap;
+
+					&:before, &:after {
+						display: none;
+					}
+				}
+
+				&.is-active > a {
+					color: #fff;
+					background-color: $color-76;
+					border-color: $color-76;
+				}
+			}
+		}
+	}
+	
+
+	#edit-field-event-type--wrapper { 
+		margin: 0;
+		float: none;
+		width: 100%;
+	}
+
+	#edit-field-event-type {
+		.form-radios {
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			margin: 0 -10px;
+			
+			@include breakpoint(mobile-large) {
+				width: 100%;
+		    	flex-direction: column;
+				align-items: center;
+				margin: -5px 0;
+			}
+			
+			> .form-item {
+				float: none;
+				display: flex;
+				align-items: center;
+				position: relative;
+				margin: 0 10px !important;
+				
+				@include breakpoint(mobile-large) {
+					margin: 5px 0;
+					width: 100%;
+			    	justify-content: center;
+				}
+
+				input {
+					position: absolute;
+					opacity: 0;
+					left: 0;
+				}
+
+				.option {
+					@include btn-white;
+					white-space: nowrap;
+					
+					@include breakpoint(mobile-large) {
+						width: 55%;
+					}
+
+					@include breakpoint(mobile-middle) {
+						width: 100%;
+					}
+
+					&:before, &:after {
+						display: none;
+					}		
+				}
+
+				input:checked + .option {
+					color: #fff;
+					background-color: $color-76;
+					border-color: $color-76;
+				}
+			}
+		}
+	}
+}
